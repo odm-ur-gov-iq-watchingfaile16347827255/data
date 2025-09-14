@@ -1,0 +1,39 @@
+User-agent: * 
+Disallow: /plus/ad_js.php
+Disallow: /plus/advancedsearch.php
+Disallow: /plus/car.php
+Disallow: /plus/carbuyaction.php
+Disallow: /plus/shops_buyaction.php
+Disallow: /plus/erraddsave.php
+Disallow: /plus/posttocar.php
+Disallow: /plus/disdls.php
+Disallow: /plus/feedback_js.php
+Disallow: /plus/mytag_js.php
+Disallow: /plus/rss.php
+Disallow: /plus/recommend.php
+Disallow: /plus/stow.php
+Disallow: /plus/count.php
+Disallow: /include/
+Disallow: /templets/
+Disallow: /jq/
+Disallow: /altads/
+Disallow: /ig52ETK1lwiKas/
+Disallow: /demo/Beautiful-Html5-Todo-App-using-jQuery-Bootstrap-listo/
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: barkrowler
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
