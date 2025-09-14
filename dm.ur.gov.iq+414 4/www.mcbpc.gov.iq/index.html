@@ -1,0 +1,1962 @@
+<html dir="rtl"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="compressed.js" type="text/javascript"></script>
+  <script src="atlasjavascript/rtl/files/alsco_headline1.js" type="text/javascript"></script>
+<script language="javascript" src="atlasjavascript/rtl/files/alsco_headline2.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="upload/themes/ar/mcbpc/icon.png" type="image/x-png">
+
+
+    <script src="javascripts/jquery.min.js"></script>
+    <style>div#page {
+
+
+
+		}
+
+		.back-to-top {
+			position: fixed;
+			bottom: 10px;
+			right: 35px;
+			text-decoration: none;
+			color: #000000;
+			background-color:#b591cc;
+
+			padding: 0em;
+			display: none;
+   border-radius: 2px;
+
+		}
+
+		.back-to-top:hover {
+border-radius:2px;
+           background-color: #7d3da6;
+		}
+	</style>
+</head><body background="upload/themes/ar/mcbpc/background.jpg" text="#000000"><a href="#" class="back-to-top"><img src="icon/top.png"></a>
+   <script>
+			jQuery(document).ready(function() {
+				var offset = 220;
+				var duration = 500;
+				jQuery(window).scroll(function() {
+					if (jQuery(this).scrollTop() > offset) {
+						jQuery('.back-to-top').fadeIn(duration);
+					} else {
+						jQuery('.back-to-top').fadeOut(duration);
+					}
+				});
+
+				jQuery('.back-to-top').click(function(event) {
+					event.preventDefault();
+					jQuery('html, body').animate({scrollTop: 0}, duration);
+					return false;
+				})
+			});
+		</script>
+
+
+
+
+
+
+ <script language="javascript">
+//Specify affected tags. Add or remove from list:
+var tgs = new Array( 'div','td','tr','basefont');
+
+//Specify spectrum of different font sizes:
+var szs = new Array( '6pt','8pt','9pt','10pt','11pt','12pt');
+var startSz = 2;
+
+function ts( trgt,inc ) {
+    if (!document.getElementById) return
+    var d = document,cEl = null,sz = startSz,i,j,cTags;
+
+    sz += inc;
+    if ( sz < 0 ) sz = 0;
+    if ( sz > 6 ) sz = 6;
+    startSz = sz;
+
+    if ( !( cEl = d.getElementById( trgt ) ) ) cEl = d.getElementsByTagName( trgt )[ 0 ];
+
+    cEl.style.fontSize = szs[ sz ];
+
+    for ( i = 0 ; i < tgs.length ; i++ ) {
+        cTags = cEl.getElementsByTagName( tgs[ i ] );
+        for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
+    }
+}
+</script>
+
+
+<!--End-->
+
+
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<title>موقع هيأة المنافذ الحدودية</title>
+<link rel="stylesheet" href="themes/alsco/style.css" type="text/css">
+
+
+<style>.shadow_table
+{
+box-shadow: 0px 0px 0px 0px #ADADAD ;
+
+}
+</style>
+
+
+
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+ <script>
+
+function black()
+{
+document.bgColor="black";
+
+}
+
+function brown()
+{
+document.bgColor="brown"
+
+}
+
+function white()
+{
+document.bgColor="white"
+ }
+ 
+ 
+ function chartreuse()
+{
+document.bgColor="chartreuse"
+ }
+ 
+ 
+  function darkblue()
+{
+document.bgColor="darkblue"
+ }
+ 
+ 
+   function red ()
+{
+document.bgColor="red "
+ }
+
+    function blue ()
+{
+document.bgColor="blue "
+ }
+
+
+     function yellow ()
+{
+document.bgColor="yellow "
+ }
+
+</script>
+
+<style>.marqueenews {
+ overflow: hidden;
+ width: 944   ;
+}
+</style>
+
+
+<style>.marqueeannounce {
+ overflow: hidden;
+ width: 1031   ;
+}
+</style>
+
+
+
+
+  
+<link rel="stylesheet" type="text/css" href="atlasjavascript/rtl/downmenu/ddsmoothmenu-v.css">
+ 
+
+<script>
+var ddsmoothmenu={
+
+//Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
+arrowimages: {down:['downarrowclass', 'upload/themes/ar/mcbpc/dartup.png', 1], left:['rightarrowclass', 'upload/themes/ar/mcbpc/dartdown.png']},
+transition: {overtime:600, outtime:600}, //duration of slide in/ out animation, in milliseconds
+shadow: {enable:false, offsetx:5, offsety:5}, //enable shadow?
+showhidedelay: {showdelay: 10, hidedelay: 100}, //set delay in milliseconds before sub menus appear and disappear, respectively
+
+///////Stop configuring beyond here///////////////////////////
+
+detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit")!=-1, //detect WebKit browsers (Safari, Chrome etc)
+detectie6: document.all && !window.XMLHttpRequest,
+css3support: window.msPerformance || (!document.all && document.querySelector), //detect browsers that support CSS3 box shadows (ie9+ or FF3.5+, Safari3+, Chrome etc)
+
+getajaxmenu:function($, setting){ //function to fetch external page containing the panel DIVs
+	var $menucontainer=$('#'+setting.contentsource[0]) //reference empty div on page that will hold menu
+	$menucontainer.html("Loading Menu...")
+	$.ajax({
+		url: setting.contentsource[1], //path to external menu file
+		async: true,
+		error:function(ajaxrequest){
+			$menucontainer.html('Error fetching content. Server Response: '+ajaxrequest.responseText)
+		},
+		success:function(content){
+			$menucontainer.html(content)
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+},
+
+
+buildmenu:function($, setting){
+	var smoothmenu=ddsmoothmenu
+	var $mainmenu=$("#"+setting.mainmenuid+">ul") //reference main menu UL
+	$mainmenu.parent().get(0).className=setting.classname || "ddsmoothmenu"
+	var $headers=$mainmenu.find("ul").parent()
+	$headers.hover(
+		function(e){
+			$(this).children('a:eq(0)').addClass('selected')
+		},
+		function(e){
+			$(this).children('a:eq(0)').removeClass('selected')
+		}
+	)
+	$headers.each(function(i){ //loop through each LI header
+		var $curobj=$(this).css({zIndex: 100-i}) //reference current LI header
+		var $subul=$(this).find('ul:eq(0)').css({display:'block'})
+		$subul.data('timers', {})
+		this._dimensions={w:this.offsetWidth, h:this.offsetHeight, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()}
+		this.istopheader=$curobj.parents("ul").length==1? true : false //is top level header?
+		$subul.css({top:this.istopheader && setting.orientation!='v'? this._dimensions.h+"px" : 0})
+		$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: smoothmenu.arrowimages.down[2]} : {}).append( //add arrow images
+			'<img src="'+ (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[1] : smoothmenu.arrowimages.left[1])
+			+'" class="' + (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[0] : smoothmenu.arrowimages.left[0])
+			+ '" style="border:;" />'
+		)
+		if (smoothmenu.shadow.enable && !smoothmenu.css3support){ //if shadows enabled and browser doesn't support CSS3 box shadows
+			this._shadowoffset={x:(this.istopheader?$subul.offset().left+smoothmenu.shadow.offsetx : this._dimensions.w), y:(this.istopheader? $subul.offset().top+smoothmenu.shadow.offsety : $curobj.position().top)} //store this shadow's offsets
+			if (this.istopheader)
+				$parentshadow=$(document.body)
+			else{
+				var $parentLi=$curobj.parents("li:eq(0)")
+				$parentshadow=$parentLi.get(0).$shadow
+			}
+			this.$shadow=$('<div class="ddshadow'+(this.istopheader? ' toplevelshadow' : '')+'"></div>').prependTo($parentshadow).css({left:this._shadowoffset.x+'px', top:this._shadowoffset.y+'px'})  //insert shadow DIV and set it to parent node for the next shadow div
+		}
+		$curobj.hover(
+			function(e){
+				var $targetul=$subul //reference UL to reveal
+				var header=$curobj.get(0) //reference header LI as DOM object
+				clearTimeout($targetul.data('timers').hidetimer)
+				$targetul.data('timers').showtimer=setTimeout(function(){
+					header._offsets={left:$curobj.offset().right, top:$curobj.offset().top}
+					var menuleft=header.istopheader && setting.orientation!='v'? 0 : header._dimensions.w
+					menuleft=(header._offsets.left+menuleft+header._dimensions.subulw>$(window).width())? (header.istopheader && setting.orientation!='v'? -header._dimensions.subulw+header._dimensions.w : -header._dimensions.w) : menuleft //calculate this sub menu's offsets from its parent
+					if ($targetul.queue().length<=1){ //if 1 or less queued animations
+						$targetul.css({right:menuleft+"px", width:header._dimensions.subulw+'px'}).animate({height:'show',opacity:'show'}, ddsmoothmenu.transition.overtime)
+						if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+							var shadowright=header.istopheader? $targetul.offset().left+ddsmoothmenu.shadow.offsetx : menuleft
+							var shadowtop=header.istopheader?$targetul.offset().top+smoothmenu.shadow.offsety : header._shadowoffset.y
+							if (!header.istopheader && ddsmoothmenu.detectwebkit){ //in WebKit browsers, restore shadow's opacity to full
+								header.$shadow.css({opacity:1})
+							}
+							header.$shadow.css({overflow:'', width:header._dimensions.subulw+'px', left:shadowright+'px', top:shadowtop+'px'}).animate({height:header._dimensions.subulh+'px'}, ddsmoothmenu.transition.overtime)
+						}
+					}
+				}, ddsmoothmenu.showhidedelay.showdelay)
+			},
+			function(e){
+				var $targetul=$subul
+				var header=$curobj.get(0)
+				clearTimeout($targetul.data('timers').showtimer)
+				$targetul.data('timers').hidetimer=setTimeout(function(){
+					$targetul.animate({height:'hide', opacity:'hide'}, ddsmoothmenu.transition.outtime)
+					if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+						if (ddsmoothmenu.detectwebkit){ //in WebKit browsers, set first child shadow's opacity to 0, as "overflow:hidden" doesn't work in them
+							header.$shadow.children('div:eq(0)').css({opacity:0})
+						}
+						header.$shadow.css({overflow:'hidden'}).animate({height:0}, ddsmoothmenu.transition.outtime)
+					}
+				}, ddsmoothmenu.showhidedelay.hidedelay)
+			}
+		) //end hover
+	}) //end $headers.each()
+	if (smoothmenu.shadow.enable && smoothmenu.css3support){ //if shadows enabled and browser supports CSS3 shadows
+		var $toplevelul=$('#'+setting.mainmenuid+' ul li ul')
+		var css3shadow=parseInt(smoothmenu.shadow.offsetx)+"px "+parseInt(smoothmenu.shadow.offsety)+"px 5px #aaa" //construct CSS3 box-shadow value
+		var shadowprop=["boxShadow", "MozBoxShadow", "WebkitBoxShadow", "MsBoxShadow"] //possible vendor specific CSS3 shadow properties
+		for (var i=0; i<shadowprop.length; i++){
+			$toplevelul.css(shadowprop[i], css3shadow)
+		}
+	}
+	$mainmenu.find("ul").css({display:'none', visibility:'visible'})
+},
+
+init:function(setting){
+	if (typeof setting.customtheme=="object" && setting.customtheme.length==2){ //override default menu colors (default/hover) with custom set?
+		var mainmenuid='#'+setting.mainmenuid
+		var mainselector=(setting.orientation=="v")? mainmenuid : mainmenuid+', '+mainmenuid
+		document.write('<style type="text/css">\n'
+			+mainselector+' ul li a {background:'+setting.customtheme[0]+';}\n'
+			+mainmenuid+' ul li a:hover {background:'+setting.customtheme[1]+';}\n'
+		+'</style>')
+	}
+	this.shadow.enable=(document.all && !window.XMLHttpRequest)? false : this.shadow.enable //in IE6, always disable shadow
+	jQuery(document).ready(function($){ //ajax menu?
+		if (typeof setting.contentsource=="object"){ //if external ajax menu
+			ddsmoothmenu.getajaxmenu($, setting)
+		}
+		else{ //else if markup menu
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+}
+
+} //end ddsmoothmenu variable
+</script>
+
+
+
+<script type="text/javascript">
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu2", //Menu DIV id
+	orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+
+customtheme: ["#1c5a80", "#18374a"],
+ customtheme: [" url(\'upload/themes/ar/mcbpc/downmenubackground.png\')",
+ "url(\'upload/themes/ar/mcbpc/downmenushadow.png\')"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_slidemenu_file"]
+})
+
+</script><style type="text/css">#smoothmenu2 ul li a {background: url('upload/themes/ar/mcbpc/downmenubackground.png');}
+#smoothmenu2 ul li a:hover {background:url('upload/themes/ar/mcbpc/downmenushadow.png');}
+</style>
+
+
+    <style>.ddsmoothmenu-v ul{
+list-style-type: none;
+}
+
+/* Top level menu links style */
+.ddsmoothmenu-v ul li a{
+display: block;
+ /*overflow: auto;*/
+ /*force hasLayout in IE7 */
+color: black;
+
+text-decoration: right;
+text-align: right;
+padding: 0;
+line-height: 32px;
+border-bottom: 3px solid #FFFFFF ;
+border-right: 0px  solid #000066 ;
+
+
+
+}
+
+.ddsmoothmenu-v ul li ul{
+position: absolute;
+width: 170px;
+top: 0;
+font-weight: normal;
+visibility: hidden;
+text-align: right;
+}
+
+
+
+
+.ddsmoothmenu-v ul li a:link, .ddsmoothmenu-v ul li a:visited, .ddsmoothmenu-v ul li a:active{
+background: #414141; /*background of menu items (default state)*/
+color: #FFFFFF;
+text-align: right;
+
+}
+
+ .ddsmoothmenu-v ul li a:hover{
+background: lightblue; /*background of menu items during onmouseover (hover state)*/
+color: #000000;
+}
+
+    .rightarrowclass{
+	position: absolute;
+top:8;
+
+ left: 1px;
+}
+
+.leftarrowclass{
+     position: absolute;
+     top:8;
+       right: 1px;
+       }
+</style>
+
+ 
+
+<title></title>
+<link type="text/css" rel="stylesheet" href="atlasjavascript/rtl/slidealsco/themes/base.css">
+<link type="text/css" rel="stylesheet" href="atlasjavascript/rtl/slidealsco/themes/default/theme.css">
+<script type="text/javascript" src="atlasjavascript/rtl/slidealsco/alscoslide.js"></script>
+
+<script type="text/javascript">
+// when the DOM is ready, convert the feed anchors into feed content
+
+
+
+var img = jQuery('<img width="740"  height="350"></img>');
+
+jQuery(document).ready(function() {
+
+	jQuery('#newsslider').accessNews({
+        title : "",
+		subtitle:"",
+		speed : "slow",
+
+  slideBy :5,
+		slideShowInterval:  9000,
+	});
+
+	jQuery('#newsslider2').accessNews({
+
+
+	});
+
+});
+</script>
+
+
+<style>div.jqans-wrapper.default,
+div.jqans-wrapper.default .jqans-container {
+	/*
+ width table
+	*/
+width: 744;
+}
+
+div.jqans-wrapper.default li {
+
+/*
+width image down
+	*/
+width: 148;
+
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'978f67a6380e9f37',t:'MTc1Njg0MTI0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
+
+ 
+<script>
+
+ function submitbutton(){
+
+
+    document.getElementById('dataRefreshButton').click();
+
+     }
+</script>
+
+
+    
+<style>.marqueeuppic {
+ overflow: hidden;
+ width:170 ;
+ height:200   ;
+}
+</style>
+
+   
+
+
+<style>.sliderImage {
+	DISPLAY: none; RIGHT: 0px; MARGIN: auto; POSITION: absolute; TOP: 0px
+}
+.sliderImage SPAN {
+	PADDING-RIGHT: 5px; DISPLAY: none; PADDING-LEFT: 1px; FONT-WEIGHT: bold; FONT-SIZE: 11px; RIGHT: 0px; FILTER: alpha(opacity=70); PADDING-BOTTOM: 5px;
+  width: 100%px;
+
+ COLOR: #fff; PADDING-TOP: 5px; FONT-FAMILY: tahoma; POSITION: absolute; HEIGHT:60px; BACKGROUND-COLOR: #000; TEXT-ALIGN: justify; moz-opacity: 0.7; khtml-opacity: 0.7; opacity: 0.7
+}
+
+ #slider {
+ width: 745;
+ height: 400;
+
+   position: relative; /* important */
+	overflow: hidden; /* important */
+}
+
+
+.clear {
+	clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0;
+    left: 0;
+}
+ul { list-style-type: none;}
+
+</style>
+
+
+<center>
+
+
+</center>
+
+
+
+<script type="text/javascript">
+t(document).ready
+(
+
+    function() {
+
+        t('#slider').s3Slider
+      (
+        {
+
+             timeOut: 13000
+        }
+      );
+    }
+);
+</script>
+
+
+
+
+
+ 
+    <style>.catbar-gray {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #eeeeee; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-red {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ffe3d9; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-orange {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ffcc99; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-blue {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #e9f0f8; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-brown {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ffe6b0; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-black {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #d3dce3; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+
+
+
+
+
+
+
+
+
+
+A.menured:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menured:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menured:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menured:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #cc3300; TEXT-DECORATION: none
+
+}
+
+
+
+A.menuyellow:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #FFFF00; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menuorange:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuorange:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuorange:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuorange:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #ff9900; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menublue:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublue:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublue:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublue:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #000099; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+
+
+A.menublack:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublack:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublack:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublack:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menugreen:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menugreen:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menugreen:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menugreen:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #008000; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menupink:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menupink:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menupink:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menupink:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #FF00FF; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+A.menuyellow:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuyellow:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuyellow:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuyellow:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #FFFFCC; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+A.menubluesky:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menubluesky:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menubluesky:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menubluesky:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #66CCFF; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+A.menuviolet:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuviolet:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuviolet:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuviolet:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #800080; TEXT-DECORATION: none
+
+}
+ </style>
+
+
+ <script>
+    function changeColorTo(parent, color)
+    {
+        var i, tdArray = parent.getElementsByTagName('td');
+        for(i in tdArray)
+        {
+            tdArray[i].style.backgroundColor = color;
+        }
+    }
+</script>
+
+  
+
+
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+
+
+
+<script src="atlasjavascript/alscobanner/js/jquery.min.js"></script>
+<script src="atlasjavascript/alscobanner/js/jquery.banner-rotator.js"></script>
+
+    
+    
+<style type="text/css">/*Make sure your page contains a valid doctype at the top*/
+#simplegallery1{ //CSS for Simple Gallery Example 1
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 0px solid darkred;
+}
+
+#simplegallery1 .gallerydesctext{ //CSS for description DIV of Example 1 (if defined)
+text-align: left;
+padding: 2px 5px;
+}
+
+@-webkit-keyframes marqueeAnimation-4319823  { 100%  {margin-left:944px}}@-webkit-keyframes marqueeAnimation-2439756  { 100%  {margin-left:1031px}}@-webkit-keyframes marqueeAnimation-5639525  { 100%  {margin-top:-1650px}}</style>
+
+<script type="text/javascript" src="javascripts/album-block.js">
+
+/***********************************************
+* Simple Controls Gallery- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery1", //ID of main gallery container,
+
+dimensions: [170,190],
+
+imagearray: [
+
+
+["upload/slideshow/ar/1279.jpg", "", "", ""],
+["upload/slideshow/ar/1278.jpg", "", "", ""],
+["upload/slideshow/ar/1277.jpg", "", "", ""],
+["upload/slideshow/ar/1276.jpg", "", "", ""],
+["upload/slideshow/ar/1275.jpg", "", "", ""],
+["upload/slideshow/ar/1274.jpg", "", "", ""],
+["upload/slideshow/ar/1273.jpg", "", "", ""],
+["upload/slideshow/ar/1272.jpg", "", "", ""],
+["upload/slideshow/ar/1271.jpg", "", "", ""],
+["upload/slideshow/ar/1270.jpg", "", "", ""]
+
+
+	],
+	autoplay: [true, 2500, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//Keyword "this": references current gallery instance
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})
+
+</script>
+
+
+
+
+
+
+
+
+     <font class="copyright"></font><font class="copyright"></font><meta name="resource-type" content="document">
+<meta name="document-state" content="dynamic">
+<meta name="distribution" content="global">
+<meta name="author" content="موقع هيأة المنافذ الحدودية">
+<meta name="copyright" content="Copyright (c) موقع هيأة المنافذ الحدودية">
+<meta name="keywords" content=".. المقالات,الشركة,المديرية,الكهرباء,ضوء,تنفيذ,صيانة,معدات,اجهزة,محطات,موظفين,عمال,,موقع,شركة,مؤسسة,وزارة,دائرة,عراق,اخبار,مقالات,نشاطات,اجتماع,  بغداد,صناعة,ايفادات,منتسبين,وزارة الصناعة,مواقع,اطلس,انظمة,استطلاعات,معرض الصور,صور,البوم الصور,عناوين,بحث,نشاطات,مؤتمرات,دولة,فديو ,gov.iq,iq,gov,كوكل,ياهو,صفحات,اقسام,ادارة ,شكاوى,طلب,استفسار,ميسان,محافظة,شكر,صادرات,واردات,انتاج,بضائع,استفتائات,استطلاعات,السكو,الاتصالات,يوتيوب ,ماركيو,صور,قوائم,برامج,مناقصات,احالات,تعليقات,امن,موقع,شركة,صناعات,انتاج,العراق,البلد,البلدان,السكر,سكر الابيض ,ياهو,استايل,محافظات,اجهزة,معدات,مستلزمات,مبانئ,رئاسات,اجهزة,رئيس,مدير,قطاع,اهم,مواد,تجارة,اعلان,قناة, عاجل,مهم,تصريح,صرح,اداء ,افتتاح,منتديات,مناهج,رواتب,موظفين,اجازات,تشكرات,ايفادات,تصميم,الهيئة,استعراض, كتب,علم">
+<meta name="description" content="هيأة, البحث,المنافذ,هياه,هياة,الحدودية,هيئة,هيئه,الحدوديه,.. المقالات.">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<meta name="rating" content="general">
+<meta name="generator" content="CMS موقع هيأة المنافذ الحدودية">
+<link rel="alternate" href="https://www.mcbpc.gov.iq/rss.php" title="rss" type="application/rss+xml">
+
+
+<div align="center">
+<center>
+<div align="center">  </div><table width="1100" class="shadow_table" height="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" dir="rtl" \="">
+<tbody><tr><td align="center" valign="top" dir="rtl">
+<center> <img width="1100" height="200" align="center" src="upload/themes/ar/mcbpc/banner.png"></center> </td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+<table width="1100" border="0" cellspacing="0" cellpadding="0" background="upload/themes/ar/mcbpc/news.png" height="56"><tbody><tr><td width="1%"><img src="upload/themes/ar/mcbpc/titlenews.png" align="absmiddle" width="152"></td> <td dir="ltr" width="99%" align="middle"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueenews" data-direction="right" data-gap="0" data-dupilcated="true" data-duration="25000" data-pauseonhover="true"><div style="width: 100000px; margin-left: -5160px; animation: 161.652542s linear 1s infinite marqueeAnimation-4319823;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;">
+<font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4163" title="رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنافذ الحدودية"><font color="#FFFFFF"><b>رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنافذ الحدودية </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4162" title="التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك"><font color="#FFFFFF"><b>التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4161" title="اكمال إجراءات افتتاح منفذ جميمة في محافظة المثنى"><font color="#FFFFFF"><b>اكمال إجراءات افتتاح منفذ جميمة في محافظة المثنى </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4160" title="ضبط حاويتين تحتوي على مواد كيمياوية خطرة في منفذ ميناء أم قصر الشمالي"><font color="#FFFFFF"><b>ضبط حاويتين تحتوي على مواد كيمياوية خطرة في منفذ ميناء أم قصر الشمالي </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4159" title="أكثر من 5 مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم"><font color="#FFFFFF"><b>أكثر من 5 مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4158" title="بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم  رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية"><font color="#FFFFFF"><b>بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم  رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4157" title="ضبط اجهزة ومستلزمات طبية معده للتهريب في منفذ ميناء ام قصر الشمالي"><font color="#FFFFFF"><b>ضبط اجهزة ومستلزمات طبية معده للتهريب في منفذ ميناء ام قصر الشمالي </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4156" title="ضبط اجهزة ومستلزمات طبية معده للتهريب في منفذ ميناء ام قصر الشمالي"><font color="#FFFFFF"><b>ضبط اجهزة ومستلزمات طبية معده للتهريب في منفذ ميناء ام قصر الشمالي </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4155" title="ضبط مستلزمات طبية معده للتهريب في منفذ ميناء ام قصر الشمالي"><font color="#FFFFFF"><b>ضبط مستلزمات طبية معده للتهريب في منفذ ميناء ام قصر الشمالي </b></font></a>   <font color="#FFFFFF"> <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> </font><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4154" title="هيأة المنافذ الحدودية ترصد  تلاعب كبير في عمليات التحويل المالي"><font color="#FFFFFF"><b>هيأة المنافذ الحدودية ترصد  تلاعب كبير في عمليات التحويل المالي </b></font></a>   </div></div></div> 
+<script>$('.marqueenews').marquee({});</script></td></tr></tbody></table></td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+<table width="1100" height="60" border="0" background="upload/themes/ar/mcbpc/announce.png" align="center" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="upload/themes/ar/mcbpc/titleannounce.png" width="65" align="absmiddle"></td><td dir="ltr"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueeannounce" data-direction="right" data-gap="0" data-dupilcated="true" data-duration="25000" data-pauseonhover="true"><div style="width: 100000px; margin-left: -30582px; animation: 766.561591s linear 1s infinite marqueeAnimation-2439756;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;">
+ <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="" title="اهلا وسهلا بكم في الموقع الرسمي لهيأة المنافذ الحدودية"><font color="#000000"> <b> اهلا وسهلا بكم في الموقع الرسمي لهيأة المنافذ الحدودية   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="https://mcbpc.gov.iq//index.php?name=News&amp;file=article&amp;sid=4110" title="450 مخالفة حصيلة أبرز عمليات هيأة المنافذ النوعية لشهر نيسان الماضي  استناداً لتوجيهات ومتابعة دولة رئيس مجلس الوزراء القائد العام للقوات المسلحة، وتنفيذا لتوجيهات سيادته، ضبطت هيأة المنافذ الحدودية العديد من  المخالفات والتي اندرجت تحت عناوين متعددة وكالاتي.   1-بلغت مجمل الدعاوى الكمركية المحالة من منافذنا إلى القضاء (119) دعوى عن مخالفات كمركية.  2-تم إلقاء القبض على (131) متهم من المطلوبين بموجب مذكرات قضائية.   3-إحباط محاولات لتهريب الأموال بواقع (6) عمليات ضبط.  4- أبرز النشاطات كانت ضبط المواد المخدرة والقاء القبض على حائزيها، حيث تم احباط (26) محاولة تهريب مخدرات.   5-ابعاد  (155) شخص مخالف شروط الإقامة.   بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية وأبرزها مع الهيئة العامة للكمارك ، حيث بلغ عددها (13) حالة وهي (إتلاف مواد غير صالحة للاستهلاك البشري ، إعادة اصدار بضائع فاشلة بالفحص).  أن جميع المخالفات اتُخذت بحقها الإجراءات القانونية اللازمة، وأحيلت إلى الجهات القضائية وفق محاضر ضبط أصولية.  وتأتي هذه الاجراءات انطلاقا من تنفيذ التوجيهات الحكومة في الأحكام والسيطرة على المنافذ الحدودية، والهيأة مستمرة في متابعة كافة المخالفات والعمل على ضبطها والحد من حدوثها.     هيأة المنافذ الحدودية  8  آيار 2025"><font color="#000000"> <b> 450 مخالفة حصيلة أبرز عمليات هيأة المنافذ النوعية لشهر نيسان الماضي  استناداً لتوجيهات ومتابعة دولة رئيس مجلس الوزراء القائد العام للقوات المسلحة، وتنفيذا لتوجيهات سيادته، ضبطت هيأة المنافذ الحدودية العديد من  المخالفات والتي اندرجت تحت عناوين متعددة وكالاتي.   1-بلغت مجمل الدعاوى الكمركية المحالة من منافذنا إلى القضاء (119) دعوى عن مخالفات كمركية.  2-تم إلقاء القبض على (131) متهم من المطلوبين بموجب مذكرات قضائية.   3-إحباط محاولات لتهريب الأموال بواقع (6) عمليات ضبط.  4- أبرز النشاطات كانت ضبط المواد المخدرة والقاء القبض على حائزيها، حيث تم احباط (26) محاولة تهريب مخدرات.   5-ابعاد  (155) شخص مخالف شروط الإقامة.   بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية وأبرزها مع الهيئة العامة للكمارك ، حيث بلغ عددها (13) حالة وهي (إتلاف مواد غير صالحة للاستهلاك البشري ، إعادة اصدار بضائع فاشلة بالفحص).  أن جميع المخالفات اتُخذت بحقها الإجراءات القانونية اللازمة، وأحيلت إلى الجهات القضائية وفق محاضر ضبط أصولية.  وتأتي هذه الاجراءات انطلاقا من تنفيذ التوجيهات الحكومة في الأحكام والسيطرة على المنافذ الحدودية، والهيأة مستمرة في متابعة كافة المخالفات والعمل على ضبطها والحد من حدوثها.     هيأة المنافذ الحدودية  8  آيار 2025   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="" title="حصيلة أهم العمليات النوعية لهيأة المنافذ لشهر كانون الثاني - 2025تعلن هيأة المنافذ الحدودية عن مجمل المخالفات التي تم ضبطها بشكل مستقل أو بالتعاون مع الدوائر العاملة، خلال شهر كانون الثاني والتي بلغت (334) مخالفة.   واندرجت المخالفات تحت عناوين متعددة ، إذ بلغت مجمل الدعاوى الكمركية المحالة من منافذنا إلى القضاء (100) دعوى والمتضمنة وجود مخالفات كمركية، وبلغ عدد المبعدين (139).   كما تم إلقاء القبض على (54) متهم من المطلوبين للقضاء.    وتمكنت الهيأة من إحباط محاولات لتهريب الأموال بواقع ( 12 ) مخالف.    وضمن أبرز النشاطات، بما يخص ضبط المواد المخدرة والقاء القبض على حائزيها حيث تم إحباط (26) محاولة تهريب.    بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية حيث بلغ عددها (3) وهي (إتلاف مواد غير صالحة للاستهلاك البشري ، إعادة اصدار بضائع فاشلة بالفحص)."><font color="#000000"> <b> حصيلة أهم العمليات النوعية لهيأة المنافذ لشهر كانون الثاني - 2025تعلن هيأة المنافذ الحدودية عن مجمل المخالفات التي تم ضبطها بشكل مستقل أو بالتعاون مع الدوائر العاملة، خلال شهر كانون الثاني والتي بلغت (334) مخالفة.   واندرجت المخالفات تحت عناوين متعددة ، إذ بلغت مجمل الدعاوى الكمركية المحالة من منافذنا إلى القضاء (100) دعوى والمتضمنة وجود مخالفات كمركية، وبلغ عدد المبعدين (139).   كما تم إلقاء القبض على (54) متهم من المطلوبين للقضاء.    وتمكنت الهيأة من إحباط محاولات لتهريب الأموال بواقع ( 12 ) مخالف.    وضمن أبرز النشاطات، بما يخص ضبط المواد المخدرة والقاء القبض على حائزيها حيث تم إحباط (26) محاولة تهريب.    بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية حيث بلغ عددها (3) وهي (إتلاف مواد غير صالحة للاستهلاك البشري ، إعادة اصدار بضائع فاشلة بالفحص).   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="" title="حصيلة العمليات النوعية لهيأة المنافذ الحدودية للفترة من 13 لغاية 18 كانون الاول 2023  1-	منفذ مطار النجف الاشرف يضبط (9) بطاقات ماستر كارد بحوزة مسافر عراقي.  2-منفذ المنذرية يعيد اصدار أرسالية محملة بــ ( الكبدة ) الى الجانب الأيراني بوزن ( 24 ) طن لعدم اكتمال الأوراق الرسمية.  3-منفذ القائم يضبط (7) مسافرين عراقيين بحوزتهم مبالغ مالية متجاوزة الحد المسموح به حسب تعليمات البنك المركزي.  4-منفذ الشلامجة يتمكن من ضبط (3) مسافرين يحملون الجنسية الاجنبية بحوزتهم مواد مخدرة.  5-منفذ القائم يضبط (5) بطاقات ماستر كارد بحوزة مسافر عراقي معدة للتهريب.  6-منفذ ميناء ام قصر الشمالي يتمكن من ضبط (8) حاويات تحتوي على دراجات نارية معدة للتهريب.  7-منفذ ميناء المعقل يتمكن من ضبط (8) حاويات تحتوي بضائع متنوعة (مواد كيماوية، أدوية بشرية، أسمدة كيماوية) مخالفة لشروط وضوابط الاستيراد.  8-منفذ مطار بغداد الدولي يتمكن من ضبط مسافرين عراقيين بحوزتهما (83) بطاقة ماستر كارد معدة للتهريب.  9-منفذ المنذرية يعيد اصدار أرسالية محملة بــ ( ملابس ) بوزن (12.360 ) طن لمخالفتها الشروط و الضوابط الاستيرادية.  10-منفذ مطار بغداد الدولي يتمكن من ضبط مسافر اجنبي بحوزته جواز سفر تركي مزور.  11-منفذ سفوان يتمكن من ضبط مسافر اجنبي بحوزته مادة مخدرة.  12-منفذ سفوان يتمكن من ضبط مسافر اجنبي بحوزته مبلغ مالي متجاوز الحد المسموح به حسب تعليمات البنك المركزي."><font color="#000000"> <b> حصيلة العمليات النوعية لهيأة المنافذ الحدودية للفترة من 13 لغاية 18 كانون الاول 2023  1-	منفذ مطار النجف الاشرف يضبط (9) بطاقات ماستر كارد بحوزة مسافر عراقي.  2-منفذ المنذرية يعيد اصدار أرسالية محملة بــ ( الكبدة ) الى الجانب الأيراني بوزن ( 24 ) طن لعدم اكتمال الأوراق الرسمية.  3-منفذ القائم يضبط (7) مسافرين عراقيين بحوزتهم مبالغ مالية متجاوزة الحد المسموح به حسب تعليمات البنك المركزي.  4-منفذ الشلامجة يتمكن من ضبط (3) مسافرين يحملون الجنسية الاجنبية بحوزتهم مواد مخدرة.  5-منفذ القائم يضبط (5) بطاقات ماستر كارد بحوزة مسافر عراقي معدة للتهريب.  6-منفذ ميناء ام قصر الشمالي يتمكن من ضبط (8) حاويات تحتوي على دراجات نارية معدة للتهريب.  7-منفذ ميناء المعقل يتمكن من ضبط (8) حاويات تحتوي بضائع متنوعة (مواد كيماوية، أدوية بشرية، أسمدة كيماوية) مخالفة لشروط وضوابط الاستيراد.  8-منفذ مطار بغداد الدولي يتمكن من ضبط مسافرين عراقيين بحوزتهما (83) بطاقة ماستر كارد معدة للتهريب.  9-منفذ المنذرية يعيد اصدار أرسالية محملة بــ ( ملابس ) بوزن (12.360 ) طن لمخالفتها الشروط و الضوابط الاستيرادية.  10-منفذ مطار بغداد الدولي يتمكن من ضبط مسافر اجنبي بحوزته جواز سفر تركي مزور.  11-منفذ سفوان يتمكن من ضبط مسافر اجنبي بحوزته مادة مخدرة.  12-منفذ سفوان يتمكن من ضبط مسافر اجنبي بحوزته مبلغ مالي متجاوز الحد المسموح به حسب تعليمات البنك المركزي.   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="https://mcbpc.gov.iq//index.php?name=News&amp;file=article&amp;sid=3638" title="(460) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر تموز لعام 2023"><font color="#000000"> <b> (460) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر تموز لعام 2023   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="" title="(453) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر حزيران لعام 2023"><font color="#000000"> <b> (453) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر حزيران لعام 2023   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="https://mcbpc.gov.iq//index.php?name=News&amp;file=article&amp;sid=3508" title="(1417) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر ايار لعام 2023"><font color="#000000"> <b> (1417) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر ايار لعام 2023   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="" title="واندرجت المخالفات تحت عناوين متعددة ، إذ بلغت مجمل الدعاوى الكمركية المحالة من قبل هيأة المنافذ إلى القضاء (294) دعوى والمتضمنة (تغيير وصف البضاعة  تهريب عجلات تزوير  فرق رسم  معاملات غير مكتملة الاجراءات القانونية).  وكذلك شكلت المخالفات المكتشفة من قبل مقر الهيأة(79) مخالفة.   كما تم إلقاء القبض على (15) متهم من المطلوبين للقضاء.   وتمكنت الهيأة من إحباط محاولات لتهريب الأموال بواقع ( 12) أحاله.   وضمن ابرز نشاطات ضبط المواد المخدرة والقاء القبض على حائزيها حيث تم احباط (31) محاولة تهريب.   بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية حيث بلغ عددها (972) وهي (إتلاف مواد إعادة اصدار بضائع)."><font color="#000000"> <b> واندرجت المخالفات تحت عناوين متعددة ، إذ بلغت مجمل الدعاوى الكمركية المحالة من قبل هيأة المنافذ إلى القضاء (294) دعوى والمتضمنة (تغيير وصف البضاعة  تهريب عجلات تزوير  فرق رسم  معاملات غير مكتملة الاجراءات القانونية).  وكذلك شكلت المخالفات المكتشفة من قبل مقر الهيأة(79) مخالفة.   كما تم إلقاء القبض على (15) متهم من المطلوبين للقضاء.   وتمكنت الهيأة من إحباط محاولات لتهريب الأموال بواقع ( 12) أحاله.   وضمن ابرز نشاطات ضبط المواد المخدرة والقاء القبض على حائزيها حيث تم احباط (31) محاولة تهريب.   بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية حيث بلغ عددها (972) وهي (إتلاف مواد إعادة اصدار بضائع).   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="https://mcbpc.gov.iq//index.php?name=News&amp;file=article&amp;sid=3460" title="(561) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر نيسان لعام 2023"><font color="#000000"> <b> (561) مجمل المخالفات التي ضبطتها هيأة المنافذ الحدودية خلال شهر نيسان لعام 2023   </b></font></a>    <img src="upload/themes/ar/mcbpc/icon.png" align="absmiddle"> <a href="" title="إذ بلغت مجمل الدعاوى الكمركية المحالة من قبل هيأة المنافذ إلى القضاء (48) دعوى والمتضمنة (تغيير وصف البضاعة ; تهريب عجلات ; تزوير ; فرق رسم ; معاملات غير مكتملة الاجراءات القانونية).   وكذلك شكلت المخالفات المكتشفة من قبل مقر الهيأة(69) مخالفة.    كما تم إلقاء القبض على (20) متهم من المطلوبين للقضاء.    وتمكنت الهيأة من إحباط محاولات لتهريب الأموال بواقع ( 19) أحاله.    وضمن ابرز نشاطات ضبط المواد المخدرة والقاء القبض على حائزيها حيث تم احباط (28) محاولة تهريب.    بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية حيث بلغ عددها (277) وهي (إتلاف مواد، إعادة اصدار بضائع)"><font color="#000000"> <b> إذ بلغت مجمل الدعاوى الكمركية المحالة من قبل هيأة المنافذ إلى القضاء (48) دعوى والمتضمنة (تغيير وصف البضاعة ; تهريب عجلات ; تزوير ; فرق رسم ; معاملات غير مكتملة الاجراءات القانونية).   وكذلك شكلت المخالفات المكتشفة من قبل مقر الهيأة(69) مخالفة.    كما تم إلقاء القبض على (20) متهم من المطلوبين للقضاء.    وتمكنت الهيأة من إحباط محاولات لتهريب الأموال بواقع ( 19) أحاله.    وضمن ابرز نشاطات ضبط المواد المخدرة والقاء القبض على حائزيها حيث تم احباط (28) محاولة تهريب.    بإلإضافة الى العديد من النشاطات المشتركة مع الدوائر العاملة في المنافذ الحدودية حيث بلغ عددها (277) وهي (إتلاف مواد، إعادة اصدار بضائع)   </b></font></a>   </div></div></div> 
+<script>$('.marqueeannounce').marquee({});</script></td></tr></tbody></table></td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+</td></tr><tr bgcolor="#FFFFFF">
+  <td align="center" valign="top" dir="rtl">
+<table width="1100" cellspacing="0" cellpadding="0" align="center" dir="rtl"><tbody><tr>
+  <td valign="top" dir="rtl">
+  
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="1" bgcolor="FFFFFF"><img style="float: right;" src="upload/upfile/ar/554.gif" alt="" width="170" height="170"></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="1" bgcolor="FFFFFF"><table style="width:170px;" border="0" align="center">
+<tbody>
+<tr>
+<td><a href="https://www.mcbpc.gov.iq/index.php?atlas=ar">&nbsp;&nbsp; <img style="vertical-align: middle; border: 0px none;" src="upload/imageblocks/ar/14.jpg" alt="" width="51px" height="34px"></a></td>
+<td><a href="https://www.mcbpc.gov.iq/index.php?atlas=en">&nbsp;<img style="vertical-align: middle; border: 0px none;" src="upload/imageblocks/ar/15.jpg" alt="" width="51px" height="34px"></a></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/index.php" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/index.php" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>الصفحة الرئيسية</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><div align="center" id="smoothmenu2" class="ddsmoothmenu-v">  <ul>
+<li style="z-index: 100;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>السيد رئيس الهيأة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=476"><font face="Arial" style="font-size: 15px">&nbsp;<b>السيرة الذاتية لرئيس الهيأة</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://mcbpc.gov.iq//index.php?name=Pages&amp;op=page&amp;pid=144"><font face="Arial" style="font-size: 15px">&nbsp;<b>كلمة السيد رئيس الهيأة</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=142"><font face="Arial" style="font-size: 15px">&nbsp;<b>الرؤيا المستقبلية</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=143"><font face="Arial" style="font-size: 15px">&nbsp;<b>الاهداف والتطوير الذي نطمح اليه</b></font></a>
+    </li>
+    </ul>
+</li><li style="z-index: 99;"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=141" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>الهيكل التنظيمي</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl" style="z-index: 98;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>رئيس الهياة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="upload/upfile/ar/2930.jpeg"><font face="Arial" style="font-size: 13px">&nbsp;<b>مكتب رئيس الهيأة</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 97;"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=24"><font face="Arial" style="font-size: 15px">&nbsp;<b>نائب رئيس الهياة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم ادارة الجودة الشاملة</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>القسم الهندسي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>شعبة السكرتارية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 96;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>الدائرة الادارية والمالية</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>معاون مدير عام الدائرة الادارية والمالية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>شعبة السكرتارية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم ادارة الموارد البشرية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الخدمات العامة</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الشؤون المالية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 95;"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=140"><font face="Arial" style="font-size: 15px">&nbsp;<b>دائرة العمليات والخطط</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>معاون مدير عام دائرة العمليات والخطط</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم العمليات</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم البحث والتحري</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>القسم الفني</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>شعبة الادارة والارشفة</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>شعبة السكرتارية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 94;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>الدائرة القانونية</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>معاون مدير عام الدائرة القانونية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الدعاوي والتحقيق</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الاستشارات القانونية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم التشريعات والتعاون الدولي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>شعبة السكرتارية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>شعبة الادارة والارشفة</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 93;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مديريات المنافذ</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl" style="z-index: 92;"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=131"><font face="Arial" style="font-size: 13px">&nbsp;<b>المنافذ البرية</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ مندلي الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ المنذرية الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ زرباطية الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ الشلامجة الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ الشيب الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ سفوان الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ طربيل الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ عرعر الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ القائم الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ الوليد الحدودي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>منفذ ربيعه الحدودي</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 91;"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>المنافذ البحرية</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>ميناء ام قصر الشمالي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>ميناء ام قصر الاوسط</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>ميناء ام قصر الجنوبي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>ميناء ابو فلوس</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>ميناء المعقل</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>ميناء خور الزبير</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 90;"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>المنافذ الجوية</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=127"><font face="Arial" style="font-size: 13px">&nbsp;<b>مديرية مطار بغداد الدولي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>مديرية مطار البصرة</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>مديرية مطار النجف</b></font></a>
+    </li>
+ </ul>
+ </li></ul>
+    </li></ul>
+</li><li style="z-index: 89;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>عن الهيأة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=130"><font face="Arial" style="font-size: 15px">&nbsp;<b>نبذة عن تاسيس الهيأة</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=134"><font face="Arial" style="font-size: 15px">&nbsp;<b>واجبات هيأة المنافذ الحدودية</b></font></a>
+    </li>
+    </ul>
+</li><li style="z-index: 88;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>قانون الهيأة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=137"><font face="Arial" style="font-size: 15px">&nbsp;<b>تعليمات تشكيلات هيأة المنافذ الحدودية ومهماتها</b></font></a>
+    </li>
+    </ul>
+</li><li style="z-index: 87;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>السيرة الذاتية لمسؤولي الهياة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl" style="z-index: 86;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مكتب رئيس الهيأة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>رئيس هياة المنافذ الحدودية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>مكتب التصاريح الامنية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الاحصاء ونظم المعلومات الجغرافية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم تقنية الاتصالات والمعلوماتية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الاعلام والاتصال الحكومي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم شؤون المواطنين</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم حقوق الانسان</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 85;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مكتب نائب رئيس الهياة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم العقود</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>القسم الهندسي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم التقييم المؤسساتي</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم شؤون المرأة</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الجودة</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم التخطيط</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>الدائرة الادارية والمالية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>الدائرة القانونية</b></font></a>
+    </li>
+    <li dir="rtl" style="z-index: 84;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>دائرة العمليات والخطط</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>القسم الفني</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم العمليات</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم البحث والتحري</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 83;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مديرية نافذة التبادل التجاري الواحدة</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الاستقبال وتنظيم الخدمات</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 13px">&nbsp;<b>قسم الخوادم والانظمة</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مديرية الرقابة والتدقيق الداخلي</b></font></a>
+    </li>
+    <li dir="rtl" style="z-index: 82;"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مركز التدريب والتطوير</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="upload/upfile/ar/4904.pdf"><font face="Arial" style="font-size: 13px">&nbsp;<b>مدير المركز</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl"><a href=""><font face="Arial" style="font-size: 15px">&nbsp;<b>مديريات المنافذ الحدودية</b></font></a>
+    </li>
+    </ul>
+</li><li><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=3037"><font face="Arial" style="font-size: 17px">&nbsp;<b>نشاطات رئيس الهيأة</b></font></a>
+    </li>
+<li><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=3038"><font face="Arial" style="font-size: 17px">&nbsp;<b>الايفادات</b></font></a>
+    </li>
+<li><a href="https://www.moj.gov.iq/facts/"><font face="Arial" style="font-size: 17px">&nbsp;<b>جريدة الوقائع العراقية</b></font></a>
+    </li>
+<li style="z-index: 81;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>اقسام الموقع</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://mcbpc.gov.iq//index.php?name=News&amp;new_topic=10"><font face="Arial" style="font-size: 15px">&nbsp;<b>رئيس الهيأة</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;new_topic=8"><font face="Arial" style="font-size: 15px">&nbsp;<b>دائرة العمليات والخطط</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;new_topic=13"><font face="Arial" style="font-size: 15px">&nbsp;<b>مركزالتدريب والتطوير</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;new_topic=1"><font face="Arial" style="font-size: 15px">&nbsp;<b>قسم الاخبار</b></font></a>
+    </li>
+    </ul>
+</li><li style="z-index: 80;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 17px">&nbsp;<b>احصائيات</b></font><img src="upload/themes/ar/mcbpc/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=469"><font face="Arial" style="font-size: 15px">&nbsp;<b>احصائية المخالفات لسنة 2020</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=237"><font face="Arial" style="font-size: 15px">&nbsp;<b>احصائية المخالفات لسنة  2019</b></font></a>
+    </li>
+    </ul>
+</li><li><a href="https://www.mcbpc.gov.iq/index.php?name=albumpicture"><font face="Arial" style="font-size: 17px">&nbsp;<b>البوم الصور</b></font></a>
+    </li>
+    </ul>
+  </div>
+</td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/https//ur.gov.iq" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/https//ur.gov.iq" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>بوابة جمهورية العراق للخدمات الحكومية الالكترونية</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><ul id="newsslider"></ul></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>البحث في المحتويات</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><!-- SiteSearch Google --><form action="https://www.mcbpc.gov.iq/index.php?name=Search" method="POST"><table align="center" dir="rtl" width="100%"><tbody><tr><td align="center">
+<input type="text" name="searchname" size="18" maxlength="255" value=""><a href="#" onclick="submitbutton();"> <img src="images/search.jpg"></a> </td></tr><tr><td align="center">
+<input type="submit" id="dataRefreshButton" name="sa" value="أبحث"></td></tr></tbody></table></form></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<a href="http://mail.mcbpc.gov.iq/webmail" style="text-decoration: none">
+</a><div align="center"><a href="http://mail.mcbpc.gov.iq/webmail" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>الايميلات</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a href="http://mail.mcbpc.gov.iq/webmail"><img src="upload/upfile/ar/350.gif" alt="" width="170" height="170"></a></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=43" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=43" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>الاستفسارات  والشكاوي</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=43"><img src="upload/upfile/ar/515.png" alt="" width="170" height="170"></a></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>احصائية زوار الموقع</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF">   <div align="right">  عدد زوار الحالي:1<br>عدد زوار اليوم:207<br>عدد زوار الشهر:421<br>عدد زوار السنة:83143<br>عدد الزوار الأجمالي:469382<br></div></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>المكتبه الصورية</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"><tbody><tr><td dir="ltr"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueeuppic" data-direction="up" data-gap="0" data-dupilcated="true" data-duration="8000" data-pauseonhover="true" style="height: 200px;"><div class="js-marquee-wrapper" style="margin-top: 200px; animation: 74s linear 1s infinite marqueeAnimation-5639525;"><div class="js-marquee" style="margin-right: 0px; float: none; margin-bottom: 0px;">
+<p><a href=""><img src="upload/uppic/ar/1381.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1380.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1379.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1378.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1377.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1376.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1375.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1374.jpg" height="170" width="170"></a></p><p><a href=""><img src="upload/uppic/ar/1373.jpg" height="170" width="170"></a></p></div></div></div> 
+<script>$('.marqueeuppic').marquee({});</script></td></tr></tbody></table></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=136" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=136" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>استمارة كشف الذمة</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=136"><img src="upload/upfile/ar/311.jpg" alt="" width="170" height="170"></a></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/right.png" valign="middle">
+<a href="upload/upfile/ar/502.jpg" style="text-decoration: none">
+</a><div align="center"><a href="upload/upfile/ar/502.jpg" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>ارشادات صحية</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a title="index.php?name=Pages&amp;op=page&amp;pid=138" href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=138"><img src="upload/upfile/ar/504.jpg" alt="" width="170" height="160"></a></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+</td><td class="leftblock"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td>
+  <table width="100%" dir="rtl" border="0" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td>
+    <center><center><div dir="rtl" id="slider">
+        <ul dir="rtl" id="sliderContent">
+            <li dir="rtl" class="sliderImage" style="display: list-item;">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2550.jpg" alt="Array" limit="1">
+                <span class="bottom" style="display: block; overflow: hidden; height: 60px; margin-top: 0px; margin-bottom: 0px; padding-top: 5px; padding-bottom: 5px;"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2549.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2548.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2547.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2546.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنا...</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2550.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2549.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2548.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2547.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="upload/headlinepic/ar/2546.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنا...</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="745\ border=" 0"="" src="https://www.mcbpc.gov.iq/upload/headlinepic/ar/" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+        </ul>
+    </div><center>
+</center></center></center></td></tr></tbody></table></td></tr></tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="46" background="upload/themes/ar/mcbpc/center.png" valign="bottom">
+<p align="center">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4163" title="رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنافذ الحدودية" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنافذ الحدودية</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<div>&nbsp;</div>
+<div><span style="font-size: 14px;">&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="upload/upfile/ar/4968.jpg" alt="" width="450" height="300"></span></div>
+<div>أجرى رئيس مجلس الوزراء السيد محمد شياع السوداني، اليوم الثلاثاء، زيارة إلى مقر هيأة المنافذ الحدودية، اجتمع فيها عبر دائرة تلفزيونية، مع مديري المنافذ، بحضور السادة؛ رئيس هيأة المنافذ والمديرين العامين والمستشارين.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>وتجول سيادته داخل مقر الهيأة، واطلع بشكل تفصيلي على الإجراءات التي تنفذ في داخل كل منفذ، كما استمع الى إيجاز من قبل رئيس الهيأة عن آليات العمل في المنافذ.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>وأكد السيد رئيس مجلس الوزراء أن هذه الزيارة تأتي ضمن سياق المتابعة لعمل المنافذ الحدودية التي&nbsp; تمثل ضرورة لبلدنا العزيز في جميع المجالات السياسية والأمنية والتجارية والاقتصادية، مشيراً إلى أن الأمن بشكل عام، خصوصا الأمن الدوائي والغذائي، يقترن بعمل هيئة المنافذ الحدودية.&nbsp;</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>وأوضح سيادته أن المنافذ كانت واحداً من الملفات التي يؤشر عليها عدم التنظيم والممارسات السلبية ونقاط ضعف الدولة بسبب حالات الفساد والتهريب، مؤكداً أن الحكومة اتخذت اجراءات حقيقية وإصلاحات هيكلية ومنها نظام الاسيكودا الذي هيَّأ الأرضية للعمل بشكل مختلف.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>وفي ما يأتي أهم ما جاء في حديث السيد رئيس مجلس الوزراء:</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷اجراءات الهيأة وقرارات مجلس الوزراء ساهمت بتحقيق الإنجازات في عمل المنافذ، وأملنا كبير باستمرار هذه الانجازات وتعاظمها.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷هناك جهات داخلية وخارجية لا يروق لها اي حالة تنظيمية في المنافذ الحدودية.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 علينا ان نحدد اجراءاتنا وخطواتنا بالشكل الذي يحقق الأهداف المرسومة.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 اكثر دول العالم تطوراً تعاني من مشاكل في المنافذ الحدودية.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 هناك خصوصية للمنافذ في العراق لعدة اعتبارات منها سياسية وتنظيمية وتشريعية.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 نؤكد اهمية الأتمتة والحوكمة الإلكترونية في مختلف الإجراءات الرقابية في المنافذ، والتطور التكنولوجي متسارع ويجب مواكبته في عملها.&nbsp;</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 المنافذ ارتبطت بهدف اساسي للحكومة وهو تعظيم الإيرادات.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 لدينا استيردات تتجاوز 70 مليار دولار وفق تقديرات وزارتي التجارة والتخطيط، ويفترض ان تكون هناك عائدات كبيرة وواضحة.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 حكومتنا حددت في برنامجها الحكومي الوصول الى 20 % من الإيرادات غير النفطية، لأنها تمثل بوابة النجاح من خلال المنافذ الحدودية.&nbsp;&nbsp;</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 الإيرادات غير النفطية ستعود بالنفع على قطاعات الصحة والتعليم والسكن، وتحمي المنتج الوطني، وستسهم بتطوير قطاعي الزراعة والصناعة، والأنشطة الأخرى.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 اتخذنا سلسلة إجراءات في مجال التحويل المالي وربطه بعمل المنافذ.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 يجب ان تكون هناك مقارنة بين ما يبيعه البنك المركزي من عملة اجنبية وما يعطيه من تحويلات للمصارف والتجار للاستيردات، ومطابقتها مع استيفاء الرسوم، وهذه الآلية ستطبق في 1- كانون الأول المقبل.</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 يجب ان يكون هناك تعاون بين هيأة المنافذ والجهات الرقابية والدوائر المعنية والقضاء.&nbsp;</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>🔷 الجهاز المركزي للتقييس والسيطرة النوعية في وزارة التخطيط شريك اساسي مهم للمنافذ الحدودية.&nbsp;</div>
+<div>&nbsp;</div>
+<div>•••••&nbsp;</div>
+<div><span style="font-size: 14px;">&nbsp;</span></div>
+<div>26- آب- 2025</div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4163" title="رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنافذ الحدودية"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 26-08-2025 | الوقـت: 01:47:31 مساءا | قراءة: 22 | <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4163" title="رئيس مجلس الوزراء السيد محمد شياع السوداني يؤكد أهمية مواكبة التطور التكنولوجي المتسارع في عمل المنافذ الحدودية">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="46" background="upload/themes/ar/mcbpc/center.png" valign="bottom">
+<p align="center">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4162" title="التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<left><img src="../mcbpc.gov.iq/upload/upfile/ar/4967.jpg" width="170" height="170" align="left" border="0"><div>&nbsp;</div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>استقبل رئيس هيأة المنافذ الحدودية الفريق د.عمر عدنان الوائلي معالي وزير التجارة اثير الغريري في مقر الهيأة.</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>حيث تم تبادل المعلومات والتنسيق في تنفيذ قرارات مجلس الوزراء ذات الصلة بالعمل المشترك بين وزارة التجارة وتوابعها مع هيأة المنافذ التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك واهم ما جاء من محاور تم الاتفاق على متابعتها وتقويمها من اجل الارتقاء بمستوى التجارة ودعم الاقتصاد العراقي وهي كالاتي :</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>1. التأكيد على دائرة العلاقات الإقتصادية في وزارة التجارة على تدقيق شهادة المنشأ والفواتير التجارية والتنسيق والتواصل الكترونياً مع هيأة المنافذ وتوابعها من اجل عدم السماح بالتلاعب بتفاصيل الوثائق المذكورة.</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>2. تمتابعة تنفيذ قرارات مجلس الوزراء التي صدرت مؤخراً والمتضمنه الغاء اجازات الاستيراد لبعض المواد.</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>3. الاتفاق على طرح مواضيع مهمة في لجنة الأمر الديواني (37) المشكلة برئاسة معالي الوزير من اجل وضع الضوابط والحلول التي يتسنى من خلالها الارتقاء بطبيعة العمل التجاري وتحقيق مواد وايرادات حكومية مهمة.&nbsp;&nbsp;</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>4. تم الاتفاق على آليه عمل يتم من خلالها تشخيص الشركات التجارية العاملة في المنافذ الحدودية والتي&nbsp; يثبت بحقها مؤشرات سلبيه من خلال الدور الرقابي التي تمارسه هيأة المنافذ بالتنسيق مع وزارة التجارة وفروعها حيث هنالك تنسيق عالي بين الهيأة ودائرة تسجيل الشركات في وزارة التجارة بهذا الخصوص وصولاً إلى عدم السماح لقيام اي شركة تجارية لممارسة عملها الا بعد استيفائها شروط وضوابط التجارة&nbsp; .&nbsp;</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>5.تم الاتفاق على تفعيل وسرعة انجاز&nbsp; اللجان المشتركة الصادره بأوامر ديوانية التي تتعلق بتدقيق التحويلات المالية وموقف الشركات القانوني وعملها التجاري لان مخرجات هذه اللجان سيكون له مردود ايجابي في حماية العملية التجارية وسريانها وفق أطر قانونية تخدم المستهلك العراقي.</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>6.تم تقدير شرح تفصيلي عن إجراءات الهيأة في متابعة العمل إلكترونيا في سيطرات الحكومة الاتحادية مع الاقليم لضمان جباية وتطابق الرسوم المستحصلة والتاكد من سريان تنفيذ قرارات حماية المنتج المحلي.&nbsp;</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>وفي ختام اللقاء أكد الوائلي ان هياة المنافذ الحدودية تتابع تنفيذ البرنامج الحكومي والمنهاج الوزاري الذي يدعم التجارة وتعظيم الإيرادات الحكومية، وأكد الطرفان على تكرار اللقاءات مستقبلاً لمواكبة اي تطور او قرارات جديدة تخدم التجارة العراقية.&nbsp;</strong></div>
+<div><strong><span style="font-size: 14px;">&nbsp;</span></strong></div>
+<div><strong>هيأة المنافذ الحدودية&nbsp;</strong></div>
+<div><strong>12 آب 2025</strong></div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4162" title="التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 14-08-2025 | الوقـت: 12:10:32 صباحا | قراءة: 11 | <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4162" title="التجارة و المنافذ الحدودية يعقدان اجتماعاً من أجل تنسيق وتوحيد العمل المشترك">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</left></td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="46" background="upload/themes/ar/mcbpc/center.png" valign="bottom">
+<p align="center">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4161" title="اكمال إجراءات افتتاح منفذ جميمة في محافظة المثنى" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>اكمال إجراءات افتتاح منفذ جميمة في محافظة المثنى</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<left><img src="../mcbpc.gov.iq/upload/upfile/ar/4965.jpg" width="170" height="170" align="left" border="0"><div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>بتوجيه من السيد رئيس مجلس الوزراء، واستناداً للبرنامج الحكومي ضمن سياسة الحكومة الخارجية التي تتطلع إلى زيادة التبادل التجاري مع المملكة العربية السعودية وباقي الدول المجاوره ، من خلال افتتاح منفذ آخر في محافظة المثنى وهو منفذ جميمة، ليكون منفذا للتجارة والمسافرين مما سينعكس ايجاباً على العراق عموما وأبناء المحافظة على وجه الخصوص.</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>هيأة المنافذ الحدودية&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>17 تموز 2025</strong></span></div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4161" title="اكمال إجراءات افتتاح منفذ جميمة في محافظة المثنى"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 17-07-2025 | الوقـت: 12:18:33 مساءا  | قراءة: 70 | <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4161" title="اكمال إجراءات افتتاح منفذ جميمة في محافظة المثنى">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</left></td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="46" background="upload/themes/ar/mcbpc/center.png" valign="bottom">
+<p align="center">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4160" title="ضبط حاويتين تحتوي على مواد كيمياوية خطرة في منفذ ميناء أم قصر الشمالي" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>ضبط حاويتين تحتوي على مواد كيمياوية خطرة في منفذ ميناء أم قصر الشمالي</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<left><img src="../mcbpc.gov.iq/upload/upfile/ar/4964.jpg" width="170" height="170" align="left" border="0"><div>&nbsp;</div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>تمكنت مديرية منفذ ميناء أم قصر الشمالي من ضبط حاويتين حجم (40) قدم في نقطة البحث والتحري خارج الحرم الكمرك تحتوي (ماده كيمياوية خطرة قابله للاشتعال وسامه وغير مخصصه للاستخدام المنزلي) تم التصريح عنها في المعاملة الكمركية المنجزة بأنها مواد تنظيف منزلي .&nbsp;&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>تم تنظيم محضر ضبط اصولي وإحالة الحاويات والمواد المضبوطة إلى مركز شرطة كمرك ام قصر الشمالي لغرض عرضها على السيد قاضي التحقيق المختص لاتخاذ الاجراءات القانونية المناسبة .&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>هيأة المنافذ الحدودية&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>11 تموز 2025</strong></span></div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4160" title="ضبط حاويتين تحتوي على مواد كيمياوية خطرة في منفذ ميناء أم قصر الشمالي"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 11-07-2025 | الوقـت: 08:46:48 صباحا  | قراءة: 78 | <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4160" title="ضبط حاويتين تحتوي على مواد كيمياوية خطرة في منفذ ميناء أم قصر الشمالي">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</left></td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="46" background="upload/themes/ar/mcbpc/center.png" valign="bottom">
+<p align="center">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4159" title="أكثر من 5 مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>أكثر من 5 مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="upload/upfile/ar/4962.jpg" alt="" width="561" height="350"><br></strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>تعلن هيأة المنافذ الحدودية عن تحقيق أكثر من (5) مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم المارة عبر سيطرتي السد وباوه محمود، انطلاقاً من مبدا العدالة في استيفاء الرسوم الكمركية وفق التسعيرة المثبته في قرار مجلس الوزراء رقم 270 لسنه 2025 .</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>جاءت هذه الأرقام المهمه، من خلال ممارسة الهيأة دورها في الرقابة والإشراف على عمل السيطرات مثمنا دور جهاز الامن الوطني وإلهيأه العامة للكمارك لجهودهم الحثيثة في تحقيق هذه الإيرادات مع السعي إلى بذل المزيد من الجهود والإجراءات لتعظيم الإيرادات غير النفطية.<br><br>أكثر تفاصيل ادخل على الرابط&nbsp;<br><span style="color: #ff0000;"><a style="color: #ff0000;" href="https://youtu.be/K3wfjmynNOU?si=K2KhVgc81jldKOrf">https://youtu.be/K3wfjmynNOU?si=K2KhVgc81jldKOrf</a></span><br></strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>هيأة المنافذ الحدودية&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>9 تموز 2025</strong></span></div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4159" title="أكثر من 5 مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 09-07-2025 | الوقـت: 02:58:24 مساءا | قراءة: 67 | <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4159" title="أكثر من 5 مليار دينار ايرادات من فرق رسوم استقطعت من بضائع وارده من منافذ الاقليم">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="46" background="upload/themes/ar/mcbpc/center.png" valign="bottom">
+<p align="center">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4158" title="بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم  رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم  رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<div><span style="font-size: 14pt;"><strong><br><img style="display: block; margin-left: auto; margin-right: auto;" src="upload/upfile/ar/4961.jpg" alt="" width="450" height="300"><br><br>بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية والمستلزمات الطبية لضمان وصولها لمقاصدها&nbsp; النهائية بدون السماح&nbsp; لاي شخص من التلاعب بمحتوياتها وضمان عدم انحرافها عن مسارها الحقيقي وتأتي تلك الاجراءات من خلال تتبع مركزي من قبل كوادر هيأة المنافذ الحدودية بواسطة القفل الالكتروني الذكي الذي يثبت على الشاحنة وبمراقبة مستمره عن طريق عمليات الربط الشبكي .</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>وهذه الاجراءات التي تمت برعاية ودعم حكومي للانتقال نحو اجراءات إلكترونية وحوكمة صارمة لمنع عمليات التهريب والتلاعب والفساد بكافة اشكاله.<br><br>أكثر تفاصيل ادخل على الرابط&nbsp;<br><span style="color: #ff0000;"><a style="color: #ff0000;" href="https://youtu.be/tM4VWDrUMOE?si=JRNELC35Fc_kWsv6">https://youtu.be/tM4VWDrUMOE?si=JRNELC35Fc_kWsv6</a></span><br></strong></span></div>
+<div><span style="font-size: 14pt;"><strong>&nbsp;</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>هيأة المنافذ الحدودية</strong></span></div>
+<div><span style="font-size: 14pt;"><strong>7 تموز 2025</strong></span></div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4158" title="بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم  رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 07-07-2025 | الوقـت: 09:13:22 مساءا | قراءة: 87 | <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=4158" title="بأشراف مباشر من دولة رئيس مجلس الوزراء المحترم  رئيس هيأة المنافذ الحدودية يعلن انطلاق التتبع الإلكتروني الذكي لإرساليات الادوية البشرية">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center cellpadding="0" cellspacing="0"><b>في المجموع: 3941 خبر ..... 6 خبر في كل صفحة</b><br><table border="0" width="99%" dir="rtl"><tbody><tr><td align="center"><font face="Tahoma" color="#bd4200" style="font-size: 10pt"><b>[ 1 ]</b></font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=6&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>2</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=12&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>3</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=18&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>4</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=24&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>5</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=30&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>6</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=36&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>7</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=42&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>8</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=48&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>9</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=54&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>10</b></font></a><font color="#000000"> ]</font>---&gt;<font face="Tahoma"><font style="font-size: 10pt"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;countpage=60&amp;currenpage=1&amp;new_topic=0"><font color="#000000">التالي</font></a></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></td></tr></tbody></table></center><table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td> 
+  <table width="100%" border="0" dir="rtl" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0" dir="rtl" align="right"><tbody><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='FFFFFF'"><td width="25%"><font color="#ea1206">تاريخ أخر تحديث الموقع:-</font></td><td><marquee behavior="alternate" direction="right" scrollamount="1" scrolldelay="70" onmouseover="this.stop()" onmouseout="this.start()" border="0"><font face="MS SANS SERIF" size="1"> [  2025-08-26  ]  <font color="#000000"> </font></font></marquee></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</center></center></center></center></center></center></td><td class="rightblock"><table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="http://sere.iq" style="text-decoration: none">
+</a><div align="center"><a href="http://sere.iq" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>المبادرة الوطنية لدعم الطاقة وتقليل الانبعاثات</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=150"><img src="upload/upfile/ar/4530.jpg" alt="" width="170" height="170"></a></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=152" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=152" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>قسم العقود</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=152"><img src="upload/upfile/ar/4823.jpg" alt="" width="170" height="78"></a></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=43" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=43" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>التقويم</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><center><script language="javascript">monthnames=new Array("كانون الثاني","شباط","آذار","نيسان","آيار","حزيران"
+,"تموز","آب"," ايلول "," تشرين أول "," تشرين ثاني ","كانون أول");var linkcount=0;function addlink(month,day,href){var entry=new Array(3);entry[0]=month;entry[1]=day;entry[2]=href;this[linkcount++]=entry;}
+Array.prototype.addlink=addlink;linkdays=new Array();monthdays=new Array(12);monthdays[0]=31;monthdays[1]=28;monthdays[2]=31;monthdays[3]=30;monthdays[4]=31;monthdays[5]=30;monthdays[6]=31;monthdays[7]=31;monthdays[8]=30;monthdays[9]=31;monthdays[10]=30;monthdays[11]=31;todayDate=new Date();thisday=todayDate.getDay();thismonth=todayDate.getMonth();thisdate=todayDate.getDate();thisyear=todayDate.getYear();thisyear=thisyear%100;thisyear=((thisyear<50)?(2000+thisyear):(1900+thisyear));if(((thisyear%4==0)&&!(thisyear%100==0))||(thisyear%400==0))monthdays[1]++;startspaces=thisdate;while(startspaces>7)startspaces-=7;startspaces=thisday-startspaces+1;if(startspaces<0)startspaces+=7;document.write("<table border=0 ");document.write("bordercolor=black><font color=black>");document.write("<tr><td colspan=8><center><strong>"
++monthnames[thismonth]+" "+thisyear
++"</strong></center></font></td></tr>");document.write("<tr>");document.write("<td align=center>Su</td>");document.write("<td align=center>M</td>");document.write("<td align=center>Tu</td>");document.write("<td align=center>W</td>");document.write("<td align=center>Th</td>");document.write("<td align=center>F</td>");document.write("<td align=center>Sa</td>");document.write("</tr>");document.write("<tr>");for(s=0;s<startspaces;s++){document.write("<td> </td>");}
+count=1;while(count<=monthdays[thismonth]){for(b=startspaces;b<7;b++){linktrue=false;document.write("<td>");for(c=0;c<linkdays.length;c++){if(linkdays[c]!=null){if((linkdays[c][0]==thismonth+1)&&(linkdays[c][1]==count)){document.write("<a href=\""+linkdays[c][2]+"\">");linktrue=true;}}}
+if(count==thisdate){document.write("<font color=\'FF0000\'><strong>");}
+if(count<=monthdays[thismonth]){document.write(count);}
+else{document.write(" ");}
+if(count==thisdate){document.write("</strong></font>");}
+if(linktrue)
+document.write("</a>");document.write("</td>");count++;}
+document.write("</tr>");document.write("<tr>");startspaces=0;}
+document.write("</table></p>");//-->
+</script><font color="black"></font><table border="0" bordercolor="black"><tbody><tr><td colspan="8"><center><strong> ايلول  2025</strong></center></td></tr><tr><td align="center">Su</td><td align="center">M</td><td align="center">Tu</td><td align="center">W</td><td align="center">Th</td><td align="center">F</td><td align="center">Sa</td></tr><tr><td> </td><td>1</td><td><font color="FF0000"><strong>2</strong></font></td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr><tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr><tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr><tr><td>28</td><td>29</td><td>30</td><td> </td><td> </td><td> </td><td> </td></tr><tr></tr></tbody></table><p></p></center><font color="black">
+</font></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>مواقع ألكترونية</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF">  <table border="0" dir="rtl" align="right" cellpadding="3" cellspacing="3" style="border-collapse: collapse" bordercolor="#111111" width="170" id="AutoNumber1">
+  <tbody><tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'FFFFFF')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=147" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               جهاز المخابرات الوطني العراقي</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.mod.mil.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الدفاع</a>
+ </td>
+   </tr>
+  <tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="http://www.moi.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الداخلية</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.moh.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الصحة</a>
+ </td>
+   </tr>
+  <tr bgcolor="F7F7F7">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'F7F7F7')">  <a href="http://www.moelc.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الكهرباء</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.oil.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة النفط</a>
+ </td>
+   </tr>
+  <tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="http://www.moh.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الصحة</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.moedu.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة التربية</a>
+ </td>
+   </tr>
+  <tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=71" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               المزيد من المواقع</a>
+ </td>
+   </tr>
+  </tbody></table>
+<center><a href="https://www.mcbpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=72"><b><font color="#8C0D06"><b></b></font></b></a></center></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="https://www.facebook.com/share/16eYcsbTxM/" style="text-decoration: none">
+</a><div align="center"><a href="https://www.facebook.com/share/16eYcsbTxM/" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>التواصل الأجتماعي</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><table id="AutoNumber1" style="width:170px; height: 33px;" border="0" align="center">
+<tbody>
+<tr style="height: 33px;">
+<td style="height: 33px; width:170px;">
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://www.facebook.com/share/16eYcsbTxM/"><img src="images/social/facebook.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+<td style="height: 33px; width:170px;">
+<div class="tiltsocail pic" style="text-align: center;">&nbsp;</div>
+</td>
+<td style="height: 33px; width:170px;">
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://t.me/OmarAdnanAlwaili" target="_blank" rel="noopener"><img src="upload/upfile/ar/3446.jpg" alt="rss" width="29px" height="29px"></a></div>
+</td>
+<td style="height: 33px; width:170px;">
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://www.mcbpc.gov.iq/rss.php"><img src="images/social/rss.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+<td style="height: 33px; width:170px;">
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://youtube.com/channel/UCFCjjv7wjkDoTJ3LbgJnFUQ?si=fGuNB1rpNXpbku-Y" target="_blank" rel="noopener"><img src="images/social/youtube.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>ارشيف الصور</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF">    <center><div dir="ltr" id="simplegallery1" style="position: relative; visibility: visible; background: black; overflow: hidden; width: 170px; height: 190px;" width="100%" height="0"><div class="gallerylayer" style="position: absolute; left: 0px; top: 0px; z-index: 999; opacity: 1;"></div><div class="gallerylayer" style="position: absolute; left: 0px; top: 0px; z-index: 1000; opacity: 1;"><img src="upload/slideshow/ar/1277.jpg" style="border-width:0" height="190" width="170"></div><div class="navpanellayer" style="position: absolute; width: 100%; height: 45px; left: 0px; top: 190px; font-style: normal; font-variant-caps: normal; font-weight: bold; font-width: normal; font-size: 11px; line-height: normal; font-family: Verdana; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-variant-emoji: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; z-index: 1001;"><div class="navpanelbg" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: black; opacity: 0.5;"></div><div class="navpanelfg" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; padding-top: 5px; text-align: center; color: white;"><img class="navimages" title="Prev" src="icon/left.gif" style="position: relative; border: 0px; cursor: pointer; top: -4px; margin-right: 10px; opacity: 0.8;"> <img class="navimages" title="Pause" src="icon/pause.gif" style="position: relative; border: 0px; cursor: pointer; top: 0px; margin-right: 10px; opacity: 0.8;"> <img class="navimages" title="Next" src="icon/right.gif" style="position: relative; border: 0px; cursor: pointer; top: -4px; margin-right: 0px; opacity: 0.8;"> <div class="gallerystatus" style="margin-top:1px">3/10</div></div></div></div>
+
+
+</center></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>بغداد عاصمة الاعلام العربي</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><img src="upload/upfile/ar/527.jpg" alt="upload/upfile/ar/527.jpg" width="170" height="170"></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=231" style="text-decoration: none">
+</a><div align="center"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=231" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>اللقاءات التلفزيونية</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a href="https://www.mcbpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=231"><img src="upload/upfile/ar/255.jpg" alt="" width="170" height="170"></a></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="upload/upfile/ar/4919.pdf" style="text-decoration: none">
+</a><div align="center"><a href="upload/upfile/ar/4919.pdf" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>الدليل الاسترشادي للنقل الدولي في العراق</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a title="الدليل الاسترشادي للنقل الدولي" href="upload/upfile/ar/4919.pdf"><img src="upload/upfile/ar/4920.jpg" alt="" width="170" height="214"></a></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/mcbpc/left.png" valign="middle">
+<a href="http://ca.iq" style="text-decoration: none">
+</a><div align="center"><a href="http://ca.iq" style="text-decoration: none"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>حكومة المواطن العراقي</b></font></a></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><a title="حكومة المواطن العراقي" href="http://ca.iq/"><img src="upload/upfile/ar/271.jpg" alt="" width="170" height="170"></a></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="70">
+<tbody><tr>
+<td align="center" background="upload/themes/ar/mcbpc/footer.png" height="70">
+<p dir="rtl"> <b>&nbsp;</b></p></td>
+</tr>
+</tbody></table></td></tr></tbody></table><font><div style="position: fixed; z-index: 1000; width: 150px; height: 65px; bottom: 5px; left: 2px;"><a href="http://itpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=125" target="_blank">
+<img class="img-responsive" alt="All Traffic To This Web Is Monitored and Scanned By Secure Gateway" title="All Traffic To This Web Is Monitored and Scanned By Secure Gateway" src="images/seal.png" width="150" height="66"></a></div>
+
+</font>
+</center></div></body></html>
