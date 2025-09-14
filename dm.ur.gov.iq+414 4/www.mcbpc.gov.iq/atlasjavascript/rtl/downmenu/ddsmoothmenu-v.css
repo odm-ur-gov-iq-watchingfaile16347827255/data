@@ -1,0 +1,40 @@
+.ddsmoothmenu-v ul{
+  
+margin: 0;
+padding: 0;
+width: 100%px; /* Main Menu Item widths */
+list-style-type: right;
+font:1px Arial;   
+text-align:right;
+}  
+ 
+.ddsmoothmenu-v  ul li{     
+position: relative; 
+text-align:right;                 
+}      
+
+
+
+
+.ddsmoothmenu-v ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+background: black; 
+color: black;
+text-align:right;
+}  
+
+.ddsmoothmenu-v ul li a:hover{
+background: black; /*background of menu items during onmouseover (hover state)*/
+color: black;
+ 
+}
+  
+
+/*Sub level menu items */
+ 
+ul { list-style-type: none;}
+
+   
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu-v ul li { float: right; height: 9%; }
+* html .ddsmoothmenu-v ul li a { height: 100%; }
+/* End */
