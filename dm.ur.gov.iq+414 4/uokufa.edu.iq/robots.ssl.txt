@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /
+
+User-agent: *
+Crawl-delay: 60
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: facebookexternalhit
+Disallow:
+
+User-Agent: facebookexternalhit
+Crawl-delay: 5
+
+User-Agent: FacebookBot
+Crawl-delay: 5
+
+User-agent: FacebookBot
+Allow: /wp-content/uploads/
+
+User-agent: Twitterbot/1.0
+Allow: /wp-content/uploads/
+
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads/
