@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'social';
+    src:    url('https://ihec.iq/wp-content/themes/ihec/fonts/social/fonts/social.eot?ynqsmo');
+    src:    url('https://ihec.iq/wp-content/themes/ihec/fonts/social/fonts/social.eot?ynqsmo#iefix') format('embedded-opentype'),
+		 url('https://ihec.iq/wp-content/themes/ihec/fonts/social/fonts/social.woff?ynqsmo') format('woff'),
+        url('https://ihec.iq/wp-content/themes/ihec/fonts/social/fonts/social.ttf?ynqsmo') format('truetype'),
+        url('https://ihec.iq/wp-content/themes/ihec/fonts/social/fonts/social.svg?ynqsmo#social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="social-"]::before, [class*=" social-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'social' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+	vertical-align: middle;
+    line-height: 1;
+	direction: ltr;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.social-email::before {
+    content: "\47";
+}
+.social-location::before {
+    content: "\45";
+}
+.social-mobile::before {
+    content: "\46";
+}
+.social-ihec::before {
+    content: "\43";
+}
+.social-angies-list::before {
+    content: "\44";
+}
+.social-twitter::before {
+    content: "\61";
+}
+.social-facebook::before {
+    content: "\62";
+}
+.social-github::before {
+    content: "\63";
+}
+.social-rss::before {
+    content: "\64";
+}
+.social-pinterest::before {
+    content: "\65";
+}
+.social-google-plus::before {
+    content: "\66";
+}
+.social-linkedin::before {
+    content: "\67";
+}
+.social-xing::before {
+    content: "\68";
+}
+.social-youtube::before {
+    content: "\69";
+}
+.social-instagram::before {
+    content: "\6a";
+}
+.social-flickr::before {
+    content: "\6b";
+}
+.social-tumblr::before {
+    content: "\6c";
+}
+.social-dribbble::before {
+    content: "\6d";
+}
+.social-skype::before {
+    content: "\6e";
+}
+.social-foursquare::before {
+    content: "\6f";
+}
+.social-vk::before {
+    content: "\70";
+}
+.social-weibo::before {
+    content: "\71";
+}
+.social-reddit::before {
+    content: "\72";
+}
+.social-stumbleupon::before {
+    content: "\73";
+}
+.social-behance::before {
+    content: "\74";
+}
+.social-spotify::before {
+    content: "\75";
+}
+.social-deviantart::before {
+    content: "\76";
+}
+.social-soundcloud::before {
+    content: "\77";
+}
+.social-vine::before {
+    content: "\78";
+}
+.social-yelp::before {
+    content: "\79";
+}
+.social-paypal::before {
+    content: "\7a";
+}
+.social-houzz::before {
+    content: "\41";
+}
+.social-vimeo::before {
+    content: "\42";
+}
+
