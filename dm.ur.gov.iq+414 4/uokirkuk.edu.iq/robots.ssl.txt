@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+Allow: /art/
+
+Sitemap: https://uokirkuk.edu.iq/art/sitemap.xml
