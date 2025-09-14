@@ -1,0 +1,109 @@
+.owl-prev2 {
+	float: right;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	background-image: url('right.png') !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent !important;
+}
+.owl-next2 {
+	float: left;
+	position: absolute;
+	left: 10px;
+	top: 0;
+	background-image: url('left.png') !important;
+	background-repeat: no-repeat !important;
+	background-color: transparent !important;
+}
+.owl-nav2 {
+	position: absolute;
+	width: 100%;
+	top: 42%;
+	height: auto;
+}
+.owl-theme-slider .owl-controls {
+	margin-top: 10px;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+.owl-theme-slider .owl-controls2 .owl-nav2 [class*=owl-] {
+	color: #fff;
+	margin: 5px;
+	padding: 23px !important;
+	background: #000;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 0px;
+}
+.owl-theme-slider .owl-controls2 .owl-nav2 [class*=owl-]:hover {
+	background: #869791;
+	color: #fff;
+	text-decoration: none;
+}
+.owl-theme-slider .owl-controls2 .owl-nav2 .disabled {
+	opacity: .5;
+	cursor: default;
+}
+.owl-theme-slider .owl-dots2 .owl-dot2 {
+	zoom: 1;*;
+	display: inline-block;
+}
+.owl-theme-slider .owl-dots2 {
+	position: absolute;
+	left: 0;
+	bottom: -42px;
+	width: 100%;
+	text-align: center;
+}
+.owl-theme-slider .owl-dots2 .owl-dot2 span {
+	width: 20px;
+	height: 20px;
+	margin: 7px 7px 5px;
+	background: #fff;
+	display: block;
+	-webkit-backface-visibility: visible;
+	-webkit-transition: opacity 200ms ease;
+	-moz-transition: opacity 200ms ease;
+	-ms-transition: opacity 200ms ease;
+	-o-transition: opacity 200ms ease;
+	transition: opacity 200ms ease;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 1px #707070 solid;
+}
+.owl-theme-slider .owl-dots2 .owl-dot2.active span, .owl-theme-slider .owl-dots2 .owl-dot2:hover span {
+	background: #666;
+}
+.item-big h2 {
+	position: static;
+	bottom: 0;
+	background: #416571;
+ 
+      padding: 10px 2% 15px;
+
+        font-size: 20px;
+	width: 100%;
+	margin: 0;
+	color: #fff;
+}
+@media only screen and (max-width: 640px) {
+
+	.item-big h2 {
+		padding: 10px 2%;
+		font-size: 16px;
+	}
+
+}
+@media only screen and (max-width: 480px) {
+
+	.owl-nav2 {
+		display: none;
+	}
+}
+
+
