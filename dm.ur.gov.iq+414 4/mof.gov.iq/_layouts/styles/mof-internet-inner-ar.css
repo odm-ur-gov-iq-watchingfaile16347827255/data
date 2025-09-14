@@ -1,0 +1,2908 @@
+/*@media print,screen*/
+
+.ms-wpContentDivSpace
+{
+	margin-left:0px !important;
+	margin-right:0px !important;
+}
+
+/* === breadCrum - start ==== */
+
+.breadCrum
+{
+    float:right;
+    width:auto;
+    height:auto;
+}
+
+.breadCrum ul
+{
+    float:right;
+    width:auto;
+    height:auto;
+    text-align:right;
+    margin:0px;
+    padding:0px;
+}
+    
+.breadCrum ul li
+{
+    float: right;
+    font-size: 14px;
+    height: auto;
+    list-style: none outside none;
+    font-family:Verdana, Geneva, sans-serif;
+    margin:0 4px 0 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    width: auto;    
+}
+    
+.breadCrum ul li a
+{
+    color: #870000;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    margin: 0 4px 0 0;
+    padding: 0;
+    text-align:right;
+    text-decoration: none;
+}
+
+.breadCrum ul li a:hover
+{
+    text-decoration:underline;
+    margin: 0 4px 0 0;
+    padding:0px;
+}
+
+/* === breadCrum - end ==== */
+
+/* === inner page main panel - start ==== */
+
+.main-inter-inner-outer
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:8px 0px 0px 0px;
+}
+
+.main-inter-inner-title
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:8px 8px 0px 0px;
+}
+
+.main-inter-inner-title h2
+{
+	float:right;
+	width:98.6%;
+	height:auto;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#fff;
+	background:#870000;
+	padding:0px 5px 0px 0px;
+	margin:0px;
+}
+
+.main-inter-inner-inner
+{
+	float:left;
+	width:699px;
+	height:auto;
+}
+
+.main-inter-inner-header
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:0px 8px 0px 0px;
+}
+
+.main-inter-inner-header h1
+{
+	float:right;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	color:#870000;
+	padding:0px;
+	margin:0px;
+}
+
+.main-inter-inner-filter
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:8px 8px 0px 0px;
+	background:#f6f6f6;
+	border:1px dashed #CCCCCC;
+}
+
+.main-inter-inner-filter h1
+{
+	float:right;
+	width:auto;
+	height:auto;
+	line-height:18px;
+	padding:9px 10px 8px 10px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#870000;
+	margin:0px;
+}
+
+.main-inter-inner-filter input[type="text"]
+{
+	float:right;
+	width:140px;
+	height:20px;
+	line-height:20px;
+	padding:0px 4px 0px 4px;
+	margin:8px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#333333;
+	border: 1px solid #b82f2f;
+}
+	
+.main-inter-inner-filter select
+{
+	float:right;
+	width:140px;
+	height:22px;
+	line-height:20px;
+	padding:1px 1px 1px 1px;
+	margin:8px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#333333;
+	border: 1px solid #b82f2f;
+}
+
+/* === inner page main panel - end ==== */
+
+/* === inner page main panel More lists content - start ==== */
+.mof-inter-content-list
+{
+	float:right;
+	width:100%;
+	height:auto;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+
+.mof-inter-content-list ul
+{
+	float:right;
+	width:100%;
+	height:auto;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+
+.mof-inter-content-list ul li img
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:11px 0px 0px 5px;
+	padding:0px;
+}
+
+.mof-inter-content-list ul li
+{
+	float:right;
+	width:94%;
+	height:auto;
+	margin:2px 20px 0px 0px;
+	padding:0px 8px 0px 0px;
+	list-style:none;
+	background:#f3f3f3;	
+}
+
+.mof-inter-content-list ul li.content
+{
+	float: right;
+	width:98.5%;
+	height:auto;
+	margin:2px 0px 0px 0px;
+	padding:0px 5px 0px 0px;
+	list-style:none;
+	background:#e9e9e9;
+}
+
+.mof-inter-content-list ul li a
+{
+	float:right;
+	width:97%;
+	height:auto;
+	line-height:28px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#666 !Important;
+	text-decoration:none;
+	margin:0px 0px 0px 0px;
+}
+
+.mof-inter-content-list ul li a:hover
+{
+	color:#870000 !Important;
+	text-decoration:none;
+}
+	
+/* === inner page main panel More lists content - end ==== */
+
+/* === inner pages footer data paging - start ==== */
+
+#Wrapper
+{
+	width:auto;
+    margin: 0px auto;
+    display: block;
+}
+
+#employeesContent
+{
+    min-height:0px;
+    margin-top:70px; 
+    color:#870000;
+    font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+	text-align:center; 
+	padding:30px;   
+}
+
+.None
+{
+    display: none;
+}
+
+.PageActive
+{
+    float:right;
+	width:auto;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	padding:0px 8px 0px 8px;
+	color: #CCC !Important;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.PageInActive
+{
+    float:right;
+	width:auto;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#FFF !Important;
+	text-decoration:none;
+	padding:0px 8px 0px 8px;
+	cursor:pointer;
+}
+
+span.newhyper:hover
+{
+    background-position: 0% 0%;
+    text-decoration: underline;
+    border-color: #999;
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
+
+span.newhyper,a.newhyper
+{
+    color: #14498D;
+    padding: 2px;
+    -moz-transition: background-color 0.35s linear;
+    -o-transition: background-color 0.35s linear;
+    -webkit-transition: background-color 0.35s linear;
+    transition: background-color 0.35s linear;
+    -moz-transition: color 0.35s linear;
+    -o-transition: color 0.35s linear;
+    -webkit-transition: color 0.35s linear;
+    transition: color 0.35s linear;
+}
+
+span.newhyper:hover,a.newhyper:hover
+{
+    background-color: #999999;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #335;
+}
+
+.gridFooter
+{    
+	float:right;
+	width:712px !Important;
+	height:36px;
+	bottom:0;
+	margin:8px 0px 0px 0px;
+	background-color:#870000;
+}
+
+.currentPage
+{
+    font-weight: bold;
+}
+
+#pageInfo{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 10px; padding-left:4px; padding-bottom : 0px;}
+#pageInfo1{font-family: Verdana,Geneva,sans-serif; font-size: 9px; text-align: left; padding-top: 10px; padding-left: 10px; padding-bottom: 0;}
+#pageInfo2{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+#pageInfo3{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+#pageInfo4{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+#pageInfo5{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+#pageInfo6{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+#pageInfo7{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+#pageInfo9{font-family:Verdana, Geneva, sans-serif; font-size: 9px; text-align: left; padding-top: 6px; padding-bottom: 0px;}
+
+#pager
+{
+    float: right;
+}
+
+#pagingWrapper
+{
+    
+   /* color: #000;
+    -moz-boz-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background: #f6f6f6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 10px;*/
+    /*text-align: center;*/
+    
+}
+
+#pagingWrapper #pager, #pagingWrapper, #pageInfo, #pageInfo1, #pageInfo2, #pageInfo3, #pageInfo4, #pageInfo5, #pageInfo6, #pageInfo7, #pageInfo8, #pageInfo9
+{
+    margin: 0px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#FFF !Important;
+	text-decoration:none;
+}
+
+#pagingWrapper #pager,#pager1,#pager2,#pager3,#pager4,#pager5,#pager6,#pager7,#pager8,#pager9
+{
+    float:right; 
+    margin: 0px;
+}
+
+/* === inner pages footer data paging - end ==== */
+
+/* === research and studies/ public reports inner page - start ==== */
+
+.main-inter-doc-info
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:10px 0px 0px 0px;
+	padding:0px 0px 10px 0px;
+	border-bottom:1px dashed #CCCCCC;
+}
+
+.main-inter-doc-info h1
+{
+	float:right;
+	text-align:right;
+	width:120px;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#870000;
+	margin:4px 0px 0px 10px;
+}
+
+.main-inter-doc-info h2
+{
+	float:right;
+	text-align:right;
+	width:120px;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#870000;
+	margin:4px 0px 0px 0px;
+}
+
+.main-inter-doc-info p
+{
+	float:right;
+	text-align:right;
+	width:540px;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#333;
+	margin:4px 0px 0px 0px;
+}
+
+.main-inter-doc-info span
+{
+	color:#333333;
+    float:right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:14px;
+    font-weight: normal;
+    height:auto;
+    line-height: 18px;
+    margin: 4px 0 0;
+    text-align: right;
+    width: 450px;
+}
+
+.main-inter-doc-info a
+{
+	color: #333333 !important;
+    float: right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    line-height: 18px;
+    margin:1px 2px 0 0;
+    text-align: right;
+}
+
+.main-inter-doc-info a:hover
+{
+	color: #870000 !important;
+    float: right;
+    text-decoration:none;
+}
+
+.main-inter-doc-info img
+{
+	width:auto;
+	height:auto;
+	border:none;
+	margin:5px 0 0 0;
+}
+
+.main-inter-doc-detail
+{
+	color: #666666;
+    float: right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    height: auto;
+    margin: 8px 0 0 8px;
+    text-align: justify;
+    width: 650px;
+}
+
+/* === research and studies/ public reports inner page - end ==== */
+
+/* === ministry news, announcement etc inner page - start ==== */
+
+.mof-inter-inner-list
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:0px 8px 0px 0px;
+	border-bottom:1px dashed #CCCCCC;
+}
+
+.mof-inter-inner-list img
+{
+	float:right;
+	width:106px;
+	height:106px;
+	margin:15px 1px 15px 10px;
+	border:none;
+}
+
+.mof-inter-inner-list p
+{
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#666;
+	padding:0px;
+	margin:14px 0px 0px 0px;
+}
+
+.mof-inter-inner-list h1
+{
+	width:690px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	font-weight:normal;
+	color:#870000;
+	margin:2px 0px 0px 0px;
+	padding:0px;
+}
+
+.mof-inter-inner-list h2
+{
+	
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+	color:#666;
+	padding:0px;
+	margin:14px 0px 0px 0px;
+}
+
+.mof-inter-inner-list h2 span
+{
+	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#000000;
+	margin:2px 0px 0px 0px;
+	padding:0px;
+}
+.mof-inter-inner-list p a
+{
+	float:left !Important;
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:12px !Important;
+	font-weight:bold !Important;
+	color:#000 !Important;
+	padding:0px;
+	margin:0px;;
+	text-decoration:none !Important;
+}
+
+.mof-inter-inner-list p a:hover
+{
+	color:#870000 !Important;
+}
+
+/* ministry news, announcement etc details - start */
+
+.mof-inter-inner-detail
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:8px 8px 0px 0px;
+}
+
+.mof-inter-inner-detail h1
+{
+	height:auto;
+	width:100%;
+	line-height:24px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	font-weight:normal;
+	color:#870000;
+	padding:0px;
+	margin:0px;
+}
+	
+.mof-inter-inner-detail h4
+{
+	height:auto;
+	width:100%;
+	line-height:20px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#000;
+	padding:0px;
+	margin:0px;
+}
+
+.mof-inter-inner-detail p
+{
+	float:right;
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#666;
+	padding:0px 0px 8px 0px;
+	margin:20px 0px 0px 0px;
+	border-bottom:dashed 1px #CCCCCC;
+}
+
+.mof-inter-inner-detail p img
+{
+	width:auto;
+	height:auto;
+	border:none;
+}
+
+.mof-inter-inner-detail p a
+{
+	float:right;
+	width:80px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#535353;
+	padding:0px;
+	margin:30px 0px 0px 0px;
+	text-decoration:none;
+}
+
+.mof-inter-inner-detail p a:hover
+{
+	color:#870000;
+}
+
+.mof-inter-inner-detail h2
+{
+	float:right;
+	width:98.6%;
+	height:auto;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#fff;
+	background:#870000;
+	padding:0px 10px 0px 0px;
+	margin:0px;
+}
+
+.mof-inter-inner-detail h3
+{
+	float:right;
+	width:98.6%;
+	height:auto;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#870000;
+	background:#f6f6f6;
+	padding:0px 10px 0px 0px;
+	margin:0px;
+}
+
+.main-content-detail
+{
+	float:right;
+	width:690px;
+	height:auto;
+	margin:0px 8px 0px 0px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#666;
+	text-align:justify;	
+}
+
+.main-content-detail-img
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:10px 0px 0px 10px;
+}
+
+/* ministry news, announcement etc details - end */
+
+/* === ministry news, announcement etc inner page - end ==== */
+
+/* === gallary albums inner - start ==== */
+
+.mof-gallary-album-outer
+{
+	float:right;
+	width:699px;
+	height:auto;
+	min-height:900px;
+	margin:0px 0px 0px 0px;  
+}
+
+.mof-gallary-album-inner
+{
+	float:right;
+	width:699px;
+	height:auto;
+	min-height:900px;
+	margin:8px 0px 0px 0px;
+}
+
+.mof-gallary-albums
+{
+	float:right;
+	width:130px;
+	height:145px;
+	margin:8px 3px 0 6px;
+	padding:0px 0px 0px 0px;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/folder.png) no-repeat top;
+}
+
+.mof-gallary-albums img
+{
+	float:right;
+	width:89px;
+	height:70px;
+	margin:28px 15px 10px 0px;
+}
+
+.mof-gallary-albums a
+{
+	float:right;
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:center;
+	color:#000 !important;
+	padding:0px;
+	margin:0px 8px 0px 0px;
+}
+
+.mof-gallary-albums a:hover
+{
+	color:#870000 !important;
+	text-decoration:none;
+}
+
+.mof-gallary-albums span
+{
+	text-decoration:none;
+	text-align:center;
+	margin:0px 0px 0px 0px;
+	width:120px;
+	float:right;
+}
+
+/* === gallary albums inner - end ==== */
+
+/* === gallary album Images slide show - start ==== */
+
+.gallary-album-title
+{
+	width:699px;
+	height:auto;
+	margin:5px 0px 0px 8px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px !important;
+	font-weight:normal !important;
+	color:#870000;
+	text-decoration:underline !important;
+}
+
+div#footer 
+{
+	color: #777;
+}
+
+div.caption-container 
+{
+	color: #000 !important;
+}
+
+div.image-title 
+{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+div.image-desc 
+{
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+
+div.download 
+{
+	margin-top: 8px;
+}
+
+div.photo-index 
+{
+	color: #777;
+}
+
+div.navigation a.prev 
+{
+	background-image: url(https://mof.gov.iq/_layouts/images/MOF/nextPageArrow.gif);
+}
+
+div.navigation a.next 
+{
+	background-image: url(https://mof.gov.iq/_layouts/images/MOF/prevPageArrow.gif);
+}
+
+div.loader 
+{
+	background-image: url(https://mof.gov.iq/_layouts/Styles/loader.gif);
+}
+
+div.slideshow img 
+{
+	border-color: #ccc;
+}
+
+ul.thumbs li.selected a.thumb 
+{
+	background: #000;
+}
+
+div.pagination a:hover 
+{
+	background-color: #eee;
+}
+
+div.pagination span.current 
+{
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+
+div#page 
+{
+	width:700px;
+	background-color: #fff;
+	margin: 0 auto;
+	text-align: right;
+	/*border-color: #ddd;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;*/
+}
+
+div#container 
+{
+	padding:0 8px 0 0px;
+}
+
+div#container 
+{
+	overflow:hidden;
+}
+
+div.controls 
+{
+	margin-top:8px;
+	height: 23px;
+}
+
+div.ss-controls 
+{
+	float: right;
+}
+
+div.controls a 
+{
+	padding:0px;
+	padding-right:5px;
+	color: #000 !important;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+}
+
+div.controls a:hover
+{
+	padding:0px;
+	padding-right:5px;
+	color: #870000 !important;
+}
+
+div#ads 
+{
+	clear: both;
+	padding: 12px 66px 12px 0;
+}
+
+div#footer 
+{
+	clear: both;
+	color: #777;
+	margin: 0 auto;
+	padding: 20px 0 40px;
+	text-align: center;
+}
+
+div.content 
+{
+	display: none;
+	clear: both;
+}
+
+div.content a, div.navigation a 
+{
+	text-decoration: none;
+}
+div.content a:hover, div.content a:active 
+{
+	text-decoration: underline;
+}
+
+div.navigation a.pageLink 
+{
+	height: 77px;
+	line-height: 77px;
+}
+
+div.nav-controls 
+{
+	float: left;
+}
+
+div.slideshow-container,
+div.loader,
+div.slideshow a.advance-link 
+{
+	width: 390px; /* This should be set to be at least the width of the largest image in the slideshow with padding */
+}
+
+div.loader,
+div.slideshow a.advance-link,
+div.caption-container 
+{
+	height: auto; /* This should be set to be at least the height of the largest image in the slideshow with padding */	
+}
+
+div.slideshow-container 
+{
+	position: relative;
+	clear: both;
+	float: right;
+	height:360px;
+}
+
+div.loader 
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url('https://mof.gov.iq/_layouts/images/MOF/images/loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div.slideshow span.image-wrapper 
+{
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 0;
+}
+
+div.slideshow a.advance-link 
+{
+	display: block;
+	height: auto; /* This should be set to be at least the height of the largest image in the slideshow with padding */
+	text-align: center;
+}
+
+div.slideshow a.advance-link:hover,
+div.slideshow a.advance-link:active,
+div.slideshow a.advance-link:visited 
+{
+	text-decoration: none;
+}
+
+div.slideshow a.advance-link:focus 
+{
+	outline: none;
+}
+
+div.slideshow img 
+{
+	border-style: solid;
+	border-width: 1px;
+	height:290px;
+	width:380px;
+}
+
+div.caption-container 
+{
+	float: left;
+	position: relative;
+	margin-top: 8px;
+}
+
+span.image-caption 
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+div.caption-container, span.image-caption 
+{
+	width: 300px;
+	margin-top:8px;
+}
+
+span.image-caption
+{
+	width: 300px;
+	margin-top:20px;
+}
+
+div.caption 
+{
+	padding: 0 6px;
+}
+
+div.image-title 
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	font-weight: bold;
+	/*font-size: 1.4em;*/
+	color:#870000;
+}
+
+div.image-desc 
+{
+	line-height: 1.3em;
+	padding-top: 10px;
+	color: #000;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+
+div.download 
+{
+	margin-top: 8px;
+}
+
+div.photo-index 
+{
+	padding: 0 0;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+}
+
+div.navigation-container 
+{
+	float: right;
+	position: relative;
+	/*left: 50%;*/
+}
+
+div.navigation 
+{
+	/*float: left;
+	position: relative;
+	left: -50%;
+	border:1px solid #000000;*/
+	
+	border: 1px solid #870000;
+    float: right;
+    /*left: 30%;*/
+    min-width: 400px;
+    width:688px;
+    position: relative;
+}
+
+div.navigation a.pageLink 
+{
+	display: block;
+	position: relative;
+	float: right;
+	margin: 2px;
+	width: 16px;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+div.navigation a.pageLink:focus 
+{
+	outline: none;
+}
+
+ul.thumbs 
+{
+	position: relative;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+ul.thumbs li 
+{
+	float: right;
+	padding: 0;
+	margin: 2px;
+	list-style: none;
+}
+
+a.thumb 
+{
+	padding: 1px;
+	display: block;
+}
+
+a.thumb:focus 
+{
+	outline: none;
+}
+
+ul.thumbs img 
+{
+	border: none;
+	display: block;
+	width:75px;
+	height:75px;
+}
+
+div.pagination 
+{
+	clear: both;
+	position: relative;
+	left: -50%;
+}
+
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis 
+{
+	position: relative;
+	display: block;
+	float: right;
+	margin-left: 2px;
+	padding: 4px 7px 2px 7px;
+	border: 1px solid #ccc;
+}
+
+div.pagination a:hover 
+{
+	text-decoration: none;
+}
+
+div.pagination span.current 
+{
+	font-weight: bold;
+}
+
+div.pagination span.ellipsis 
+{
+	border: none;
+	padding: 5px 2px 3px 0;
+}
+
+div.gallery-gutter 
+{
+	clear: both;
+	padding-bottom: 20px;
+}
+
+/* === gallary album Images slide show - end ==== */
+
+/* === table format pages - start ==== */
+
+.contenttable
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:8px 8px 0px 0px;
+}
+
+.contenttable table
+{
+	float:right;
+	width:99%;
+	min-height:300px;
+	height:auto;
+	border-right:1px solid #870000;
+	border-bottom:1px solid #870000;
+}
+
+.contenttable table thead 
+{
+	border-right:1px solid #870000;
+}
+
+.contenttable table thead tr
+{
+	background:#dedede;
+}
+
+.contenttable table thead th
+{
+	border-left:1px solid #870000;
+	border-top:1px solid #870000;
+	padding:6px;
+}
+
+.contenttable table thead th span
+{
+	font:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color:#870000;
+}
+
+.contenttable tr:hover
+{
+	background:#f7efef;
+}
+
+.contenttable td
+{
+	padding:4px;
+	border-left:1px solid #870000;
+	border-top:1px solid #870000;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#370000;
+	vertical-align:middle;
+	line-height:18px;
+}
+	
+.contenttable td h1
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#b82f2f;
+	padding:0px;
+	margin:0px;
+}
+
+.contenttable td span
+{
+	float:right;
+	width:100%;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	padding:0px;
+	margin:0px;
+}
+
+.contenttable td img
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:0px 8px 0px 8px;
+}
+
+.contenttable td a
+{
+	float:right;
+	width:100%;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	text-decoration:none;
+	color:#000 !important;
+	padding:0px;
+	margin:0px;
+}
+
+.contenttable td a:hover
+{
+	color:#870000 !important;
+	text-decoration:none;
+}
+
+/* === table format pages - end ==== */
+
+
+/* === weather detail pages - start ==== */
+
+.mof-inner-weather
+{
+	float:right;
+	width:700px;
+	height:auto;
+	margin:0px 0px 0px 0px;
+}
+	
+.mof-inner-weather-location
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-inner-weather-location h1
+{
+	float:left;
+	width:auto;
+	height:20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:13px;
+	color:#525252;
+	margin:8px 6px 0px 6px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-inner-weather-location h2
+{
+	width:35px;
+	height:20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:13px;
+	color:#000;
+	margin:8px 16px 0px 16px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-inner-weather-location h3
+{
+	float:right;
+	width:60px;
+	height:20px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:13px;
+	color:#870000;
+	margin:8px 2px 0px 2px;
+	padding:0px 0px 0px 0px;
+}
+
+
+/* === weather detail pages - end ==== */
+
+/* ===================== site maps pages - start ========================= */
+
+.mof-inner-sitemap
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:8px 8px 10px 0px;
+	padding-bottom:20px;
+}
+
+/* === Acordian - start ==== */
+
+.Accordion 
+{
+	border:1px solid #870000;
+	border-top:none;
+	overflow: hidden;
+}
+
+.AccordionPanel 
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.AccordionPanelTab 
+{
+	width:699px;
+	height:auto;
+	line-height:36px;
+	background-color: #870000;
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:16px;
+	font-weight:normal;
+	color:#fff;
+	margin:0px;
+	padding:0px 5px 0px 0px;
+	margin:0px 0px 1px 0px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+.AccordionPanelContent 
+{
+	overflow: auto;
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+	height:auto;
+}
+
+.AccordionPanelOpen 
+{
+
+}
+
+.AccordionPanelTabHover 
+{
+	color: #eee;
+}
+
+.AccordionPanelOpen .AccordionPanelTabHover 
+{
+	color: #EEEEEE;
+}
+
+.AccordionFocused .AccordionPanelTab 
+{
+	background-color: #000;
+}
+
+.AccordionFocused .AccordionPanelOpen .AccordionPanelTab 
+{
+	background-color: #870000;
+}
+
+@media print 
+{
+	.Accordion 
+	{
+		overflow: visible !important;
+	}
+  
+	.AccordionPanelContent 
+	{
+		display: block !important;
+		overflow: visible !important;
+		height: auto !important;
+	}
+}
+
+/* === Acordian - end ==== */
+
+.mof-inner-sitemap-nav
+{
+	width:auto;
+	height:auto;
+	padding-bottom:10px;
+}
+
+.mof-inner-sitemap-nav h1
+{
+	margin:10px 15px 0 0;
+	padding:0 18px 0 0;
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	color:#000;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/bullets_ar_03.png) no-repeat right !Important;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.mof-inner-sitemap-nav h1 a
+{
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	text-decoration:none;
+	color:#000 !important;
+}
+
+.mof-inner-sitemap-nav h1 a:hover
+{
+	text-decoration:none;
+	color:#870000 !important;
+}
+
+.mof-inner-sitemap-nav h2
+{
+	margin:20px 110px 0 0;
+	padding:0 18px 0 0;
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	color:#000;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/libull.png) no-repeat right !Important;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.mof-inner-sitemap-nav h2 a
+{
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	text-decoration:none;
+	color:#000 !important;
+}
+
+.mof-inner-sitemap-nav h2 a:hover
+{
+	text-decoration:none;
+	color:#870000 !important;
+}
+
+.mof-inner-sitemap-nav h3
+{
+	margin:20px 160px 0 0;
+	padding:0 18px 0 0;
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	color:#000;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/libull_03.png) no-repeat right !Important;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.mof-inner-sitemap-nav h3 a
+{
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	text-decoration:none;
+	color:#000 !important;
+}
+
+.mof-inner-sitemap-nav h3 a:hover
+{
+	text-decoration:none;
+	color:#870000 !important;
+}
+
+/* === site map footer menu - start ==== */
+
+.mof-inner-sitemap-footer 
+{
+	float:right;
+	width:190px;
+	height:auto;
+	/*padding-right: 30px;
+	padding-bottom:10px;*/
+}
+
+.mof-inner-sitemap-footer h1
+{
+	margin:10px 15px 20px 0px;
+	padding:0px 18px 0px 0px;
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:14px;
+	font-variant:normal;
+	font-weight: normal;
+	cursor: pointer;
+	color:#000;
+	background:url(https://mof.gov.iq/_layouts/images/mof/bullets_ar_03.png) no-repeat right !Important;
+}
+
+.mof-inner-sitemap-footer h1 a
+{
+	font-family:Verdana, Geneva, sans-serif !Important;
+	font-size:12px;
+	font-variant:normal;
+	text-decoration:none;
+	color:#000 !important;
+}
+
+.mof-inner-sitemap-footer h1 a:hover
+{
+	text-decoration:none;
+	color:#870000 !important;
+}
+
+/* === site map footer menu - end ==== */
+
+/* ===================== site maps pages - end ========================= */
+
+
+/* =================== rating indication - start ========================= */
+
+.mof-inner-rating-ind
+{
+	float:left;
+	width:100px;
+	height:auto;
+	min-height:180px;
+	margin:8px 0px 0px 0px;
+}
+
+.mof-inner-rating-ind h1
+{
+	float:right;
+	width:90px;
+	line-height:30px;
+	padding:0px 10px 0px 0px;
+	margin:0px 0px 0px 0px;
+	background-color:#eaeaea;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#870000;
+}
+
+.mof-inner-rating-ind ul
+{
+	float:right;
+	width:90px;
+	margin:0px;
+	padding:0px;
+}
+
+.mof-inner-rating-ind ul li
+{
+	float:right;
+	width:88px;
+	height:22px;
+	list-style:none;
+	line-height:22px;
+	padding:0px 10px 0px 0px;
+	border-bottom:1px dotted #CCCCCC;
+	border-left:1px dotted #CCCCCC;
+	border-right:1px dotted #CCCCCC;
+	color: #FFFFFF;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;	
+}
+
+/* =================== rating indication - end ========================= */
+
+/* ================ faq (frequently ask Question - start ================== */
+
+.mof-inner-faq-outer
+{
+	float:right;
+	width:599px;
+	height:auto;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-inner-faq-inner
+{
+	float:right;
+	width:595px;
+	height:auto;
+	margin:2px 0px 2px 8px;
+	padding:0px 0px 10px 0px;
+	border-bottom:1px dashed #CCCCCC;
+}
+
+.mof-inner-faq-inner h1
+{
+	float:right;
+	width:120px;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	text-align:right;
+	color:#870000;
+	margin:4px 150px 0px 0px;
+}
+
+.mof-inner-faq-inner h2
+{
+	float:right;
+	width:590px;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#870000;
+	margin:4px 8px 0px 0px;
+}
+
+.mof-inner-faq-inner h2 span
+{
+	/*float:right;*/
+	width: auto;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:#870000;
+	margin:0px 0px 0px 5px;
+}
+
+.mof-inner-faq-inner p
+{
+	float:right;
+	width:585px;
+	height:auto;
+	line-height:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	text-align:right;
+	color:#666;
+	margin:10px 8px 0px 0px;
+}
+
+.mof-inner-faq-inner p span
+{
+	/*float:right;*/
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#333;
+	margin:0px 0px 10px 5px;
+}
+
+.mof-inner-faq-inner span img
+{
+	float:right;
+	width:auto;
+	height:auto;
+	border:none;
+}
+	
+.mof-inner-faq-inner h4
+{ 
+	float:right;
+	width:584px;
+	height:auto;
+	line-height:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	margin:8px 0px 0px 0px;
+	padding:0;
+}
+
+.mof-inner-faq-inner h4 span
+{
+    /*float:right;*/
+    font-family:Verdana, Geneva, sans-serif; 
+    font-size:11px; 
+    font-weight:normal;
+    padding:0 20px 0 19px;
+    text-decoration:none; 
+    color:#870000;
+} 
+
+.mof-inner-faq-inner input[type="radio"]
+{
+	float:right;
+	margin:0px 15px 0px 19px;
+	position:relative;
+}
+	
+/* ================ faq (frequently ask Question - end ================== */
+
+
+/* ================ rating results - start ================== */
+
+.mof-inner-rate-result
+{
+	float:right;
+    height:auto;
+    width:270px;
+}
+
+.mof-inner-rate-result h1
+{ 
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    float: right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    height: auto;
+    margin:0;
+    padding:0;
+    width:49px;
+    text-align:center;
+}
+
+.mof-inner-rate-result-ind
+{
+	float:left;
+	width:100%;
+	height:auto;
+}
+ 
+.mof-inner-rate-result-ind span
+{
+	float:right;
+	width:18%;
+	height:20px;
+	line-height:20px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	text-align:center;
+	color:#fff;
+}
+
+/* ================ rating results - end ================== */
+
+/* ================ Feedback - start ================== */
+
+.mof-inner-feedback-outer
+{
+	float:right;
+	width:580px;
+	height:auto;
+	margin:0px 8px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-inner-feedback-inner
+{
+	float:right;
+    height:auto;
+    margin:8px 0px 0px 0;
+    padding-bottom: 10px;
+    width: 599px;
+}
+
+.mof-inner-feedback-inner h1
+{ 
+	float:right;
+	width:584px;
+	height:auto;
+	line-height:24px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#333;
+	margin:0px;
+	padding:0px 15px 0px 0px;
+}
+
+.mof-inner-feedback-inner h1 span
+{
+    color: #870000;
+    float: right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 0 25px 0 12px;
+    text-decoration: none;
+} 
+
+.mof-inner-feedback-inner p
+{ 
+	float:right;
+	width:584px;
+	height:auto;
+	line-height:24px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#333;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-feedback-rating
+{
+	float: right;
+    height: auto;
+    width: 250px;
+}
+    
+.mof-feedback-rating h1
+{ 
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    float: right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    height: auto;
+    line-height: 16px;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 50px;
+}
+
+.mof-feedback-rating-ind
+{
+	float:left;
+	width:100%;
+	height:auto;
+}
+ 
+.mof-feedback-rating-ind span
+{
+	float:right;
+	width:20%;
+	height:20px;
+	line-height:20px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	text-align:center;
+	color:#fff;
+}
+ 
+/* ================ Feedback - end ================== */
+ 
+/* ================ button - start ================== */
+
+.activebutton-container
+{
+	float:right;
+	margin:5px 244px 0 0; 
+	padding:0px 0px 0px 0px;
+	text-align:center;
+	bottom:0;
+}
+
+.activebutton
+{
+    float:right;
+    margin:13px 30px 0 0;
+    
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	display:inline-block;
+	color:#870000;
+	padding:3px 18px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+	font-family:Verdana, Geneva, sans-serif;
+    font-weight:normal;
+	font-size:14px;
+	border: 1px ridge #999999;
+}
+
+.activebutton:hover 
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+	color:#bc2f2f !important;
+	cursor:pointer;
+}
+
+.activebutton:active 
+{
+	position:relative;
+	top:1px;
+}
+
+/* ================ button - end ================== */
+	
+
+/* ================ Customer Care - start ================== */
+
+.mof-inner-cust-care
+{
+	float:right;
+	width:702px;
+	height:auto;
+	margin:8px 0px 0px 0px;
+}
+
+.mof-inner-cust-care img
+{
+	float:left;
+	width:176px;
+	height:176px;
+	margin:10px 0 0 1px;
+}
+
+.mof-inner-cust-care h1
+{ 
+	float:right;
+	width:684px;
+	height:auto;
+	line-height:24px;
+	background:#870000;
+	font-family:Verdana, Geneva, sans-serif;
+	text-align:right;
+	font-size:16px;
+	font-weight:normal;
+	color:#FFF;
+	margin:0px;
+	padding:0px 15px 0px 0px;
+}
+
+.mof-cust-care-body
+{
+    background-color:#ffffff;
+	float:right;
+	height:600;
+	width:100%;
+}
+
+.mof-cust-care-body h2
+{ 
+	float:right;
+	width:150px;
+	height:auto;
+	/*line-height:24px;*/
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#b82f2f;
+	margin:15px 0px 0px 0px;
+	padding:0px 15px 0px 0px;
+}
+
+.mof-cust-care-body strong
+{ 
+	float:right;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:8px;
+	color:Red;
+	margin:18px 0px 0px 5px; 
+	padding:0px 5px 0px 0px;
+	vertical-align:super;
+}
+
+.mof-txtBox
+{
+	float:right;
+	width:292px;
+	height:20px;
+	margin:12px 0px 4px 0px; 
+	padding:0px 4px 0px 4px;
+	border: 1px solid #b82f2f;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#333; 
+	line-height:20px;
+}
+
+.mof-select
+{
+	float:right;
+	width:304px;
+	height:22px !important;
+	margin:12px 0px 4px 0px !important; 
+	padding:0px 0px 0px 0px !important;
+	border: 1px solid #b82f2f !important;
+	font-family: Verdana, Geneva, sans-serif !important;
+	font-size:10px !important;
+	color:#333 !important; 
+	line-height:20px !important; 
+}
+
+.mof-datepicker
+{
+	float:right;
+	width:86px;
+	height:20px;
+	margin:12px 0px 4px 0px; 
+	padding:0px 4px 0px 4px;
+	border: 1px solid #b82f2f;
+	font-family: Verdana, Geneva, sans-serif !important;
+	font-size:11px;
+	color:#333;  
+	line-height:20px;
+}
+
+.ms-dtinput a img
+{
+	margin-top:10px;
+	margin-right: 5px;
+}
+
+/* ================ Customer Care - end ================== */
+ 
+/* ================ Discussion Board - start ================== */
+
+.mof-inner-disc-header
+{
+    float:right; 
+    width:100%;
+    height:100%;
+}
+
+.mof-inner-disc-header h1
+{
+    color:#151515;
+    float:right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:16px;
+    font-weight:normal;
+    line-height:20px;
+    padding:0 12px 0 0;
+    margin:0 0 5px 50%;
+}
+
+.mof-inner-disc-header ul
+{
+	float:left;
+    color:#151515;
+    margin:0px;
+    padding:0px;
+}
+
+.mof-inner-disc-header ul li
+{   
+	list-style:none;
+    color:#151515;
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    line-height:20px;
+    margin:0 2px;
+}
+
+.mof-inner-disc-header ul li a
+{
+	list-style:none;
+    color:#151515 !Important;
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    line-height:20px;
+}
+
+.mof-inner-disc-header ul li span
+{
+    color:#151515;
+    float:right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    line-height:20px;
+    margin:0;
+    padding:0;
+}
+
+.mof-inner-disc-header a,
+mof-inner-disc-header a:link,
+mof-inner-disc-header a:visited,
+mof-inner-disc-header a:active
+{
+	float:left;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    color:#151515;
+    margin:0px;
+    padding:0px;
+}
+
+.mof-inner-disc-header a:hover
+{
+    float:left;
+    list-style:none;
+    color: #870000 !Important;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    line-height:20px;
+    text-decoration:underline;   
+}
+
+.mof-inner-disc-main
+{
+    background-color:#ffffff;
+	float:right;
+	width:100%;
+	height:600;
+}
+
+/* discussion board main area - start */
+
+.mof-inner-disc-body
+{
+    float:right; 
+    width:685px;
+    height:auto;  
+    padding:10px 10px 10px 10px;
+}
+
+.mof-inner-disc-body h1
+{   
+    color:#151515;
+    float:right;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    margin:5px 0 0 310px;
+    width:340px;
+    padding-top:10px;
+}
+
+.mof-inner-disc-body h2
+{   
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    color:#151515;
+    font-weight:bold;
+	width:77px;
+	padding-top:5px;
+}
+
+.mof-inner-disc-body h2 a
+{   
+    float:none;
+    margin:0px;
+    padding:0px;
+}
+
+.mof-inner-disc-body h3
+{   
+    /*float:right;*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    color:#333333;
+    font-weight:bold;
+    /*margin:2px 0px 0px 10px;
+    width:80px;*/
+}
+
+.mof-inner-disc-body h4
+{   
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:11px;
+    font-weight:normal;
+    color:#333333;
+    font-weight:bold;
+    margin: 0px 0px 10px 10px;
+    width:100px;
+    text-align:center;
+}
+
+.mof-inner-disc-body h4 img
+{   
+    /*float:right;*/
+    width:auto;
+    height:auto;
+    margin:4px 0px 4px 10px;
+    width:63px;
+    height:63px;
+}
+
+.mof-inner-disc-body h5
+{   
+	/*float:right;*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:16px;
+    font-weight:normal;
+    color: #870000;
+    margin:5px 0px 5px 0px;
+    width:90%;
+}
+
+.mof-inner-disc-body p
+{
+    /*float:right;*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    text-align:justify;
+    width:96%;
+    color:#151515;
+    margin:5px 0px 20px 0px;
+}
+
+.mof-disc-reply-icon
+{
+    color: #870000;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:13px;
+    text-decoration: none;
+    float:left;
+}
+
+a:link.mof-disc-reply-icon, 
+a:visited.mof-disc-reply-icon, 
+a:active.mof-disc-reply-icon
+{
+    color: #333;
+    text-decoration:underline;
+}
+
+.mof-disc-reply-icon:hover,  
+div.mof-disc-reply-icon.hover
+{
+     text-decoration:underline;
+     cursor:pointer;
+}
+
+/* discussion board main area - end */
+
+
+/* discussion board replies - start */
+
+.mof-inner-disc-reply
+{
+    float:right; 
+    width:685px;
+    height:auto;
+    margin:0;  
+    padding:10px 0;
+    border-top: 1px dashed #912C2D;
+}
+
+.mof-inner-disc-reply h1
+{   
+    color:#151515;
+    float:right;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    margin:5px 0 0 220px;
+    width:340px;
+    padding-top:10px;
+}
+
+.mof-inner-disc-reply h2
+{   
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:13px;
+    font-weight:normal;
+    color:#151515;
+    font-weight:bold;
+	width:77px;
+	 height: 20px;
+	padding-top:5px;
+}
+
+.mof-inner-disc-reply h2 a
+{   
+    float:none;
+    margin:0px;
+    padding:0px;
+}
+
+.mof-inner-disc-reply h3
+{   
+    /*float:right;*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    color:#333333;
+    font-weight:bold;
+    /*margin:2px 0px 0px 10px;
+    width:80px;*/
+}
+
+.mof-inner-disc-reply h4
+{   
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:11px;
+    font-weight:normal;
+    color:#333333;
+    font-weight:bold;
+    margin: 0px 0px 10px 10px;
+    width:100px;
+    text-align:center;
+}
+
+.mof-inner-disc-reply h4 img
+{   
+    /*float:right;*/
+    width:auto;
+    height:auto;
+    margin:4px 0px 4px 10px;
+    width:63px;
+    height:63px;
+}
+
+.mof-inner-disc-reply h5
+{   
+	/*float:right;*/
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:16px;
+    font-weight:normal;
+    color: #870000;
+    margin:5px 0px 5px 0px;
+    width:96%;
+}
+
+.mof-inner-disc-reply p
+{
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    text-align:justify;
+    width:83%;
+    color:#151515;
+    margin:5px 0px 20px 0px;
+    min-height:100px;
+}
+
+/* discussion board replies - end */
+
+/* discussion board reply area - start */
+
+.mof-disc-reply-area
+{
+    float:right; 
+    width:100%;
+    height:auto;
+    padding: 0 4px;
+}
+
+.mof-disc-reply-body
+{ 
+    background-color: #FFFFFF;
+    /*border-color: #912C2D;
+    border-style: solid;
+    border-width: 1px;*/
+    float:right;
+    width:99.9%;
+	height:600;   
+}
+
+.mof-disc-reply-body textarea
+{ 
+    float:right;
+	width:292px;
+	height:20px;
+	margin:12px 15px 4px 0px; 
+	padding:0px 4px 0px 4px;
+	border: 1px solid #b82f2f;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#333; 
+	line-height:20px;
+}
+
+.mof-disc-reply-attach
+{
+	color: #000000;
+    float: right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    height: auto;
+    margin: 8px 0 4px;
+    padding: 0;
+    width: 90%;
+}
+
+.mof-disc-reply-attach h3
+{
+	float:right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    height:auto;
+    padding:0 15px 0 0;
+    width:100px;
+    margin:0;
+}
+
+.mof-disc-reply-attachments
+{
+	float:left;
+    padding-right:15px;
+    width: 60%;
+}
+
+.mof-disc-reply-attachment
+{
+	float:right;
+	height:auto;	
+	margin:0px 10px 4px 0px; 
+	padding:0px 0px 0px 0px;
+}
+
+.mof-disc-reply-attachment img
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:3px 5px 0px 0px; 
+	padding:0px 0px 0px 0px;
+	border:1px solid #333;
+	background-color:#FFF;
+}
+
+.mof-disc-reply-attachment input[type="text"]
+{
+	float:right;
+	width:250px;
+	height:20px;
+	margin:0px 0px 0px 0px; 
+	padding:0px 4px 0px 4px;
+	border: 1px solid #B82F2F;
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:11px;
+	color:#333; 
+	line-height:20px; 
+}
+
+.mof-disc-reply-button 
+{   
+    float:right;
+    margin:20px 33px;
+    width:100%;
+    height:auto;
+    text-align:center;
+}
+
+
+/* discussion board reply area - end */
+
+/* ================ Discussion Board - end ================== */
+
+/* ================ dialog box - start ================== */
+
+.mof-inner-dialog
+{
+    float:right; 
+    width:400px !important;
+    padding: 0px;
+}
+    
+.mof-inner-dialog h1
+{
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    width:386px;
+    height:auto;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:2px 2px 2px 2px;
+    color:#ffffff;
+    background:#912C2D;
+}
+
+.mof-inner-dialog h2
+{
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    width:100px;
+    margin:12px 10px 10px 5px;
+    color:#b82f2f;
+    height:20px;
+}
+
+.mof-inner-dialog input
+{
+	float:right;
+	height:20px;
+	line-height:20px;
+    font-family: Verdana, Geneva, sans-serif !important;
+    font-size:12px !important;
+    font-weight:normal;
+    width:270px;
+    margin:10px 0px 10px 0px;
+    border: 1px solid #b82f2f;
+    color:#333; 
+}
+
+.mof-inner-dialog input[type="file"]
+{
+	float:right;
+	height:20px;
+	line-height:20px;
+    font-family: Verdana, Geneva, sans-serif !important;
+    font-size:12px !important;
+    font-weight:normal;
+    width:270px;
+    margin:10px 0px 10px 10px;
+    border: 1px solid #b82f2f;
+    color:#333; 
+}
+
+.mof-inner-dialog h3
+{   
+    float:right;
+    margin:20px 5px 20px 20px;
+}
+
+.mof-inner-dialog h4
+{   
+    float:right;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:8px;
+    color:Red;
+    padding:2px 2px 0px 0px;
+    vertical-align:super;
+}
+
+.mof-inner-dialog img
+{   
+    float:right;
+	width:auto;
+	height:auto;
+	margin:14px 5px 0px 0px; 
+	padding:0px 0px 0px 0px;
+}
+
+.ui-dialog .ui-dialog-title 
+{
+    float: right !important;
+    font-family: Verdana, Geneva, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    margin-right:0 !important;
+    margin-left:16px !important;
+}
+
+/* ================ dialog box - end ================== */
+
+.displayContainerOuter
+{
+    border:1px solid #999999;
+    float:right;
+    height:100%;
+    width:100%;
+}
+
+.displayContainerInner
+{
+    background-color: #fff;
+    /*border: solid 1px #912C2D;*/
+}
+
+.activityHeadWrapper
+{
+    background-color:#912C2D;
+    border-bottom: solid 1px #912C2D;
+}
+
+.activityHead
+{
+    font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+    color:#FFF;
+    padding:4px;
+}
+
+.activityButton, input.activityButton
+{
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+    margin-bottom: 3px;
+    padding: 3px;
+    border: 1px ridge #999999;
+    color: #333;
+    background-color: #EBEBEB;
+    text-decoration: none;
+    cursor:pointer;
+    text-align: center;
+    font-weight:normal;
+}
+
+a:link.activityButton, a:visited.activityButton, a:active.activityButton
+{
+    color: #333;
+    text-decoration: none;
+}
+
+.activityButton:hover, .searchButton:hover, div.activityButton.hover
+{
+    background-color: #999999;
+}
+
+		
+/* ================ Page layouts - start ================== */
+
+.mof-Def-Cen-body
+{
+	float:right;
+	width:982px;
+	height:auto;
+	min-height:200px;
+	padding:10px;
+}
+
+.mof-Def-left-body
+{
+	float:right;
+	width:982px;
+	height:auto;
+	min-height:200px;
+	margin:8px 25px 0px 0px;
+}
+
+.mof-left
+{
+	float:right;
+	width:238px;
+	height:auto;
+	min-height:400px;
+	margin:0px 0px 0px 0px;
+}
+
+ .mof-left-right{
+ float:right;
+ width:699px;
+ height:auto;
+ min-height:200px;
+ margin:0px 15px 0px 0px;}
+ 	
+.mof-main-thr-Col
+{
+	float:right;
+	width:982px;
+	height:auto;
+	min-height:200px;
+	padding:10px;
+}
+	
+.mof-fris-Col
+{
+	float:right;
+	width:238px;
+	height:auto;
+	min-height:400px;
+	margin:8px 25px 0px 0px;
+}
+
+.mof-seco-Col
+{
+	float:right;
+	width:400px;
+	height:auto;
+	min-height:400px;
+	margin:8px 8px 0px 0px;
+}
+
+.mof-ther-Col
+{
+	float:right;
+	width:300px;
+	height:auto;
+	min-height:400px;
+	margin:8px 8px 0px 0px;
+}
+
+/* ================ Page layouts - end ================== */
+
+/*==========================================================================================================*/
+/*==================================== Record lising grid start here ========================================*/
+/*==========================================================================================================*/
+
+.centertable
+{
+	float:right;
+	width:100%;
+	height:auto;
+	padding:0px 0px 0px 0px;
+}
+
+.centertable table
+{
+	float:left;
+	width:100%;
+	height:auto;
+	border-left:1px solid #870000;
+	border-bottom:1px solid #870000;
+}
+
+.centertable table thead 
+{
+	border-left:1px solid #870000;
+}
+
+.centertable table thead tr
+{
+	background:#dedede;
+}
+
+.centertable table thead th
+{
+	border-right:1px solid #870000;
+	border-top:1px solid #870000;
+	padding:6px;
+	text-align:right;
+}
+
+.centertable table thead th span
+{
+	font:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color:#870000;
+}
+
+.centertable table tbody th
+{
+	border-right:1px solid #870000;
+	border-top:1px solid #870000;
+	padding:6px;
+	text-align:right;
+	background:#dedede;
+	font-weight: bold;
+}
+
+.centertable td h1
+{
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#b82f2f;
+}
+
+.centertable td
+{
+	padding:4px;
+	border-right:1px solid #870000;
+	border-top:1px solid #870000;
+}
+
+.centertable td .mofspan
+{
+	float:right;
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#000;
+}
+
+.centertable td a
+{
+	float:right;
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#b82f2f !important;
+}
+
+.centertable td a:hover
+{
+	float:right;
+	width:auto;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#000 !important;
+}
+
+/*==========================================================================================================*/
+/*==================================== Record lising grid end here =========================================*/
+/*==========================================================================================================*/
+
+.iconT
+{
+    float:left;
+   /* width:14px;
+    height:14px;*/
+    margin:0px 0px 0px 4px;
+    border:0px;
+    cursor:pointer;
+   
+   }
