@@ -1,0 +1,21 @@
+Sitemap: https://data.linz.govt.nz/sitemap.xml
+
+User-agent: *
+
+Disallow: /my/
+Disallow: /c/
+Disallow: /e/
+Disallow: /search/
+Disallow: /feeds/csw
+Disallow: /services
+
+User-agent: Webalta
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+
+User-agent: CybelangelScanner
+Disallow: /
+
