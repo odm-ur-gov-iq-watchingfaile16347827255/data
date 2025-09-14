@@ -1,0 +1,1966 @@
+<html dir="rtl"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="atlasjavascript/rtl/files/alsco_headline1.js" type="text/javascript"></script>
+<script language="javascript" src="atlasjavascript/rtl/files/alsco_headline2.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="https://www.mpc.gov.iq/upload/themes/ar/Atlas/icon.png" type="image/x-png">
+
+
+    <script src="javascripts/jquery.min.js"></script>
+    <style>div#page {
+
+
+
+		}
+
+		.back-to-top {
+			position: fixed;
+			bottom: 10px;
+			right: 35px;
+			text-decoration: none;
+			color: #000000;
+			background-color:#b591cc;
+
+			padding: 0em;
+			display: none;
+   border-radius: 2px;
+
+		}
+
+		.back-to-top:hover {
+border-radius:2px;
+           background-color: #7d3da6;
+		}
+	</style>
+</head><body background="upload/themes/ar/atlas/background.jpg" text="#000000"><a href="#" class="back-to-top"><img src="icon/top.png"></a>
+   <script>
+			jQuery(document).ready(function() {
+				var offset = 220;
+				var duration = 500;
+				jQuery(window).scroll(function() {
+					if (jQuery(this).scrollTop() > offset) {
+						jQuery('.back-to-top').fadeIn(duration);
+					} else {
+						jQuery('.back-to-top').fadeOut(duration);
+					}
+				});
+
+				jQuery('.back-to-top').click(function(event) {
+					event.preventDefault();
+					jQuery('html, body').animate({scrollTop: 0}, duration);
+					return false;
+				})
+			});
+		</script>
+
+
+
+
+
+
+ <script language="javascript">
+//Specify affected tags. Add or remove from list:
+var tgs = new Array( 'div','td','tr','basefont');
+
+//Specify spectrum of different font sizes:
+var szs = new Array( '6pt','8pt','9pt','10pt','11pt','12pt');
+var startSz = 2;
+
+function ts( trgt,inc ) {
+    if (!document.getElementById) return
+    var d = document,cEl = null,sz = startSz,i,j,cTags;
+
+    sz += inc;
+    if ( sz < 0 ) sz = 0;
+    if ( sz > 6 ) sz = 6;
+    startSz = sz;
+
+    if ( !( cEl = d.getElementById( trgt ) ) ) cEl = d.getElementsByTagName( trgt )[ 0 ];
+
+    cEl.style.fontSize = szs[ sz ];
+
+    for ( i = 0 ; i < tgs.length ; i++ ) {
+        cTags = cEl.getElementsByTagName( tgs[ i ] );
+        for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
+    }
+}
+</script>
+
+
+<!--End-->
+
+
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<title>وزارة الصحة والبيئة / دائرة العيادات الطبية الشعبية</title>
+<link rel="stylesheet" href="https://www.mpc.gov.iq/themes/alsco/style.css" type="text/css">
+
+
+<style>.shadow_table
+{
+box-shadow: 0px 0px 0px 0px #ADADAD ;
+
+}
+</style>
+
+
+
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+ 
+
+<link rel="stylesheet" type="text/css" href="https://www.mpc.gov.iq/atlasjavascript/rtl/topmenu/ddsmoothmenu.css">
+<script type="text/javascript" src="https://www.mpc.gov.iq/atlasjavascript/rtl/topmenu/jquery.min.js"></script>
+<script>
+var ddsmoothmenu={
+
+//Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
+arrowimages: {down:['downarrowclass', 'upload/themes/ar/Atlas/dartup.png', 1], left:['rightarrowclass', 'upload/themes/ar/Atlas/dartdown.png']},
+transition: {overtime:600, outtime:600}, //duration of slide in/ out animation, in milliseconds
+shadow: {enable:false, offsetx:5, offsety:5}, //enable shadow?
+showhidedelay: {showdelay: 10, hidedelay: 100}, //set delay in milliseconds before sub menus appear and disappear, respectively
+
+///////Stop configuring beyond here///////////////////////////
+
+detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit")!=-1, //detect WebKit browsers (Safari, Chrome etc)
+detectie6: document.all && !window.XMLHttpRequest,
+css3support: window.msPerformance || (!document.all && document.querySelector), //detect browsers that support CSS3 box shadows (ie9+ or FF3.5+, Safari3+, Chrome etc)
+
+getajaxmenu:function($, setting){ //function to fetch external page containing the panel DIVs
+	var $menucontainer=$('#'+setting.contentsource[0]) //reference empty div on page that will hold menu
+	$menucontainer.html("Loading Menu...")
+	$.ajax({
+		url: setting.contentsource[1], //path to external menu file
+		async: true,
+		error:function(ajaxrequest){
+			$menucontainer.html('Error fetching content. Server Response: '+ajaxrequest.responseText)
+		},
+		success:function(content){
+			$menucontainer.html(content)
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+},
+
+
+buildmenu:function($, setting){
+	var smoothmenu=ddsmoothmenu
+	var $mainmenu=$("#"+setting.mainmenuid+">ul") //reference main menu UL
+	$mainmenu.parent().get(0).className=setting.classname || "ddsmoothmenu"
+	var $headers=$mainmenu.find("ul").parent()
+	$headers.hover(
+		function(e){
+			$(this).children('a:eq(0)').addClass('selected')
+		},
+		function(e){
+			$(this).children('a:eq(0)').removeClass('selected')
+		}
+	)
+	$headers.each(function(i){ //loop through each LI header
+		var $curobj=$(this).css({zIndex: 100-i}) //reference current LI header
+		var $subul=$(this).find('ul:eq(0)').css({display:'block'})
+		$subul.data('timers', {})
+		this._dimensions={w:this.offsetWidth, h:this.offsetHeight, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()}
+		this.istopheader=$curobj.parents("ul").length==1? true : false //is top level header?
+		$subul.css({top:this.istopheader && setting.orientation!='v'? this._dimensions.h+"px" : 0})
+		$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: smoothmenu.arrowimages.down[2]} : {}).append( //add arrow images
+			'<img src="'+ (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[1] : smoothmenu.arrowimages.left[1])
+			+'" class="' + (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[0] : smoothmenu.arrowimages.left[0])
+			+ '" style="border:;" />'
+		)
+		if (smoothmenu.shadow.enable && !smoothmenu.css3support){ //if shadows enabled and browser doesn't support CSS3 box shadows
+			this._shadowoffset={x:(this.istopheader?$subul.offset().left+smoothmenu.shadow.offsetx : this._dimensions.w), y:(this.istopheader? $subul.offset().top+smoothmenu.shadow.offsety : $curobj.position().top)} //store this shadow's offsets
+			if (this.istopheader)
+				$parentshadow=$(document.body)
+			else{
+				var $parentLi=$curobj.parents("li:eq(0)")
+				$parentshadow=$parentLi.get(0).$shadow
+			}
+			this.$shadow=$('<div class="ddshadow'+(this.istopheader? ' toplevelshadow' : '')+'"></div>').prependTo($parentshadow).css({left:this._shadowoffset.x+'px', top:this._shadowoffset.y+'px'})  //insert shadow DIV and set it to parent node for the next shadow div
+		}
+		$curobj.hover(
+			function(e){
+				var $targetul=$subul //reference UL to reveal
+				var header=$curobj.get(0) //reference header LI as DOM object
+				clearTimeout($targetul.data('timers').hidetimer)
+				$targetul.data('timers').showtimer=setTimeout(function(){
+					header._offsets={left:$curobj.offset().right, top:$curobj.offset().top}
+					var menuleft=header.istopheader && setting.orientation!='v'? 0 : header._dimensions.w
+					menuleft=(header._offsets.left+menuleft+header._dimensions.subulw>$(window).width())? (header.istopheader && setting.orientation!='v'? -header._dimensions.subulw+header._dimensions.w : -header._dimensions.w) : menuleft //calculate this sub menu's offsets from its parent
+					if ($targetul.queue().length<=1){ //if 1 or less queued animations
+						$targetul.css({right:menuleft+"px", width:header._dimensions.subulw+'px'}).animate({height:'show',opacity:'show'}, ddsmoothmenu.transition.overtime)
+						if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+							var shadowright=header.istopheader? $targetul.offset().left+ddsmoothmenu.shadow.offsetx : menuleft
+							var shadowtop=header.istopheader?$targetul.offset().top+smoothmenu.shadow.offsety : header._shadowoffset.y
+							if (!header.istopheader && ddsmoothmenu.detectwebkit){ //in WebKit browsers, restore shadow's opacity to full
+								header.$shadow.css({opacity:1})
+							}
+							header.$shadow.css({overflow:'', width:header._dimensions.subulw+'px', left:shadowright+'px', top:shadowtop+'px'}).animate({height:header._dimensions.subulh+'px'}, ddsmoothmenu.transition.overtime)
+						}
+					}
+				}, ddsmoothmenu.showhidedelay.showdelay)
+			},
+			function(e){
+				var $targetul=$subul
+				var header=$curobj.get(0)
+				clearTimeout($targetul.data('timers').showtimer)
+				$targetul.data('timers').hidetimer=setTimeout(function(){
+					$targetul.animate({height:'hide', opacity:'hide'}, ddsmoothmenu.transition.outtime)
+					if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+						if (ddsmoothmenu.detectwebkit){ //in WebKit browsers, set first child shadow's opacity to 0, as "overflow:hidden" doesn't work in them
+							header.$shadow.children('div:eq(0)').css({opacity:0})
+						}
+						header.$shadow.css({overflow:'hidden'}).animate({height:0}, ddsmoothmenu.transition.outtime)
+					}
+				}, ddsmoothmenu.showhidedelay.hidedelay)
+			}
+		) //end hover
+	}) //end $headers.each()
+	if (smoothmenu.shadow.enable && smoothmenu.css3support){ //if shadows enabled and browser supports CSS3 shadows
+		var $toplevelul=$('#'+setting.mainmenuid+' ul li ul')
+		var css3shadow=parseInt(smoothmenu.shadow.offsetx)+"px "+parseInt(smoothmenu.shadow.offsety)+"px 5px #aaa" //construct CSS3 box-shadow value
+		var shadowprop=["boxShadow", "MozBoxShadow", "WebkitBoxShadow", "MsBoxShadow"] //possible vendor specific CSS3 shadow properties
+		for (var i=0; i<shadowprop.length; i++){
+			$toplevelul.css(shadowprop[i], css3shadow)
+		}
+	}
+	$mainmenu.find("ul").css({display:'none', visibility:'visible'})
+},
+
+init:function(setting){
+	if (typeof setting.customtheme=="object" && setting.customtheme.length==2){ //override default menu colors (default/hover) with custom set?
+		var mainmenuid='#'+setting.mainmenuid
+		var mainselector=(setting.orientation=="v")? mainmenuid : mainmenuid+', '+mainmenuid
+		document.write('<style type="text/css">\n'
+			+mainselector+' ul li a {background:'+setting.customtheme[0]+';}\n'
+			+mainmenuid+' ul li a:hover {background:'+setting.customtheme[1]+';}\n'
+		+'</style>')
+	}
+	this.shadow.enable=(document.all && !window.XMLHttpRequest)? false : this.shadow.enable //in IE6, always disable shadow
+	jQuery(document).ready(function($){ //ajax menu?
+		if (typeof setting.contentsource=="object"){ //if external ajax menu
+			ddsmoothmenu.getajaxmenu($, setting)
+		}
+		else{ //else if markup menu
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+}
+
+} //end ddsmoothmenu variable
+</script>
+<script type="text/javascript">
+
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+
+customtheme: ["", ""],
+
+    customtheme: [" url(\'upload/themes/ar/Atlas/upmenubackground.png\')", "url(\'upload/themes/ar/Atlas/upmenushadow.png\')"],
+
+
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+
+</script><style type="text/css">#smoothmenu1, #smoothmenu1 ul li a {background: url('upload/themes/ar/atlas/upmenubackground.png');}
+#smoothmenu1 ul li a:hover {background:url('https://www.mpc.gov.iq/upload/themes/ar/Atlas/upmenushadow.png');}
+</style>
+
+
+<style>.ddsmoothmenu ul li ul{
+
+position: absolute;
+
+left: 0;
+
+display: none; /*collapse all sub menus to begin with*/
+
+visibility: hidden;
+
+
+direction: ar ;
+
+
+width: 200px ;
+
+}
+
+.ddsmoothmenu ul li a{
+display: block;
+background: #414141; /*background of menu items (default state)*/
+color: white;
+
+padding: 0px  ;
+line-height: 38px;
+color: #ffffff;
+text-decoration: none;
+}
+
+.ddsmoothmenu ul li ul li a{
+
+
+
+padding:  0px;
+line-height: 35px;
+
+
+border-top-width: 0;
+
+border-bottom: 1px solid #FFFFFF;
+}
+
+.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited, .ddsmoothmenu ul li a:active{
+background: #414141; /*background of menu items (default state)*/
+color: #FFFFFF;
+text-align: #right;
+
+}
+
+ .ddsmoothmenu ul li a:hover{
+background: lightblue; /*background of menu items during onmouseover (hover state)*/
+color: #000000;
+direction: ar ;
+}
+
+
+.downarrowclass{
+
+position: absolute;
+
+top:15;
+left: 1px;
+
+}
+
+
+
+</style>
+
+ 
+  
+
+<style>.marqueeannounce {
+ overflow: hidden;
+ width: 851   ;
+}
+</style>
+
+
+
+
+<script>
+
+function black()
+{
+document.bgColor="black";
+
+}
+
+function brown()
+{
+document.bgColor="brown"
+
+}
+
+function white()
+{
+document.bgColor="white"
+ }
+ 
+ 
+ function chartreuse()
+{
+document.bgColor="chartreuse"
+ }
+ 
+ 
+  function darkblue()
+{
+document.bgColor="darkblue"
+ }
+ 
+ 
+   function red ()
+{
+document.bgColor="red "
+ }
+
+    function blue ()
+{
+document.bgColor="blue "
+ }
+
+
+     function yellow ()
+{
+document.bgColor="yellow "
+ }
+
+</script>
+
+<style>.marqueenews {
+ overflow: hidden;
+ width: 764   ;
+}
+</style>
+
+ 
+<link rel="stylesheet" type="text/css" href="https://www.mpc.gov.iq/atlasjavascript/rtl/downmenu/ddsmoothmenu-v.css">
+ 
+
+<script>
+var ddsmoothmenu={
+
+//Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
+arrowimages: {down:['downarrowclass', 'upload/themes/ar/Atlas/dartup.png', 1], left:['rightarrowclass', 'upload/themes/ar/Atlas/dartdown.png']},
+transition: {overtime:600, outtime:600}, //duration of slide in/ out animation, in milliseconds
+shadow: {enable:false, offsetx:5, offsety:5}, //enable shadow?
+showhidedelay: {showdelay: 10, hidedelay: 100}, //set delay in milliseconds before sub menus appear and disappear, respectively
+
+///////Stop configuring beyond here///////////////////////////
+
+detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit")!=-1, //detect WebKit browsers (Safari, Chrome etc)
+detectie6: document.all && !window.XMLHttpRequest,
+css3support: window.msPerformance || (!document.all && document.querySelector), //detect browsers that support CSS3 box shadows (ie9+ or FF3.5+, Safari3+, Chrome etc)
+
+getajaxmenu:function($, setting){ //function to fetch external page containing the panel DIVs
+	var $menucontainer=$('#'+setting.contentsource[0]) //reference empty div on page that will hold menu
+	$menucontainer.html("Loading Menu...")
+	$.ajax({
+		url: setting.contentsource[1], //path to external menu file
+		async: true,
+		error:function(ajaxrequest){
+			$menucontainer.html('Error fetching content. Server Response: '+ajaxrequest.responseText)
+		},
+		success:function(content){
+			$menucontainer.html(content)
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+},
+
+
+buildmenu:function($, setting){
+	var smoothmenu=ddsmoothmenu
+	var $mainmenu=$("#"+setting.mainmenuid+">ul") //reference main menu UL
+	$mainmenu.parent().get(0).className=setting.classname || "ddsmoothmenu"
+	var $headers=$mainmenu.find("ul").parent()
+	$headers.hover(
+		function(e){
+			$(this).children('a:eq(0)').addClass('selected')
+		},
+		function(e){
+			$(this).children('a:eq(0)').removeClass('selected')
+		}
+	)
+	$headers.each(function(i){ //loop through each LI header
+		var $curobj=$(this).css({zIndex: 100-i}) //reference current LI header
+		var $subul=$(this).find('ul:eq(0)').css({display:'block'})
+		$subul.data('timers', {})
+		this._dimensions={w:this.offsetWidth, h:this.offsetHeight, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()}
+		this.istopheader=$curobj.parents("ul").length==1? true : false //is top level header?
+		$subul.css({top:this.istopheader && setting.orientation!='v'? this._dimensions.h+"px" : 0})
+		$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: smoothmenu.arrowimages.down[2]} : {}).append( //add arrow images
+			'<img src="'+ (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[1] : smoothmenu.arrowimages.left[1])
+			+'" class="' + (this.istopheader && setting.orientation!='v'? smoothmenu.arrowimages.down[0] : smoothmenu.arrowimages.left[0])
+			+ '" style="border:;" />'
+		)
+		if (smoothmenu.shadow.enable && !smoothmenu.css3support){ //if shadows enabled and browser doesn't support CSS3 box shadows
+			this._shadowoffset={x:(this.istopheader?$subul.offset().left+smoothmenu.shadow.offsetx : this._dimensions.w), y:(this.istopheader? $subul.offset().top+smoothmenu.shadow.offsety : $curobj.position().top)} //store this shadow's offsets
+			if (this.istopheader)
+				$parentshadow=$(document.body)
+			else{
+				var $parentLi=$curobj.parents("li:eq(0)")
+				$parentshadow=$parentLi.get(0).$shadow
+			}
+			this.$shadow=$('<div class="ddshadow'+(this.istopheader? ' toplevelshadow' : '')+'"></div>').prependTo($parentshadow).css({left:this._shadowoffset.x+'px', top:this._shadowoffset.y+'px'})  //insert shadow DIV and set it to parent node for the next shadow div
+		}
+		$curobj.hover(
+			function(e){
+				var $targetul=$subul //reference UL to reveal
+				var header=$curobj.get(0) //reference header LI as DOM object
+				clearTimeout($targetul.data('timers').hidetimer)
+				$targetul.data('timers').showtimer=setTimeout(function(){
+					header._offsets={left:$curobj.offset().right, top:$curobj.offset().top}
+					var menuleft=header.istopheader && setting.orientation!='v'? 0 : header._dimensions.w
+					menuleft=(header._offsets.left+menuleft+header._dimensions.subulw>$(window).width())? (header.istopheader && setting.orientation!='v'? -header._dimensions.subulw+header._dimensions.w : -header._dimensions.w) : menuleft //calculate this sub menu's offsets from its parent
+					if ($targetul.queue().length<=1){ //if 1 or less queued animations
+						$targetul.css({right:menuleft+"px", width:header._dimensions.subulw+'px'}).animate({height:'show',opacity:'show'}, ddsmoothmenu.transition.overtime)
+						if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+							var shadowright=header.istopheader? $targetul.offset().left+ddsmoothmenu.shadow.offsetx : menuleft
+							var shadowtop=header.istopheader?$targetul.offset().top+smoothmenu.shadow.offsety : header._shadowoffset.y
+							if (!header.istopheader && ddsmoothmenu.detectwebkit){ //in WebKit browsers, restore shadow's opacity to full
+								header.$shadow.css({opacity:1})
+							}
+							header.$shadow.css({overflow:'', width:header._dimensions.subulw+'px', left:shadowright+'px', top:shadowtop+'px'}).animate({height:header._dimensions.subulh+'px'}, ddsmoothmenu.transition.overtime)
+						}
+					}
+				}, ddsmoothmenu.showhidedelay.showdelay)
+			},
+			function(e){
+				var $targetul=$subul
+				var header=$curobj.get(0)
+				clearTimeout($targetul.data('timers').showtimer)
+				$targetul.data('timers').hidetimer=setTimeout(function(){
+					$targetul.animate({height:'hide', opacity:'hide'}, ddsmoothmenu.transition.outtime)
+					if (smoothmenu.shadow.enable && !smoothmenu.css3support){
+						if (ddsmoothmenu.detectwebkit){ //in WebKit browsers, set first child shadow's opacity to 0, as "overflow:hidden" doesn't work in them
+							header.$shadow.children('div:eq(0)').css({opacity:0})
+						}
+						header.$shadow.css({overflow:'hidden'}).animate({height:0}, ddsmoothmenu.transition.outtime)
+					}
+				}, ddsmoothmenu.showhidedelay.hidedelay)
+			}
+		) //end hover
+	}) //end $headers.each()
+	if (smoothmenu.shadow.enable && smoothmenu.css3support){ //if shadows enabled and browser supports CSS3 shadows
+		var $toplevelul=$('#'+setting.mainmenuid+' ul li ul')
+		var css3shadow=parseInt(smoothmenu.shadow.offsetx)+"px "+parseInt(smoothmenu.shadow.offsety)+"px 5px #aaa" //construct CSS3 box-shadow value
+		var shadowprop=["boxShadow", "MozBoxShadow", "WebkitBoxShadow", "MsBoxShadow"] //possible vendor specific CSS3 shadow properties
+		for (var i=0; i<shadowprop.length; i++){
+			$toplevelul.css(shadowprop[i], css3shadow)
+		}
+	}
+	$mainmenu.find("ul").css({display:'none', visibility:'visible'})
+},
+
+init:function(setting){
+	if (typeof setting.customtheme=="object" && setting.customtheme.length==2){ //override default menu colors (default/hover) with custom set?
+		var mainmenuid='#'+setting.mainmenuid
+		var mainselector=(setting.orientation=="v")? mainmenuid : mainmenuid+', '+mainmenuid
+		document.write('<style type="text/css">\n'
+			+mainselector+' ul li a {background:'+setting.customtheme[0]+';}\n'
+			+mainmenuid+' ul li a:hover {background:'+setting.customtheme[1]+';}\n'
+		+'</style>')
+	}
+	this.shadow.enable=(document.all && !window.XMLHttpRequest)? false : this.shadow.enable //in IE6, always disable shadow
+	jQuery(document).ready(function($){ //ajax menu?
+		if (typeof setting.contentsource=="object"){ //if external ajax menu
+			ddsmoothmenu.getajaxmenu($, setting)
+		}
+		else{ //else if markup menu
+			ddsmoothmenu.buildmenu($, setting)
+		}
+	})
+}
+
+} //end ddsmoothmenu variable
+</script>
+
+
+
+<script type="text/javascript">
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu2", //Menu DIV id
+	orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+
+customtheme: ["#1c5a80", "#18374a"],
+ customtheme: [" url(\'upload/themes/ar/Atlas/downmenubackground.png\')",
+ "url(\'upload/themes/ar/Atlas/downmenushadow.png\')"],
+contentsource: "markup" //"markup" or ["container_id", "path_to_slidemenu_file"]
+})
+
+</script><style type="text/css">#smoothmenu2 ul li a {background: url('upload/themes/ar/atlas/downmenubackground.png');}
+#smoothmenu2 ul li a:hover {background:url('https://www.mpc.gov.iq/upload/themes/ar/Atlas/downmenushadow.png');}
+</style>
+
+
+    <style>.ddsmoothmenu-v ul{
+list-style-type: none;
+}
+
+/* Top level menu links style */
+.ddsmoothmenu-v ul li a{
+display: block;
+ /*overflow: auto;*/
+ /*force hasLayout in IE7 */
+color: black;
+
+text-decoration: right;
+text-align: right;
+padding: 0;
+line-height: 32px;
+border-bottom: 3px solid #FFFFFF ;
+border-right: 0px  solid #000066 ;
+
+
+
+}
+
+.ddsmoothmenu-v ul li ul{
+position: absolute;
+width: 170px;
+top: 0;
+font-weight: normal;
+visibility: hidden;
+text-align: right;
+}
+
+
+
+
+.ddsmoothmenu-v ul li a:link, .ddsmoothmenu-v ul li a:visited, .ddsmoothmenu-v ul li a:active{
+background: #414141; /*background of menu items (default state)*/
+color: #FFFFFF;
+text-align: right;
+
+}
+
+ .ddsmoothmenu-v ul li a:hover{
+background: lightblue; /*background of menu items during onmouseover (hover state)*/
+color: #000000;
+}
+
+    .rightarrowclass{
+	position: absolute;
+top:8;
+
+ left: 1px;
+}
+
+.leftarrowclass{
+     position: absolute;
+     top:8;
+       right: 1px;
+       }
+</style>
+
+  
+
+
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+
+
+
+<script src="atlasjavascript/alscobanner/js/jquery.min.js"></script>
+<script src="atlasjavascript/alscobanner/js/jquery.banner-rotator.js"></script>
+
+    
+    
+<style type="text/css">/*Make sure your page contains a valid doctype at the top*/
+#simplegallery1{ //CSS for Simple Gallery Example 1
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 0px solid darkred;
+}
+
+#simplegallery1 .gallerydesctext{ //CSS for description DIV of Example 1 (if defined)
+text-align: left;
+padding: 2px 5px;
+}
+
+</style>
+
+<script type="text/javascript" src="javascripts/album-block.js">
+
+/***********************************************
+* Simple Controls Gallery- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery1", //ID of main gallery container,
+
+dimensions: [170,170],
+
+imagearray: [
+
+
+["upload/slideshow/ar/285.jpg", "", "", ""],
+["upload/slideshow/ar/284.jpg", "", "", ""],
+["upload/slideshow/ar/283.jpg", "", "", ""],
+["upload/slideshow/ar/282.jpg", "", "", ""],
+["upload/slideshow/ar/281.jpg", "", "", ""]
+
+
+	],
+	autoplay: [true, 2500, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//Keyword "this": references current gallery instance
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})
+
+</script>
+
+
+
+
+
+
+
+
+ 
+ 
+<style>.marqueeread {
+ overflow: hidden;
+ width:100%;
+ height:200;
+}
+</style>
+
+
+  
+
+
+<style>.sliderImage {
+	DISPLAY: none; RIGHT: 0px; MARGIN: auto; POSITION: absolute; TOP: 0px
+}
+.sliderImage SPAN {
+	PADDING-RIGHT: 5px; DISPLAY: none; PADDING-LEFT: 1px; FONT-WEIGHT: bold; FONT-SIZE: 11px; RIGHT: 0px; FILTER: alpha(opacity=70); PADDING-BOTTOM: 5px;
+  width: 100%px;
+
+ COLOR: #fff; PADDING-TOP: 5px; FONT-FAMILY: tahoma; POSITION: absolute; HEIGHT:60px; BACKGROUND-COLOR: #000; TEXT-ALIGN: justify; moz-opacity: 0.7; khtml-opacity: 0.7; opacity: 0.7
+}
+
+ #slider {
+ width: 565;
+ height: 400;
+
+   position: relative; /* important */
+	overflow: hidden; /* important */
+}
+
+
+.clear {
+	clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0;
+    left: 0;
+}
+ul { list-style-type: none;}
+
+</style>
+
+
+<center>
+
+
+</center>
+
+
+
+<script type="text/javascript">
+t(document).ready
+(
+
+    function() {
+
+        t('#slider').s3Slider
+      (
+        {
+
+             timeOut: 4000
+        }
+      );
+    }
+);
+</script>
+
+
+
+
+
+ 
+   
+
+<title></title>
+<link type="text/css" rel="stylesheet" href="https://www.mpc.gov.iq/atlasjavascript/rtl/slidealsco/themes/base.css">
+<link type="text/css" rel="stylesheet" href="https://www.mpc.gov.iq/atlasjavascript/rtl/slidealsco/themes/default/theme.css">
+<script type="text/javascript" src="atlasjavascript/rtl/slidealsco/alscoslide.js"></script>
+
+<script type="text/javascript">
+// when the DOM is ready, convert the feed anchors into feed content
+
+
+
+var img = jQuery('<img width="560"  height="300"></img>');
+
+jQuery(document).ready(function() {
+
+	jQuery('#newsslider').accessNews({
+        title : "",
+		subtitle:"",
+		speed : "slow",
+
+  slideBy :5,
+		slideShowInterval:  2000,
+	});
+
+	jQuery('#newsslider2').accessNews({
+
+
+	});
+
+});
+</script>
+
+
+<style>div.jqans-wrapper.default,
+div.jqans-wrapper.default .jqans-container {
+	/*
+ width table
+	*/
+width: 564;
+}
+
+div.jqans-wrapper.default li {
+
+/*
+width image down
+	*/
+width: 112;
+
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+  
+<script>
+
+ function submitbutton(){
+
+
+    document.getElementById('dataRefreshButton').click();
+
+     }
+</script>
+
+
+ 
+
+
+
+ <style>.catbar-gray {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #eeeeee; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-red {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ffe3d9; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-orange {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ffcc99; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-blue {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #e9f0f8; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-brown {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ffe6b0; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+.catbar-black {
+
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 0px; BACKGROUND: #d3dce3; PADDING-BOTTOM: 0px; WIDTH: 100%px; COLOR: #008000; PADDING-TOP: 0px; BORDER-BOTTOM: #ffffff 0px solid; TEXT-ALIGN: right
+}
+
+
+
+
+
+
+
+
+
+
+
+A.menured:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menured:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menured:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menured:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #cc3300; TEXT-DECORATION: none
+
+}
+
+
+
+A.menuyellow:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #FFFF00; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menuorange:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuorange:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuorange:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuorange:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #ff9900; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menublue:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublue:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublue:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublue:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #000099; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+
+
+A.menublack:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublack:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublack:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menublack:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menugreen:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menugreen:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menugreen:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menugreen:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #008000; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+
+
+A.menupink:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menupink:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menupink:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menupink:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #FF00FF; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+A.menuyellow:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuyellow:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuyellow:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuyellow:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #FFFFCC; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+A.menubluesky:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menubluesky:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menubluesky:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menubluesky:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #66CCFF; TEXT-DECORATION: none
+
+}
+
+
+
+
+
+A.menuviolet:link {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuviolet:visited {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuviolet:active {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #000000; PADDING-TOP: 1px; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+
+}
+
+A.menuviolet:hover {
+
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: tahoma; BACKGROUND-COLOR: #800080; TEXT-DECORATION: none
+
+}
+ </style>
+
+
+ <script>
+    function changeColorTo(parent, color)
+    {
+        var i, tdArray = parent.getElementsByTagName('td');
+        for(i in tdArray)
+        {
+            tdArray[i].style.backgroundColor = color;
+        }
+    }
+</script>
+
+  
+<style>.marqueeuppic {
+ overflow: hidden;
+ width:170 ;
+ height:250   ;
+}
+</style>
+
+ 
+<style>.marqueelastnewsxc {
+ overflow: hidden;
+ width:100%;
+ height:200;
+}
+@-webkit-keyframes marqueeAnimation-4112670  { 100%  {margin-left:851px}}@-webkit-keyframes marqueeAnimation-5680692  { 100%  {margin-left:764px}}@-webkit-keyframes marqueeAnimation-8445909  { 100%  {margin-top:-130px}}@-webkit-keyframes marqueeAnimation-2675592  { 100%  {margin-top:-170px}}@-webkit-keyframes marqueeAnimation-3197721  { 100%  {margin-top:-130px}}</style>
+
+
+ <font class="copyright"></font><font class="copyright"></font><meta name="resource-type" content="document">
+<meta name="document-state" content="dynamic">
+<meta name="distribution" content="global">
+<meta name="author" content="وزارة الصحة والبيئة / دائرة العيادات الطبية الشعبية">
+<meta name="copyright" content="Copyright (c) وزارة الصحة والبيئة / دائرة العيادات الطبية الشعبية">
+<meta name="keywords" content=".. المقالات,الشركة,المديرية,الكهرباء,ضوء,تنفيذ,صيانة,معدات,اجهزة,محطات,موظفين,عمال,,موقع,شركة,مؤسسة,وزارة,دائرة,عراق,اخبار,مقالات,نشاطات,اجتماع,  بغداد,صناعة,ايفادات,منتسبين,وزارة الصناعة,مواقع,اطلس,انظمة,استطلاعات,معرض الصور,صور,البوم الصور,عناوين,بحث,نشاطات,مؤتمرات,دولة,فديو ,gov.iq,iq,gov,كوكل,ياهو,صفحات,اقسام,ادارة ,شكاوى,طلب,استفسار,ميسان,محافظة,شكر,صادرات,واردات,انتاج,بضائع,استفتائات,استطلاعات,السكو,الاتصالات,يوتيوب ,ماركيو,صور,قوائم,برامج,مناقصات,احالات,تعليقات,امن,موقع,شركة,صناعات,انتاج,العراق,البلد,البلدان,السكر,سكر الابيض ,ياهو,استايل,محافظات,اجهزة,معدات,مستلزمات,مبانئ,رئاسات,اجهزة,رئيس,مدير,قطاع,اهم,مواد,تجارة,اعلان,قناة, عاجل,مهم,تصريح,صرح,اداء ,افتتاح,منتديات,مناهج,رواتب,موظفين,اجازات,تشكرات,ايفادات,تصميم,الهيئة,استعراض, كتب,علم">
+<meta name="description" content="موقع, اخبار, نشاطات, اعلانات,.. المقالات.">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<meta name="rating" content="general">
+<meta name="generator" content="CMS وزارة الصحة والبيئة / دائرة العيادات الطبية الشعبية">
+<link rel="alternate" href="https://www.mpc.gov.iq/rss.php" title="rss" type="application/rss+xml">
+
+
+<div align="center">
+<center>
+<div align="center">  </div><table width="920" class="shadow_table" height="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" dir="rtl" \="">
+<tbody><tr><td align="center" valign="top" dir="rtl">
+<center> <img width="920" height="188" align="center" src="upload/themes/ar/atlas/banner.png"></center> </td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+<table border="0" width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+<td width="10%" style="border-left:0px solid #FFFFFF;"><div id="smoothmenu1" class="ddsmoothmenu">
+  <ul>
+    <li><a href="https://www.mpc.gov.iq/index.php"><font face="Tahoma" style="font-size: 16px"><center><b>الصفحة الرئيسية</b></center></font></a>
+</li>
+</ul>
+</div></td><td width="10%" style="border-left:0px solid #FFFFFF;"><div id="smoothmenu1" class="ddsmoothmenu">
+  <ul>
+    <li><a href="https://www.mpc.gov.iq/index.php?name=monaksa"><font face="Tahoma" style="font-size: 16px"><center><b>المناقصات</b></center></font></a>
+</li>
+</ul>
+</div></td><td width="10%" style="border-left:0px solid #FFFFFF;"><div id="smoothmenu1" class="ddsmoothmenu">
+  <ul>
+    <li><a href="https://www.mpc.gov.iq/index.php?name=News"><font face="Tahoma" style="font-size: 16px"><center><b>الأخبـــار</b></center></font></a>
+</li>
+</ul>
+</div></td><td width="10%"><div id="smoothmenu1" class="ddsmoothmenu">
+  <ul>
+    <li><a href="https://www.mpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=106"><font face="Tahoma" style="font-size: 16px"><center><b>أتصل بنا</b></center></font></a>
+</li>
+</ul>
+</div></td></tr>  </tbody></table>
+</td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+<table width="920" height="60" border="0" background="upload/themes/ar/atlas/announce.png" align="center" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="upload/themes/ar/atlas/titleannounce.png" width="65" align="absmiddle"></td><td dir="ltr"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueeannounce" data-direction="right" data-gap="0" data-dupilcated="true" data-duration="25000" data-pauseonhover="true"><div style="width: 100000px; margin-left: -244px; animation: 32.168038s linear 1s infinite marqueeAnimation-4112670;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;">
+ <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title=""><font color="#000000"> <b>    </b></font></a>    <font color="#000000">/</font> <a href="" title="مرحبا بكم في موقعنا الرسمي"><font color="#000000"> <b> مرحبا بكم في موقعنا الرسمي   </b></font></a>   </div></div></div> 
+<script>$('.marqueeannounce').marquee({});</script></td></tr></tbody></table></td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+<table width="920" border="0" cellspacing="0" cellpadding="0" background="upload/themes/ar/atlas/news.png" height="56"><tbody><tr><td width="1%"><img src="upload/themes/ar/atlas/titlenews.png" align="absmiddle" width="152"></td> <td dir="ltr" width="99%" align="middle"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueenews" data-direction="right" data-gap="0" data-dupilcated="true" data-duration="25000" data-pauseonhover="true"><div style="width: 100000px; margin-left: -4670px; animation: 177.814136s linear 1s infinite marqueeAnimation-5680692;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 0px; float: left;">
+<font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1760" title="العيادات الطبية الشعبية تصدر البوصلة الإحصائية لعام 2024 للتعريف بنشاطات الدائرة"><font color="#FFFFFF"><b>العيادات الطبية الشعبية تصدر البوصلة الإحصائية لعام 2024 للتعريف بنشاطات الدائرة </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=758" title="العيادات الطبية الشعبية تفتح ردهة للجناح الخاص في مستشفى السلام التعليمي في نينوى"><font color="#FFFFFF"><b>العيادات الطبية الشعبية تفتح ردهة للجناح الخاص في مستشفى السلام التعليمي في نينوى </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=226" title="(( تنويــــه ))"><font color="#FFFFFF"><b>(( تنويــــه )) </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=84" title="فريق من دائرة العيادات  الطبية الشعبية يقوم بزيارة المختبر الاستشاري"><font color="#FFFFFF"><b>فريق من دائرة العيادات  الطبية الشعبية يقوم بزيارة المختبر الاستشاري </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=81" title="مدير عام دائرة العيادات الطبية الشعبية يعقد اجتماعا لمدراء الاقسام والشعب المستقلة"><font color="#FFFFFF"><b>مدير عام دائرة العيادات الطبية الشعبية يعقد اجتماعا لمدراء الاقسام والشعب المستقلة </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=77" title="معاون مدير عام العيادات الطبية الشعبية يلتقي بسواق الدائرة للتعرف على ابرز المشاكل في العمل"><font color="#FFFFFF"><b>معاون مدير عام العيادات الطبية الشعبية يلتقي بسواق الدائرة للتعرف على ابرز المشاكل في العمل </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=76" title="دائرة العيادات الطبية الشعبية تعقدا اجتماعا لمناقشة عدد من القرارات في العمل"><font color="#FFFFFF"><b>دائرة العيادات الطبية الشعبية تعقدا اجتماعا لمناقشة عدد من القرارات في العمل </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=35" title="العيادات الطبية الشعبية تصدر البوصلة الإحصائية لعام 2019 للتعريف بنشاطاتها"><font color="#FFFFFF"><b>العيادات الطبية الشعبية تصدر البوصلة الإحصائية لعام 2019 للتعريف بنشاطاتها </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=34" title="العيادات الطبية الشعبية تبدأ تجهيز عياداتها بالأدوية العامة والمزمنة لشهرين متتالين"><font color="#FFFFFF"><b>العيادات الطبية الشعبية تبدأ تجهيز عياداتها بالأدوية العامة والمزمنة لشهرين متتالين </b></font></a>   <font color="#FFFFFF"> / </font><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=33" title="العيادات الطبية الشعبية تعقد الجلسة التاسعة لمجلس ادارتها لهذا العام"><font color="#FFFFFF"><b>العيادات الطبية الشعبية تعقد الجلسة التاسعة لمجلس ادارتها لهذا العام </b></font></a>   </div></div></div> 
+<script>$('.marqueenews').marquee({});</script></td></tr></tbody></table></td></tr><tr bgcolor="#FFFFFF"><td align="center" valign="top" dir="rtl">
+</td></tr><tr bgcolor="#FFFFFF">
+  <td align="center" valign="top" dir="rtl">
+<table width="920" cellspacing="0" cellpadding="0" align="center" dir="rtl"><tbody><tr>
+  <td valign="top" dir="rtl">
+  
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="1" bgcolor="FFFFFF"><table id="AutoNumber1" style="width:170px; height: 22px;" border="0" align="center">
+<tbody>
+<tr>
+<td>
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="images/social/facebook.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+<td>
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://twitter.com" target="_blank" rel="noopener"><img src="images/social/twitter.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+<td>
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://www.google.iq" target="_blank" rel="noopener"><img src="images/social/google.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+<td>
+<div class="tiltsocail pic" style="text-align: center;"><a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="images/social/youtube.png" alt="rss" width="29px" height="29px"></a></div>
+</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>القائمة الرئيسية</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><div align="center" id="smoothmenu2" class="ddsmoothmenu-v">  <ul>
+<li style="z-index: 100;"><a href="" style="padding-right: 1px;"><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادات الطبية الشعبية في بغداد</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl" style="z-index: 99;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادات الطبية الشعبية في الرصافة</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الكرادة الاستشارية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة سليمان فيضي الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الزعفرانية الثانية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الزعفرانية الاولى الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة المستنصرية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصليخ الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة حي سومر الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الدهاليك الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الكريعات الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الاعظمية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة زيونة الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الشيخ عمر الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة المدائن الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الحسينية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الشعب الثانية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الشعب الاولى الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة بغداد الجديدة الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر الاولى المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر الثانية الصباحي الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر الثانية المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر الرابعة المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر الخامسة المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر السابعة المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصدر العاشرة المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الحبيبة الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة حي النصر الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة المدينة العمالية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الكمالية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الامين الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الاقصى الطبية الشعبية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 98;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادات لطبية الشعبية في الكرخ</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl" style="z-index: 97;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة العامل الصباحي الطبية الشعبية</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة العامل المسائية الطبية الشعبية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة العامرية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة العدل الاستشارية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الخضراء الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة المحمودية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة ابي غريب الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الانتفاضة الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl" style="z-index: 96;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة مجمع الدورة السكني الطبي الشعبي</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الدورة الاولى الطبية الشعبية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة ابو دشير الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الوشاش الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة اسماعيل ناجي المسائية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الاسكان الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الرحمانية الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة السلام الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الصابيات الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الاعلام الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl" style="z-index: 95;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادة الطبية الشعبية الحرية الاولى</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادة الطبية الشعبية الحرية الثانية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 94;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادة الطبية الشعبية الشعلة الاولى</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادة الطبية الشعبية الشعلة الثانية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 93;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادة الطبية الشعبية الغزالية الاولى</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادة الطبية الشعبية  الغزالية الثانية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl" style="z-index: 92;"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الكاظمية الطبية الشعبية</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الدولعي الطبية الشعبية</b></font></a>
+    </li>
+ </ul>
+    </li><li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة البياع الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة المستقبل الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الحسين الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة اجنادين الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة الجمعيات الطبية الشعبية</b></font></a>
+    </li>
+    <li dir="rtl"><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>عيادة السيدية الطبية الشعبية</b></font></a>
+    </li>
+ </ul>
+    </li></ul>
+</li><li style="z-index: 91;"><a href="#" style="padding-right: 1px;"><font face="Arial" style="font-size: 16px">&nbsp;<b>الأيفادات</b></font><img src="upload/themes/ar/atlas/dartdown.png" class="rightarrowclass" style="border:;"></a>
+ <ul dir="rtl" style="display: none; top: 0px; visibility: visible;">
+    <li dir="rtl"><a href="https://www.mpc.gov.iq/index.php?name=efadatmsoolen"><font face="Arial" style="font-size: 16px">&nbsp;<b>إيفادات المسؤولين</b></font></a>
+    </li>
+    <li dir="rtl"><a href="https://www.mpc.gov.iq/index.php?name=efadatmntsbeen"><font face="Arial" style="font-size: 16px">&nbsp;<b>إيفادات المنتسبين</b></font></a>
+    </li>
+    </ul>
+</li><li><a href="https://www.mpc.gov.iq/index.php?name=shakwa"><font face="Arial" style="font-size: 16px">&nbsp;<b>الشكاوى</b></font></a>
+    </li>
+<li><a href=""><font face="Arial" style="font-size: 16px">&nbsp;<b>العيادات الطبية الشعبية في المحافظات</b></font></a>
+    </li>
+<li><a href="https://www.mpc.gov.iq/index.php?name=Search"><font face="Arial" style="font-size: 16px">&nbsp;<b>البحث في الموقع</b></font></a>
+    </li>
+<li><a href="https://www.mpc.gov.iq/index.php?name=Voting"><font face="Arial" style="font-size: 16px">&nbsp;<b>الأستفتاءات</b></font></a>
+    </li>
+<li><a href="https://www.mpc.gov.iq/index.php?name=Topics"><font face="Arial" style="font-size: 16px">&nbsp;<b>أقسام الموقع</b></font></a>
+    </li>
+<li><a href="https://www.mpc.gov.iq/index.php?name=video"><font face="Arial" style="font-size: 16px">&nbsp;<b>المكتبة الفديوية</b></font></a>
+    </li>
+<li><a href="https://www.mpc.gov.iq/index.php?name=mktbapicture"><font face="Arial" style="font-size: 16px">&nbsp;<b>المكتبة الصورية</b></font></a>
+    </li>
+<li><a href="https://www.mpc.gov.iq/index.php?name=albumpicture"><font face="Arial" style="font-size: 16px">&nbsp;<b>البوم الصور</b></font></a>
+    </li>
+    </ul>
+  </div>
+</td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>الأحصائيات</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF">   <div align="right">  عدد زوار الحالي:6<br>عدد زوار اليوم:202<br>عدد زوار الشهر:449<br>عدد زوار السنة:49218<br>عدد الزوار الأجمالي:138154<br></div></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>معرض الصور</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF">    <center><div dir="ltr" id="simplegallery1" style="position: relative; visibility: visible; background: black; overflow: hidden; width: 170px; height: 170px;" width="100%" height="0"><div class="gallerylayer" style="position: absolute; left: 0px; top: 0px; z-index: 999;"></div><div class="gallerylayer" style="position: absolute; left: 0px; top: 0px; z-index: 1000; opacity: 1;"><img src="upload/slideshow/ar/285.jpg" style="border-width:0" height="170" width="170"></div><div class="navpanellayer" style="position: absolute; width: 100%; height: 45px; left: 0px; top: 170px; font-style: normal; font-variant-caps: normal; font-weight: bold; font-width: normal; font-size: 11px; line-height: normal; font-family: Verdana; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-variant-emoji: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; z-index: 1001;"><div class="navpanelbg" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: black; opacity: 0.5;"></div><div class="navpanelfg" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; padding-top: 5px; text-align: center; color: white;"><img class="navimages" title="Prev" src="icon/left.gif" style="position: relative; border: 0px; cursor: pointer; top: -4px; margin-right: 10px; opacity: 0.8;"> <img class="navimages" title="Pause" src="icon/pause.gif" style="position: relative; border: 0px; cursor: pointer; top: 0px; margin-right: 10px; opacity: 0.8;"> <img class="navimages" title="Next" src="icon/right.gif" style="position: relative; border: 0px; cursor: pointer; top: -4px; margin-right: 0px; opacity: 0.8;"> <div class="gallerystatus" style="margin-top:1px">1/5</div></div></div></div>
+
+
+</center></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>الأستفتاءات</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><form action="https://www.mpc.gov.iq/index.php?name=Voting" method="post"><input type="hidden" name="poll_id" value="1"><input type="hidden" name="op" value="poll_save"><div align="right"><font align="right"><b>&nbsp;مارأيك بنشاط المديرية التابعة لنا</b></font><br><table border="0" dir="rtl"> <tbody><tr><td valign="top"><input type="radio" name="questions" value="1"></td><td width="100%"><font class="content">ممتاز</font></td></tr><tr><td valign="top"><input type="radio" name="questions" value="2"></td><td width="100%"><font class="content">جيد جدا</font></td></tr><tr><td valign="top"><input type="radio" name="questions" value="3"></td><td width="100%"><font class="content">جيد</font></td></tr><tr><td valign="top"><input type="radio" name="questions" value="4"></td><td width="100%"><font class="content">لأباس</font></td></tr></tbody></table><br><center><font class="content"><input type="submit" value="تصويت"></font><br><br><font class="content"><a href="https://www.mpc.gov.iq/index.php?name=Voting&amp;op=poll_result&amp;poll_id=1"><b>النتائــج</b></a><br><a href="https://www.mpc.gov.iq/index.php?name=Voting"><b>المزيد من الأستفتائات</b></a><br><br>عدد المصوتين: <b>57</b>   </font></center></div></form></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>أكثر الأخبار قراءة</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><table width="100%" dir="rtl" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" dir="rtl"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueeread" data-direction="up" data-gap="0" data-dupilcated="true" data-duration="7000" data-pauseonhover="true" style="height: 200px;"><div class="js-marquee-wrapper" style="margin-top: 200px; animation: 11.55s linear 1s infinite marqueeAnimation-8445909;"><div class="js-marquee" style="margin-right: 0px; float: none; margin-bottom: 0px;">
+<table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/moreread.png" title="مدير عام دائرة العيادات الطبية الشعبية يعقد اجتماعا لمدراء الاقسام والشعب المستقلة"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=81" title="مدير عام دائرة العيادات الطبية الشعبية يعقد اجتماعا لمدراء الاقسام والشعب المستقلة"><font color="#000000">مدير عام دائرة العيادات...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/moreread.png" title="وزارة  الصحة : سنتجه لتفرغ المستشفيات العامة لمعالجة المرضى في نفس الوقت الذي نسرع بتقديم الخدمات للمصابين بفايروس كورونا"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=20" title="وزارة  الصحة : سنتجه لتفرغ المستشفيات العامة لمعالجة المرضى في نفس الوقت الذي نسرع بتقديم الخدمات للمصابين بفايروس كورونا"><font color="#000000">وزارة  الصحة : سنتجه لت...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/moreread.png" title="العيادات الطبية الشعبية تبدأ تجهيز عياداتها بالأدوية العامة والمزمنة لشهرين متتالين"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=34" title="العيادات الطبية الشعبية تبدأ تجهيز عياداتها بالأدوية العامة والمزمنة لشهرين متتالين"><font color="#000000">العيادات الطبية الشعبية...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/moreread.png" title="(( تنويــــه ))"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=226" title="(( تنويــــه ))"><font color="#000000">(( تنويــــه ))</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/moreread.png" title="العيادات الطبية الشعبية تصدر البوصلة الإحصائية لعام 2019 للتعريف بنشاطاتها"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=35" title="العيادات الطبية الشعبية تصدر البوصلة الإحصائية لعام 2019 للتعريف بنشاطاتها"><font color="#000000">العيادات الطبية الشعبية...</font></a></td></tr></tbody></table></div></div></div> 
+<script>$('.marqueeread').marquee({});</script></td></tr></tbody></table></td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/right.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>share</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><center><a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button"><img src="icon/share.gif" border="0" alt="Share"></a></center>
+
+<script type="text/javascript" src="javascripts/share.js"></script>
+</td>
+</tr>
+  
+ 
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+</td><td class="leftblock"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td>
+  <table width="100%" dir="rtl" border="0" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td>
+    <center><center><div dir="rtl" id="slider">
+        <ul dir="rtl" id="sliderContent">
+            <li dir="rtl" class="sliderImage" style="display: list-item;">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/64.jpg" alt="Array" limit="1">
+                <span class="bottom" style="display: block;"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/63.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/62.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">وزير الصحة يفتتح العيادة الطبية الشعبية الثانية في مدينة الصدر ببغداد بعد إعادة تأهيلها لتقدم خدماته...</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/61.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">وزير الصحة يفتتح الصيدلية المركزية الثانية في مدينة الصدر  ببغداد</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/60.jpg" alt="Array" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">وزارة الصحة تتخذ 3 إجراءات لتطبيق مشروع الغسيل البريتوني لمرضى العجز الكلوي</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/64.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/63.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/62.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">وزير الصحة يفتتح العيادة الطبية الشعبية الثانية في مدينة الصدر ببغداد بعد إعادة تأهيلها لتقدم خدماته...</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/61.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">وزير الصحة يفتتح الصيدلية المركزية الثانية في مدينة الصدر  ببغداد</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="upload/headlinepic/ar/60.jpg" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF">وزارة الصحة تتخذ 3 إجراءات لتطبيق مشروع الغسيل البريتوني لمرضى العجز الكلوي</font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+            <li dir="rtl" class="sliderImage">
+                 <img height="400" width="565\ border=" 0"="" src="https://www.mpc.gov.iq/upload/headlinepic/ar/" alt="" limit="1">
+                <span class="bottom"><strong><a href=""><font color="#FFFFFF"></font></a></strong><br><font color="#FFFFFF"></font></span>
+            </li>
+        </ul>
+    </div><center>
+</center></center></center></td></tr></tbody></table></td></tr></tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/center.png" valign="middle">
+<p align="center">
+<a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1905" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<right><img src="upload/imagenews/ar/1852.jpg" width="180" height="140" align="right" border="0"></right><div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">وتأتي مشاركة الدائرة بأعتبارها من ركائز وزارة الصحة العراقية المهمة والتي تقدم خدمات طبية وعلاجية وتشخيصية وأدوية الأمراض المزمنة والعامة للمواطنين من خلال عياداتها المنتشرة في محافظات العراق وبأسعار مدعومة ، وخدمات متنوعة أخرى .</div>
+<div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">أضافة الى أن الدائرة ترعى عدد من المشاريع الاستثمارية الصحية والتي تعمل وفق مبدأ الشراكة مع القطاع الخاص ودوائر الصحة في بغداد والمحافظات وحسب قانونها رقم ٨٩ لسنة ١٩٨٦ المعدل .</div>
+<div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">&nbsp;</div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1905" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 01-09-2025 | الوقـت: 09:10:26 صباحا  | قراءة: 8 | <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1905" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/center.png" valign="middle">
+<p align="center">
+<a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1904" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<right><img src="upload/imagenews/ar/1851.jpg" width="180" height="140" align="right" border="0"></right><div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">قام مدير مديرية العيادات الطبية الشعبية في واسط بزيارة الى عيادة ( الزهراء الطبية الشعبية , الشهداء الطبية الشعبية , الكرامة الطبية الشعبية , الحوراء الطبية الشعبية , الاستقلال الطبية الشعبية , الجهاد الطبية الشعبية , المشروع الطبية الشعبية ) للاطلاع على واقع العمل في تلك العيادات وجرد الادوية ومطابقتها مع السجلات والتأكيد على متابعة عمل الثلاجات الخاصة بحفظ الادوية وخاصة الانسولين بصورة</div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1904" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 20-08-2025 | الوقـت: 03:42:28 مساءا  | قراءة: 23 | <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1904" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/center.png" valign="middle">
+<p align="center">
+<a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1903" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<right><img src="upload/imagenews/ar/1850.jpeg" width="180" height="140" align="right" border="0"></right><div class="x14z9mp xat24cr x1lziwak x1vvkbs xtlvy1s x126k92a" style="margin: 0.5em 0px 0px; overflow-wrap: break-word; white-space-collapse: preserve; font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px;">
+<div dir="auto" style="font-family: inherit;">قامت مديرية العيادات الطبية الشعبية في ميسان بزيارة الى العيادة الطبية الشعبية التاسعة الحسن العسكري (ع) لمتابعة العمل فيها وآلية صرف الدواء وتدقيق سجلات الادوية العامة والمزمنة والنظافة العامة والتأكيد على السلامة المهنية من خلال توفير مطافئ الحريق إضافة الى توجيه منتسبي العيادة للعمل بنظام الدفع الالكتروني وبذل المزيد من الجهود لتقديم افضل الخدمات للمراجعين وحسب ماتقتضيه المصلحة العامة</div>
+</div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1903" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 20-08-2025 | الوقـت: 03:37:22 مساءا  | قراءة: 7 | <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1903" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/center.png" valign="middle">
+<p align="center">
+<a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1902" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<right><img src="upload/imagenews/ar/1849.jpg" width="180" height="140" align="right" border="0"></right><div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">&nbsp;</div>
+<div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">قامت مديرية العيادات الطبية الشعبية في صلاح الدين بزيارة الى العيادة الطبية التخصصية في مستشفى تكريت التعليمي لمتابعة سير العمل وملاحظة مستوى الخدمات المقدمة للمراجعين وآلية صرف الادوية وتدقيق كافة السجلات ومطابقتها والتأكيد على دوام المنتسبين والعمل بنظام الدفع الالكتروني والسلامة المهنية من خلال توفير مطافي وكرات الحريق وحسب ماتقتضيه المصلحة العامة .</div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1902" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 18-08-2025 | الوقـت: 04:03:56 مساءا  | قراءة: 20 | <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1902" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center><table width="100%" dir="rtl" cellspacing="3" cellpadding="0">
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/center.png" valign="middle">
+<p align="center">
+<a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1901" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات" style="font-family:arial; font-size: 16; color: #FFFFFF;"><b>دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات</b></a></p></td>
+</tr>
+<tr>
+<td style="border:1px solid #d1d8ec; " valign="top" align="justify">
+<right><img src="upload/imagenews/ar/1848.jpg" width="180" height="140" align="right" border="0"></right><div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">تنفيذا لتوجيهات مدير عام الدائرة الدكتورة فاتن محمد جارالله</div>
+<div dir="auto" style="font-family: `Segoe UI Historic`, `Segoe UI`, Helvetica, Arial, sans-serif; color: #080809; font-size: 15px; white-space-collapse: preserve;">اختتمت دائرة العيادات الطبية الشعبية دورة تدريبية في تدقيق وتفتيش الخدمات الفندقية والتفتيش الوقائي في السلامة والصحة المهنية في المستشفيات بمشاركة موظفي</div>
+<table width="100%" border="0" align="right" dir="rtl" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="font-size: 10pt" width="440"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1901" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"><b style="font-size: 10pt">أقرأ المزيد ...</b></a> | التاريخ: 18-08-2025 | الوقـت: 04:03:02 مساءا  | قراءة: 6 | <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1901" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات">التعليقات</a> </td><td align="left"></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+<center cellpadding="0" cellspacing="0"><b>في المجموع: 1876 خبر ..... 5 خبر في كل صفحة</b><br><table border="0" width="99%" dir="rtl"><tbody><tr><td align="center"><font face="Tahoma" color="#bd4200" style="font-size: 10pt"><b>[ 1 ]</b></font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=5&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>2</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=10&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>3</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=15&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>4</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=20&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>5</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=25&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>6</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=30&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>7</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=35&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>8</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=40&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>9</b></font></a><font color="#000000"> ]</font><font face="Tahoma"><font style="font-size: 10pt">[ <a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=45&amp;currenpage=0&amp;new_topic=0"><font color="#000000"><b>10</b></font></a><font color="#000000"> ]</font>---&gt;<font face="Tahoma"><font style="font-size: 10pt"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;countpage=50&amp;currenpage=1&amp;new_topic=0"><font color="#000000">التالي</font></a></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></td></tr></tbody></table></center><table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td> 
+  <table width="100%" border="0" dir="rtl" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0" dir="rtl" align="right"><tbody><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='FFFFFF'"><td width="25%"><font color="#ea1206">تاريخ أخر تحديث الموقع:-</font></td><td><marquee behavior="alternate" direction="right" scrollamount="1" scrolldelay="70" onmouseover="this.stop()" onmouseout="this.start()" border="0"><font face="MS SANS SERIF" size="1"> [  2025-09-01  ]  <font color="#000000"> </font></font></marquee></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td> 
+  <table width="100%" border="0" dir="rtl" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td><table border="0" width="100%" cellpadding="3" cellspacing="0" dir="rtl" align="right"><tbody><tr bgcolor="#FFFFFF"><td width="85%" align="right"> <font color="#070628"><off>عناوين أخر مواضيع الموقع</off></font></td><td align="center"><font color="#070628"><off>التاريخ</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1905" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"><font color="#070628"><off>دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي الس... </off></font></a></td><td align="center"><font color="#070628"><off>2025-09-01
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1904" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"><font color="#070628"><off>مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاط... </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-20
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1903" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"><font color="#070628"><off>مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع) </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-20
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1902" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"><font color="#070628"><off>مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في... </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1901" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"><font color="#070628"><off>دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الف... </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="دائرة العيادات الطبية الشعبية تقيم ورشة عمل تدريبية  لتنظيم العمل المحاسبي في المديريات"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1900" title="دائرة العيادات الطبية الشعبية تقيم ورشة عمل تدريبية  لتنظيم العمل المحاسبي في المديريات"><font color="#070628"><off>دائرة العيادات الطبية الشعبية تقيم ورشة عمل تدريبية  لتنظيم العمل المحاسبي في ال... </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="الصيدلية المركزية الأولى في جانب الرصافة تستقبل اكثر من 800 مراجع خلال تموز"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1899" title="الصيدلية المركزية الأولى في جانب الرصافة تستقبل اكثر من 800 مراجع خلال تموز"><font color="#070628"><off>الصيدلية المركزية الأولى في جانب الرصافة تستقبل اكثر من 800 مراجع خلال تموز </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="مراجعي عيادة الاقصى الطبية الشعبية في بغداد يبلغ اكثر من 1800 مراجع خلال تموز"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1898" title="مراجعي عيادة الاقصى الطبية الشعبية في بغداد يبلغ اكثر من 1800 مراجع خلال تموز"><font color="#070628"><off>مراجعي عيادة الاقصى الطبية الشعبية في بغداد يبلغ اكثر من 1800 مراجع خلال تموز </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="دائرة العيادات الطبية الشعبية تقوم بزيارة الى عيادة زيونة لمتابعة عملها"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1897" title="دائرة العيادات الطبية الشعبية تقوم بزيارة الى عيادة زيونة لمتابعة عملها"><font color="#070628"><off>دائرة العيادات الطبية الشعبية تقوم بزيارة الى عيادة زيونة لمتابعة عملها </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr><tr onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor='#FFFFFF'" bgcolor="#FFFFFF"><td align="right"><img src="upload/themes/ar/atlas/topic.png" width="8" height="11
+" title="العيادات الطبية الشعبية تزيد السعة السريرية لردهة الجناح الخاص في مستشفى امراض وجراحة الجهاز الهضمي بمدينة الطب"> <a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1896" title="العيادات الطبية الشعبية تزيد السعة السريرية لردهة الجناح الخاص في مستشفى امراض وجراحة الجهاز الهضمي بمدينة الطب"><font color="#070628"><off>العيادات الطبية الشعبية تزيد السعة السريرية لردهة الجناح الخاص في مستشفى امراض و... </off></font></a></td><td align="center"><font color="#070628"><off>2025-08-18
+</off></font></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td> 
+  <table width="100%" border="0" dir="rtl" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td><center></center><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" align="right" dir="rtl"><tbody><tr><td dir="rtl" align="center">أخر المواضيع المضافة</td><td align="center">أكثر المواضيع قراءة</td></tr> <tr><td valign="top" width="50%"><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1905" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"><font color="#000000">دائرة العيادات الطبية الشعبية الراعي الذ...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1904" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"><font color="#000000">مدير مديرية العيادات الطبية الشعبية في و...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1903" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"><font color="#000000">مديرية العيادات الطبية الشعبية في ميسان ...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1902" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"><font color="#000000">مديرية العيادات الطبية الشعبية في صلاح ا...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1901" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"><font color="#000000">دائرة العيادات الطبية الشعبية تختتم دورة...</font></a></td></tr></tbody></table></td><td valign="top" width="50%"><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="اللجنة الطبية الصباحية والمسائية لفحص السياقة في عيادة الأسكان الطبية الشعبية تستقبل الراغبين بالحصول على إجازة السوق خلال الدوام الصباحي والمسائي"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1643" title="اللجنة الطبية الصباحية والمسائية لفحص السياقة في عيادة الأسكان الطبية الشعبية تستقبل الراغبين بالحصول على إجازة السوق خلال الدوام الصباحي والمسائي"><font color="#000000">اللجنة الطبية الصباحية والمسائية لفحص ال...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="المختبر الاستشاري الطبي يباشر بأجراء فحص كورونا للراغبين بالسفر"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=32" title="المختبر الاستشاري الطبي يباشر بأجراء فحص كورونا للراغبين بالسفر"><font color="#000000">المختبر الاستشاري الطبي يباشر بأجراء فحص...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="اعلان رقم 1"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=221" title="اعلان رقم 1"><font color="#000000">اعلان رقم 1</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="مدير عام دائرة العيادات الطبية الشعبية يعقد اجتماعا لمدراء الاقسام والشعب المستقلة"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=81" title="مدير عام دائرة العيادات الطبية الشعبية يعقد اجتماعا لمدراء الاقسام والشعب المستقلة"><font color="#000000">مدير عام دائرة العيادات الطبية الشعبية ي...</font></a></td></tr></tbody></table><table cellspacing="0" bgcolor="#FFFFFF" cellpadding="1" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/wcenter.png" title="دائرة العيادات الطبية الشعبية تقرر تقديم الدوام ساعة واحدة في عياداتها واللجان الطبية المسائية ببغداد والمحافظات خلال  شهر رمضان المبارك"></td><td onmouseover="this.bgColor='#cccccc'" onmouseout="this.bgColor=''" width="100%"><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=651" title="دائرة العيادات الطبية الشعبية تقرر تقديم الدوام ساعة واحدة في عياداتها واللجان الطبية المسائية ببغداد والمحافظات خلال  شهر رمضان المبارك"><font color="#000000">دائرة العيادات الطبية الشعبية تقرر تقديم...</font></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="middle"><tbody><tr><td> 
+  <table width="100%" border="0" dir="rtl" cellspacing="0" cellpadding="3" class="yasser"><tbody><tr><td><div class="jqans-wrapper default"><div class="jqans-container"><div class="jqans-content"><img width="560" height="300" src="upload/headlinepic2/ar/2.jpg"><div><h1>دائرة العيادات الطبية الشعبية</h1><p><br><a href=""> » اقرأ المزيد</a></p></div></div></div><div class="jqans-stories-selector" style="width: 112px;"><ul><li class="selected"><div></div></li></ul></div><div class="jqans-stories"><ul id="newsslider" style="width: 112px;">		<li class="selected">
+			<a href=""><img src="upload/headlinepic2/ar/2.jpg" width="82" height="30" alt=""></a>
+			<h3><a href="">دائرة العيادات الطبية الشعبية</a></h3>
+			<p><br><a href=""> » اقرأ المزيد</a></p>
+		</li>
+</ul></div></div></td></tr></tbody></table></td></tr></tbody></table>
+</center></center></center></center></center></td><td class="rightblock"><table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+<tbody><tr>
+<td height="1" bgcolor="FFFFFF"><table style="width:170px;" border="0" align="center">
+<tbody>
+<tr>
+<td><a href="https://www.mpc.gov.iq/index.php?atlas=ar">&nbsp;&nbsp; <img style="vertical-align: middle; border: 0px none;" src="upload/imageblocks/ar/14.jpg" alt="" width="51px" height="34px"></a></td>
+<td><a href="https://www.mpc.gov.iq/index.php?atlas=en">&nbsp;<img style="vertical-align: middle; border: 0px none;" src="upload/imageblocks/ar/15.jpg" alt="" width="51px" height="34px"></a></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+   
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="0">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>محرك بحث الموقع</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><!-- SiteSearch Google --><form action="https://www.mpc.gov.iq/index.php?name=Search" method="POST"><table align="center" dir="rtl" width="100%"><tbody><tr><td align="center">
+<input type="text" name="searchname" size="18" maxlength="255" value=""><a href="#" onclick="submitbutton();"> <img src="images/search.jpg"></a> </td></tr><tr><td align="center">
+<input type="submit" id="dataRefreshButton" name="sa" value="أبحث"></td></tr></tbody></table></form></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>محرك بحث كوكل</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><!-- SiteSearch Google --><form method="get" action="https://www.google.iq/custom" target="_blank"><table align="center" dir="rtl" width="100%"><tbody><tr><td nowrap="nowrap" valign="top" align="center"><a href="https://www.google.com/"><img src="images/google.gif" border="0" alt="Google"></a></td></tr><tr><td align="center"> <input type="text" name="q" size="18" maxlength="255" value=""></td></tr><tr><td align="center"><input type="submit" name="sa" value="أبحث"></td></tr></tbody></table></form><!-- Powered by SiteSearch Google --></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>مواقع إلكترونية</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF">  <table border="0" dir="rtl" align="right" cellpadding="3" cellspacing="3" style="border-collapse: collapse" bordercolor="#111111" width="170" id="AutoNumber1">
+  <tbody><tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.mod.mil.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الدفاع</a>
+ </td>
+   </tr>
+  <tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="http://www.moi.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الداخلية</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.moh.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الصحة</a>
+ </td>
+   </tr>
+  <tr bgcolor="F7F7F7">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'F7F7F7')">  <a href="http://www.moelc.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الكهرباء</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.oil.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة النفط</a>
+ </td>
+   </tr>
+  <tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="http://www.moh.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة الصحة</a>
+ </td>
+   </tr>
+  <tr bgcolor="CFCFCF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'CFCFCF')">  <a href="http://www.moedu.gov.iq" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               وزارة التربية</a>
+ </td>
+   </tr>
+  <tr bgcolor="FFFFFF">
+   <td onmouseover="changeColorTo(this.parentNode, 'C9FF4A')" onmouseout="changeColorTo(this.parentNode, 'FFFFFF')">  <a href="https://www.mpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=71" target="_blank">
+                   <img height="16" src="icon/blockmenu.png" width="16px" border="0"> 
+               المزيد من المواقع</a>
+ </td>
+   </tr>
+  </tbody></table>
+<center><a href="https://www.mpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=72"><b><font color="#8C0D06"><b></b></font></b></a></center></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>التقويم</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><center><script language="javascript">monthnames=new Array("كانون الثاني","شباط","آذار","نيسان","آيار","حزيران"
+,"تموز","آب"," ايلول "," تشرين أول "," تشرين ثاني ","كانون أول");var linkcount=0;function addlink(month,day,href){var entry=new Array(3);entry[0]=month;entry[1]=day;entry[2]=href;this[linkcount++]=entry;}
+Array.prototype.addlink=addlink;linkdays=new Array();monthdays=new Array(12);monthdays[0]=31;monthdays[1]=28;monthdays[2]=31;monthdays[3]=30;monthdays[4]=31;monthdays[5]=30;monthdays[6]=31;monthdays[7]=31;monthdays[8]=30;monthdays[9]=31;monthdays[10]=30;monthdays[11]=31;todayDate=new Date();thisday=todayDate.getDay();thismonth=todayDate.getMonth();thisdate=todayDate.getDate();thisyear=todayDate.getYear();thisyear=thisyear%100;thisyear=((thisyear<50)?(2000+thisyear):(1900+thisyear));if(((thisyear%4==0)&&!(thisyear%100==0))||(thisyear%400==0))monthdays[1]++;startspaces=thisdate;while(startspaces>7)startspaces-=7;startspaces=thisday-startspaces+1;if(startspaces<0)startspaces+=7;document.write("<table border=0 ");document.write("bordercolor=black><font color=black>");document.write("<tr><td colspan=8><center><strong>"
++monthnames[thismonth]+" "+thisyear
++"</strong></center></font></td></tr>");document.write("<tr>");document.write("<td align=center>Su</td>");document.write("<td align=center>M</td>");document.write("<td align=center>Tu</td>");document.write("<td align=center>W</td>");document.write("<td align=center>Th</td>");document.write("<td align=center>F</td>");document.write("<td align=center>Sa</td>");document.write("</tr>");document.write("<tr>");for(s=0;s<startspaces;s++){document.write("<td> </td>");}
+count=1;while(count<=monthdays[thismonth]){for(b=startspaces;b<7;b++){linktrue=false;document.write("<td>");for(c=0;c<linkdays.length;c++){if(linkdays[c]!=null){if((linkdays[c][0]==thismonth+1)&&(linkdays[c][1]==count)){document.write("<a href=\""+linkdays[c][2]+"\">");linktrue=true;}}}
+if(count==thisdate){document.write("<font color=\'FF0000\'><strong>");}
+if(count<=monthdays[thismonth]){document.write(count);}
+else{document.write(" ");}
+if(count==thisdate){document.write("</strong></font>");}
+if(linktrue)
+document.write("</a>");document.write("</td>");count++;}
+document.write("</tr>");document.write("<tr>");startspaces=0;}
+document.write("</table></p>");//-->
+</script><font color="black"></font><table border="0" bordercolor="black"><tbody><tr><td colspan="8"><center><strong> ايلول  2025</strong></center></td></tr><tr><td align="center">Su</td><td align="center">M</td><td align="center">Tu</td><td align="center">W</td><td align="center">Th</td><td align="center">F</td><td align="center">Sa</td></tr><tr><td> </td><td>1</td><td><font color="FF0000"><strong>2</strong></font></td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr><tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr><tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr><tr><td>28</td><td>29</td><td>30</td><td> </td><td> </td><td> </td><td> </td></tr><tr></tr></tbody></table><p></p></center><font color="black">
+</font></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>صور متنوعة</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"><tbody><tr><td dir="ltr"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueeuppic" data-direction="up" data-gap="0" data-dupilcated="true" data-duration="8000" data-pauseonhover="true" style="height: 250px;"><div class="js-marquee-wrapper" style="margin-top: 250px; animation: 13.44s linear 1s infinite marqueeAnimation-2675592;"><div class="js-marquee" style="margin-right: 0px; float: none; margin-bottom: 0px;">
+<p><a href=""><img src="upload/uppic/ar/2.jpeg" height="170" width="170"></a></p></div></div></div> 
+<script>$('.marqueeuppic').marquee({});</script></td></tr></tbody></table></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+<table width="170" dir="rtl" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" height="4">
+
+<tbody><tr>
+<td height="34" background="upload/themes/ar/atlas/left.png" valign="middle">
+<div align="center"><font color="#FFFFFF" style="font-family: arial; font-size: 15"> <b>أخر الأخبار</b></font></div></td>
+</tr>
+<tr>
+<td height="1" bgcolor="FFFFFF"><table width="100%" dir="rtl" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" dir="rtl"><script src="javascripts/jquery.marquee.min.js"></script><div class="marqueelastnewsxc" data-direction="up" data-gap="0" data-dupilcated="true" data-duration="7000" data-pauseonhover="true" style="height: 200px;"><div class="js-marquee-wrapper" style="margin-top: 200px; animation: 11.55s linear 1s infinite marqueeAnimation-3197721;"><div class="js-marquee" style="margin-right: 0px; float: none; margin-bottom: 0px;">
+<table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/lastnews.png" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1905" title="دائرة العيادات الطبية الشعبية الراعي الذهبي الرسمي لمعرض ومؤتمر الصحة الدولي السنوي Health Expo lraq في دورته الخامسة والمقام على أرض معرض بغداد الدولي للفترة من 18-21 /9 /2025"><font color="#000000">دائرة العيادات الطبية الش...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/lastnews.png" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1904" title="مدير مديرية العيادات الطبية الشعبية في واسط يقوم بزيارة الى عدد من العيادات للاطلاع على واقع العمل"><font color="#000000">مدير مديرية العيادات الطب...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/lastnews.png" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1903" title="مديرية العيادات الطبية الشعبية في ميسان تتابع العمل في عيادة الحسن العسكري (ع)"><font color="#000000">مديرية العيادات الطبية ال...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/lastnews.png" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1902" title="مديرية العيادات الطبية الشعبية في صلاح الدين تقوم بزيارة الى العيادة التخصصية في مستشفى تكريت لمتابعة العمل فيها"><font color="#000000">مديرية العيادات الطبية ال...</font></a></td></tr></tbody></table><table cellspacing="0" cellpadding="2" border="0"><tbody><tr><td><img src="upload/themes/ar/atlas/lastnews.png" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"></td><td><a href="https://www.mpc.gov.iq/index.php?name=News&amp;file=article&amp;sid=1901" title="دائرة العيادات الطبية الشعبية تختتم دورة تدريبية بعنوان تدقيق وتفتيش الخدمات الفندقية والسلامة المهنية للمستشفيات"><font color="#000000">دائرة العيادات الطبية الش...</font></a></td></tr></tbody></table></div></div></div> 
+<script>$('.marqueelastnewsxc').marquee({});</script></td></tr></tbody></table></td>
+</tr>
+
+
+</tbody></table>
+
+
+
+<table border="0" cellspacing="0" width="1" id="AutoNumber1" height="1">
+<tbody><tr>
+<td width="100%" height="0"></td>
+</tr>
+</tbody></table>
+</td></tr></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="70">
+<tbody><tr>
+<td align="center" background="upload/themes/ar/atlas/footer.png" height="70">
+<p dir="rtl"> <b>&nbsp;</b></p></td>
+</tr>
+</tbody></table></td></tr></tbody></table><font><div style="position: fixed; z-index: 1000; width: 150px; height: 65px; bottom: 5px; left: 2px;"><a href="http://itpc.gov.iq/index.php?name=Pages&amp;op=page&amp;pid=125" target="_blank">
+<img class="img-responsive" alt="All Traffic To This Web Is Monitored and Scanned By Secure Gateway" title="All Traffic To This Web Is Monitored and Scanned By Secure Gateway" src="images/seal.png" width="150" height="66"></a></div></font>
+</center></div><div id="_atssh" style="visibility: hidden;"><iframe id="_atssh333" title="AddThis utility frame" height="1px" width="1px" style="border: 0px; left: 0px; top: 0px;"></iframe></div><script type="text/javascript" src="https://s7.addthis.com/static/r07/core174.js"></script></body></html>
