@@ -1,0 +1,68 @@
+.elementor-689 .elementor-element.elementor-element-84f6233{padding:0px 0px 210px 0px;}.elementor-689 .elementor-element.elementor-element-1235085 > .elementor-element-populated{padding:0px 70px 0px 70px;}.elementor-689 .elementor-element.elementor-element-26bc145{width:auto;max-width:auto;}.elementor-689 .elementor-element.elementor-element-26bc145 .aux-widget-image{text-align:left;}.elementor-689 .elementor-element.elementor-element-26bc145 .aux-media-image{border-radius:15px 15px 15px 15px;overflow:hidden;box-shadow:0px 55px 99px 0px rgba(45, 61, 84.99999999999999, 0.39);}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-widget-testimonial{background-color:var( --e-global-color-de2f655 );text-align:center;border-radius:15px 15px 15px 15px;padding:50px 47px 5px 47px;box-shadow:0px 55px 99px 0px rgba(45, 61, 84.99999999999999, 0.1);}.elementor-689 .elementor-element.elementor-element-c133ef2{width:auto;max-width:auto;align-self:center;position:absolute;bottom:-100px;left:40%;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-image img{border-radius:100% 100% 100% 100%;overflow:hidden;}.elementor-689 .elementor-element.elementor-element-c133ef2 .col-title a, .elementor-689 .elementor-element.elementor-element-c133ef2 .col-title{color:var( --e-global-color-secondary );}.elementor-689 .elementor-element.elementor-element-c133ef2 .col-title, .elementor-689 .elementor-element.elementor-element-c133ef2 .col-title a{font-size:24px;font-weight:400;text-transform:capitalize;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content{color:var( --e-global-color-4fe9a691 );font-size:23px;font-weight:300;font-style:italic;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content .entry-content{margin-top:0px;margin-bottom:10px;}@media(max-width:1024px){.elementor-689 .elementor-element.elementor-element-84f6233{padding:0px 0px 220px 0px;}.elementor-689 .elementor-element.elementor-element-c133ef2{bottom:-120px;}.elementor-689 .elementor-element.elementor-element-c133ef2 .col-title, .elementor-689 .elementor-element.elementor-element-c133ef2 .col-title a{font-size:21px;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content{font-size:18px;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-widget-testimonial{padding:40px 25px 5px 25px;}}@media(max-width:767px){.elementor-689 .elementor-element.elementor-element-84f6233{padding:0px 0px 250px 0px;}.elementor-689 .elementor-element.elementor-element-1235085 > .elementor-element-populated{padding:0px 70px 0px 70px;}.elementor-689 .elementor-element.elementor-element-c133ef2{bottom:-160px;}.elementor-689 .elementor-element.elementor-element-c133ef2 .col-title, .elementor-689 .elementor-element.elementor-element-c133ef2 .col-title a{font-size:18px;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content{font-size:15px;}.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-widget-testimonial{padding:15px 15px 5px 15px;}}/* Start custom CSS for aux_testimonial, class: .elementor-element-c133ef2 */.elementor-689 .elementor-element.elementor-element-c133ef2 .entry-content{
+    max-width: 430px;
+}
+.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content .entry-content::after{
+    display: none;
+}
+.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-infobox{
+    margin: 0 auto;
+}
+.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content .entry-content::before{
+    content: "";
+    width: 110px;
+    height: 98px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: -100px;
+    margin: 0 auto !important;
+    background-image: linear-gradient(180deg, var( --e-global-color-primary ) 0%, var( --e-global-color-secondary ) 100%);
+    box-shadow: 0px 55px 99px #2D3D551A;
+    border-radius: 15px;
+}
+.elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content::after{
+    content: "" !important;
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='31.504' height='22.176' viewBox='0 0 31.504 22.176'%3E%3Cpath id='Path_1721' data-name='Path 1721' d='M9.768-71.544a1.758,1.758,0,0,1-1.452-.66,2.272,2.272,0,0,1-.528-1.452,5.808,5.808,0,0,1,.528-2.376l5.676-14.916a6.479,6.479,0,0,1,1.386-2.112,2.934,2.934,0,0,1,2.046-.66h2.244a1.777,1.777,0,0,1,1.584.792,2.476,2.476,0,0,1,.264,1.98l-2.508,15.84q-.4,3.564-3.3,3.564Zm17.688,0A1.758,1.758,0,0,1,26-72.2a2.272,2.272,0,0,1-.528-1.452A5.808,5.808,0,0,1,26-76.032L31.68-90.948a6.478,6.478,0,0,1,1.386-2.112,2.934,2.934,0,0,1,2.046-.66h2.244a1.777,1.777,0,0,1,1.584.792,2.476,2.476,0,0,1,.264,1.98L36.7-75.108q-.4,3.564-3.3,3.564Z' transform='translate(-7.788 93.72)' fill='%231a1a30'/%3E%3C/svg%3E");
+    display: inline-block !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -25px;
+    left: 45%;
+}
+@media screen and (max-width:1024px) and (min-width:768px){
+    .elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content::after{
+        top: -35px;
+        left: 44%;
+    }
+}
+@media screen and (max-width:900px) and (min-width:768px){
+    .elementor-689 .elementor-element.elementor-element-c133ef2{
+        bottom: -110px!important;
+        left: 30%!important;
+    }
+}
+@media screen and (max-width:767px){
+    .elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content .entry-content::before{
+        width: 80px;
+        height: 68px;
+        top:-50px;
+    }
+    .elementor-689 .elementor-element.elementor-element-c133ef2 .aux-testimonial-content::after{
+        top: -25px;
+        left: 40%;
+    }
+     .elementor-689 .elementor-element.elementor-element-c133ef2 .aux-widget-testimonial{
+       box-shadow:0px 25px 50px #2d3d551a!important;
+    }
+}
+@media screen and (max-width:320px){
+    .elementor-689 .elementor-element.elementor-element-c133ef2 {
+   bottom: -250px!important;
+   left:35%!important;
+}}/* End custom CSS */
