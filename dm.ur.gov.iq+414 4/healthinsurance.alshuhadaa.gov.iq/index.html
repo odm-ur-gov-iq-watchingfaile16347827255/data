@@ -1,0 +1,332 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+	استمارة تقديم ذوي الشهداء على الضمان الصحي
+</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="../fonts.googleapis.com/css2/index_family=cairo&amp;display=swap.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">/* تحسين إعدادات الخط والتخطيط الأساسي */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0f4f8;
+    font-size: 18px;
+}
+
+/* ضبط الجسم بشكل عام */
+body {
+    direction: rtl;
+background-image: linear-gradient(0deg, #e0e0e0 0%, #f2f2f2 100%);
+
+
+
+}
+
+/* إعدادات العناوين والنصوص */
+h5 {
+    color: #444;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+/* صناديق الإدخال والقوائم */
+input, select {
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover {
+    border-color: #5bc0de;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+}
+
+input:focus, select:focus {
+    border-color: #5bc0de;
+    background-color: #e8f6ff;
+    outline: none;
+}
+
+/* تحسين مظهر الحاويات */
+.container, .container1 {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    
+    background-color: #fff;
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+     padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px; /* نفس زاوية الانحناء مثل الحاويات */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* إضافة تأثير الظل مثل الحاويات */
+    width: 95%; /* تعديل العرض ليصبح بنسبة 90% من عرض الشاشة */
+    max-width: 1000px; /* أقصى عرض للفوتر ليكون مثل الحاويات */
+    margin: 20px auto; /* ضبط الهوامش لتوسيط الفوتر */
+    text-align: center;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align:center;
+}
+
+/* تحسين أزرار */
+.btn {
+    background-color: #125B9A;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:  #387ADF;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(97, 150, 166, 0.5);
+}
+
+.yellowButton {
+    background-color: #ffec64;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.yellowButton:hover {
+    background-color: #ffab23;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.yellowButton:active {
+    position: relative;
+    top: 1px;
+}
+
+/* إعدادات الحاوية الرئيسية */
+.Maindiv {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Maindiv:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* تحسين الخطوط */
+.auto-style1 {
+    color: #903a22;
+    font-size: 1rem;
+}
+
+.auto-style2 {
+    color: #c80707;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* تحسين العناصر الصغيرة */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+}
+
+/* إعدادات الفوتر */
+.footer {
+    background-color: #B0B0B0;
+   padding: 20px;
+   border:1px;
+    margin-top: 20px;
+    border-radius: 15px; /* نفس زاوية الانحناء مثل الحاويات */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* إضافة تأثير الظل مثل الحاويات */
+   
+    max-width: 1200px; /* أقصى عرض للفوتر ليكون مثل الحاويات */
+    margin: 20px auto; /* ضبط الهوامش لتوسيط الفوتر */
+    text-align: center;
+}
+
+footer p {
+    color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+footer h5 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+footer .card-text span {
+    color: #f9f9f9;
+    display: block;
+}
+
+@media (max-width: 576px) {
+    input, select, .btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .container, .container1 {
+        padding: 10px;
+    }
+}
+ .Maindiv{
+            text-align:center;
+           font-size:18px;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post" action="index.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="V2ePI7nmLDOLHzvjTuIJkt1+5Fu61g0S1s6cxiaLC++cMY+BFFUtZE+VgJkNqDNL100niKpfpGoMkfsVdjYY+jgt9N5y4bmFAL9fnoZTH/s=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="RaZWo2r11oqGnUDOvUsskIOcQkekzNnpU5RWNVKJcfoAzAqONyJmzflC/hN/rccvTRwbvWlBWk193aJp2dFwyv6A8JYFujaAYc7CwxXhJuCT9yKz2z/Tm31NDpYYYjUn2EPu/MHWbppVnuwx/AvOtNlUNNfq9Tee1isjHZh23FCu/gTqYhCoq/gfJ7Ghp13PtyZNGOO/pu0xDvcQ7r5pSA==">
+</div>
+     
+            <div class="container1">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div align="center">
+                            <div style="text-align: center">
+
+                                       <div class="Header">
+            <div style="text-align: center" class="Maindiv">
+                <span id="Label1" style="font-size:24px;">مؤسسة الشهداء</span><br>
+
+                <img src="shaar.png" width="200px" height="200px"><br>
+
+
+                <br>
+               
+                 <span id="Label8">استمارة تقديم ذوي الشهداء على الضمان الصحي </span><br>
+
+           
+
+            
+       
+                               
+                                
+                                <br>
+                                <br>
+                                     
+      
+                                <span id="Label7" class="auto-style2">ملاحظات</span><br>
+                                
+                                <span id="Label6" class="auto-style1">- تدقيق بيانات الاستشهاد و رقم قرار الأستشهاد كون هذه البيانات غير قابلة للتعديل </span><br>
+                               
+                                 <span id="Label3" class="auto-style1">- يجب كتابة رقم القرار و رقم الهاتف بارقام انكليزية  </span><br>
+                                <br>
+                               
+                          
+                          
+
+                          
+                           
+                               <span id="MartyrTypeLabel">أختر النظام </span><br>
+                              <select name="MartyrType" id="MartyrType">
+	<option value="نظام شهداء ضحايا جرائم حزب البعث">  نظام شهداء ضحايا جرائم حزب البعث</option>
+	<option value="نظام الحشد الشعبي">نظام شهداء و جرحى الحشد الشعبي </option>
+	<option value="نظام ضحايا الارهاب">نظام الشهداء و مصابي العمليات الحربية والاخطاء العسكرية والعمليات الارهابية</option>
+	<option value="شهداء وجرحى الاجهزة الامنية">شهداء وجرحى الاجهزة الامنية</option>
+
+</select><br>
+
+
+                            <div class="button12">
+                                <input type="submit" name="ButtonSend" value="الدخول للاستمارة" id="ButtonSend" class=" btn "></div>
+
+                      
+               
+                </div> </div> </div> </div> </div>
+                <footer class="container-fluid ">
+                <div class="footer" id="footer123" style="justify-content: space-around;">
+                   
+                    <div style="margin-top: 5px; text-align:center;color:darkgrey">
+                        <h5 style="color:black">من نحن</h5>
+                        <hr>
+                        <p>
+                             مؤسسة الشهداء الجهة الرسمية الوحيدة التي تعنى بذوي شهداء 
+                        </p>  
+                         <h5 style="color:black">للتواصل معنا</h5>
+                        <div class="card-text">
+
+                            <!--.col-->
+
+                            <!--.row-->
+                            <div class="row">
+                                <div class="col">
+                                    <i class="fas fa-map-marker ml-3" aria-hidden="true"></i>
+                                    <span>العراق/ بغداد/الكرادة / قرب جسر الطابقين</span>
+                                </div>
+                                <!--.col-->
+                            </div>
+                            <!--.row-->
+                            <div class="row">
+                                <div class="col">
+                                    <i class="fas fa-envelope-open ml-3" aria-hidden="true"></i>
+                                    <span>media@alshuhadaa.gov.iq</span>
+                                    <hr>
+                                  <p>  قسم تقنيةالمعلومات </p>
+                                        <p>  شعبة البرمجة و قواعد البيانات </p>
+                    </div>
+                  
+                </div>
+                            </div>
+
+                    </div>
+                    </div>
+            </footer>
+            </div>
+                    </div>
+                
+           
+    </form>
+  
+
+
+</body></html>
