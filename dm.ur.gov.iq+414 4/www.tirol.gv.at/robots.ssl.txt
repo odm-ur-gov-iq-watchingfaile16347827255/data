@@ -1,0 +1,84 @@
+Sitemap: https://www.tirol.gv.at/sitemap.xml?no_cache=1
+
+User-agent: *
+
+Allow: /sitemap.xml?sitemap=pages&cHash*
+Allow: /sitemap.xml?no_cache=1
+
+Disallow: /_assets/
+Disallow: /fileadmin/_recycler_/
+Disallow: /fileadmin/_temp_/
+Disallow: /fileadmin/_test_/
+Disallow: /fileadmin/user_upload/
+Disallow: /fileadmin/wlv/
+Disallow: /typo3/
+Disallow: /typo3conf/
+Disallow: /typo3temp/
+Disallow: /index.php*
+Disallow: /?id=*
+Disallow: /*no_cache=1*
+
+Disallow: /*.html
+Disallow: /*.zip
+
+Disallow: /bestaetigung/
+Disallow: /bildung/bildungsinstitut-medienzentrum/newsletter*
+Disallow: /buergerservice/foerderungen/tiroler-foerdertransparenzgesetz/*
+Disallow: /buergerservice/kundmachungen/
+Disallow: /buergerservice/newsletter/elementarbildung/newsletter*
+Disallow: /buergerservice/newsletter/elementarbildung/sonderausgabe*
+Disallow: /buergerservice/newsletter/erasmus-jugend-und-esk/erasmus*
+Disallow: /buergerservice/newsletter/infoeck/infoeck-newsletter*
+Disallow: /buergerservice/newsletter/interner-newsletter-forst/
+Disallow: /buergerservice/newsletter/landesentwicklung/*
+Disallow: /buergerservice/newsletter/landesgesetzblatt-und-verordnungsblatt/landesgesetzblatt*
+Disallow: /buergerservice/newsletter/landesgesetzblatt-und-verordnungsblatt/verordnungsblatt*
+Disallow: /buergerservice/newsletter/tirisnews/tirisnews*
+Disallow: /fileadmin/buergerservice/e-government/transparenzpaket/
+Disallow: /fileadmin/buergerservice/kundmachungen/
+Disallow: /fileadmin/intern/
+Disallow: /fileadmin/themen/gesundheit-vorsorge/gpz/downloads/
+Disallow: /gesellschaft-soziales/diversitaet/newslettra*
+Disallow: /gesellschaft-soziales/jugend/newsletter*
+Disallow: /gesundheit-vorsorge/gpz/*
+Disallow: /intern/
+Disallow: /landtags-einladung*
+Disallow: /landtags-fotoservice*
+Disallow: /landtags-info*
+Disallow: /landtags-terminerinnerung*
+Disallow: /presse/newsletter/abendinformation*
+Disallow: /presse/newsletter/korrektur*
+Disallow: /presse/newsletter/landes-einladung*
+Disallow: /presse/newsletter/landes-fotoservice*
+Disallow: /presse/newsletter/medien-einladung*
+Disallow: /presse/newsletter/medien-terminerinnerung*
+Disallow: /presse/newsletter/medieninformation*
+Disallow: /presse/newsletter/mittagsinformation*
+Disallow: /presse/newsletter/originalton*
+Disallow: /presse/newsletter/tagesvorschau*
+Disallow: /schulung/
+Disallow: /suche/?*
+Disallow: /test/
+Disallow: /umwelt/wald/holzmarkt/holzpreise/holzmarktbericht*
+Disallow: /ungueltige-mitarbeiterIn/
+Disallow: /ungueltige-mitarbeiterinnenliste/
+Disallow: /ungueltige-organisationseinheit/
+Disallow: /*/abonnentenliste/
+
+
+User-agent: SiteimproveBot-Crawler
+Disallow: /
+User-agent: LinkCheck by SiteImprove.com
+Disallow: /
+User-agent: Yasni
+Disallow: /
+User-agent: Pipl
+Disallow: /
+User-agent: 123People
+Disallow: /
+User-agent: MyOnID
+Disallow: /
+User-Agent: serpstatbot
+Disallow: /
+User-agent: Flamingo_SearchEngine
+Disallow: /
