@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /class/
+Disallow: /data/
+Disallow: /lib/
+Disallow: /request/
+Disallow: /tmp/
+Disallow: /main/
+Disallow: /mainn/
+Disallow: /template/
+Disallow: /view/
+
+User-agent: BLEXBot
+Disallow: /
+Allow: /data/iasj/coversheet/
+Sitemap: https://ipmj.org/sitemap.xml
