@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("IntlCLDRNumberType34",["IntlVariations"],(function(a,b,c,d,e,f,g){"use strict";a={getVariation:function(a){if(a===0)return c("IntlVariations").NUMBER_ZERO;else if(a===1)return c("IntlVariations").NUMBER_ONE;else if(a===2)return c("IntlVariations").NUMBER_TWO;else if(a%100>=3&&a%100<=10)return c("IntlVariations").NUMBER_FEW;else if(a%100>=11&&a%100<=99)return c("IntlVariations").NUMBER_MANY;else return c("IntlVariations").NUMBER_OTHER}};b=a;g["default"]=b}),98);
