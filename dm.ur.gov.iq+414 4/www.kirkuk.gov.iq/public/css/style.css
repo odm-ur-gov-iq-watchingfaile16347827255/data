@@ -1,0 +1,1116 @@
+/********** Template Fonts **********/
+/* 
+ * Noto Kufi Arabic (Arabic)
+ */
+@font-face {
+    font-family: "Noto Kufi Arabic Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Regular.eot);
+    src: url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Regular.eot?#iefix)
+            format("embedded-opentype"),
+        url(../fonts/notokufiarabic/notokufiarabic-regular.woff2)
+            format("woff2"),
+        url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Regular.woff) format("woff"),
+        url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Regular.ttf)
+            format("truetype");
+}
+
+@font-face {
+    font-family: "Noto Kufi Arabic Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Bold.eot);
+    src: url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Bold.eot?#iefix)
+            format("embedded-opentype"),
+        url(../fonts/notokufiarabic/notokufiarabic-bold.woff2) format("woff2"),
+        url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Bold.woff) format("woff"),
+        url(https://www.kirkuk.gov.iq/public/fonts/NotoKufiArabic/NotoKufiArabic-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Al Hurra Txt Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://www.kirkuk.gov.iq/public/fonts/Al-Hurra/Al-Hurra-Txtreg-Bold.eot);
+    src: url(https://www.kirkuk.gov.iq/public/fonts/Al-Hurra/Al-Hurra-Txtreg-Bold.eot?#iefix)
+            format("embedded-opentype"),
+        url(../fonts/al-hurra/al-hurra-txtreg-bold.woff2) format("woff2"),
+        url(https://www.kirkuk.gov.iq/public/fonts/Al-Hurra/AlHurraTxtBold.woff) format("woff"),
+        url(https://www.kirkuk.gov.iq/public/fonts/Al-Hurra/Al-Hurra-Txtreg-Bold.ttf) format("truetype");
+}
+
+/********** Template CSS **********/
+:root {
+    --primary: #06a3da;
+    --secondary: #34ad54;
+    --light: #eef9ff;
+    --dark: #091e3e;
+    --maron: #4d1015;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.blog-item iframe {
+    top: 25px !important;
+}
+.sticky-top::before {
+    background: #091e3e;
+    content: "";
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    opacity: 0.8;
+}
+.sticky-top::after {
+    border-color: #091e3e #091e3e rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    -moz-border-bottom-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-top-colors: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid;
+    border-width: 60px 37px;
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: 40%;
+    top: 0;
+    width: 0;
+    opacity: 0.8;
+}
+.sticky-top {
+    border-bottom: 10px solid #3a4b65;
+    padding-top: 2px !important;
+    padding-bottom: 1.5rem !important;
+}
+a {
+    color: #4d1015;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4d1015;
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4d1015;
+}
+.blog-item {
+    border-bottom: 4px solid var(--primary);
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    min-height: 100%;
+}
+
+.blog-item:hover {
+    border-bottom: 4px solid var(--maron);
+}
+
+.custom-card {
+    border-bottom: 4px solid var(--primary);
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.pagination {
+    padding-right: 0 !important;
+}
+
+.custom-card:hover {
+    border-bottom: 4px solid var(--maron);
+}
+
+.custom-border-li li {
+    border-bottom: 4px solid var(--primary);
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.custom-border-li li:hover {
+    border-bottom: 4px solid var(--maron);
+}
+
+.player-small {
+    padding-bottom: 61.25% !important;
+}
+
+/*** Spinner ***/
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--maron);
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px);
+    }
+
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg)
+            rotateY(-179.9deg);
+    }
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.font-alhuraa {
+    font-family: "Al Hurra Txt Bold", sans-serif;
+}
+
+.font-kufi-regular {
+    font-family: "Noto Kufi Arabic Regular";
+}
+
+.font-kufi-bold {
+    font-family: "Noto Kufi Arabic Bold";
+}
+
+.fs-custom {
+    font-size: 13px !important;
+}
+
+.maroon-color {
+    color: var(--maron) !important;
+}
+
+.bg-maroon {
+    background-color: var(--maron) !important;
+}
+
+.default-link {
+    list-style: none;
+    color: var(--maron) !important;
+    transition: all 0.3 ease-in-out;
+}
+
+.default-link:hover {
+    color: #8b0000;
+}
+
+.custom-btn h5 {
+    font-size: 13px;
+}
+
+.custom-btn {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.custom-btn:hover {
+    background-color: #8b0000 !important;
+}
+
+.modal-header .btn-close {
+    margin: -0.5rem 0.5rem -0.5rem !important;
+}
+
+.fadeFromBottom div {
+    text-align: right !important;
+}
+
+.citizenservices {
+    background: url(../img/offcanvas.webp) #c0c0c0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.staffservices {
+    background: url(../img/staffservices.webp) #c0c0c0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ur-shadow {
+    -webkit-filter: drop-shadow(5px 5px 5px #fff);
+    filter: drop-shadow(1px 0 12px #fff);
+}
+
+.link-footer p,
+.link-footer a {
+    font-size: 14px;
+}
+
+.share-post h6 {
+    font-family: "Noto Kufi Arabic Regular" !important;
+}
+
+.bn-direction-rtl .bn-controls button {
+    border-right: solid 1px #ffffff !important;
+}
+
+.bn-controls button {
+    background-color: var(--maron) !important;
+}
+
+.tendersservices {
+    background-color: #091e3e !important;
+}
+
+.btn {
+    font-family: "Al Hurra Txt Bold", sans-serif !important;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn-outline-primary {
+    color: #fff;
+    border-color: transparent;
+    background-color: var(--maron);
+}
+
+.btn-outline-primary:hover {
+    color: var(--maron);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.staffservices .offcanvas-header {
+    padding: 10px 1rem;
+}
+
+.offcanvas-bottom {
+    height: 41vh;
+}
+
+.structural {
+    background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
+        url(https://www.kirkuk.gov.iq/public/img/structural.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.structural a {
+    color: #fff;
+    font-family: "Al Hurra Txt Bold", sans-serif !important;
+}
+
+.structural h5 {
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+        -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.structural p {
+    font-size: 11px;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.inlinePlayButton {
+    color: transparent !important;
+}
+
+.file-upload {
+    background-color: #ffffff;
+    width: 263px;
+    margin: 0 auto;
+    padding: 14px;
+}
+
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1fb264;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824b;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #1aa059;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #1fb264;
+    position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #1fb264;
+    border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #15824b;
+    padding: 60px 0;
+}
+
+.file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #6e72ea;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #1f23ab;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 767px) {
+    .file-upload {
+        position: inherit !important;
+    }
+}
+
+/*** Heading ***/
+h1,
+h2,
+.fw-bold {
+    font-weight: 800 !important;
+}
+
+h3,
+h4,
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+h5,
+h6,
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+/*** Button ***/
+.btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #ffffff;
+    box-shadow: inset 0 0 0 50px transparent;
+}
+
+.btn-primary:hover {
+    box-shadow: inset 0 0 0 0 var(--primary);
+}
+
+.btn-secondary:hover {
+    box-shadow: inset 0 0 0 0 var(--secondary);
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.camera_pag_ul li img {
+    width: 200px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+/*** Breacking News ***/
+.breaking-news .news {
+    width: 200px;
+}
+
+.breaking-news .news span {
+    font-size: 12px;
+}
+
+.breaking-news .news-scroll a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.breaking-news .dot {
+    height: 6px;
+    width: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 2px !important;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.topbar {
+    border-bottom: 3px solid #fff;
+}
+
+/*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    font-family: "Al Hurra Txt Bold";
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.5s;
+    text-shadow: 2px 0 #091e3e, -2px 0 #091e3e, 0 2px #091e3e, 0 -2px #091e3e,
+        1px 1px #091e3e, -1px -1px #091e3e, 1px -1px #091e3e, -1px 1px #091e3e;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #091e3e;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+        -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+/*** Navbar ***/
+.custom-nav-link {
+    font-family: "Al Hurra Txt Bold";
+    position: relative;
+    margin-left: 25px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.5s;
+    text-shadow: 2px 0 #091e3e, -2px 0 #091e3e, 0 2px #091e3e, 0 -2px #091e3e,
+        1px 1px #091e3e, -1px -1px #091e3e, 1px -1px #091e3e, -1px 1px #091e3e;
+}
+
+.custom-nav-link:hover,
+.custom-nav-link.active {
+    color: #091e3e;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+        -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.navbar-dark .navbar-brand h1 {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+        background: #ffffff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #ffffff;
+        text-shadow: 2px 0 #091e3e, -2px 0 #091e3e, 0 2px #091e3e,
+            0 -2px #091e3e, 1px 1px #091e3e, -1px -1px #091e3e, 1px -1px #091e3e,
+            -1px 1px #091e3e;
+    }
+
+    .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #ffffff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: 23px;
+        left: 50%;
+        background: #091e3e;
+        transition: 0.5s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+/*** Carousel ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 30, 62, 0.7);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 14px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+/*** Section Title ***/
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.section-title.text-center::before {
+    right: 50%;
+    margin-right: -75px;
+}
+
+.section-title.section-title-sm::before {
+    width: 90px;
+    height: 3px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 5px;
+    bottom: 0px;
+    background: #ffffff;
+    -webkit-animation: section-title-run 5s infinite linear;
+    animation: section-title-run 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    width: 4px;
+    height: 3px;
+}
+
+.section-title.text-center::after {
+    -webkit-animation: section-title-run-center 5s infinite linear;
+    animation: section-title-run-center 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    -webkit-animation: section-title-run-sm 5s infinite linear;
+    animation: section-title-run-sm 5s infinite linear;
+}
+
+@-webkit-keyframes section-title-run {
+    0% {
+        right: 0;
+    }
+
+    50% {
+        right: 145px;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@-webkit-keyframes section-title-run-center {
+    0% {
+        right: 50%;
+        margin-right: -75px;
+    }
+
+    50% {
+        right: 50%;
+        margin-right: 45px;
+    }
+
+    100% {
+        right: 50%;
+        margin-right: -75px;
+    }
+}
+
+@-webkit-keyframes section-title-run-sm {
+    0% {
+        right: 0;
+    }
+
+    50% {
+        right: 85px;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: 0.5s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #dddddd;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item.center {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: #ffffff !important;
+    box-shadow: 0 0 30px #dddddd;
+}
+
+/*** Team ***/
+.team-item {
+    transition: 0.5s;
+}
+
+.team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.team-social a.btn {
+    position: relative;
+    margin: 0 3px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.team-item:hover {
+    box-shadow: 0 0 30px #dddddd;
+}
+
+.team-item:hover .team-social {
+    background: rgba(9, 30, 62, 0.7);
+}
+
+.team-item:hover .team-social a.btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.3s 0s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.3s 0.05s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.3s 0.1s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(4) {
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.3s 0.15s;
+}
+
+.team-item .team-img img,
+.blog-item .blog-img img {
+    transition: 0.5s;
+}
+
+.team-item:hover .team-img img,
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+.share-post {
+    position: relative;
+}
+
+.share-post2 {
+    position: absolute;
+    top: 23px;
+}
+
+/*** Miscellaneous ***/
+@media (min-width: 991.98px) {
+    .facts {
+        position: relative;
+        margin-top: -166px;
+        z-index: 1;
+    }
+
+    .facts2 {
+        position: relative;
+        margin-top: -120px;
+        z-index: 1;
+    }
+
+    .facts3 {
+        position: relative;
+        margin-top: -78px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bg-header:before {
+        background: transparent !important;
+    }
+
+    .bg-header:after {
+        border-color: transparent !important;
+    }
+
+    .blog-item img {
+        height: 71vw !important;
+    }
+
+    .logo-text {
+        position: inherit !important;
+        width: 181px !important;
+    }
+
+    .navbar {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+
+    .logo-kirkuk {
+        display: none !important;
+    }
+
+    .facts {
+        margin-top: -97px;
+    }
+
+    .facts2 {
+        margin-top: -97px;
+    }
+
+    .facts3 {
+        margin-top: -97px;
+    }
+
+    .facts .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .facts2 .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .facts3 .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.video-gallery {
+    display: block;
+    overflow: hidden;
+}
+
+.mbYTP_wrapper {
+    height: 215px;
+}
+
+.playerBox {
+    width: 584px !important;
+    height: 242px !important;
+    margin-left: -82px !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.bg-header::before {
+    background: #091e3e;
+    content: "";
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    opacity: 0.8;
+}
+
+.bg-header::after {
+    border-color: #091e3e #091e3e rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    -moz-border-bottom-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-top-colors: none;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid;
+    border-width: 60px 37px;
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: 40%;
+    top: 0;
+    width: 0;
+    opacity: 0.8;
+}
+
+.logo-text {
+    position: absolute;
+    top: 17px;
+    right: 221px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    width: 300px;
+}
+
+.logo-kirkuk {
+    position: absolute;
+    top: 7px;
+    right: 70px;
+    width: 106px;
+}
+
+.link-animated a {
+    transition: 0.5s;
+}
+
+.link-animated a:hover {
+    padding-left: 10px;
+}
+
+@media (min-width: 767.98px) {
+    .footer-about {
+        margin-bottom: -75px;
+    }
+}
