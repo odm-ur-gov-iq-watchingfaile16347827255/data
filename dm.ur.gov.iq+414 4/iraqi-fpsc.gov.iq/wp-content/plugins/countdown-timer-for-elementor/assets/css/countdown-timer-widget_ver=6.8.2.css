@@ -1,0 +1,57 @@
+.countdown-items {
+    display: inline-block;
+    width: 150px;
+    background-color: #6ec1e4;
+    margin: 0px 20px;
+}
+.countdown-items .ctw-digits{
+	display: block;
+    font-size: 64px;
+	text-align:center;
+	line-height: 1.5em;
+}
+.countdown-items .ctw-label {
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+}
+.finished-message{
+	text-align:center;
+	margin-top:15px;
+}
+.countdown-timer-init
+{
+	display:flex;
+	flex-wrap : wrap;
+}
+
+.countdown-timer-widget{
+    display: flex;
+/*     justify-content: center; */
+/*     align-items: center; */
+    flex-wrap: wrap;
+}
+
+.countdown-items {
+    overflow:  hidden;
+	margin : 0px !important;
+}
+.finished-message {
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+	.countdown-items {margin: 0px;min-width:150px;height: auto;}
+	.ctw-digits {height : auto !important;}
+	.countdown-timer-init {display: flex;flex-wrap: wrap;}
+}
+
+
+ 
+@media(max-width: 493px) {
+    /* .countdown-items { width: 15%; }*/
+	.countdown-items .ctw-digits{ font-size:20px; }
+	.countdown-items .ctw-label{ font-size:10px; }
+}
+
+
+
