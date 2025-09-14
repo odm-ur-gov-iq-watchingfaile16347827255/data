@@ -1,0 +1,1 @@
+import{r as o,ap as t,C as r,s as u,aq as i}from"./bfq3BMMB.js";function l(n){const a=o(t(n));return r(()=>t(n),e=>{a.value=e||`nui-input-${Math.random().toString(36).slice(2)}`}),u(()=>{a.value||(a.value=`nui-input-${Math.random().toString(36).slice(2)}`)}),i(a)}export{l as u};
