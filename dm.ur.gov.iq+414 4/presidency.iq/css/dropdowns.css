@@ -1,0 +1,87 @@
+.dropdowns nav, .dropdowns ul, .dropdowns li, .dropdowns a {
+	margin: 0;
+	padding: 0;
+}
+.dropdowns a {
+	text-decoration: none;
+}
+.toggleMenu {
+	display: none;
+}
+.nav {
+	list-style: none;
+*zoom: 1;
+}
+.nav:before, .nav:after {
+	content: " ";
+	display: table;
+}
+.nav:after {
+	clear: both;
+}
+.nav ul {
+	list-style: none;
+}
+.nav a {
+	padding: 10px 0px 10px 30px;
+}
+.nav li {
+	position: relative;
+}
+.nav > li {
+	float: right;
+}
+.nav > li > .parent {
+	background-image: url("https://presidency.iq/css/images/downArrow.png");
+	background-repeat: no-repeat;
+	background-position: left;
+}
+.nav > li > a {
+	display: block;
+}
+.nav li ul {
+	position: absolute;
+	right: -9999px;
+}
+.nav > li.hover > ul {
+	right: 0;
+}
+.nav li li.hover ul {
+	right: 100%;
+	top: 0;
+}
+.nav li li a {
+	display: block;
+	position: relative;
+	z-index: 100000;
+}
+.nav li li li a {
+	z-index: 200000000;
+
+}
+@media screen and (max-width: 769px) {
+.active {
+	display: block;
+}
+.nav > li {
+	float: none;
+	background-color:#999;
+	line-height:40px;
+	border-bottom:1px #f0f0f0 solid;
+}
+.nav > li > .parent {
+	background-position: 95% 50%;
+}
+.nav li li .parent {
+	background-image: url("https://presidency.iq/css/images/downArrow.png");
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+.nav ul {
+	display: block;
+	width: 100%;
+}
+.nav > li.hover > ul, .nav li li.hover ul {
+	position: static;
+}
+}
