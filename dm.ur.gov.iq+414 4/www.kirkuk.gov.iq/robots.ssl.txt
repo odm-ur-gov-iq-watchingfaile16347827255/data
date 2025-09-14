@@ -1,0 +1,15 @@
+User-agent: Googlebot
+Disallow: /control
+Disallow: /record-incoming-and-outgoing
+Disallow: /airport
+Disallow: /PHPMailer
+Disallow: /system
+Disallow: /jobs/form/admin-control
+Disallow: /form/moving_furniture/admin-form
+Disallow: /form/jobs/admin-form-jobs
+Disallow: /form/replace-email/admin-form
+Disallow: /kirkuk-provincial-council
+
+Sitemap: https://www.kirkuk.gov.iq/sitemap.xml/news
+Sitemap: https://www.kirkuk.gov.iq/sitemap.xml
+
