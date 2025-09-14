@@ -1,0 +1,439 @@
+# robots.txt file for https://www.telegram.com/
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: AmazonBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /story/sponsor-story/
+Disallow: /picture-gallery/sponsor-story/
+Disallow: /videos/sponsor-story/
+Disallow: /longform/sponsor-story/
+Disallow: /pages/interactives/sponsor-story/
+Disallow: /interactives/sponsor-story/
+Disallow: /videos/embed/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: NewsNow
+Disallow: /
+
+User-agent: news-please
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: peer39_crawler
+Disallow: /
+
+User-agent: peer39_crawler/1.0
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Claude-User
+Disallow: /
+
+User-agent: Claude-SearchBot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: Ai2Bot-Dolma
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: Arquivo-web-crawler
+Disallow: /
+
+User-agent: AspiegelBot
+Disallow: /
+
+User-agent: AwarioRssBot
+Disallow: /
+
+User-agent: AwarioSmartBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: coccocbot-web
+Disallow: /
+
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+User-agent: crawler4j
+Disallow: /
+
+User-agent: Crawlspace
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: DuckAssistBot
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: Google-CloudVertexBot
+Disallow: /
+
+User-agent: https://hada.news
+Disallow: /
+
+User-agent: https://www.imediaethics.org
+Disallow: /
+
+User-agent: iaskspider/2.0
+Disallow: /
+
+User-agent: ICC-Crawler
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: ISSCyberRiskCrawler
+Disallow: /
+
+User-agent: JenkersBot
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+User-agent: LivelapBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: Meltwater
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Mojeek
+Disallow: /
+
+User-agent: MojeekBot
+Disallow: /
+
+User-agent: MoodleBot
+Disallow: /
+
+User-agent: NeticleBot
+Disallow: /
+
+User-agent: Netvibes
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+User-agent: Seekr
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: Sidetrade Indexer Bot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: Turnitin
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+User-agent: yacy
+Disallow: /
+
+User-agent: yacybot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: YandexAdditional
+Disallow: /
+
+User-agent: YandexAdditionalBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: ia_archiver-web.archive.org
+Disallow: /
+
+User-agent: aiHitBot
+Disallow: /
+
+User-agent: Amazon Kendra
+Disallow: /
+
+User-agent: Big Sur AI
+Disallow: /
+
+User-agent: Brandwatch
+Disallow: /
+
+User-agent: Bravest
+Disallow: /
+
+User-agent: ChatGPT Operator
+Disallow: /
+
+User-agent: Cotoyogi
+Disallow: /
+
+User-agent: DigitalOceanGenAICrawler
+Disallow: /
+
+User-agent: Echobot Bot
+Disallow: /
+
+User-agent: EchoboxBot
+Disallow: /
+
+User-agent: Factset_spyderbot
+Disallow: /
+
+User-agent: Grok
+Disallow: /
+
+User-agent: iaskspider
+Disallow: /
+
+User-agent: ICC Crawler
+Disallow: /
+
+User-agent: imgproxy
+Disallow: /
+
+User-agent: LINER Bot
+Disallow: /
+
+User-agent: MistralAI-User
+Disallow: /
+
+User-agent: netEstate Imprint Crawler
+Disallow: /
+
+User-agent: NovaAct
+Disallow: /
+
+User-agent: QualifiedBot
+Disallow: /
+
+User-agent: SBIntuitionsBot
+Disallow: /
+
+User-agent: SemrushBot-OCOB
+Disallow: /
+
+User-agent: SemrushBotSwa
+Disallow: /
+
+User-agent: Sidetrade
+Disallow: /
+
+User-agent: TikTokSpider
+Disallow: /
+
+User-agent: WARDBot
+Disallow: /
+
+User-agent: *
+Disallow: /errors
+Disallow: /interactive/
+Disallow: /userauth/
+Disallow: /ugc/
+Disallow: /feeds/
+Disallow: /services/
+Disallow: /facebook/
+Disallow: /version-info/
+Disallow: /longform/draft/
+Disallow: /story/draft/
+Disallow: /topic/*/smart/
+Disallow: /search
+Disallow: /module-showcase/
+Disallow: /newsletter/
+Disallow: /blended-newsletter/
+Disallow: /story/nletter/
+Disallow: /sports/services/photos/
+Disallow: /optimus
+Disallow: /ux-train
+Disallow: /story/advisory/
+Disallow: /.cam-tangent/
+Disallow: /pbd/
+Disallow: /gciaf/
+Disallow: /gcdn/gciaf/
+Disallow: /dcc/
+Disallow: /gcdn/dcc/
+Disallow: /dc/
+Disallow: /gcdn/dc/
+Disallow: /dcjs/
+Disallow: /gcdn/dcjs/
+Disallow: /content-queries/
+Disallow: /zxc/
+Disallow: /*?refresh
+Disallow: /*template=printart
+Disallow: /.cache/
+Disallow: /a/
+Disallow: /advertising/
+Disallow: /apps/pbcs.dll/art_tips
+Disallow: /apps/pbcs.dll/classifieds
+Disallow: /apps/pbcs.dll/css/
+Disallow: /apps/pbcs.dll/error
+Disallow: /apps/pbcs.dll/events
+Disallow: /apps/pbcs.dll/exec
+Disallow: /apps/pbcs.dll/index
+Disallow: /apps/pbcs.dll/js/
+Disallow: /apps/pbcs.dll/misc
+Disallow: /apps/pbcs.dll/netguest
+Disallow: /apps/pbcs.dll/ptshowguide
+Disallow: /apps/pbcs.dll/ptshowguideitem
+Disallow: /apps/pbcs.dll/related
+Disallow: /apps/pbcs.dll/search
+Disallow: /apps/pbcs.dll/temaoversikt
+Disallow: /apps/pbcsad.dll
+Disallow: /apps/pbcsi.dll
+Disallow: /apps/rub.dll
+Disallow: /binary/
+Disallow: /blotter/
+Disallow: /carousel/
+Disallow: /default_rewrites.ini
+Disallow: /doubleclick/
+Disallow: /error
+Disallow: /external-search/
+Disallow: /factbox/
+Disallow: /images/
+Disallow: /includes/
+Disallow: /interact/
+Disallow: /interstitial/
+Disallow: /localdata.ini
+Disallow: /logs/
+Disallow: /mal/
+Disallow: /navigation/
+Disallow: /notices/
+Disallow: /overlay/
+Disallow: /pagination/
+Disallow: /peel/
+Disallow: /publicus.ini
+Disallow: /relatedimage/
+Disallow: /scr/
+Disallow: /search/
+Disallow: /section?template=emailfriend
+Disallow: /shareable/
+Disallow: /skyslider/
+Disallow: /submit/
+Disallow: /templates/
+Disallow: /tmp/
+Disallow: /verticals/
+Disallow: /w/
+Disallow: /xsendmail.ini
+
+Sitemap: https://www.telegram.com/news-sitemap.xml
+Sitemap: https://www.telegram.com/web-sitemap-index.xml
+Sitemap: https://www.telegram.com/video-sitemap-index.xml
+Sitemap: https://www.telegram.com/betting/sitemap.xml
+Sitemap: https://www.telegram.com/betting/news-sitemap.xml
