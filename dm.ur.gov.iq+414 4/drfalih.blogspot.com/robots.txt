@@ -1,0 +1,10 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+Disallow: /share-widget
+Allow: /
+
+Sitemap: http://drfalih.blogspot.com/sitemap.xml
+
