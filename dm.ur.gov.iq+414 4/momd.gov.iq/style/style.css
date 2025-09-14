@@ -1,0 +1,93 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Cairo", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../images/background_image.png");
+  margin-block: 20px;
+  /* Full height */
+  height: 200px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+li {
+  list-style: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.rounded-circle {
+  border-width: 6px !important;
+}
+
+a {
+  color: #000;
+  font-weight: bold;
+}
+
+.QuickURLS a li {
+  color: white;
+  font-weight: normal;
+}
+
+#online-services .col-md-2 {
+  margin: 15px;
+}
+
+.content-text-nev {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+#vision{
+  padding-top: 0; 
+  margin-top: 0;
+} */
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.title_em {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.content_btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 20px;
+}
+
+.content_btn .link_home {
+  /* border: 1px solid #30708d; */
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.content_btn .link_home .active {
+  color: #30708d;
+}
+
+.bg_cv {
+  background-color: #fff;
+}
