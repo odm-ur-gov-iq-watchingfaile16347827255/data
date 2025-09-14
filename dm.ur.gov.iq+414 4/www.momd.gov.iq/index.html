@@ -1,0 +1,465 @@
+<!DOCTYPE html><html lang="en"><head>
+    <link rel="icon" type="image/png" href="https://www.momd.gov.iq/images/logo.jpg">
+    <title data-bind="webTitle"></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1366">
+
+    <script src="cpanel/scripts/jquery-3.5.1.js"></script>
+
+    <!-- cdn  -->
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <link href="../fonts.googleapis.com/css/index_family=cairo.css" rel="stylesheet">
+
+    <!-- cdn  jquery and bootstrap  -->
+    <!-- <script src="https://www.momd.gov.iq/js/jquery.min.js"></script> -->
+    <script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- I couldn't find where I've used the JS Public Class Fields so I've moved to the build version by Babel -->
+    <script type="module" src="node_modules/esiur/src/esiur.js"></script>
+
+
+    <script src="scripts/esiur_service.js"></script>
+    <script src="scripts/loadministerposts.js"></script>
+    <script src="scripts/loadministryposts.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="https://www.momd.gov.iq/style/style.css">
+    <script src="scripts/languages.js"></script>
+    <script src="scripts/handle_translate.js"></script>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="container text-center p-3  " id="loadingContainer">
+        <div class="spinner-grow " role="status" style="width: 5rem; height: 5rem; background-color: #30708D;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="container-fluid" id="pageBody" style="display: none;">
+        <!-- the starting image of the website -->
+        <div class="row" style="background-color: #30708D;">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <!-- nav items -->
+                <nav class="nav nav-pills nav-fill p-2">
+                    <!--  -->
+                    <button class="btn text-white " onclick="requestArabicLanguage()">
+                        <b>عربي </b>
+                    </button>
+                    <button class="btn  text-white" onclick="requestEnglishLanguage()">
+                        <b> English</b>
+                    </button>
+                    <a class="nav-item nav-link text-white " href="https://www.momd.gov.iq/pages/ministry_vision.html">
+                        <h5 class="font-weight-bold content-text-nev" data-bind="ministryVision"> <b>  رؤية الوزارة  </b></h5>
+                    </a>
+                    <a class="nav-item nav-link text-white " href="#">
+                        <h5 class="font-weight-bold content-text-nev" data-bind="contactUs"> الاتصال بنا </h5>
+                    </a>
+                    <!-- <a class="nav-item nav-link text-white" href="#">
+                        <h5> <b> مكتب الوزير </b> </h5>
+                    </a> -->
+                    <div class="dropdown">
+                        <button class="btn text-white content-text-nev dropdown-toggle" type="button" style="background-color: #30708D;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <h5 class="font-weight-bold mb-0" data-bind="ministryOffice"> مكتب الوزير </h5>
+                        </button>
+                        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=631" data-bind="DepartmentofMedia">
+                                قسم الاعلام </a>
+                            <a class="dropdown-item" href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=632" data-bind="DepartmentofSecurityPermits">
+                                قسم التصاريح الامنية </a>
+                            <a class="dropdown-item" href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=493" data-bind="GovernmentContractsDepartment">
+                                قسم العقود الحكومية </a>
+                            <a class="dropdown-item" href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=633" data-bind="CitizensAffairsDepartment">
+
+                                قسم شؤون المواطنين </a>
+                            <a class="dropdown-item" href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=626" data-bind="WomenEmpowermentDepartment">
+                                قسم شؤون المرأة </a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link text-white" href="https://www.momd.gov.iq/pages/ministry_law.html">
+                        <h5 class="font-weight-bold content-text-nev" data-bind="ministryLaws"> <b> قوانين الوزارة </b> </h5>
+                    </a>
+                    <a class="nav-item nav-link text-white" href="https://www.momd.gov.iq/pages/Cv_Employees.html">
+                        <h5 class="font-weight-bold content-text-nev" data-bind="cv_employees"> <b> السيرة الذاتية للسادة المسؤولين </b></h5>
+                    </a>
+                    <a class="nav-item nav-link text-white" href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=0">
+                        <h5 class="font-weight-bold content-text-nev" data-bind="latestNews"> <b> أخر الأخبار </b></h5>
+                    </a>
+                </nav>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <!--  posts  -->
+        <div class="row align-items-center">
+            <!-- empty space -->
+            <div class="col-md-1"></div>
+            <!--  -->
+            <!-- left side ministery posts  -->
+            <div class="col-md-5 bg-white text-info h-auto py-0" id="ministry_posts_root"> 
+                <!-- <h3 class="text-center p-3 m-3 border "> أخبار الوزارة </h3> -->
+            </div>
+            <!-- right side minister posts  -->
+            <div class="col-md-5 bg-white h-auto" id="minister_posts_root">
+                <!-- <h3 class="text-center p-3 m-3 border "> أخبار الوزيرة </h3> -->
+            </div>
+            <!-- empty space -->
+            <div class="col-ml-1"> </div>
+            <!--    -->
+        </div>
+        <!-- middle buttons -->
+        <div class="row align-items-center">
+            <div class="col-md-12 text-center">
+                <button data-bind="MinistersActivities" type="button " class="btn btn-light p-3 m-3 border border-dark" onclick="latestNews(629)">نشاطات
+                    الوزير</button>
+                <button data-bind="allNews" type="button" class="btn btn-light p-3 m-3 border border-dark" onclick="latestNews(0)">جميع
+                    الأخبار</button>
+            </div>
+        </div>
+        <!-- minister vision  section-->
+        <div class="row ">
+            <!-- vision -->
+            <div class="col-md-4  d-flex align-items-center justify-content-center" style="background-color: #233C55; padding: 0%; margin: 0%;">
+                <div class=" jumbotron text-center" style="background-color: #233C55;">
+                    <h5 data-bind="visionTitle" style="color: #FEFEC9; ">رؤيتنا</h5>
+                    <p class="text-white" id="vision"> </p>
+                </div>
+            </div>
+            <!-- last talk -->
+            <div class="col-md-8" style="background-color: #30708D; ">
+                <!--  -->
+                <div class="row">
+                    <!-- last talk col -->
+                    <div class="col-md-8 d-flex align-items-center justify-content-center" style="background-color: #30708D; ">
+                        <div class="jumbotron text-justify " style="background-color: #30708D;">
+                            <b id="quote" style="color: #FEFEC9; font-size: large; ">    </b>
+                            <!-- <p data-bind="ministerTitle" class="text-white text-left"> <b> معالي وزيرة الهجرة والمهجرين
+                                </b> -->
+                            <p></p>
+                            <!-- cv section -->
+                            <a href="https://www.momd.gov.iq/minister_cv/cv.html">
+                                <b data-bind="cv" class="text-right" style="color:orange;">السيرة الذاتية</b>
+                            </a>  
+                            <!-- <a href="https://drive.google.com/file/d/1zpppxwL11fwjFy7KeyW1CYgNuXrW5t-z/view?usp=drivesdk">
+                                <b data-bind="cv" class="text-right" style="color:orange;">السيرة الذاتية</b>
+                            </a> -->
+                            -
+                            <!-- <a href="https://www.facebook.com/Othman.Ali.ALGhanmi"
+                                class="text-white">
+                                <b style="color:orange;"> Facebook </b>
+                            </a> -->
+                            <a href="https://www.facebook.com/profile.php?id=100052043543927" class="text-white">
+                                <b style="color:orange;"> Facebook </b>
+                             </a>
+                            -
+                            <!-- <a href="https://twitter.com/alghanmiothman?s=11&amp;t=IKyg4AgOt6SFEaAGk51s0g" class="text-white">
+                                <b style="color:orange;"> Twitter </b>
+                            </a> -->
+                            <a href="https://www.twitter.com/EvanGabro" class="text-white">
+                                <b style="color:orange;"> Twitter </b>
+                            </a>                 
+                        </div>
+                    </div>
+                    <!-- image section -->
+                    <div class="col-md-4  d-flex align-items-center justify-content-center">
+                        <div class="container">
+                            <img src="images/minister/evan.png" class="rounded-circle" alt="Cinque Terre" width="75%" height="100%" style=" border: solid; border-width: 6px; border-color: #A7CEE1;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center" style="height: 350px;">
+        <!-- online services -->
+            <div class="row align-items-center  
+                justify-content-center my-2" id="online-services">
+                <script src="scripts/online_services_elements.js"></script>
+    <div class="col-md-3" style="width:100px; height:100px;">
+    <a href="https://drive.google.com/drive/folders/1v_W_Q1bDtI2NntC9Mgtl_9kGlwQu0AZi?usp=sharing">
+        <div class="card text-dark bg-info p-2">
+            <div class="card-header">
+                <div class="container text-center ">
+                    <img src="images/icons/gov_icon.png" class="rounded-lg  " alt="Cinque Terre" width="100px" height="100px">
+                </div>
+            </div>
+            <div class="card-body text-center text-white px-0 mx-0">
+                <h3 data-bind="PackedfinancialGrantsforDisplacedPeople"> وجبات المنح المالية للنازحين</h3>
+            </div>
+  
+            <div class="card-footer text-center text-white">
+             <p data-bind="test">    </p>
+            </div>
+        </div>
+    </a>
+  </div>
+    
+    <div class="col-md-3" style="width:100px; height:100px;">
+    <a href="../ur.gov.iq/index/show-eservice/50417/10033/org/index_fbclid=iwar1vzw0_xybnc4ygmbotwuj9wtirpdhbehocjk7mr_x1jcfsvvhcnmsjr14.html">
+        <div class="card text-dark bg-info p-2">
+            <div class="card-header">
+                <div class="container text-center ">
+                    <img src="images/icons/phone_icon.png" class="rounded-lg  " alt="Cinque Terre" width="100px" height="100px">
+                </div>
+            </div>
+            <div class="card-body text-center text-white px-0 mx-0">
+                <h3 data-bind="IraqiCompetenciesAbroadForm"> استمارة الكفاءات العراقية في الخارج</h3>
+            </div>
+  
+            <div class="card-footer text-center text-white">
+             <p data-bind="test">    </p>
+            </div>
+        </div>
+    </a>
+  </div>
+    
+    <div class="col-md-3" style="width:100px; height:100px;">
+    <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=666">
+        <div class="card text-dark bg-info p-2">
+            <div class="card-header">
+                <div class="container text-center ">
+                    <img src="images/icons/gov_icon.png" class="rounded-lg  " alt="Cinque Terre" width="100px" height="100px">
+                </div>
+            </div>
+            <div class="card-body text-center text-white px-0 mx-0">
+                <h3 data-bind="ElectronicApplicationForm"> الاستراتيجية الوطنية للنزاهه ومكافحة الفساد</h3>
+            </div>
+  
+            <div class="card-footer text-center text-white">
+             <p data-bind="ImmigrantsAndImmigrantsRegistrationForm">    </p>
+            </div>
+        </div>
+    </a>
+  </div>
+    
+            </div>
+        </div>
+        <div class="container  ">
+            <!-- other websites section -->
+            <div class="row align-items-center p-3" style="background-color: #D6F4FF;">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3 text-center p-3 text-dark">
+                    <ul class="thumbnails-carousel clearfix" style=" list-style:none;">
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=630">
+                            <li data-bind="BranchAffairsDepartment">  </li>
+                        </a>
+                        <div class="container h-5 w-5 bg-dark border border-dark my-3">
+                        </div>
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=500">
+                            <b>
+                                <li data-bind="DepartmentofInformationAndResearch"> </li>
+                            </b>
+                        </a>
+                        <div class="container h-5 w-5 bg-dark border border-dark my-3">
+                        </div>
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=501">
+                            <b>
+                                <li data-bind="PlanningAndFollowUpDepartment"> </li>
+                            </b>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <ul class="thumbnails-carousel clearfix" style=" list-style:none;">
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=496">
+                            <b>
+                                <li data-bind="AdministrativeAndFinancialDepartment"> </li>
+                            </b>
+                        </a>
+                        <div class="container h-5 w-5 bg-dark border border-dark my-3">
+                        </div>
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=497">
+                            <b>
+                                <li data-bind="LegalDepartment"> </li>
+                            </b>
+                        </a>
+                        <div class="container h-5 w-5 bg-dark border border-dark my-3">                
+                        </div>
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=498">
+                            <b>
+                                <li data-bind="DepartmentofImmigrationAffairs"> </li>
+                            </b>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <b>
+                        <h3 data-bind="ministryDepartmentsNews">
+                        </h3>
+                    </b>
+                    <div class="container h-5 w-5 bg-dark border border-dark my-3">
+                    </div>
+                    <h3>
+                        <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=627">
+                            <b>
+                                <li data-bind="AgentsMinistryNews">
+                                </li>
+                            </b>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- quick links -->
+        <div class="container text-white">
+            <!-- quick websites section -->
+            <div class="QuickURLS row align-items-center p-2  text-center" style="background-color: #30708D;">
+                <div class="col-md-1 p-2">
+                    <a href="https://www.moj.gov.iq/iraqmag/" class="text-white">
+                        <b data-bind="IraqiNewspaperFacts"> </b>
+                    </a>
+                </div>
+                <div class="col-md-2  p-2">
+                    <a href="../www.constituteproject.org/constitution/iraq_2005_lang=ar.pdf" class="text-white">
+                        <b data-bind="IraqsConstitution"> </b>
+                    </a>
+                </div>
+                <div class="col-md-2 ">
+                    <a href="https://www.google.com/maps/d/edit?mid=1_J99LSMf0TtDsF9lWtF5qN5IxWKfGAhf&amp;usp=sharing">
+                        <b data-bind="MinistryBranches" class="text-white">
+                        </b>
+                    </a>
+                </div>
+                <div class="col-md-1 ">
+                    <a href="https://m.facebook.com/alsadaaaaaaaa/" class="text-white">
+                        <b data-bind="facebook"> </b>
+                    </a>
+                </div>
+                <div class="col-md-2 ">
+                    <a href="https://youtube.com/channel/UC1KZXQZf5LOHQ74j43TsfOQ" class="text-white">
+                        <b data-bind="MinistryVideo"> </b>
+                    </a>
+                </div>
+                <div class="col-md-2 ">
+                    <a href="https://www.momd.gov.iq/pages/department_posts.html?departmentId=494" class="text-white">
+                        <b data-bind="OfficialDelegations"> </b>
+                    </a>
+                </div>
+                <div class="col-md-2 text-white">
+                    <b>
+                        <h3 data-bind="QuickLinks"></h3>
+                    </b>
+                </div>
+            </div>
+        </div>
+        <!-- external links -->
+        <div class="container">
+            <!-- external websites section -->
+            <div class="row align-items-center p-3  text-center " style="background-color: #7DC9E6; font-weight: bold; color: #000;  ">
+                <div class="col-md-2  ">
+                    <a href="https://ar.parliament.iq/?__cf_chl_jschl_tk__=pmd_1ced73ee9633dc60383b1202c6a5aa4ca3891660-1628624538-0-gqNtZGzNAc2jcnBszQcO">
+                        <b>
+                            <li data-bind="IraqiParliament"> </li>
+                        </b>
+                    </a>
+                </div>
+                <div class="col-md-2  ">
+                    <a href="https://moi.gov.jo/Default/Ar">
+                        <b>
+                            <li data-bind="MinistryOfInteriorAffairs"> </li>
+                        </b>
+                    </a>
+                </div>
+                <div class="col-md-2  ">
+                    <a href="../presidency.iq/index.html#gsc.tab=0">
+                        <b>
+                            <li data-bind="PrimeMinister"> </li>
+                        </b>
+                    </a>
+                </div>
+                <div class="col-md-2  ">
+                    <a href="https://ca.iq/">
+                        <b>
+                            <li data-bind="ElectronicCitizenGoverment"> </li>
+                        </b>
+                    </a>
+                </div>
+                <div class="col-md-2 ">
+                    <a href="https://www.farouq.moch.gov.iq/farah/www_moh_gov_default.html">
+                        <b>
+                            <li data-bind="MinistryOfHealth"> </li>
+                        </b>
+                    </a>
+                </div>
+                <div class="col-md-2 text-white">
+                    <b>
+                        <h3 data-bind="ExternalLinks"></h3>
+                    </b>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- external links -->
+        <div class="container">
+            <!-- external websites section -->
+            <div class="row align-items-center   text-center " style="background-color: #e6907d; padding: 50px; font-weight: bold; color: #000;  ">
+                <div class="col-md-12  text-light">
+                    <a href="https://www.momd.gov.iq/pages/ur.html">
+                        <b>
+                            <li data-bind="LinkToUrPageFromHome"> </li>
+                        </b>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+	<div class="container">
+            <!-- external websites section -->
+            <div class="row align-items-center   text-center " style="background-color: #e6907d; padding: 50px; font-weight: bold; color: #000;  ">
+                <div class="col-md-12  text-light">
+                    <a href="https://eservice.ur.gov.iq/customer/applyService/21296">
+                        <b>
+                            <li data-bind="LinkToEmployeeServicePageFromHome"> </li>
+                        </b>
+                    </a>
+                </div>
+            </div>
+        </div>
+	<hr>
+    
+
+
+    <!-- footer -->
+    <div class="container-fluid py-2 my-3 " style="background-color: #30708D;">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted" style="background-color: #30708D;">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="background-color: #30708D;">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block text-white">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+                <!-- Right -->
+                <div>
+                    <a href="https://m.facebook.com/alsadaaaaaaaa/" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f text-white fa-lg"></i>
+                    </a>
+                    <a href="https://mobile.twitter.com/mediamomd?s=11" class="me-4 text-reset">
+                        <i class="fab fa-twitter text-white fa-lg"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Links  -->
+            <!-- Copyright -->
+            <div class="text-center p-4 text-white" style="background-color: #30708D;">
+                <b data-bind="footer"> </b>
+            </div>
+            <div class="container text-light text-center" id="footerindexdate" style="background-color: #30708D;">2025-9-3</div>
+            <script>
+                var date = new Date();
+                var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+                document.getElementById("footerindexdate").innerHTML = current_date;
+            </script>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+</div>
+
+
+</body></html>
