@@ -1,0 +1,1129 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
+
+</title>
+
+    <!-- Google Fonts -->
+    <link href="../fonts.googleapis.com/css2/index_family=cairo_wght@400_700&amp;display=swap.css" rel="stylesheet">
+
+    <style>body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header-img {
+            width: 100%;
+            display: block;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 15px;
+        }
+
+        .menu a {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .menu a:hover {
+            background: #eee;
+            transform: translateY(-2px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 999;
+            direction: rtl;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            text-align: right;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .news-ticker {
+            background: #800000;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-ticker-content {
+            display: inline-block;
+            animation: scrollRight 40s linear infinite;
+        }
+
+        @keyframes scrollRight {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @media (max-width: 768px) {
+            .dropdown-content {
+                right: auto;
+                left: 0;
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="index.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="202EA31B">
+</div>
+        <img src="images/group1.png" alt="Header" class="header-img">
+        <div class="header">
+            <div class="navbar">
+                <div class="menu">
+                   <div class="dropdown">
+                        <a href="https://alshuhadaa.gov.iq/Main.aspx">الرئيسية</a>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <a>الدوائر</a>
+                        <div class="dropdown-content">
+                            <a href="https://alshuhadaa.gov.iq/DareaNaeeb.aspx">مكتب نائب رئيس المؤسسة</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraTadeheat.aspx">مديرية تخليد التضحيات</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraIdara.aspx">الدائرة الادارية والمالية</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraKanunia.aspx">الدائرة القانونية</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraIktsad.aspx">دائرة الاقتصاد والاستثمار والتنمية</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraMakabur.aspx">دائرة حماية المقابر الجماعية والمفقودين</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraIjtmaea.aspx">دائرة الشؤون الاجتماعية والصحية</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraSandok.aspx">دائرة صندوق الشهداء</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraWathaeq.aspx">مديرية الوثائق والمحفوظات</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraSuoonTalemia.aspx">مديرية الشؤون التعليمية والثقافية</a>
+                            <a href="https://alshuhadaa.gov.iq/DaeraArady.aspx">مديرية الاراضي والعقارات</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a>المديريات</a>
+                        <div class="dropdown-content">
+                            <a href="https://alshuhadaa.gov.iq/SHResafa.aspx">مدريرية شهداء الرصافة</a>
+                            <a href="https://alshuhadaa.gov.iq/SHKarch.aspx">مديرية شهداء الكرخ</a>
+                            <a href="https://alshuhadaa.gov.iq/SHALSader.aspx">مديرية شهداء الصدر</a>
+                            <a href="https://alshuhadaa.gov.iq/SHKarbala.aspx">مديرية شهداء كربلاء المقدسة</a>
+                            <a href="https://alshuhadaa.gov.iq/SHNajaf.aspx">مديرية شهداء النجف الاشرف</a>
+                            <a href="https://alshuhadaa.gov.iq/SHALDewania.aspx">مديرية شهداء الديوانية</a>
+                            <a href="https://alshuhadaa.gov.iq/SHMesan.aspx">مديرية شهداء ميسان</a>
+                            <a href="https://alshuhadaa.gov.iq/SHDeqar.aspx">مديرية شهداء ذي قار</a>
+                            <a href="https://alshuhadaa.gov.iq/SHALMuthana.aspx">مديرية شهداء المثنى</a>
+                            <a href="https://alshuhadaa.gov.iq/SHBasra.aspx">مديرية شهداء البصرة</a>
+                            <a href="https://alshuhadaa.gov.iq/SHNorthBasra.aspx">مديرية شهداء شمال البصرة</a>
+                            <a href="https://alshuhadaa.gov.iq/SHNainawa.aspx">مديرية شهداء نينوى</a>
+                            <a href="https://alshuhadaa.gov.iq/SHKarkuk.aspx">مديرية شهداء كركوك</a>
+                            <a href="https://alshuhadaa.gov.iq/SHSlashAlDeen.aspx">مديرية شهداء صلاح الدين</a>
+                            <a href="https://alshuhadaa.gov.iq/SHDeala.aspx">مديرية شهداء ديالى</a>
+                            <a href="https://alshuhadaa.gov.iq/SHALAnbar.aspx">مديرية شهداء الانبار</a>
+                            <a href="https://alshuhadaa.gov.iq/SHWaset.aspx">مديرية شهداء واسط</a>
+                            <a href="https://alshuhadaa.gov.iq/SHBable.aspx">مديرية شهداء بابل</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a>الخدمات</a>
+                        <div class="dropdown-content">
+                            <a href="https://complaints.alshuhadaa.gov.iq/">شكاوى ذوي الشهداء</a>
+                            <a href="https://alshuhadaa.gov.iq/Notfication.aspx">اعلانات مؤسسة الشهداء</a>
+                            <a href="https://alshuhadaa.gov.iq/Wataeq.aspx">وثائق لا تموت</a>
+                            <a href="https://alshuhadaa.gov.iq/ArchiveMain.aspx">أرشيف الأخبار العامة</a>
+                            <a href="https://alshuhadaa.gov.iq/ArchiveSub.aspx">أرشيف أخبار الدوائر والمديريات</a>
+                            <a href="https://alshuhadaa.gov.iq/SocialMedia.aspx">مواقعنا</a>
+                            <a href="https://alshuhadaa.gov.iq/idverify.aspx">تحقق من الهوية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-ticker">
+            <div class="news-ticker-content">
+                
+            </div>
+        </div>
+
+        
+   
+    <style>/* Vertical Carousel (existing) */
+        .news-carousel-container {
+            width: 100%;
+            max-width: none;
+            height: 350px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .news-carousel-list {
+            padding: 0;
+            margin: 0 auto;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            animation: scrollUpFade 30s linear infinite;
+        }
+
+        .news-carousel-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            flex-direction: row-reverse;
+        }
+
+            .news-carousel-item:hover {
+                transform: scale(1.03);
+            }
+
+        .news-carousel-image {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 10px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .news-carousel-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+        .news-carousel-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+            flex: 1;
+            text-align: right;
+        }
+
+        /* Horizontal Carousel with Unique Class Names */
+        .news-carousel-container-horizontal {
+            width: 100%;
+            max-width: none;
+            height: 270px;
+            overflow: hidden;
+            margin: 0 auto;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .news-carousel-list-horizontal {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: inline-flex;
+            white-space: nowrap;
+            gap: 15px;
+            animation: scrollLeftFade 30s linear infinite;
+        }
+
+        @keyframes scrollLeftFade {
+            0% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+                transform: translateX(-85%);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-87%); /* Adjust to make transition smoother */
+            }
+        }
+
+
+        .news-carousel-item-horizontal-fixed {
+            display: inline-flex;
+            align-items: center;
+            padding: 0px;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            flex-direction: column;
+            width: 420px;
+            height: 260px; /* Fixed height for consistent layout */
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden; /* Prevents overflow of content */
+        }
+
+            .news-carousel-item-horizontal-fixed:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+        .news-carousel-image-fixed {
+            width: 100%; /* Takes the full width of the container */
+            height: 170px; /* Adjust height as needed */
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 10px; /* Remove bottom margin */
+        }
+
+            .news-carousel-image-fixed img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+        .news-carousel-title-fixed {
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            margin: 0;
+            padding: 0 10px; /* Adds padding for better text wrapping */
+            text-align: center;
+            line-height: 1.3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block; /* Allows normal text wrapping */
+            max-height: 6.6em; /* Adjusts based on line-height to limit lines */
+            white-space: normal; /* Enables text to wrap */
+        }
+
+
+        /* Keyframes for Vertical Scrolling */
+        @keyframes scrollUpFade {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+
+            1% {
+                opacity: 1;
+            }
+
+            97% {
+                opacity: 1;
+                transform: translateY(-63%);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-63%);
+            }
+        }
+
+        /* Base styling for video gallery */
+        .video-gallery {
+            display: flex;
+            gap: 4px; /* Small gap between videos */
+            overflow-x: auto; /* Enables horizontal scrolling */
+            padding: 10px 20px; /* Adds padding for better aesthetics */
+            background-color: #f9f9f9;
+            scroll-snap-type: x mandatory; /* Smooth snap scrolling */
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            position: relative;
+        }
+
+            /* Adding subtle gradient edges for aesthetic scrolling effect */
+            .video-gallery::before,
+            .video-gallery::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                z-index: 1;
+            }
+
+        
+
+        /* Video container styling */
+        .video-container {
+            flex: 0 0 auto; /* Prevents videos from shrinking */
+            scroll-snap-align: center; /* Centers each video in the viewport */
+            transition: transform 0.3s ease;
+        }
+
+           
+        /* Reduced height styling for specific videos */
+        .video-gallery .small-video video {
+            max-height: 450px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+            .video-gallery .small-video video:hover {
+                transform: scale(1.03); /* Slight scale effect for interactivity */
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+            }
+
+        /* Optional scrollbar styling for mobile */
+        .video-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .video-gallery::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 4px;
+        }
+
+
+
+        /* Smooth scrolling for a refined experience */
+        .video-gallery {
+            scroll-behavior: smooth;
+        }
+
+
+        /* Base styling for enhanced video section */
+        .enhanced-video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #f4f7fa;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        }
+
+        /* Wrapper to control responsive behavior */
+        .video-wrapper {
+            display: flex;
+            gap: 20px; /* Space between videos */
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Styling for each video frame container */
+        .video-frame-container {
+            flex: 1 1 45%; /* Makes each video take up ~45% on large screens */
+            max-width: 600px;
+            min-width: 280px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            /* iFrame styling for a cinematic aspect ratio and smooth scaling */
+            .video-frame-container iframe {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border: 0;
+            }
+
+            /* Hover effect for interactive feel */
+            .video-frame-container:hover {
+                transform: scale(1.03);
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+            }
+
+        /* Responsive layout adjustments */
+        @media (max-width: 1023px) {
+            .video-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .video-frame-container {
+                flex: 1 1 100%; /* Stack videos on smaller screens */
+                max-width: none;
+            }
+        }
+
+        /* Optional scrollbar styling for mobile */
+        .enhanced-video-section::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .enhanced-video-section::-webkit-scrollbar-thumb {
+            background-color: #bbb;
+            border-radius: 4px;
+        }
+
+           .fixed-news-container {
+            width: 100%;
+            max-width: none;
+            padding: 20px 0;
+            background: #f5f5f5;
+            border-radius: 12px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fixed-news-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        .fixed-news-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .fixed-news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fixed-news-title{
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 10px 0 5px;
+            text-align: center;
+        }
+
+        .fixed-news-details {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 10px 0 5px;
+            text-align: right;
+        }
+
+        .fixed-news-details {
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+        }
+    </style>
+
+    <div class="news-carousel-container">
+        <ul class="news-carousel-list">
+
+           
+<table id="MainContent_newsDataList" cellspacing="0" cellpadding="10" style="border-collapse:collapse;">
+	<tbody><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=536" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء تقيم ندوة تثقيفية لإظهار جـ رائـ م حـ زب الـ بـ عـ ث
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_0" src="https://alshuhadaa.gov.iq/VYK_FB_IMG_1756839601973.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=535" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    طارق المندلاوي كرامة الشهداء مقدسة وخط أحمر يمس كل العراقيين ولن نقبل التجاوز على الـ د مـ ا ء .
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_1" src="https://alshuhadaa.gov.iq/SQj_FB_IMG_1756822007696.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=534" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء ترفع دعوى قضائية ضد المدعو (عدي الغريري) لإساءته لرمزية الشهداء
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_2" src="https://alshuhadaa.gov.iq/Ofg_FB_IMG_1756813590646.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=533" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء تنظم برنامجاً ترفيهياً لأبناء الشهداء
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_3" src="https://alshuhadaa.gov.iq/oA4_FB_IMG_1756808017777.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=532" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    رئيس مؤسسة الشهداء يستقبل مستشار محافظ الديوانية وعدداً من عوائل الشهداء
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_4" src="https://alshuhadaa.gov.iq/xGj_FB_IMG_1756734582481.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=531" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء تثمن قرار وزير العمل بإطفاء ديون ذوي شهداء الـحـشـد الـشـعـبـي
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_5" src="https://alshuhadaa.gov.iq/VVd_FB_IMG_1756472749666.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=530" class="news-link" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    وفد مؤسسة الشهداء يهدي إصداراته إلى هيئة المساءلة والعدالة. 
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataList_newsImage_6" src="https://alshuhadaa.gov.iq/eDg_FB_IMG_1756471680798.jpg" alt="News Image" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr>
+</tbody></table>
+
+<table id="MainContent_newsDataListClone" cellspacing="0" cellpadding="10" style="border-collapse:collapse;">
+	<tbody><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=536" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء تقيم ندوة تثقيفية لإظهار جـ رائـ م حـ زب الـ بـ عـ ث
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_0" src="https://alshuhadaa.gov.iq/VYK_FB_IMG_1756839601973.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=535" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    طارق المندلاوي كرامة الشهداء مقدسة وخط أحمر يمس كل العراقيين ولن نقبل التجاوز على الـ د مـ ا ء .
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_1" src="https://alshuhadaa.gov.iq/SQj_FB_IMG_1756822007696.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=534" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء ترفع دعوى قضائية ضد المدعو (عدي الغريري) لإساءته لرمزية الشهداء
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_2" src="https://alshuhadaa.gov.iq/Ofg_FB_IMG_1756813590646.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=533" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء تنظم برنامجاً ترفيهياً لأبناء الشهداء
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_3" src="https://alshuhadaa.gov.iq/oA4_FB_IMG_1756808017777.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=532" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    رئيس مؤسسة الشهداء يستقبل مستشار محافظ الديوانية وعدداً من عوائل الشهداء
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_4" src="https://alshuhadaa.gov.iq/xGj_FB_IMG_1756734582481.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=531" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    مؤسسة الشهداء تثمن قرار وزير العمل بإطفاء ديون ذوي شهداء الـحـشـد الـشـعـبـي
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_5" src="https://alshuhadaa.gov.iq/VVd_FB_IMG_1756472749666.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr><tr>
+		<td>
+        <li class="news-carousel-item" style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=530" style="text-decoration: none; color: inherit; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div class="news-carousel-title" style="flex: 1; text-align: right; margin-right: 10px;">
+                    وفد مؤسسة الشهداء يهدي إصداراته إلى هيئة المساءلة والعدالة. 
+                </div>
+                <div class="news-carousel-image" style="flex-shrink: 0; margin-left: 10px;">
+                    <img id="MainContent_newsDataListClone_newsImageClone_6" src="https://alshuhadaa.gov.iq/eDg_FB_IMG_1756471680798.jpg" alt="News Image Clone" style="max-width: 100px; max-height: 100px;">
+                </div>
+            </a>
+        </li>
+    </td>
+	</tr>
+</tbody></table>
+
+
+        </ul>
+    </div>
+
+    <div class="news-carousel-container-horizontal">
+        <ul class="news-carousel-list-horizontal">
+           <span id="MainContent_newsDataListHorizontal"><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=529" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_0" src="https://alshuhadaa.gov.iq/5hQ_FB_IMG_1756330875918.jpg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">إعــــلان هام ..</div>
+            </a>
+        </li>
+    </span><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=528" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_1" src="https://alshuhadaa.gov.iq/XiM_FB_IMG_1756308372605.jpg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">معالي رئيس مؤسسة الشهداء الدكتور عبدالإله النائلي يستقبل عدد من عوائل الشهداء للنظر في استحقاقاتهم</div>
+            </a>
+        </li>
+    </span><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=527" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_2" src="https://alshuhadaa.gov.iq/e8f_FB_IMG_1756238118636.jpg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">بسم الله الرحمن الرحيم</div>
+            </a>
+        </li>
+    </span><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=526" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_3" src="https://alshuhadaa.gov.iq/NkY_FB_IMG_1756216592885.jpg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">مجلس النواب ينهي القراءة الاولى لتعديل قانون تعويض المتضررين متضمناً تمديد الرواتب واستحقاق قطع الأراضي لذوي الشهداء والمصابين</div>
+            </a>
+        </li>
+    </span><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=525" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_4" src="https://alshuhadaa.gov.iq/T8T_FB_IMG_1756218939903.jpg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">تعزية ..</div>
+            </a>
+        </li>
+    </span><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=523" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_5" src="https://alshuhadaa.gov.iq/xmp_FB_IMG_1756155718488.jpg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">لجنة الشهداء النيابية تستضيف الدكتور النائلي لمناقشة تعديل قانون مؤسسة الشهداء</div>
+            </a>
+        </li>
+    </span><span>
+        <li class="news-carousel-item-horizontal-fixed">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=522" style="text-decoration: none; color: inherit; width: 100%; display: block; text-align: center;">
+                <div class="news-carousel-image-fixed">
+                    <img id="MainContent_newsDataListHorizontal_newsImageHorizontal_6" src="https://alshuhadaa.gov.iq/w32_f417ee55-fafb-4eff-96f6-46718543aeab.jpeg" alt="News Image">
+                </div>
+                <div class="news-carousel-title-fixed">مؤسسة الشهداء تستقبل فريق المتابعة للجنة العليا لتبسيط الإجراءات والخدمات الحكومية</div>
+            </a>
+        </li>
+    </span></span>
+
+        </ul>
+    </div>
+
+    <div class="enhanced-video-section">
+        <div class="video-wrapper">
+            <!-- Embed YouTube videos with correct embed URLs -->
+            <div class="video-frame-container">
+                <iframe src="https://www.youtube.com/embed/yp5oghVBtQo" allowfullscreen="" frameborder="0"></iframe>
+            </div>
+
+            <div class="video-frame-container">
+                <iframe src="https://www.youtube.com/embed/uMQAr5M1cvk" allowfullscreen="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+  <!-- الأخبار الثابتة الجديدة -->
+    <div class="fixed-news-container">
+        <table id="MainContent_newsDataListSecond" cellspacing="0" cellpadding="10" style="border-collapse:collapse;">
+	<tbody><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=521" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_0" src="https://alshuhadaa.gov.iq/Bnx_IMG_9915.jpeg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">رئيس مؤسسة الشهداء يستقبل النائبين جميل الحديدي والنائب بيدء سلمان</div>
+                <div class="fixed-news-details">
+استقبل رئيس مؤسسة الشهداء الدكتور عبد الإله النائلي، في مكتبه اليوم، النائب جميل الحديدي  والنائب بيدء سلمان .
+
+وجرى خلال اللقاء بحث عدد من القضايا التي تهم شريحة ذوي الشهداء، والسبل الكفيلة بتعزيز الخدمات المقدمة لهم، بما يضمن إنصاف هذه الشريحة التي قدّمت أغلى التضحيات في سبيل الوطن.</div>
+                <div class="fixed-news-details">
+وأكد الدكتور النائلي حرص مؤسسة الشهداء على مواصلة التنسيق مع السادة أعضاء مجلس النواب، بما يعزز التشريعات والسياسات الداعمة لحقوق ذوي الشهداء، مشيدًا في الوقت ذاته بالدور الذي يقوم به السادة النواب في دعم المؤسسة.</div>
+            </a>
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=520" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_1" src="https://alshuhadaa.gov.iq/hYt_FB_IMG_1755960940428.jpg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">#اعلان</div>
+                <div class="fixed-news-details">للتسجيل على الدروس المجانية لابناء الشهداء من الصف الثالث المتوسط والسادس الاعدادي </div>
+                <div class="fixed-news-details">والدروس المدفوعة للمراحل غير المنتهية من خلال رابط الاستمارة المجانية: https://alshuhadaa.ta3leem.iq/application/new</div>
+            </a>
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=519" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_2" src="https://alshuhadaa.gov.iq/Fv2_d554119c-88bf-4efd-a918-a7c43c464687.jpeg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">إحياءً لذكرى وفاة الرسول (صلّى الله عليه وآله وسلّم).. مؤسسة الشهداء تقيم  معرضها السنوي في النجف الاشرف .</div>
+                <div class="fixed-news-details">تزامناً وإحياءً  للذكرى الأليمة لوفاة خاتم الأنبياء الرسول الأعظم محمد(صلّى الله عليه وآله وسلّم)..  اقامت مؤسسة الشهداء متمثلة بمديريتي تخليد التضحيات و شهداءالنجف الاشرف المعرض السنوي لصور الشهداء  في محافظة النجف الاشرف.</div>
+                <div class="fixed-news-details">تضمن برنامج المعرض لوحات وصوراً تؤرخ لمسيرة الشهداء من ضحايا النظام الـ بـ عـ ثـ ي المباد، إلى شهداء الـ حـ شـ د الـ شـ عـ بـ ي الذين سقوا تراب الوطن بدمائهم، وصولاً إلى علماء الدين والمفكرين الذين واجهوا الطغيان بثبات العقيدة وصدق الموقف .
+
+وكان للمعرض صدى كبير لدى وشهد حضورا واسعاً من قبل الزائرين القادمين من مختلف محافظات العراق الذين اشادو  بهذاالدور الفعال للمتحف , وما تم عرضه من لوحات صورية لبعض مقتنياتها  .</div>
+            </a>
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=518" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_3" src="https://alshuhadaa.gov.iq/Gnu_FB_IMG_1755804707061.jpg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">مؤسسة الشهداء تقيم ندوةً تعريفيةً عن جـ ر ا ئـ م د ا عـ&nbsp; ش والـ بـ عـ ث الـ مـ قـ بـ و ر.</div>
+                <div class="fixed-news-details">اقامة مؤسسة الشهداء /دائرة العلاقات العامة والاعلام بالتعاون مع دائرة العلاقات والتعاون الدولي.&nbsp;ندوةً تعريفيةً عن جـ ر ا ئـ م د ا عـ&nbsp; ش والـ بـ عـ ث الـ مـ قـ بـ و ر ، بحضور مستشار الوزارة لشؤون الشباب الدكتور علي فاضل الدفاعي، والملاك المتقدم في الوزارة، فضلاً عن منتسبي المؤسسة وموظفي الوزارة.
+
+افتتحت الندوة بكلمةً ألقى مستشار الوزارة لشؤون الشباب</div>
+                <div class="fixed-news-details">الدكتور علي فاضل الدفاعي اكد فيها على أهمية التعريف بـ جـ رائـ م النظام السابق وما خلّفه من شهداء وتضحيات ومآسٍ ، مرورا بمااقترفته عـ صـ ا بـ ات دا عـ ش الا ر هـ ا بـ يـ ة بحق الشعب العراقي ليكونا بذلك وجهان لعملة واحدة ، مشدداً على ضرورة نشر الوعي بخطر هذه تلك الحقب السوداء .
+
+كما ثمن في الوقت ذاته الجهود التي تبذلها مؤسسة الشهداء ووزارة التعليم العالي والبحث العلمي في إعداد المناهج والبرامج التوعوية التي توثق الـ جـ رائـم وتكشف عن حقائقها.
+</div>
+            </a>
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=517" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_4" src="https://alshuhadaa.gov.iq/1hG_90d71ddb-2ca6-4705-97e2-39ed4e1d3019.jpeg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">وفد من مؤسسة الشهداء يزور مديرية شهداء ديالى</div>
+                <div class="fixed-news-details">بتوجيه من معالي رئيس مؤسسة الشهداء الدكتور عبد الإله النائلي قام وفد من قسم تقويم الأداء المؤسسي بزيارة ميدانية إلى مديرية شهداء ديالى.</div>
+                <div class="fixed-news-details">
+وكان في استقبال الوفد السيد فاضل محمد شلال (مدير المديرية) ومعاون المدير السيد ياسر علي إضافة إلى مجموعة من موظفي المديرية. 
+تضمنت الزيارة الاطلاع على آليات العمل ومناقشة الملاحظات الخاصة بتطوير الأداء وتحسين الخدمة المقدمة لذوي الشهداء.
+</div>
+            </a>
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=516" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_5" src="https://alshuhadaa.gov.iq/iqE_332eb303-09a4-48e8-9edc-b2360e7b6766.jpeg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">مؤسسة الشهداء تقيم احتفالية بمناسبة اليوم الإسلامي لمناهضة العنف ضد المرأة</div>
+                <div class="fixed-news-details">برعاية رئيس مؤسسة الشهداء الدكتور عبد الإله النائلي،
+نظّم قسم شؤون المرأة في المؤسسة، وبالتعاون مع مديرية الإعلام والعلاقات العامة ومديرية تخليد التضحيات، احتفالية بمناسبة اليوم الإسلامي لمناهضة العنف ضد المرأة، بالتزامن مع ذكرى دخول سبايا آل محمد (عليهن السلام).
+</div>
+                <div class="fixed-news-details">وحضر الحفل نائب رئيس المؤسسة السيد يوسف عبد الجبار أرهيف، وجمع من المديرين العامين، وشخصيات رسمية، وموظفي المؤسسة.
+
+وألقى السيد النائب كلمة بالنيابة عن رئيس المؤسسة أكد فيها المكانة السامية للمرأة ودورها الفاعل عبر مسيرة التاريخ، مبيناً أن الله سبحانه وتعالى هو أول من منح المرأة التكريم وأعلى من شأنها.
+</div>
+            </a>
+        </div>
+    </td>
+	</tr><tr>
+		<td>
+        <div class="fixed-news-item">
+            <a href="https://alshuhadaa.gov.iq/OneNewsShow.aspx?NewsID=515" style="text-decoration: none; color: inherit; display: block; text-align: center;">
+                <div class="fixed-news-image">
+                    <img id="MainContent_newsDataListSecond_fixedNewsImage_6" src="https://alshuhadaa.gov.iq/Huz_FB_IMG_1755600020225.jpg" alt="News Image">
+                </div>
+                <div class="fixed-news-title">رئيس مؤسسة الشهداء يستقبل النائبين وطبان الجبوري والنائب برهان النمراوي</div>
+                <div class="fixed-news-details">استقبل رئيس مؤسسة الشهداء الدكتور عبد الإله النائلي، في مكتبه اليوم، النائب وطبان الجبوري والنائب برهان النمراوي.
+
+وجرى خلال اللقاء بحث عدد من القضايا التي تهم شريحة ذوي الشهداء، والسبل الكفيلة بتعزيز الخدمات المقدمة لهم، بما يضمن إنصاف هذه الشريحة التي قدّمت أغلى التضحيات في سبيل الوطن.</div>
+                <div class="fixed-news-details">وأكد الدكتور النائلي حرص مؤسسة الشهداء على مواصلة التنسيق مع السادة أعضاء مجلس النواب، بما يعزز التشريعات والسياسات الداعمة لحقوق ذوي الشهداء، مشيدًا في الوقت ذاته بالدور الذي يقوم به السادة النواب في دعم المؤسسة.
+</div>
+            </a>
+        </div>
+    </td>
+	</tr>
+</tbody></table>
+
+    </div>
+
+
+    <div id="fmAndOnthisDay" class="video-gallery">
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/V1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/V2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/V3.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/V4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/MSSH3.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/MSSH4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container small-video">
+            <video controls="">
+                <source src="https://alshuhadaa.gov.iq/Video/MSSH5.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    
+
+    <div class="enhanced-map-image-container">
+    <div class="custom-map-frame-wrapper">
+    <iframe class="custom-map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6670.284470055546!2d44.39658644525315!3d33.28894171249694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1557802967ec021d%3A0x8d4bd94acdd096a7!2sMartyrs%20Foundation!5e0!3m2!1sen!2siq&amp;language=ar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+
+    <div class="custom-image-container">
+        <img src="images/bilding.jpeg" alt="Martyrs Foundation Image" class="custom-image">
+    </div>
+</div>
+
+    <style>.enhanced-map-image-container {
+    display: flex;
+    flex-direction: column; /* Default to column for mobile */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: transparent;
+    max-width: 800px;
+    margin: auto;
+}
+
+.custom-map-frame-wrapper,
+.custom-image-container {
+    flex: 1;
+}
+
+.custom-map-frame-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.custom-map-frame {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-map-frame-wrapper:hover .custom-map-frame {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.custom-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.custom-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.custom-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for Large Screens */
+@media (min-width: 768px) {
+    .enhanced-map-image-container {
+        flex-direction: row; /* Side by side on large screens */
+        align-items: flex-start;
+    }
+
+    .custom-map-frame-wrapper,
+    .custom-image-container {
+        width: 50%; /* Each takes half the width on large screens */
+    }
+
+    .custom-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+}
+
+    </style>
+
+
+
+    </form>
+
+
+</body></html>
