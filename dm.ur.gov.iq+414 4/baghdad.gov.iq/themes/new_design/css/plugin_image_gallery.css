@@ -1,0 +1,108 @@
+.plugin_image_holder {width:100%; overflow:hidden; text-align: center;}
+
+
+
+.lightbox_image {
+
+	display: inline-block;
+
+	padding:3px; 
+
+	margin: 5px 31px; 
+
+	border:2px solid #CCC; 
+
+	text-align:center;
+
+	background-color:#fff;
+
+}
+
+
+
+.box_stripes {width:100%; overflow:hidden;}
+
+
+
+
+
+.controls { 
+
+	padding:4px; 
+
+	background-color:#f5f5f5; 
+
+	border-bottom:1px solid #c4c4c4; 
+
+	margin-top:6px;
+
+	text-align:center;
+
+	color:#555;
+
+	font-size:11px;
+
+}
+
+
+
+.controls img {vertical-align:middle; cursor:pointer;}
+
+
+
+.controls span.section_previous {float:left;}
+
+
+
+.controls span.section_next {float:right;}
+
+
+
+.scroller {width:100%; overflow:hidden;}
+
+
+
+.section {
+
+	width:640px;
+
+	overflow:hidden;
+
+	float:left;
+
+}
+
+
+
+.box_stripes div.image { 
+
+	float:none; 
+
+	border:1px solid #ccc;
+
+	text-align:center;
+
+	margin-bottom:4px; 
+
+}
+
+
+
+.box_stripes div.stripe_summary_holder { 
+
+	padding:4px 6px 0px 6px;
+
+	font-size:10px;
+
+	line-height:12px;
+
+	color:#656565;
+
+}
+
+
+
+.box_stripes div.stripe_summary_holder strong {font-size:11px;}
+
+
+
