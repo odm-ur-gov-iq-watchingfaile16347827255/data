@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /assets
+Disallow: /storage
+Disallow: /*? 
+Disallow: */print
+Disallow: */pdf
+Sitemap: https://arabacinet.org/sitemap.xml
+Crawl-delay: 10
