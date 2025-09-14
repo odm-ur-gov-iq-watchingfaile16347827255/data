@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /*.xml$
+Disallow: /*.rdf$
+Disallow: /login
+Disallow: /ontology
+Disallow: /*.json
+Disallow: /*?*key=*
+Disallow: /*?*status=*
+
+Allow: /sitemap.xml
+Allow: /sitemap/*
+
+Sitemap: https://www.constituteproject.org/sitemap.xml
