@@ -1,0 +1,22 @@
+# Notice: Collection of data on Facebook through automated means is
+# prohibited unless you have express written permission from Facebook
+# and may only be conducted for the limited purpose contained in said
+# permission.
+# See: http://www.facebook.com/apps/site_scraping_tos_terms.php
+
+User-agent: facebookexternalhit
+Allow: *
+
+User-agent: *
+Disallow: /*cursor=
+Disallow: /*fb_comment_id=
+Disallow: /ajax/
+Disallow: /tealium/
+Disallow: /intern/
+Disallow: /internal/
+Disallow: /login/
+Disallow: /oidc/callback/
+Disallow: /*.php
+
+
+Sitemap: https://business.whatsapp.com/sitemap/business_whatsapp_com_sitemap.xml.gz
