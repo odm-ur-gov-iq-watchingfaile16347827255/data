@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /corp/search*
+Allow: /corp/*/search*
+Disallow: */search/*
+Disallow: */adult/*
+Disallow: /corp/*.pdf$
+Disallow: /corp/solution/
+Disallow: /corp/lps/
+Disallow: /corp/get-data/
+Disallow: /corp/unlock-growth/
+Disallow: /silent-login/
+Disallow: /signin-oidc/
+Disallow: /signout-oidc/
+Sitemap: https://www.similarweb.com/corp/sitemap_index.xml
+Sitemap: https://www.similarweb.com/blog/sitemap_index.xml
+Sitemap: https://www.similarweb.com/sitemaps/sitemap_index.xml.gz
+#
+#                    sMMMMMMMMs
+#                 MNdmMh+-``.:ohNM
+#               MNy/   .sMd-   `/yNM
+#             MNo`    sMo        .oNM
+#            Md -    sMo           -dM
+#           'MM+      -dMm+.        yMM'
+#            MN`       `:yNMd/      .NM
+#             MN-         `-hMy    :MM
+#              MMN-        sMd`   -NM
+#               Md:`     `sh``  .sMM
+#                 Mdms+-.```-hmMds
+#                    oMMMMMMMMo
+#
+#       OFFICIAL MEASURE OF THE DIGITAL WORLD
+#
