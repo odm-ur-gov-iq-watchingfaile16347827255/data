@@ -1,0 +1,2717 @@
+@charset "utf-8";
+/*@media print,screen*/
+
+/* CSS Document */
+
+body
+{
+	margin:0px;	
+	background: url(../images/mof/inner_bg.png) center repeat-y #EFF0F3;
+	font-family: Verdana, Geneva, sans-serif simplified arabic;
+}
+
+.ms-wpContentDivSpace
+{
+	margin-left:0px !important;
+	margin-right:0px !important;
+}
+
+.mof-intra-main
+{
+	margin:0 auto;
+	width:1002px;
+	height:auto;
+	position:relative;
+}
+
+.mof-intra-inner
+{
+	float:left;
+    width:1002px;
+    height: auto;
+    background-color:#FFF !important;
+    margin:0px 0px 0px -8px;
+}
+
+.mof-intra-header
+{
+	float:left;
+	width:1002px;
+	height:170px;
+}
+
+.mof-intra-header-login
+{
+	float:left;
+	width:140px;
+	height:20px;
+	margin:75px 0px 0px 0px;
+}
+
+.mof-intra-header-login h1
+{
+	float:right;
+	width: auto;
+	height: auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:16px;
+	text-align:right;
+	color:#FFF;
+	margin:0px
+}
+
+.mof-intra-healink
+{
+	float:left;
+	width:1002px;
+	height:31px;
+	background: url(../images/mof/mof-design-header-repeat.jpg) repeat-x;
+}
+
+.mof-intra-healink img
+{
+	float:left;
+	margin:5px 8px 0px 4px;
+	border:none;
+}
+
+.lock
+{
+	float:left;
+	margin:-5px 0px 0px 0px !Important;
+	border:none;
+	cursor:pointer;
+}
+
+.mof-intra-txtBoxIcon 
+{
+   /* background: none repeat scroll 0 0 #FFFFFF;
+    border:1px solid #5E0001;*/
+    color:#999999;
+    float:left;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:14px;
+    height:20px;
+    line-height:20px;
+    margin:4px 0px 0 10px;
+    padding:0 0 0 0;
+    width:auto;
+}
+
+.mof-intra-txtBox
+{
+	border:none;
+    color:#999999;
+    float:right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size:14px;
+    text-align:right;
+    height:20px;
+    line-height:20px;
+    padding:0 4px 0 0;
+    width:150px;
+}
+
+.mof-intra-lstBox
+{
+	float:left;
+	width: auto;
+	height: auto;
+	margin:8px 0px 0px 10px;
+	padding:0px 0px 0px 6px;
+	border: 1px solid #0387ce;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:12px;
+	overflow:hidden;
+	background: url(https://mof.gov.iq/_layouts/images/MOF/arrow.png) right no-repeat transparent;
+	color:#fff;  
+}	
+
+.mof-intra-healink ul
+{
+	float:left;
+	width:auto;
+	height:20px;
+	margin:8px 0px 0px 0px;
+	padding:0px;
+}
+
+.mof-intra-healink ul li
+{
+	float: right;
+	width:auto;
+	height:20px;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	list-style:none;
+}
+
+.mof-intra-healink ul li a
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#fff;
+	text-decoration:none;
+	margin:0px 8px 0px 8px;
+}
+
+.mof-intra-healink ul li a:hover
+{
+	color:#000;
+	text-decoration:none;
+}
+
+.mof-intra-healink span
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#000;
+	text-decoration:none;
+	margin:0px 8px 0px 8px;
+	color:#FFF;
+}
+
+.mof-intra-healink span:hover
+{
+	color:#000;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.mof-intra-heamain
+{
+	float:left;
+	width:1002px;
+	height:auto;
+	background:url(../images/mof/ar_flag.png) no-repeat left top;
+}
+
+.mof-intra-heamain img
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:10px 10px 0px 0px;
+	border:none;
+	cursor:pointer;
+}
+
+.mof-intra-heamain .headertitle
+{
+	float:right;
+	width:auto;
+	height:auto;
+	margin:17px 0px 12px 0px;
+}
+
+/* top menu -  start*/
+
+
+.mof-nav-bar
+{
+	float:left;
+	width:1002px;
+	height:4px;
+	background:#000;
+	margin: 0px 0px 0px 0px;	
+}
+
+/* top menu -  end */
+
+.mof-intra-navi-2
+{
+	float:left;
+	width:1002px;
+	height:38px;
+	background: url(https://mof.gov.iq/_layouts/images/MOF/mof-design5-slice_28.png) repeat-x;
+}
+
+.mof-intra-navi-2 img
+{
+	float:right;
+	width: auto;
+	height: auto;
+	margin:3px 10px 0px 0px;
+	border:none;
+}
+
+.mof-intra-body
+{
+	float:left;
+	width:1002px;
+	height:auto;
+	background:#ffffff;
+	margin-top:4px;
+	padding-bottom:10px;
+}
+
+/* === marquee - start ==== */
+
+.mof-intra-mar
+{
+	float:left;
+	width:1002px;
+	height:auto;
+	min-height:38px;
+	background:url(../images/mof/mof-design-f-newsrep.png) bottom repeat-x;
+	margin:-6px 0px 0px 0px;
+}
+
+.mof-intra-mar marquee
+{
+	float:right;
+	width:990px;
+	height:auto;
+}
+
+.mof-intra-mar td
+{
+	font:Verdana, Geneva, sans-serif;
+	font-size:10px;
+}
+
+.mof-intra-mar a
+{
+	font:Verdana, Geneva, sans-serif;
+	font-size:12px !important;
+	text-decoration:none;
+	color:#000 !important;
+}
+
+.mof-intra-mar a:hover
+{
+	text-decoration:underline;
+	color:#870000 !important;
+}
+
+/* === marquee - end === */
+
+
+/*==========================================================================================================*/
+/* ==================================== Div Left Sides Start Here ===========================================*/
+/*==========================================================================================================*/
+.mof-intra-body-left{
+	float:right;
+	width:238px;
+	height:auto;
+	margin:8px 28px 0px 0px;}
+
+
+.mof-intra-body-left-hna{
+	float:right;
+	width:238px;
+	height:auto;
+	margin:0px 0px 0px 0px;
+	border:1px solid #999;
+	background:url(../images/mof/mof-design-slice_25.jpg) repeat-x bottom;
+	}
+
+.mof-intra-body-left-hna h1{
+	float:right;
+	width:226px;
+	line-height:36px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:18px;
+	text-align:right;
+	color:#FFF !Important;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+.mof-intra-body-left-hna ul{
+	float:right;
+	width:226px;
+	height:auto;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+	
+	
+}
+
+.mof-intra-body-left-hna ul li{
+	float:right;
+	width:224px;
+	/*height:26px;*/
+	color:#FFF !Important;
+	list-style:none;
+	margin:0px 0px 0px 0px;
+	padding:0px 12px 0px 0px;
+	border-bottom:1px dotted #999;
+	border-top:none;
+	
+}
+
+.mof-intra-body-left-hna ul li a{
+	float:right;
+	width:204px;
+	line-height:26px;
+	font-family: Traditional Arabic;
+	font-weight:BOLD !important;
+	font-size:14px;
+	color:#151515 !Important;
+	text-align:right;
+	margin:0px 0px 0px 8px;
+	padding:0px 12px 0px 0px;
+	text-decoration:none;
+
+	
+}
+
+.mof-intra-body-left-hna ul li a:hover{
+	color:#bc2f2f !Important;
+	text-decoration:none;
+}
+/* left side navigation - end */
+
+/* left side scrolling images - start */
+.testicon
+{
+    float:right;
+    width:auto;
+    height:auto;
+    background-color:#ffffff;
+}
+.iconDiv
+{
+    width:auto;
+    height:auto;
+}
+.iconDiv img
+{
+    width:auto;
+    height:auto;
+    text-align:center;
+    max-width:62px;
+    max-height:40px;
+ 
+}
+ 
+ 
+ .iconDivtext
+ {
+ width:62px;
+ background-color:White;
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:16px ;
+ line-height:10px;
+ text-align:center;
+ color:#000;}
+
+
+.mof-intra-body-left-icons
+{
+	float:right;
+	width:240px;
+	/*padding:10px 0px 0px 0px;*/
+}
+
+.example 
+{
+	float:right !important;
+	width:260px!important;
+	margin: -10px -12px 0 0!important;
+}
+
+.example .show 
+{
+	height: 100px!important;
+	overflow: hidden!important;		
+}
+	
+.roundabout-holder 
+{ 
+	padding: 0; 
+	height: 10em; 
+	width: 85%; 
+	margin: 0 auto; 
+	list-style: none; 
+}
+
+.roundabout-moveable-item 
+{
+	cursor: pointer!important;
+	border:none!important;
+	text-align: center!important;
+	line-height: 3em!important;
+}
+
+.roundabout-in-focus 
+{ 
+	cursor: auto!important; 
+}
+
+/*
+.mof-intra-body-left-icons img
+{
+	float:right;
+	width:45px;
+	height:45px;
+	margin:0px 0px 0px 0px;
+	text-align:center;
+}
+
+.mof-intra-body-left-icons img:hover
+{
+	width:auto;
+	height:65px;
+	cursor:pointer;
+}
+
+.mof-intra-body-left-icons img.active
+{
+	width:auto;
+	height:65px;
+	cursor:pointer;
+}
+*/
+/* left side scrolling images - end */
+
+/* left side event celender - start */
+
+.mof-intra-body-left-ecal
+{
+	float:right;
+	width:238px;
+	height:280px;
+	margin:8px 0px 0px 0px;
+	background:url(../images/mof/mof-design-slice_25.jpg) repeat-x bottom;
+}
+
+.mof-intra-body-left-ecal h1
+{
+	float:right;
+	width:226px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:16px;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-ecal h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+	margin:1px;
+}
+
+.mof-intra-body-left-ecal div
+{	margin:0px;
+	padding:5px 0px 0px 0px;
+}
+
+/* left side event celender - end */
+
+/* main page Annoucemnts - start */
+
+.mof-intra-body-left-anno
+{
+	float:right;
+	width:348px;
+	height:326px;
+	margin:8px 0px 0px 0px;
+	background-color:#f8f8f8;
+}
+
+.mof-intra-body-left-anno h1
+{
+	float:right;
+	width:336px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-anno h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+}
+
+.mof-intra-body-left-anno-n
+{
+	float:right;
+	width:324px;
+	height:auto;
+	max-height:100%;
+	padding:0px 20px 6px 0px;
+	list-style:none;
+	border-bottom:1px dotted #CCC;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/news.png) no-repeat right 4px;
+}
+
+.mof-intra-body-left-anno h2
+{
+	float:right;
+	width:320px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	text-align:right;
+	color:#000000;
+	margin:0px;
+	padding:5px 0px 0px 5px;
+	text-decoration:underline;
+}
+
+.mof-intra-body-left-anno h2 a
+{
+	color:#151515 !important;
+	float:right;
+	text-decoration:underline;
+}
+
+.mof-intra-body-left-anno h2 a:hover
+{
+	color:#bc2f2f !important;
+	text-decoration:none;
+}
+
+.mof-intra-body-left-anno h4
+{
+	float:right;
+	width:320px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#000000;
+	margin:0px;
+	padding:3px 0px 0px 5px;
+}
+
+.mof-intra-body-left-anno p
+{
+	float:left;
+	width:320px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	text-align:right;
+	color:#676767;
+	margin:0px;
+	padding:5px 0px 0px 5px;
+	/*background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design7_03.jpg) center bottom no-repeat;*/
+}
+
+/* main page Annoucemnts - end */
+
+/* main page Contact Directory - start */
+
+.mof-intra-body-left-helpd
+{
+	float:right;
+	width:342px;
+	height:326px;
+	margin:8px 0px 0px 0px;
+	background-color:#f8f8f8;
+}
+
+.mof-intra-body-left-helpd h1
+{
+	float:right;
+	width:330px;
+	line-height:36px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:18px;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-helpd h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+}
+
+.mof-intra-body-left-dcd
+{
+	float:right;
+	width:324px;
+	height:auto;
+	max-height:100%;
+	padding:0px 20px 6px 0px;
+	list-style:none;
+	border-bottom:1px dotted #CCC;
+	background:url(../images/mof/contentd.png) no-repeat right 4px;
+}
+
+.mof-intra-body-left-dcd h2
+{
+	float:right;
+	width:320px;
+	height:auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal !important;
+	font-size:11px !important;
+	color:#151515 !important;
+	margin:0px;
+	padding:5px 5px 0px 0px;
+	text-decoration:none;
+}
+
+.mof-intra-body-left-dcd p
+{
+	float:right;
+	width:320px;
+	height:auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#676767;
+	margin:0px;
+	padding:5px 5px 0px 0px;
+}
+
+/* main page Help Desk - end */
+
+.tabDiv{
+	float:right;
+	width:342px;
+	height:auto;
+	margin:8px 0px 0px 0px;
+
+	}
+/* main page Ministry News - start */
+
+.mof-intra-body-left-minisN
+{
+	float:right;
+	width:348px;
+	height:326px;
+	margin:8px 0px 0px 0px;
+	background-color:#f8f8f8;
+}
+
+.mof-intra-body-left-minisN h1
+{
+	float:right;
+	width:336px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-minisN h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+}
+
+.mof-intra-body-left-minisN-n
+{
+	float:left;
+	width:324px;
+	height:auto;
+	max-height:100%;
+	padding:0px 20px 6px 0px;
+	list-style:none;
+	border-bottom:1px dotted #CCC;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/news.png) no-repeat right 4px;
+}
+
+.mof-intra-body-left-minisN h2
+{
+	float:right;
+	width:320px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal !important;
+	text-align:right;
+	font-size:12px !important;
+	color:#151515 !important;
+	margin:0px;
+	padding:5px 0px 0px 5px;
+}
+
+.mof-intra-body-left-minisN h2 a
+{
+	color:#151515 !important;
+	float:right;
+
+}
+
+.mof-intra-body-left-minisN h2 a:hover
+{
+	color:#bc2f2f !important;
+	text-decoration:none;
+}
+
+.mof-intra-body-left-minisN h4
+{
+	float:right;
+	width:320px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#676767;
+	margin:0px;
+	padding:3px 0px 0px 5px;
+}
+
+/* main page Ministry News - end */
+
+/* main page Public Report - start */
+
+.mof-intra-body-left-hlines
+{
+	float:right;
+	width:342px;
+	height:326px;
+	margin:8px 0px 0px 5px !important;
+	background-color:#f8f8f8;
+}
+
+.mof-intra-body-left-hlines h1
+{
+	float:right;
+	width:330px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-hlines h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+}
+
+.mof-intra-body-left-hlines-n
+{
+	float:right;
+	width:314px;
+	height:28px;
+	max-height:100%;
+	padding:4px 28px 6px 0px;
+	list-style:none;
+	border-bottom:1px dotted #CCC;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design-f-pdf.png) no-repeat right 2px;
+}
+
+.mof-intra-body-left-hlines-n a
+{
+	float:right;
+	width:290px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#151515 !important;
+	list-style:none;
+	text-decoration:none;
+}
+
+.mof-intra-body-left-hlines-n a:hover
+{
+	color:#bc2f2f !important;
+	list-style:none;
+	text-decoration:none;
+}
+
+.mof-intra-body-left-hlines-nimg
+{
+	float:left;
+	height:15px;
+	width:14px;
+	padding:0px;
+	margin:0px 0px 0px 0px;
+	border:0;
+}
+
+.mof-intra-body-left-hlines-nimg a
+{
+	float:left;
+	height:15px;
+	width:14px;
+	padding:0px;
+	margin:0px 0px 0px 0px;
+}
+
+.mof-intra-body-left-hlines-n img
+{
+	float:left;
+	height:auto;
+	width:auto;
+	padding:0px;
+	margin:2px 0px 0px 0px;
+	border:0;
+}
+
+/* main page Public Report - end */
+
+
+/* main page Gallary - start */
+
+.mof-intra-body-left-ourGal
+{
+	float:right;
+	width:238px;
+	height:209px;
+	background: url(https://mof.gov.iq/_layouts/images/MOF/mof-design5_06.jpg) repeat-x #efefef;
+	margin:8px 0px 0px 0px;
+}
+
+.mof-intra-body-left-ourGal h1
+{
+	float:right;
+	width:226px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-ourGal h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+	padding:0px;
+	margin:0px;
+}
+
+.mof-intra-body-left-ourGal img
+{
+	float:right;
+	width:224px;
+	height:152px;
+	margin:0px;
+	padding:12px 8px 0px 8px;
+	border:0;
+}
+
+/* main page Gallary - end */
+
+
+
+
+/* for weather - start */
+#weatherData td
+{ 
+	text-align:center; 
+	padding-left:15px;
+	padding-right:15px;
+	
+}
+ 
+.weatherlocation
+{
+	text-align:center;
+}        
+     
+.weather_icon
+{
+	background-image: url(http://l.yimg.com/a/lib/ywc/img/wicons.png);
+	margin-left: auto;
+	margin-right: auto;
+	width: 61px; 
+	height: 28px;
+}
+
+/* for weather - end */
+
+
+/*========= main page Discussion - start */
+
+.mof-intra-body-left-Dis1
+{
+	float:left;
+    margin:-7px 0px 0px 0px;
+}
+
+.mof-intra-body-left-Dis
+{
+    border: 1px solid #aaaaaa;
+	float:left;
+	/*width:283px;*/
+	height:288px;
+	background-color:#efefef;
+	margin:8px 0px 0px 0px;
+}
+
+.mof-intra-body-left-Dis h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+}
+
+.mof-intra-body-left-Dis h1
+{
+	float:left;
+	width:226px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-Dis h2
+{
+	float:right;
+	width:200px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal !important;
+	font-size:12px !important;
+	text-align:right;
+	color:#370000;
+	margin:0px;
+	padding:2px 0px 0px 12px;
+}
+
+.mof-intra-body-left-Disa
+{
+	float:right;
+	width:230px;
+	height:auto;
+	margin: 5px 0px 5px 0px;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design7_03.jpg) left bottom no-repeat;
+
+}
+.mof-intra-body-left-Dis p
+{
+	float:right;
+	width:auto;
+	height:auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:10px;
+	color:#151515 !important;
+	margin:5px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	
+}
+
+.mof-intra-body-left-Dis a
+{
+	width:auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#222222 !important;
+	text-decoration:none;
+	margin:5px 0px 0px 0px;
+	float:left;
+}
+
+.mof-intra-body-left-Dis a:hover
+{
+	color:#bc2f2f !important;
+	text-decoration:none;
+}
+
+/* for scrolling discussions */
+
+#MOFDiscussions
+{
+    width:236px;
+    height:216px;
+    overflow:auto;
+}
+
+#MOFDiscussions dt
+{
+    background: url("https://mof.gov.iq/_layouts/images/MOF/keyword.gif") no-repeat scroll right top transparent;
+    border-bottom: medium none;
+    border-right: medium none;
+    padding: 0 20px 5px 10px;
+    float:right;
+}
+
+#MOFDiscussions dd
+{
+    margin-right: 0;
+    padding: 0 10px 10px 10px;
+    background-color: transparent;
+}
+
+#MOFDiscussions dd.last
+{
+    border-bottom: 1px solid #ffffff;
+}
+
+#MOFDiscussions div
+{
+    margin-top: 0;
+}
+
+/* for scrolling discussions */
+
+/*========= main page Discussion - end */
+
+/* main page directaive adnd commssions - start */
+
+.mof-intra-body-left-mdc
+{
+	background: url("https://mof.gov.iq/_layouts/images/MOF/mof-design5_06.jpg") repeat-x scroll 0 0 #EFEFEF;
+    float: right;
+    height: auto;
+    margin: 0;
+    width: 238px;
+}
+	
+.mof-intra-body-left-mdc h1
+{
+	background: url("../images/mof/mof-design-f-nav-rep.jpg") repeat-x scroll 0 0 transparent;
+    color: #FFFFFF;
+    float: right;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 18px !important;
+    font-weight: normal !important;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 12px 0 0;
+    width: 226px;
+}
+
+.mof-intra-body-left-mdc h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+	margin:0px 0px 0px 0px;
+}
+
+.mof-intra-body-left-dac
+{
+	background: url("https://mof.gov.iq/_layouts/images/MOF/mof-design-f-2-bull.png") no-repeat scroll right 10px center transparent;
+    border-bottom: 1px dotted #CCCCCC;
+    float: left;
+    height: 25px;
+    list-style: none outside none;
+    max-height: 100%;
+    padding: 0 18px 6px 20px;
+    width: 196px;
+}
+
+.mof-intra-body-left-dac h2
+{
+	float:right;
+	width:200px;
+	height:auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal !important;
+	font-size:11px !important;
+	color:#151515 !important;
+	margin:0px;
+	padding:9px 5px 0px 0px;
+	text-decoration:none;
+}
+
+.mof-intra-body-left-dac h2 a
+{	
+	color:#151515 !important;
+}
+
+.mof-intra-body-left-dac h2 a:hover
+{	
+	color:#bc2f2f !important;
+	text-decoration:none;
+}
+
+/* main page directaive adnd commssions - end */
+
+
+/*========= main page social sites icon - start  */
+       
+.mof-intra-body-left-socialsite
+{   
+    float:right;
+    width:238px;
+	height:auto;
+	margin:8px 0px 1px 0px;
+	text-align:center;
+}
+
+.mof-intra-body-left-socialsite a
+{
+	float:right;
+	margin:0px 9px;
+}
+
+.mof-intra-body-left-socialsite a:hover
+{
+	text-decoration:none;
+}
+
+.mof-intra-body-left-socialsite a img
+{
+	float:right;
+	width:40px;
+	height:40px;
+	padding:0 12px 0px 5px;
+	
+}
+
+/*========= main page social sites icon - end  */
+
+/* main page Currency - start */
+
+.mof-intra-body-left-cuR{
+  background: none repeat scroll 0 0 #EFEFEF;
+    float: right;
+    height: 178px;
+    margin: 8px -3px 0 0;
+    width: 224px;
+
+	}
+	
+	
+	
+	
+
+.mof-intra-body-left-cuR h1{
+	 background: url("../images/mof/mof-design-f-nav-rep.jpg") repeat-x scroll 0 0 transparent;
+    color: #FFFFFF;
+    float: left;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 6px 0 12px;
+    width: 205px;
+}
+.mof-intra-body-left-cuR h1 img{
+	float:left;
+	width: auto;
+	height:auto;
+	margin:0px 0px 0px 0px;
+}
+
+
+
+.mof-intra-body-left-cuR table{
+	float:right;
+	width: auto;
+	line-height:16px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#333;
+	margin:0px;
+	margin:0px 0px 0px 0px;
+}
+.mof-intra-body-left-cuR table th span{
+	font:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color:#870000;
+	}
+
+.mof-intra-body-left-cuR table img{
+	float: right;
+    height: auto;
+    margin: 0 12px 0 15px;
+    width: auto}
+.mof-intra-body-left-cuR table td{
+	  color: #370000;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 11px;
+    line-height: 24px;
+    width: 65%;
+	}
+.mof-intra-body-left-cuR table td span{
+	padding:4px;
+	text-align:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#370000;
+	line-height:18px;
+	}
+
+
+.mof-intra-body-cuR
+{
+	float:right;
+	width:228px;
+	height:132px;
+}
+
+
+.mof-intra-body-cuR a
+{
+	float:right !Important;
+	width:200px !Important;
+	line-height:12px !Important;
+	font-family: Verdana, Geneva, sans-serif !Important;
+	font-weight:normal !Important;
+	font-size:11px !Important;
+	color:#333 !Important;
+	margin:0px !Important;
+	margin:4px 12px 0px 0px !Important;
+	text-decoration:none !Important;
+}
+.mof-intra-body-cuR a:hover
+{
+	color:#870000 !Important;
+	text-decoration:none !Important;
+}
+/* main page Currency - end */
+
+/* main page Goverment Site - start */
+
+.mof-intra-body-left-govS
+{
+	float:right;
+	width:228px;
+	height:178px;
+	background:#efefef;
+	margin:8px 0px 0px 0px;
+	text-align:center;
+}
+	
+.mof-intra-body-left-govS h1
+{
+	float:right;
+	width:216px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-govS h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+	margin:0px 0px 0px 0px;
+}
+
+.mof-intra-body-left-govS img
+{
+	margin:0px;
+	width:60px;
+	height:57px;
+	border:0;
+}
+
+/* main page Goverment Site - end */
+
+/* main page Weather - start */
+
+.mof-intra-body-left-wae
+{
+    float:right;
+	width:228px;
+	height:178px;
+	margin:8px 7px 0px 0px;
+	background-color:#eee;
+}
+	
+.mof-intra-body-left-wae h1
+{
+    float:left;
+	width:216px;
+	line-height:36px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-left-wae h1 img
+{
+	float:left;
+	width:auto;
+	height:auto;
+	margin:0px 0px 0px 0px;
+}
+
+
+
+.waeDiv
+{
+	float:right;
+	width:228px;
+	height:auto;
+}
+
+.waeDiv h2
+{
+	color: #333333;
+    float: right;
+    font-family: simplified arabic;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 12px;
+    margin: 8px 0 4px;
+    text-align: center !Important;
+    text-decoration: underline;
+    width: 228px;
+}
+
+
+.waeDiv h3
+{
+	 color: #333333;
+    float: left;
+    font-family: simplified arabic;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 14px;
+    margin: 2px 0 0 10px;
+    text-align: center;
+    width: 87px;
+}
+
+.waeDiv p
+{
+	 color: #333333;
+    float: right;
+    font-family: simplified arabic;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    margin: 4px 4px 0 8px;
+    text-align: right;
+    width: 222px;
+}
+
+.waeDiv p span
+{
+	 float: left;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 30px 0 40px;
+    text-align: center;
+    width: 25px;
+}
+
+/* for weather data - start */
+
+
+
+/* for weather data - end */
+
+/* main page Weather - end */
+
+/*==========================================================================================================*/
+/* ==================================== Div Left Sides Ends Here ===========================================*/
+/*==========================================================================================================*/
+
+/*==========================================================================================================*/
+/* ==================================== Div Right Sides start Here =========================================*/
+/*==========================================================================================================*/
+
+.mof-intra-body-right
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:2px 15px 0px 8px;
+}
+
+.mof-layout-inner-right
+{
+	float:right;
+	width:699px;
+	height:auto;
+	margin:2px 25px 0px 8px;
+}
+
+/* main page right banner - start */
+
+.mof-intra-body-right-ban
+{
+	float:left;
+	width:699px;
+	height:307px;
+	margin:5px 0px 0px 5px;
+}
+
+.mof-intra-body-right-ban h1
+{
+	float:right;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	text-align:right;
+	color:#FFF;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-intra-body-right-ban img
+{
+	float:left;
+	width:698px;
+	height:282px;
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	position:absolute;
+	top:0;
+	right:0;
+	border:0;
+}
+
+.mof-intra-body-right-ban span 
+{
+	position: absolute;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:7px 15px 5px 5px;
+	width:677px;
+	height:auto;
+	min-height:20px;
+	background-color: #000;
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity:0.5;
+	color:#fff;
+	bottom:0;
+}
+
+.MOFimages 
+{    
+    position:relative;
+    height:282px;
+    width:684px;
+    float:right;
+    margin:1px;
+    cursor:pointer;
+
+    /* CSS3 tweaks for modern browsers */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    /*-moz-box-shadow: 0 0 25px #666;
+    -webkit-box-shadow: 0 0 25px #666;*/
+}
+
+/* main page right banner - end */
+
+/* main page news banner - start */
+
+.mof-intra-news-banner
+{
+	float:right;
+	width:699px;
+	height:307px;
+	margin:5px 0px 0px 0px
+}
+
+.mof-intra-body-banner
+{
+	float:left;
+	width:699px;
+	height:307px;
+	margin:5px 0px 0px 5px;
+}
+
+.mof-intra-body-banner h1
+{
+	float:right;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	text-align:right;
+	color:#FFF;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+}
+
+.mof-intra-body-banner img
+{
+	float:left;
+	width:500px;
+	height:280px;
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	position:absolute;
+	top:0;
+	right:0;
+	border:0;
+}
+
+.mof-intra-body-banner span 
+{
+	position: absolute;
+	font-family: Verdana, Geneva, sans-serif;
+	width:186px;
+	height:auto;
+	min-height:20px;
+	color:#870000;
+	left:0;
+	top:93px;
+	
+	/*
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity:0.5;
+	bottom:0;
+	background-color: #000;
+	padding:7px 15px 5px 5px;*/
+}
+
+.mof-intra-body-banner h4 
+{
+    color:#000000;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    height:auto;
+    line-height:20px;
+    margin:0;
+    padding:0;
+    width:186px;
+}
+
+.mof-intra-body-banner h4 span
+{
+    position:absolute;
+	font-family: Verdana, Geneva, sans-serif;
+	width:186px;
+	height:auto;
+	min-height:20px;
+	color:#000;
+	left:0;
+	top:63px;
+}
+
+.MOFBanner 
+{    
+    position:relative;
+    height:284px;
+    width:697px;
+    float:right;
+    margin:1px;
+    cursor:pointer;
+
+    /* CSS3 tweaks for modern browsers */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    /*-moz-box-shadow: 0 0 25px #666;
+    -webkit-box-shadow: 0 0 25px #666;*/
+}
+
+/* main page news banner - end */
+
+.mof-intra-body-right-upE
+{
+	float:left;
+	width:680px;
+	height:auto;
+	background: url(https://mof.gov.iq/_layouts/images/MOF/mof-design5_06.jpg) repeat-x #efefef;
+	margin:8px 0px 0px 0px;
+	border-bottom:1px solid #d7d7d7;
+}
+	
+.mof-intra-body-right-upE h1
+{
+	float:left;
+	width:668px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:16px;
+	color:#FFF;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design5-slice_34.png) no-repeat left;
+	margin:0px 0px 4px 0px; 
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-upE h2
+{
+	float:left;
+	width:110px;
+	height:20px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:18px;
+	color:#b7b7b7;
+	margin:8px 0px 4px 0px; 
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-upE-inner
+{
+	float:left;
+	width:678px;
+	height:60px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#000000;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	border:1px solid #d7d7d7;
+	border-bottom:none;
+}
+
+.mof-intra-body-right-upE-inner h4
+{
+	float:left;
+	width:110px;
+	height:52px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#000000;
+	margin:8px 0px 4px 0px; 
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-upE-inner p
+{
+	float:left;
+	width: 507px;
+	height:52px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color:#000000;
+	margin:8px 0px 4px 0px; 
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-heD
+{
+	float:left;
+	width:680px;
+	height:auto;
+	background: url(https://mof.gov.iq/_layouts/images/MOF/mof-design5_06.jpg) repeat-x #efefef;
+	margin:8px 0px 0px 0px;
+	border-bottom:1px solid #d7d7d7;
+}
+	
+.mof-intra-body-right-heD h1
+{
+	float:left;
+	width:668px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:16px;
+	color:#FFF;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design5-slice_34.png) no-repeat left;
+	margin:0px;
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-heD h2
+{
+	float:left;
+	width:110px;
+	height:30px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:18px;
+	color:#b7b7b7;
+	margin:4px 0px 4px 0px; 
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-heD p
+{
+	float:left;
+	width: 668px;
+	height:52px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	color:#000000;
+	margin:0px 0px 0px 0px; 
+	padding:4px 0px 0px 12px;
+	border:1px solid #d7d7d7;
+	border-bottom:none;
+}
+
+/* main page our Department - start */
+
+.mof-intra-body-right-ourD
+{
+	float:left;
+	width:700px;
+	height:185px;
+	margin:8px 0px 0px 4px;
+	background-color: #ececec;
+}
+
+.mof-intra-body-right-ourD h1
+{
+	float:left;
+	width:688px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold !important;
+	font-size:18px !important;
+	text-align:right;
+	color:#FFF;
+	background: url(../images/mof/mof-design-f-nav-rep.jpg) repeat-x;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+}
+
+.mof-intra-body-right-ourD h1 img
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+	height:auto;
+	width:auto;
+}
+
+.mof-intra-body-right-ourD img
+{
+	float:left;
+	width: auto;
+	height:auto;
+	margin:35px 0px 0px 16px;
+}
+
+.mof-intra-body-right-ourD h2 a
+{
+	float:left;
+	width:80px;
+	line-height:16px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#bc2f2f;
+	margin:10px 4px 0px 0px;
+	padding:0px 0px 0px 12px;
+	text-decoration:none;
+}
+
+.mof-intra-body-right-ourD h2 a:hover
+{
+	float:left;
+	width:80px;
+	margin:10px 4px 0px 0px;
+	padding:0px 0px 0px 12px;
+	color: #333;
+	text-decoration:none;
+}
+
+/* main page our Department - end */
+
+/* main page goverment sites - start */
+
+.mof-intra-body-right-govS
+{
+	float:left;
+	width:680px;
+	height:211px;
+	background: url(https://mof.gov.iq/_layouts/images/MOF/mof-design5_06.jpg) repeat-x #f8f8f8;
+	margin:8px 0px 0px 0px;
+}
+	
+.mof-intra-body-right-govS h1
+{
+	float:left;
+	width:668px;
+	line-height:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:16px;
+	color:#FFF;
+	background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design5-slice_34.png) no-repeat left;
+	margin:0px;
+	padding:0px 0px 0px 12px;
+}
+
+.mof-intra-body-right-govS img
+{
+	float:left;
+	width: auto;
+	height:auto;
+	margin:35px 0px 0px 6px;
+	border:none;
+}
+
+.mof-intra-body-right-govS h2 a
+{
+	float: right;
+	width:80px;
+	line-height:16px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	color:#ba2636;
+	margin:10px 4px 0px 0px;
+	padding:0px 0px 0px 12px;
+	text-decoration:none;
+}
+
+.mof-intra-body-right-govS h2 a:hover
+{
+	float: right;
+	width:80px;
+	margin:10px 4px 0px 0px;
+	padding:0px 0px 0px 12px;
+	color:#91c905;
+	text-decoration:none;
+}
+
+/* main page goverment sites - end */
+
+
+/*==========================================================================================================*/
+/* ==================================== Div Right Sides Ends Here ===========================================*/
+/*==========================================================================================================*/
+
+
+/* style for area read more, view more link - start */
+.mof-intra-body-area-link
+{
+	
+}
+
+.mof-intra-body-area-link a
+{
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:10px;
+	margin:0px;
+	padding:5px 10px 5px;
+	background:center bottom no-repeat;
+	text-align:left;
+	color:#151515 !important;
+}
+
+.mof-intra-body-area-link a:hover
+{
+	color:#bc2f2f !important;
+	list-style:none;
+	text-decoration:none;
+}
+
+/* style for area read more, view more link - end */
+
+
+
+
+/*tabs - start */
+
+.ui-tabs 
+{ 
+	float:left; 
+	width:348px; 
+	height:auto;  
+} /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+
+.ui-tabs .ui-tabs-nav 
+{ 
+	float:left;
+	width:175px;
+	height:34px;   
+}
+
+.ui-tabs .ui-tabs-nav li 
+{ 
+	float:left; 
+	list-style: none;
+}
+
+.ui-tabs .ui-tabs-nav li a 
+{ 
+	float: left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	width:163px; 
+	height:34px;
+	line-height:34px; 
+	text-decoration: none;
+	padding-left:12px;
+	list-style:none; 
+	background:url(https://mof.gov.iq/_layouts/images/MOF/mof-design-slice_54.png) no-repeat; 
+	color:#000; 
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active 
+{ 
+	float: left; 
+	width:163px; 
+	height:34px; 
+	text-decoration: none; 
+	list-style:none;  
+	color:#007425; 
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a 
+{ 
+	float: left; 
+	width:163px; 
+	height:34px; 
+	text-decoration: none; 
+	list-style:none; 
+	color:#007425;  
+}
+
+.ui-tabs .ui-tabs-nav li a, .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a 
+{ 
+	cursor: pointer; 
+} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+.ui-tabs .ui-tabs-panel 
+{ 
+	display: block;  
+}
+
+/*tabs - end */
+
+/*==========================================================================================================*/
+/*==================================== main menu (top) start here ==========================================*/
+/*==========================================================================================================*/
+
+/*.menus{float:left;width:950px; height:18px; background:#000; padding:6px 0px 6px 0px;}
+.menus ul{float:right; padding:0px; margin:0px;background:#000; }
+.menus ul li {float:right; list-style:none; display:inline-block; margin:0 15px 0 0; position:relative;}
+.menus ul li:hover,.menus ul li.active {background-color:#bc2f2f !important;}
+.menus ul li:last-child{margin-right:0px;}
+.menus ul li a{padding:0px 0px 6px 0px;text-decoration:none; font-size:12px; color: #FFF; display:block; font-family:Tahoma, Geneva, sans-serif; background:url(https://mof.gov.iq/_layouts/images/mof-design-slice_13.png) no-repeat bottom center; }
+.menus ul li a:hover,.menus ul li a.active{ background-color:#999;color:#000 !important;}
+
+.menus ul li ul{position: absolute;left: 0;display: block;visibility: hidden; padding:0px; margin:0px; z-index:9999;}
+.menus ul li ul li{display:list-item;float:none; border-bottom:1px solid #999999 !important; padding:0px !important; width:250px; margin:0px;}
+.menus ul li ul li.active,.menus ul li ul li:hover{background-color:#bc2f2f !Important;/*background:url(https://mof.gov.iq/_layouts/images/opecety.png) repeat; }
+.menus ul li ul li ul{top: 0; padding:0px; margin:0px;}
+.menus ul li ul li a{margin:0px; padding:0 0 0 3px !important; font-size:12px; font-family: Tahoma, Geneva, sans-serif; color:#ffffff;display:block; line-height:24px;border:none !important; background-image:none;background:#747474 ;-webkit-box-shadow: -6px 6px 0px 0px #b6b6b6;box-shadow: -6px 6px 0px 0px #b6b6b6;}
+.menus ul li ul li a:hover{ font-size:13px; font-family: Tahoma, Geneva, sans-serif;color:#fff ;background-color:#bc2f2f !important; } 
+.menus ul li ul li a.active{ font-size:13px; font-family: Tahoma, Geneva, sans-serif;color:#fff ;background-color:#bc2f2f !important; } 
+
+body.ie6 .menus ul li ul li a,
+body.ie7 .menus ul li ul li a,
+body.ie8 .menus ul li ul li a,
+body.ie9 .menus ul li ul li a 
+{
+
+   -ms-filter: "progid:DXImageTransform.Microsoft.DropShadow(OffX=-6, OffY=6, Color=#b6b6b6)";
+   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=-6, OffY=6, Color=#b6b6b6);
+}
+
+*/
+
+.mof-intra-navi{float:left;width:950px;height:28px;background: url(../images/mof/mof-design-nb_ar.png) right no-repeat;padding:0px 60x 0px 0px;margin:0px 0px 0px 0px; font-family:Traditional Arabic !Important; font-weight:bold;}
+.menus{float:left;width:921px; height:16px; background:#000; padding:6px 0px 6px 0px;}
+.menus ul{float:right; padding:0px 0px 0px 0px; margin:-3px 0px 0px 0px;background:#000; }
+.menus ul li {float:right; list-style:none; display:inline-block; margin:0 0 0 50px; position:relative;}
+.menus ul li:hover,.menus ul li.active {background-color:#bc2f2f !important;}
+.menus ul li:last-child{margin-right:0px;}
+.menus ul li a{padding:0px 0px 4px 0px;text-decoration:none; font-size:14px; text-align:right; color: #FFF; display:block; font-family:Traditional Arabic;   }
+.menus ul li a.active,.menus ul li a:hover{background-color:#bc2f2f;color:#000 !important;}
+
+
+.menus ul li ul{position:absolute; left: 0;display: block;visibility: hidden; padding:0px; margin:0px; z-index:9999;}
+.menus ul li ul li{display:list-item;float:right; border-bottom:1px solid #999999 !important; padding:0px !important; width:110px/*width: 250px;*/; margin:0px;}
+.menus ul li ul li.active,.menus ul li ul li:hover{background-color:#bc2f2f !Important;/*background:url(https://mof.gov.iq/_layouts/images/opecety.png) repeat;*/ }
+/*.menus ul li ul li ul{top: 0; padding:0px; margin:0px;left:-250px !Important;}
+.menus ul li ul li ul{top: 0; padding:0px; margin:0px;left:-190px  !Important;}*/
+.menus ul li ul li ul{ float:none;top: 0; padding:0px; margin:0px;right:110px;}
+.menus ul li ul li a{margin:0px; padding:0 3px 0 0 !important; font-size:14px; font-family:Traditional Arabic !Important; color:#ffffff;display:block; line-height:24px;border:none !important; background-image:none;background:#000 ;-webkit-box-shadow: -6px 6px 0px 0px #b6b6b6;box-shadow: -6px 6px 0px 0px #b6b6b6;}
+.menus ul li ul li a:hover{ color:#fff !important; } 
+.menus ul li ul li a span{float:left; margin:0px 0px 0px 8px;}
+
+
+body.ie6 .menus ul li ul li a,
+body.ie7 .menus ul li ul li a,
+body.ie8 .menus ul li ul li a,
+body.ie9 .menus ul li ul li a 
+{
+
+   -ms-filter: "progid:DXImageTransform.Microsoft.DropShadow(OffX=-6, OffY=6, Color=#b6b6b6)";
+   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=-6, OffY=6, Color=#b6b6b6);
+}
+
+
+
+
+
+/*
+.mof-intra-navi{float:left;width:900px;height:28px;background: url(../images/mof/mof-design-nb_ar.png) right no-repeat;padding:0px 60x 0px 0px;margin:0px 0px 0px 0px; font-family:Verdana, Geneva, sans-serif !Important;}
+.menus{float:left;width:872px; height:16px; background:#000; padding:6px 0px 6px 0px;}
+.menus ul{float:right; padding:0px; margin:0px;background:#000; }
+.menus ul li {float:right; list-style:none; display:inline-block; margin:0 0 0 42px; position:relative;}
+.menus ul li:last-child{margin-right:0px;}
+.menus ul li a{padding:0px 0px 6px 0px;text-decoration:none; font-size:14px; text-align:right; color: #FFF; display:block; font-family:Verdana, Geneva, sans-serif background:url(https://mof.gov.iq/_layouts/images/mof-design-slice_13.png) no-repeat bottom center !Important; }
+.menus ul li a.active,.menus ul li a:hover{color:#bc2f2f;}
+
+
+.menus ul li ul{position:absolute; left: 0;display: block;visibility: hidden; padding:0px; margin:0px; z-index:9999;}
+.menus ul li ul li{display:list-item;float:none; border-bottom:1px solid #999999 !important; padding:0px !important; width:250px; margin:0px;}
+.menus ul li ul li:hover{background:#555555; color:#bc2f2f; }
+.menus ul li ul li ul{top: 0; padding:0px; margin:0px;left:-250px !Important;}
+.menus ul li ul li a{margin:0px; padding:0 3px 0 0 !important; font-size:14px; font-family: Verdana, Geneva, sans-serif color:#ffffff !Important;display:block; line-height:24px;border:none !important; background-image:none;}
+.menus ul li ul li a:hover{ color:#fff !important; } 
+.menus ul li ul li a span{float:left; margin:0px 0px 0px 8px;}
+
+*/
+/*==========================================================================================================*/
+/*==================================== main menu (top) end here ==========================================*/
+/*==========================================================================================================*/
+
+/*==========================================================================================================*/
+/*====================================== left navigation start here ========================================*/
+/*==========================================================================================================*/
+
+.sf-menu, .sf-menu * 
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.sf-menu 
+{
+	line-height:1.0;
+}
+
+.sf-menu ul 
+{
+	position:absolute;
+	top:-999em;
+	width:226px; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul li 
+{
+	width:226px;
+}
+
+.sf-menu li:hover 
+{
+	width:226px;
+
+}
+
+.sf-menu li 
+{
+	float:right;
+	position:relative;
+}
+
+.sf-menu a 
+{
+	display:block;
+	position:relative;
+	/*font-family:Verdana, Geneva, sans-serif !important;*/
+	font-weight:normal !important;
+	font-size:14px;
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul 
+{
+	right:134px;
+	top:30px; /* match top ul list item height */
+	z-index:99;
+}
+
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul 
+{
+	top:-999em;
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul 
+{
+	right:138px; /* match ul width */
+	top:0;
+}
+
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul 
+{
+	top:-999em;
+}
+
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul 
+{
+	right:134px; /* match ul width */
+	top:0;
+}
+
+/*** DEMO SKIN ***/
+.sf-menu 
+{
+	float:right;
+	margin-bottom:1em;
+}
+
+.sf-menu a 
+{
+	padding:.75em 1em;
+	text-decoration:none;
+}
+
+.sf-menu a, .sf-menu a:visited  /* visited pseudo selector so IE6 applies text colour*/
+{ 
+	color:#13a;
+}
+.sf-menu li 
+{
+	/*background:#BDD2FF;*/
+}
+
+.sf-menu li li 
+{
+    background:#fff;
+	border:1px dotted #999;
+	right:60px;	
+}
+
+.sf-menu li li li 
+{
+	border:1px dotted #999;
+	right:100px;	
+}
+
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active 
+{
+	float:right;
+	color:#023d6c;
+	text-decoration:none;
+}
+
+/*** arrows **/
+.sf-menu a.sf-with-ul 
+{
+	padding-left:2.25em;
+	min-width:1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+
+.sf-sub-indicator 
+{
+	float:left;
+}
+
+a > .sf-sub-indicator /* give all except IE6 the correct values */
+{  
+	top:.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator 
+{
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator 
+{ 
+	background-position:  -10px 0;
+}
+
+.sf-menu ul a > .sf-sub-indicator 
+{
+	background-position:  0 0; 
+}
+
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator 
+{
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul 
+{
+	background:	url('https://mof.gov.iq/_layouts/images/shadow.png') no-repeat bottom right;
+	padding: 0 8px 9px 0;
+	-moz-border-radius-bottomright: 17px;
+	-moz-border-radius-topleft: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+}
+
+.sf-shadow ul.sf-shadow-off 
+{
+	background: transparent;
+}
+
+/* superfish vertical navigation - start */
+
+/*** adding sf-vertical in addition to sf-menu creates a vertical menu ***/
+.sf-vertical, .sf-vertical li 
+{
+	width:226px;
+	height:auto;
+min-height:26px;
+}
+
+/* this lacks ul at the start of the selector, so the styles from the main CSS file override it where needed */
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul 
+{
+	right:16.5em; /* match ul width */
+	top:0;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical .sf-sub-indicator 
+{ 
+	background-position: -10px 0; 
+} /* IE6 gets solid image only */
+
+.sf-vertical a > .sf-sub-indicator 
+{ 
+	background-position: 0 0; 
+} /* use translucent arrow for modern browsers*/
+
+/* hover arrow direction for modern browsers*/
+.sf-vertical a:focus > .sf-sub-indicator,
+.sf-vertical a:hover > .sf-sub-indicator,
+.sf-vertical a:active > .sf-sub-indicator,
+.sf-vertical li:hover > a > .sf-sub-indicator,
+.sf-vertical li.sfHover > a > .sf-sub-indicator
+{
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/* superfish vertical navigation - end */
+
+/*==========================================================================================================*/
+/*====================================== left navigation end here ==========================================*/
+/*==========================================================================================================*/
+
+
+
+/*==========================================================================================================*/
+/* ==================================== Div Footer Sides starts Here ========================================*/
+/*==========================================================================================================*/
+
+.mof-intra-footer
+{
+	float:left;
+	width:1002px;
+	height:auto;
+	min-height:230px;
+	margin:0px 0px 0px 0px;
+	background:url(../images/mof/mof-design-f-footer-rep.png) repeat-x;
+	
+}
+	
+.mof-intra-footer img
+{
+	float:right;
+	width: auto;
+	height: auto;
+	
+}
+	
+.mof-intra-footer ul
+{
+	float: right;
+    height: auto;
+    margin: 0;
+    min-height: 215px;
+    padding: 10px 15px 0;
+    width: 300px;
+}
+
+.mof-intra-footer ul li
+{
+	color: #FFFFFF;
+    float: right;
+    height: 20px;
+    list-style: none outside none;
+    margin: 5px 0 1px;
+    padding: 4px 0 0 12px;
+    width: 320px;
+}
+
+.mof-intra-footer ul li a
+{
+	float:right;
+	width:auto;
+	line-height:16px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	text-align:right;
+	color:#ffffff;
+	margin:0px;
+	padding:0px 12px 0px 0px;
+	text-decoration:none;
+}
+
+.mof-intra-footer ul li a:hover
+{
+	float:right;
+	width:auto;
+	color: #000;
+	text-decoration:none;
+}
+
+/*
+.mof-intra-bottom
+{
+	float:right;
+	width:1002px;
+	line-height:36px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	text-align:center;
+	color:#000;
+	margin:0px;
+	padding:0px 0px 0px 0px;
+	text-decoration:none;
+}*/
+
+
+/*==========================================================================================================*/
+/* ==================================== Div Footer Sides end Here ==========================================*/
+/*==========================================================================================================*/
+
+/*==========================================================================================================*/
+/* ================================= Div Footer bottoem Sides start Here ===================================*/
+/*==========================================================================================================*/
+
+.mof-intra-bottom
+{
+     width:1002px;
+	height:28px;
+	background:url(../images/mof/mof-design-f-newsrep.png) bottom repeat-x;
+	float:right;
+	
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	
+	margin:0px;
+	padding:4px 0px 4px 0px;
+	text-decoration:none;
+}
+
+.mof-intra-bottom h1
+{ 
+	float:right;
+	width:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#000;
+	margin:0px;
+	padding:10px 10px 0px 0px;
+	text-decoration:none;
+}
+
+.mof-intra-bottom h2
+{ 
+	float:left;
+	width:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#000;
+	margin:0px;
+	padding:10px 0px 0px 10px;
+	text-decoration:none;
+}
+
+/*==========================================================================================================*/
+/* ================================= Div Footer bottoem Sides end Here ===================================*/
+/*==========================================================================================================*/
+
+.rssFeed-subscribe
+{
+	 float:right;
+	 width:400px;
+	 height:auto;
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-size:13px;
+	 color:#666;
+	 padding:0px;
+}
+
+.rssFeed-subscribe p
+{
+	 float:right;
+	 min-width:320px;
+	 height:auto;
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-size:13px;
+	 color:#666;
+	 padding:0px;
+	 margin:1px 0px 6px 0px;
+}
+
+.rssFeed-subscribe img
+{
+	 float:right;
+	 width:auto;
+	 height:auto;
+	 border:0;
+}
+
+/*   css  for home page Tab menu */
+
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	clear: none;
+	width: 100%; /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+}
+
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	float:right;
+	height:30px;
+	width:160px;
+	line-height:30px;
+	padding:0px 10px 0px 0px; 
+	margin: 0px 0px 0px 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	background: url(https://mof.gov.iq/_layouts/images/mof/tab.jpg) no-repeat;
+	text-align:right;
+	list-style: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+/* This selector is an example of how to change the appearnce of a tab button
+ * container as the mouse enters it. The class "TabbedPanelsTabHover" is
+ * programatically added and removed from the tab element as the mouse enters
+ * and exits the container.
+ */
+.TabbedPanelsTabHover {
+	background-color: #CCC;
+}
+
+/* This selector is an example of how to change the appearance of a tab button
+ * container after the user has clicked on it to activate a content panel.
+ * The class "TabbedPanelsTabSelected" is programatically added and removed
+ * from the tab element as the user clicks on the tab button containers in
+ * the widget.
+ *
+ * As mentioned above, for our default style, tab buttons are positioned
+ * 1 pixel down from where it would normally render. When the tab button is
+ * selected, we change its bottom border to match the background color of the
+ * content panel so that it looks like the tab is part of the content panel.
+ */
+.TabbedPanelsTabSelected {
+	color:#bf000f;	
+}
+
+/* This selector is an example of how to make a link inside of a tab button
+ * look like normal text. Users may want to use links inside of a tab button
+ * so that when it gets focus, the text *inside* the tab button gets a focus
+ * ring around it, instead of the focus ring around the entire tab.
+ */
+.TabbedPanelsTab a {
+	color: black;
+	text-decoration: none;
+}
+
+/* This is the selector for the ContentGroup. The ContentGroup container houses
+ * all of the content panels for each tabbed panel in the widget. For our
+ * default style, this container provides the background color and borders that
+ * surround the content.
+ *
+ * The name of the class ("TabbedPanelsContentGroup") used in this selector is
+ * not necessary to make the widget function. You can use any class name you
+ * want to style the ContentGroup container.
+ */
+.TabbedPanelsContentGroup {
+	clear: both;
+	border: 1px solid #CCCCCC;
+    clear: both;
+    width: auto !important;
+	
+}
+
+/* This is the selector for the Content panel. The Content panel holds the
+ * content for a single tabbed panel. For our default style, this container
+ * provides some padding, so that the content is not pushed up against the
+ * widget borders.
+ *
+ * The name of the class ("TabbedPanelsContent") used in this selector is
+ * not necessary to make the widget function. You can use any class name you
+ * want to style the Content container.
+ */
+.TabbedPanelsContent {
+	overflow: hidden;
+	padding: 4px;
+}
+
+/* This selector is an example of how to change the appearnce of the currently
+ * active container panel. The class "TabbedPanelsContentVisible" is
+ * programatically added and removed from the content element as the panel
+ * is activated/deactivated.
+ */
+.TabbedPanelsContentVisible {
+}
+
+/* Vertical Tabbed Panels
+ *
+ * The following rules override some of the default rules above so that the
+ * TabbedPanels widget renders with its tab buttons along the left side of
+ * the currently active content panel.
+ *
+ * With the rules defined below, the only change that will have to be made
+ * to switch a horizontal tabbed panels widget to a vertical tabbed panels
+ * widget, is to use the "VTabbedPanels" class on the top-level widget
+ * container element, instead of "TabbedPanels".
+ */
+
+.VTabbedPanels {
+	overflow: hidden;
+	zoom: 1;
+}
+
+/* This selector floats the TabGroup so that the tab buttons it contains
+ * render to the left of the active content panel. A border is drawn around
+ * the group container to make it look like a list container.
+ */
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	width: 10em;
+	height: 20em;
+	background-color: #EEE;
+	position: relative;
+	
+}
+
+/* This selector disables the float property that is placed on each tab button
+ * by the default TabbedPanelsTab selector rule above. It also draws a bottom
+ * border for the tab. The tab button will get its left and right border from
+ * the TabGroup, and its top border from the TabGroup or tab button above it.
+ */
+.VTabbedPanels .TabbedPanelsTab {
+	float: none;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+/* This selector disables the float property that is placed on each tab button
+ * by the default TabbedPanelsTab selector rule above. It also draws a bottom
+ * border for the tab. The tab button will get its left and right border from
+ * the TabGroup, and its top border from the TabGroup or tab button above it.
+ */
+.VTabbedPanels .TabbedPanelsTabSelected {
+	background-color: #EEE;
+	border-bottom: solid 1px #999;
+}
+
+/* This selector floats the content panels for the widget so that they
+ * render to the right of the tabbed buttons.
+ */
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	padding: 0px;
+	width: 30em;
+	height: 20em;
+}
+
+/* Styles for Printing */
+@media print {
+.TabbedPanels {
+	overflow: visible !important;
+}
+.TabbedPanelsContentGroup {
+	display: block !important;
+	overflow: visible !important;
+	height: auto !important;
+}
+.TabbedPanelsContent {
+	overflow: visible !important;
+	display: block !important;
+	clear:both !important;
+}
+.TabbedPanelsTab {
+	 overflow: visible !important;
+	 display: block !important;
+	 clear:both !important;
+}
+}
+
+
+/* close the home page tabe menu */
+
+
+/*CSS for Search Page(MOFSearch.aspx)  starts */
+
+.srch-Title2 a:link, .srch-Title2 a:visited, .srch-Title2 a:hover
+{
+	color:rgb(194, 12, 12) !important
+	}
+
+.srch-URL2{
+     color:#D21B0C !important
+}
+/*CSS for Search Page(MOFSearch.aspx)  Ends */
