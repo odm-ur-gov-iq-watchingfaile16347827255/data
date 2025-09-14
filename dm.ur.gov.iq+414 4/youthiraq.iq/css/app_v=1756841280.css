@@ -1,0 +1,1140 @@
+/* خلفية الهيدر */
+.app-header {
+  font-family: 'Cairo', sans-serif;
+  background-image: url('../images/pattern.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  padding: 5px 0;
+  position: relative;
+}
+
+/* الشريط العلوي */
+.top-bar {
+  padding: 5px 0;
+}
+
+.social-icons a {
+  color: #333;
+  margin-right: 10px;
+}
+
+.languages a {
+  color: #333;
+  margin-left: 5px;
+}
+
+/* قسم الشعار */
+.logo-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  top: -15px;
+  margin-top: -15px;
+}
+
+.main-logo {
+  max-height: 120px;
+}
+
+.text-logo p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.text-logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f4b41a;
+  margin: 5px 0;
+  text-align: right;
+}
+
+/* شريط التنقل */
+.main-nav {
+  background-color: #333;
+  border-top: 3px solid #f4b41a;
+  margin-top: -15px;
+  direction: rtl;
+  width: 100%;
+}
+
+.main-nav .nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav .nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+
+.main-nav .nav-link:hover {
+  color: #f4b41a;
+  text-decoration: none;
+}
+
+.main-nav .nav-link.active {
+  color: #f4b41a;
+}
+
+/* استجابة التصميم للشاشات المختلفة */
+@media (max-width: 992px) {
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-logo h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .main-logo {
+    max-height: 100px;
+  }
+
+  .top-bar .languages {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-logo {
+    order: -1; /* يجعل الشعار يظهر قبل النصوص */
+    max-height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .text-logo h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .main-logo {
+    order: -1; /* يجعل الشعار يظهر فوق النصوص */
+    max-height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .text-logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .main-nav {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+  /* الكاروسل الأساسي */
+/* تصميم الكاروسيل كما هو */
+.custom-carousel {
+  width: 100%;
+  max-width: 1500px;
+  height: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 15px;
+}
+
+.carousel-caption.custom-caption {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(210%, 27%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: right;
+  width: 35%;
+  max-width: 400px;
+  height: 250px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-date {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 15px;
+      direction: rtl; /* تحديد اتجاه النص من اليمين لليسار */
+
+}
+
+.carousel-button {
+  background-color: #f0ad4e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #ec971f;
+}
+
+
+
+
+/* الإعلامات الشرطية */
+
+/* للأجهزة اللوحية (العرض أقل من 1024px) */
+@media (max-width: 1024px) {
+  .custom-carousel {
+    height: 500px; /* تقليل ارتفاع الكاروسل */
+  }
+  .carousel-caption.custom-caption {
+    width: 50%; /* زيادة عرض التسمية لتناسب الشاشات المتوسطة */
+    right: 5%; /* تعديل المحاذاة */
+    transform: translate(0%, 50%);
+  }
+  h5 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+        direction: rtl; /* تحديد اتجاه النص من اليمين لليسار */
+
+  }
+  .carousel-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* للأجهزة الصغيرة (العرض أقل من 768px) */
+@media (max-width: 768px) {
+  .custom-carousel {
+    height: 350px; /* تقليل ارتفاع الكاروسل أكثر */
+  }
+  .carousel-image {
+    object-fit: cover; /* تأكد من أن الصور تغطي الكاروسل بشكل صحيح */
+  }
+  .carousel-caption.custom-caption {
+    width: 90%; /* عرض أكبر للتسمية النصية */
+    height: auto; /* ارتفاع تلقائي للتسمية */
+    top: 60%; /* ضبط الموضع العمودي */
+    transform: translate(0, -50%);
+    padding: 10px;
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+        direction: rtl; /* تحديد اتجاه النص من اليمين لليسار */
+
+  }
+  .carousel-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+
+/* للأجهزة الصغيرة جدًا (العرض أقل من 480px) */
+/* للأجهزة الصغيرة جدًا (العرض أقل من 480px) */
+@media (max-width: 480px) {
+  .custom-carousel {
+    height: auto;
+  }
+  .carousel-caption.custom-caption {
+    width: 68%; /* ملء العرض تقريبًا */
+    height: 50%;
+    bottom: 15%; /* تعديل الموضع */
+    padding: 8px;
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 11px;
+  }
+  p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  direction: rtl;      /* اتجاه النص من اليمين */
+  text-align: right;   /* محاذاة النص إلى اليمين */
+}
+
+  .carousel-button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* الأخبار */
+.news-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F6F6F6;
+  direction: rtl;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* جعل الأعمدة ديناميكية */
+  gap: 15px;
+}
+
+.news-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+}
+
+.news-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ضبط الصورة لتغطية المساحة بالكامل */
+  object-position: center; /* ضبط الصورة في المنتصف */
+}
+
+.news-date-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.news-day {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.news-month,
+.news-year {
+  font-size: 12px;
+  display: block;
+}
+
+.news-content {
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1; /* يضمن أن المحتوى سيأخذ المساحة المتاحة */
+}
+
+.news-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-summary {
+  font-size: 0.9rem;
+  color: #555;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* تحديد عدد الأسطر المعروضة */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* إضافة النقاط في حال كان النص طويلاً */
+  height: 4.5rem; /* تحديد ارتفاع ثابت للوصف */
+  line-height: 1.5; /* تحسين المسافة بين الأسطر */
+}
+
+.news-read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #f0ad4e;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.news-read-more-btn:hover {
+  background-color: #ec971f;
+}
+
+.news-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  background-color: #f0ad4e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-all-btn:hover {
+  background-color: #ec971f;
+}
+
+/* الإعلامات الشرطية */
+@media (max-width: 768px) {
+  .news-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .news-cards {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+  }
+
+  .news-image-wrapper {
+    height: 150px;
+  }
+  
+
+  .news-title {
+    font-size: 0.9rem;
+  }
+
+  .news-summary {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2; /* عرض سطرين من الوصف فقط في الشاشات الصغيرة */
+    height: 3.2rem; /* ارتفاع أقل للوصف */
+  }
+
+  .news-read-more-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .news-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .news-image-wrapper {
+    height: 150px;
+  }
+  .news-card {
+    max-width: 78%; /* تقليل عرض الكارت */
+    height:100%;
+    margin: 0 auto; /* لضمان تموضع الكارت في المنتصف */
+  }
+
+  .news-title {
+    font-size: 0.8rem;
+  }
+
+  .news-summary {
+    font-size: 0.7rem;
+    -webkit-line-clamp: 2; /* عرض سطرين من الوصف فقط في الشاشات الصغيرة جدًا */
+    height: 3rem; /* ارتفاع أقل للوصف */
+  }
+
+
+  .pagination .page-link {
+    font-size: 1rem; /* تصغير الأيقونات للشاشات الصغيرة */
+    padding: 6px 10px;
+  }
+  .news-read-more-btn {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+
+
+  
+  /* القارات*/
+.description {
+    word-wrap: break-word; /* لمنع تجاوز النص */
+    white-space: normal;   /* لجعل النص يلتف بشكل طبيعي */
+    overflow-wrap: break-word; /* دعم إضافي لتقسيم الكلمات */
+    font-size: 16px; /* حجم خط مناسب للموبايل */
+    line-height: 1.6; /* تحسين تباعد الأسطر */
+    text-align: justify; /* توزيع النص بشكل متناسق */
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 14px;  /* تقليل حجم الخط للشاشات الصغيرة */
+        line-height: 1.5;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+        font-size: 14px;  /* تقليل حجم الخط للشاشات الصغيرة */
+        line-height: 1.5;
+        padding: 8px;
+    }
+}
+  .decisions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .decisions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .decision-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .toggle-button {
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    text-align: center;
+  }
+  
+  .toggle-button:hover {
+    background-color: #ddd;
+  }
+  
+  .decision-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .decision-date {
+    font-weight: bold;
+    color: #f0ad4e;
+  }
+  .decision-title {
+    font-weight: bold;
+    color: #f0ad4e;
+  }
+  
+  .decision-text {
+    color: #333;
+  }
+  
+  .decision-content {
+    padding: 10px;
+    text-align: right;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* الفوتر */
+.app-footer {
+    background-color: #333; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* محتوى الفوتر */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* نص الحقوق */
+  .copyright {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* أيقونات وسائل التواصل الاجتماعي */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  .icon:hover {
+    color: #007bff; /* لون عند التمرير */
+  }
+  
+  /* أيقونة واتساب */
+  .icon.whatsapp:hover {
+    color: #25d366;
+  }
+  
+  /* أيقونة فيسبوك */
+  .icon.facebook:hover {
+    color: #4267B2;
+  }
+  
+  /* أيقونة إنستغرام */
+  .icon.instagram:hover {
+    color: #C13584;
+  }
+/* تصميم قسم البرامج */
+/* تصميم قسم البرامج */
+/* قسم البرامج */
+.programs-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f6f6f6;
+  direction: rtl;
+  margin-top: 30px;
+}
+
+.news-header h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.programs-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.program-card-link {
+  text-decoration: none;
+}
+
+.program-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 415px;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.program-logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.program-logo img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.program-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.program-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.program-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+.programs-read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #f0ad4e;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+.programs-read-more-btn:hover {
+  background-color: #ec971f;
+}
+
+/* الإعلامات الشرطية */
+@media (max-width: 1024px) {
+  .programs-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .program-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .programs-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .programs-cards {
+    display: flex; /* تفعيل flexbox للحاوية */
+    flex-direction: column; /* ترتيب الكروت بشكل عمودي */
+    align-items: center; /* محاذاة العناصر في المنتصف أفقيًا */
+    gap: 15px;
+  }
+
+  .program-card {
+    max-width: 70%; /* تقليل عرض الكارت */
+    height: 100%;
+    margin: 0 auto; /* التأكد من المحاذاة الأفقية */
+  }
+
+  .program-logo img {
+    height: 150px;
+  }
+
+  .program-title {
+    font-size: 16px;
+  }
+
+  .program-description {
+    font-size: 12px;
+  }
+
+  .programs-read-more-btn {
+    padding: 8px 16px;
+  }
+
+  .pagination .page-link {
+    font-size: 1rem; /* تصغير الأيقونات للشاشات الصغيرة */
+    padding: 6px 10px;
+  }
+}
+
+
+
+
+
+
+
+/* المواقع المهمة */
+.important-sites {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: hidden; /* إزالة شريط التمرير السفلي */
+  scroll-behavior: smooth;
+  width: 70%; /* ضبط العرض ليتناسب مع التصميم */
+  gap: 30px; /* ضبط المسافة بين الشعارات */
+  padding: 10px 0;
+  align-items: center;
+}
+
+.site-card {
+  text-align: center;
+  flex-shrink: 0;
+  width: calc(100% / 3 - 20px); /* إظهار ثلاثة شعارات فقط */
+}
+
+.site-logo {
+  width: 100px; /* ضبط حجم الشعارات */
+  height: 100px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.site-name {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* خلفية نصف شفافة */
+  border: none;
+  color: #fff;
+  font-size: 14px; /* تصغير حجم الأيقونات */
+  padding: 5px; /* تصغير حجم الزر */
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 30px; /* تصغير حجم الدائرة */
+  height: 30px;
+}
+
+.carousel-control-prev {
+  left: 3px; /* ضبط موقع السهم الأيسر */
+}
+
+.carousel-control-next {
+  right: 3px; /* ضبط موقع السهم الأيمن */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* تغيير لون الخلفية عند التمرير */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 12px; /* تصغير أيقونة السهم */
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #378BAE;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+/* الأخبار بشكل منفصل */
+.news-section1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F6F6F6;
+  direction: rtl;
+}
+
+.news-header1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-header1 h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.news-cards1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ثلاثة أعمدة في الشاشات الكبيرة */
+  gap: 10px;
+}
+
+.news-card1 {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+ width: 100%; /* ليتناسب الكارت مع العرض */
+}
+
+.news-card1:hover {
+  transform: scale(1.03);
+}
+
+.news-content1 {
+  padding: 15px;
+  text-align: center;
+}
+
+.news-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* الإعلامات الشرطية */
+@media (max-width: 1024px) {
+  .news-cards1 {
+    grid-template-columns: repeat(2, 1fr); /* عمودين في الشاشات المتوسطة */
+    gap: 15px;
+  }
+
+  .news-header1 h2 {
+    font-size: 1.7rem; /* تعديل حجم العنوان في الشاشات المتوسطة */
+  }
+
+  .news-card1 {
+    max-width: 100%; /* يسمح بمرونة أكبر في العرض */
+  }
+}
+
+@media (max-width: 768px) {
+  .news-cards1 {
+    grid-template-columns: repeat(1, 1fr); /* عمود واحد في الشاشات الصغيرة */
+    gap: 20px;
+    justify-items: center; /* توسيط الكروت أفقيًا */
+  }
+
+  .news-header1 h2 {
+    font-size: 1.5rem; /* تصغير حجم العنوان في الشاشات الصغيرة */
+  }
+
+  .news-card1 {
+    max-width: 90%; /* تحديد عرض الكارت ليكون أقل من 100% */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-header1 h2 {
+    font-size: 1.2rem; /* تصغير حجم العنوان أكثر في الشاشات الصغيرة جداً */
+  }
+
+  .news-cards1 {
+    grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة جداً */
+    gap: 15px;
+    justify-items: center; /* توسيط الكروت أفقيًا */
+  }
+
+  .news-card1 {
+    max-width: 78%; /* تقليل عرض الكارت على الشاشات الصغيرة جداً */
+  }
+}
+
+
+
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* يسمح بلف العناصر في الشاشات الصغيرة */
+  gap: 5px; /* مسافة بين الأزرار */
+  padding: 10px;
+}
+
+.pagination .page-item {
+  margin: 0;
+}
+
+.pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f4b41a; /* اللون الرئيسي */
+  background-color: transparent;
+  border: 2px solid #f4b41a; /* لون الإطار */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.pagination .page-link i {
+  vertical-align: middle;
+}
+
+.pagination .page-link:hover {
+  background-color: #f4b41a; /* لون الخلفية عند التمرير */
+  color: #fff; /* لون النص عند التمرير */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #f4b41a; /* لون الخلفية للنشط */
+  color: #fff; /* لون النص للنشط */
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #ccc; /* لون النص للمعطل */
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+
+
