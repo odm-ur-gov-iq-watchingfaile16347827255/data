@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: http://iraqnla.gov.iq/sitemap.xml
+Sitemap: http://iraqnla.gov.iq//report.php?sitemap_1.xml
+Sitemap: http://iraqnla.gov.iq//waken/page.php?sitemap_1.xml
