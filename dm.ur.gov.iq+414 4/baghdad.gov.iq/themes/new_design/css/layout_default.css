@@ -1,0 +1,130 @@
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	text-align:center;
+	font-size:12px;
+}
+
+.container {
+
+}
+
+
+
+
+#content {width:auto; padding:5px;}
+
+#dynamic_box_left {margin-right: 10px; float:left;}
+
+#dynamic_box_center {float:right;}
+
+#dynamic_box_right {margin-left: 10px; float:right;}
+
+#content_footer {clear:both;}
+
+/********** two column default layout *************/
+#layout_two_column div#dynamic_box_right {width:385px;}
+#layout_two_column div#dynamic_box_left {width:calc((100% - 10px) * 0.35);}
+#layout_two_column div#dynamic_box_center {width:calc((100% - 10px) * 0.65);}
+
+/*********deafault layout**********/
+#layout_default div#dynamic_box_right {width:300px; padding-right:10px;}
+#layout_default div#dynamic_box_left {width:160px; padding-left:10px;}
+#layout_default div#dynamic_box_center {width:420px; padding:0 10px;}
+
+/************ three columns ***************/
+#layout_three_columns div#dynamic_box_right {width:300px; padding-right:10px;}
+#layout_three_columns div#dynamic_box_left {width:160px; padding-left:10px;}
+#layout_three_columns div#dynamic_box_center {width:420px; padding:0 10px;}
+
+/************ equal ***************/
+#layout_	equal div#dynamic_box_right {width:296px; padding-right:10px;}
+#layout_equal div#dynamic_box_left {width:296px; padding-left:10px;}
+#layout_equal div#dynamic_box_center {width:286px; padding:0 10px;}
+
+/************ equal rights ***************/
+#layout_equal_rights div#dynamic_box_right {width:240px; padding-right:10px;}
+#layout_equal_rights div#dynamic_box_left {width:400px; padding-left:20px;}
+#layout_equal_rights div#dynamic_box_center {width:240px; padding-left:10px;}
+
+/************ non equal ***************/
+#layout_non_equal div#dynamic_box_right {width:300px; padding-right:20px;}
+#layout_non_equal div#dynamic_box_left {width:320px; padding-left:20px;}
+#layout_non_equal div#dynamic_box_center {width:250px;}
+
+
+/************* CONTENT FEATURES *****************/
+#content_features_left {float:right;}
+
+#content_features_right {float:right;}
+
+.features_equal_default {width:100%; overflow:hidden;}
+
+/*********** equal_default *********************/
+.features_equal_default #content_features_left {width:380px;}
+.features_equal_default #content_features_right {width:200px;}
+
+/*********** equal *********************/
+.features_equal #content_features_left {width:460px;}
+.features_equal #content_features_right {width:440px;}
+
+/*********** left *********************/
+.features_left #content_features_left {width:680px;}
+.features_left #content_features_right {width:310px;}
+
+/*********** right *********************/
+.features_right #content_features_left {width:310px;}
+.features_right #content_features_right {width:680px;}
+
+/*********** equal_three *********************/
+.features_inside .content_features_col {width:190px; float:right; margin:0 5px;}
+
+/*********** inside *********************/
+.features_inside {width:600px; overflow:hidden;}
+.features_inside #content_features_left {width:335px; padding-left:20px;}
+.features_inside #content_features_right {width:245px;}
+
+/******************** LAYOUT BOXES********************/
+#main_news_box {float:right;}
+
+.main_news_box_row {width:100%; overflow:hidden;}
+
+.main_news_box_row .cell_0 {margin-right:10px}
+
+.main_news_box_row .cell_1 {margin-left:10px;}
+
+.main_news_category { 
+	float:right; 
+	display:inline;
+	width:290px; 
+}
+
+/******************** TOOLTIPS ********************/
+.tooltip {
+	position:absolute!important;
+	overflow:hidden;
+	font-size:12px;
+	z-index:10000!important;
+}
+
+.tooltip .xtop, .tooltip .xbottom {display:block; background:transparent; font-size:1px;}
+.tooltip .xb1, .tooltip .xb2, .tooltip .xb3, .tooltip .xb4 {display:block; overflow:hidden;}
+.tooltip .xb1, .tooltip .xb2, .tooltip .xb3 {height:1px;}
+.tooltip .xb2, .tooltip .xb3, .tooltip .xb4 {background:#666; border-left:1px solid #333; border-right:1px solid #333;}
+.tooltip .xbottom .xb2, .tooltip .xbottom .xb3, .tooltip .xbottom .xb4 {background:#666;}
+.tooltip .xb1 {margin:0 5px; background:#333;}
+.tooltip .xb2 {margin:0 3px; border-width:0 2px;}
+.tooltip .xb3 {margin:0 2px;}
+.tooltip .xb4 {height:2px; margin:0 1px;}
+
+.tooltip .xboxcontent {
+	padding:0 .5em;
+	margin:0;
+	color:#000;
+	word-wrap:break-word;
+	border:1px solid #333;
+	border-width:0px 1px 0 1px;
+	background-color:#666;
+	text-align:right;
+}
