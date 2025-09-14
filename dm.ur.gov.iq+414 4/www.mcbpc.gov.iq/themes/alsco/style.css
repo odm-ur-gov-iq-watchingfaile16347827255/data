@@ -1,0 +1,319 @@
+.tiltsocail {
+  -webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}  
+  
+.tiltsocail:hover {
+  -webkit-transform: rotate(-50deg);
+-moz-transform: rotate(-50deg);
+-o-transform: rotate(-50deg);
+-ms-transform: rotate(-50deg);
+transform: rotate(-50deg);
+}
+      
+table.leftalsco th {
+	
+	color: #ffffff;     
+	height:23px;       
+	font-size:14px;      
+	font-weight: bold;      
+	font-family: Arial, Helvetica;  
+	text-decoration: none; 
+  
+background-image: url('https://www.mcbpc.gov.iq/themes/alsco/images/cellpicleft.gif'); 
+
+	   
+}       
+          
+table.rightalsco th {  
+	  
+	color: #ffffff;   
+	height:23px;           
+	font-size:14px;     
+	font-weight: bold;  
+	font-family: Arial, Helvetica;    
+	text-decoration: none;
+  
+background-image: url('https://www.mcbpc.gov.iq/themes/alsco/images/cellpicright.gif');
+
+	 
+}
+
+ 
+table.centeralsco th {   
+	  
+	color: #ffffff;     
+	 height:30px;                             
+	font-size:15px;
+	font-weight: bold;
+	font-family: Arial, Helvetica;
+	text-decoration: none;
+  
+background-image: url('https://www.mcbpc.gov.iq/themes/alsco/images/cellpiccenter.gif');
+
+	
+}
+
+
+  
+
+/*ÕÃ„ „Õ ÊÌ«  «·»·Êﬂ Ê⁄œ«œ «·’›Õ«  Êﬂ· «·ﬂ «»«  «·„ÊÃÊœ… œ«Œ· «·»·Êﬂ«  Êﬂ–·ﬂ „Õ ÊÌ«  «·»·Êﬂ Ê«·Ê«‰…
+
+*/
+a:link			{ color: #000066; font-size: 15px; font-family: Arial, Helvetica;text-decoration:none}
+a:active			{ color: #000066; font-size: 15px; font-family: Arial, Helvetica;text-decoration:none}
+a:visited		{ color: #000066; font-size: 15px; font-family: Arial, Helvetica;text-decoration:none}
+a:hover			{ color: #000066; font-size: 15px; font-family: Arial, Helvetica;text-decoration:none}
+
+/*ÕÃ„ „Õ ÊÌ«  «·»·Êﬂ «‰ Â«¡  
+  
+*/
+
+ 
+.bgcolor1		{ background-color: #FFFFFF; }
+.bgcolor2		{ background-color: #FAFAFA; }
+.bgcolor3		{ background-color: #F5F5F5; }
+.bgcolor4		{ background-color: #D1D8EC; }
+.sort				{ background-color: #D1D8EC; }
+
+.text				{ background: none; color: #000000; font-size: 11px; font-family: Arial, Helvetica}
+
+
+
+/*ÕÕÃ„ ﬂ «»… Ê«·Ê«‰ «ﬁ”«„ «·„Êﬁ⁄
+
+*/
+.title				{ background: none; color: #2666B9; font-size: 20px; font-weight: bold; font-family: MagistralC, Arial, Helvetica; text-decoration: none}
+/* ÕÕÃ„ ﬂ «»… Ê«·Ê«‰ «ﬁ”«„ «·„Êﬁ⁄
+
+*/
+
+
+.yasser 		{  border: 1px #D1D8EC solid;}
+
+.bodyline		{ background-color: #FFFFFF; border: 1px #D1D8EC solid;}
+.blockline		{ background-color: #FFFFFF; border: 1px #D1D8EC solid; border-top: none;}
+.titleline			{ border: 1px #ffffff solid;}
+.left		{ border: 1px #ffffff solid;}
+.boxtitle			{ font-family: Arial, Helvetica; font-size: 15px; color:#FF5500; font-weight: bold;}
+.content			{ background: none; color: #000000; font-size: 15px; font-family: Arial, Helvetica}
+
+
+
+.block-title		{ background: none; color: #2666B9; font-size: 15px; font-family: Arial, Helvetica}
+
+
+
+  
+/*ÕÕÃ„ ﬂ «»… Ê«·Ê«‰ «·«Œ»«—   
+
+*/
+.storytitle		{ background: none; color: #ffffff; font-size: 15px; height:1px;  font-weight: bold; font-family: Arial, Helvetica; text-decoration: none}
+/*ÕÕÃ„ ﬂ «»… Ê«·Ê«‰ «·«Œ»«—
+
+*/
+  
+
+.storycat		{ background: none; color: #FF5500; font-size: 15px; font-weight: bold; font-family: Arial, Helvetica; text-decoration: none}
+.boxcontent	{ background: none; color: #ffffff; font-size: 15px; font-family: Arial, Helvetica}
+
+
+
+/*  ÕÃ„ Êﬂ «»… ⁄‰«ÊÌ‰ ’›Õ«  «·„Êﬁ⁄ «Ì ⁄‰œ «·œŒÊ· ⁄·Ï «·›Ê·œ—«  ÌŸÂ— «·⁄‰Ê«‰ »«·ÕÃ„ «·Ì ‰—Ìœ… Êﬂ–·ﬂ «··Ê‰
+
+*/
+.option 			{ background: none; color: #FF5500; font-size: 15px; font-weight: bold; font-family: Arial, Helvetica; text-decoration: none}
+/*  ÕÃ„ Êﬂ «»… ⁄‰«ÊÌ‰ ’›Õ«  «·„Êﬁ⁄ «Ì ⁄‰œ «·œŒÊ· ⁄·Ï «·›Ê·œ—«  ÌŸÂ— «·⁄‰Ê«‰ »«·ÕÃ„ «·Ì ‰—Ìœ… Êﬂ–·ﬂ «··Ê‰  
+
+*/
+
+
+.tiny				{ background: none; color: #000000; font-size: 11px; font-weight: normal; font-family: Arial, Helvetica; text-decoration: none}
+.small			{ background: none; color: #000000; font-size: 11px; font-weight: normal; font-family: Arial, Helvetica; text-decoration: none}
+.middle			{ padding-left:3; padding-right:3; padding-top:0; padding-bottom:3;}
+.forumline		{ background-color: #FFFFFF; border: 1px #D1D8EC solid;}
+.helpline		{ background-color: #FFFFFF; border-style: none; }
+.copyright		{ background: none; color: #000000; font-size: 11px; font-weight: normal; font-family: Arial, Helvetica; text-decoration: none}
+
+
+.leftblock		{ vertical-align: top; width: 100%}
+.rightblock		{ vertical-align: top; width: 165px}
+
+
+legend			{ font-family: Arial,Helvetica; font-size: 11px; color:#FF5500; font-weight: bold;}
+
+ 
+
+fieldset			{ border: solid #2666B9 1px;}
+
+
+/*ÕÃ„ «·ﬂ·Ì ··ŒÿÊÿ «·„Êﬁ⁄  ‘„· «·ﬁÊ«∆„ Ê«·ﬁÊ«∆„ «·„‰“·ﬁ… Ê ⁄œ«œ «·’›«  Ê„Õ ÊÌ«  «·»·Êﬂ«  Êﬂ· «·ŒÿÊÿ
+*/
+font, td, p		{ font-size: 15px; font-family: Arial, Helvetica}
+/*ÕÃ„ «·ﬂ·Ì ··ŒÿÊÿ «·„Êﬁ⁄  ‘„· «·ﬁÊ«∆„ Ê«·ﬁÊ«∆„ «·„‰“·ﬁ… Ê ⁄œ«œ «·’›«  Ê„Õ ÊÌ«  «·»·Êﬂ«  Êﬂ· «·ŒÿÊÿ «‰ Â«¡
+*/
+
+
+
+hr					{ height: 0px; border: solid #ffffff 0px; border-top-width: 1px;}
+
+					
+
+th{
+	color: #ffffff;
+	height: 8px;
+	font-size:14px;
+	font-weight: bold;
+	font-family: Arial, Helvetica;
+	text-decoration: none;
+	background-color: #ffffff;
+	
+	
+	background-image: url('https://www.mcbpc.gov.iq/themes/alsco/images/cellpicleft.gif');	
+
+	
+	
+	border: medium none #ffffff ;	 
+}
+
+
+
+  
+  body {
+	margin: 0px;  
+
+	scrollbar-face-color: #f7f7f7;
+	          
+	scrollbar-track-color: #f0f0f0; 
+	scrollbar-highlight-color: #f0f0f0;    
+	scrollbar-arrow-color: #000000;
+	scrollbar-base-color: #FFFFFF;
+	scrollbar-darkshadow-color: #FFFFFF;
+
+}
+    
+
+
+
+input, textarea, select {
+	background: #FAFAFA;
+	color: #000000;
+	text-indent: 2px;
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px;
+	border-color: #DEDEDE;
+	font-size: 11px; font-family: Arial, Helvetica; text-decoration: none
+}
+
+td.row1	{ background-color: #F5F5F5; }
+td.row2	{ background-color: #EFEFEF; }
+td.row3	{ background-color: #E5E5E5; }
+
+td.cat, td.catHead, td.catSides, td.catLeft, td.catRight, td.catBottom {
+	background-image: url('https://www.mcbpc.gov.iq/themes/alsco/images/cellpic7.gif');
+	background-color:#DFDFDF; border: medium solid #FFFFFF; height: 20px
+}
+
+td.rowpic {
+	background-color: #FFFFFF;
+	background-image: url('https://www.mcbpc.gov.iq/themes/alsco/images/cellpic2.jpg');
+	background-repeat: repeat-y
+}
+
+td.cat, td.catHead, td.catBottom { height: 29px; border-width: 0px 0px 0px 0px; }
+th.thHead, th.thSides, th.thTop, th.thLeft, th.thRight, th.thBottom, th.thCornerL, th.thCornerR { font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px; }
+td.row3Right, td.spaceRow { background-color: #DFDFDF; border: #FFFFFF; border-style: solid; }
+
+th.thHead, td.catHead							{ font-size: 11px; border-width: 1px 1px 0px 1px; }
+th.thSides, td.catSides, td.spaceRow	{ border-width: 0px 1px 0px 1px; }
+th.thRight, td.catRight, td.row3Right		{ border-width: 0px 1px 0px 0px; }
+th.thLeft, td.catLeft								{ border-width: 0px 0px 0px 1px; }
+th.thBottom, td.catBottom					{ border-width: 0px 1px 1px 1px; }
+th.thTop												{ border-width: 1px 0px 0px 0px; }
+th.thCornerL										{ border-width: 1px 0px 0px 1px; }
+th.thCornerR										{ border-width: 1px 1px 0px 0px; }
+th.thNull												{ border-width: 0px 0px 0px 0px; }
+
+.maintitle	{
+	font-weight: bold; font-size: 55px; font-family: Arial, Arial, Helvetica, sans-serif;
+	text-decoration: none; line-height : 120%; color : #000000;
+}
+
+.gen																	{ font-size: 55px; }
+.genmed															{ font-size: 55px; }
+.gensmall															{ font-size: 55px; }
+.gen, .genmed, .gensmall										{ color: #000000; }
+a.gen, a.genmed, a.gensmall									{ color: #2666B9; text-decoration: none; }
+a.gen:hover, a.genmed:hover, a.gensmall:hover	{ color: #FF5500; text-decoration: none; }
+
+.mainmenu			{ font-size: 40px; color: #000000 }
+a.mainmenu			{ text-decoration: none; color: #2666B9;  }
+a.mainmenu:hover	{ color: #FF5500; text-decoration: none }
+.cattitle					{ font-weight: bold; font-size: 11px ; letter-spacing: 1px; color : #2666B9}
+a.cattitle				{ text-decoration: none; color: #2666B9; }
+a.cattitle:hover		{ color: #FF5500; text-decoration: none; }
+.forumlink				{ font-weight: bold; font-size: 11px; color : #2666B9; }
+a.forumlink 			{ text-decoration: none; color: #2666B9; }
+a.forumlink:hover	{ text-decoration: none; color: #FF5500; }
+.nav						{ font-weight: bold; font-size: 11px; color : #000000;}
+a.nav					{ text-decoration: none; color: #2666B9; }
+a.nav:hover			{ color: #FF5500; text-decoration: none; }
+.topictitle, h1, h2		{ font-weight: bold; font-size: 11px; color : #000000; }
+a.topictitle:link		{ text-decoration: none; color: #2666B9; }
+a.topictitle:visited	{ text-decoration: none; color: #2666B9; }
+a.topictitle:hover	{ text-decoration: none; color: #FF5500; }
+.name					{ font-size: 11px; color: #000000;}
+.postdetails			{ font-size: 10px; color: #000000; }
+.postbody				{ font-size: 11px; line-height: 18px}
+a.postlink:link		{ text-decoration: none; color: #2666B9 }
+a.postlink:visited	{ text-decoration: none; color: #2666B9; }
+a.postlink:hover		{ text-decoration: none; color: #FF5500 }
+a.copyright			{ color: #444444; text-decoration: none; }
+a.copyright:hover	{ color: #000000; text-decoration: underline; }
+
+.code { 
+	font-family: Courier, Arial, sans-serif; font-size: 11px; color: #006600;
+	background-color: #FAFAFA; border: #DFDFDF; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+.quote {
+	font-family: Arial, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444; line-height: 125%;
+	background-color: #FAFAFA; border: #DFDFDF; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+input.button {
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px;
+	border-color: #000000;
+}
+
+
+
+
+
+   
+.tilt {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+ 
