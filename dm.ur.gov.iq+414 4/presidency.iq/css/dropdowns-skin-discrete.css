@@ -1,0 +1,118 @@
+/* colors */
+/* ------ */
+/* togle menu button for narrow screens */
+.toggleMenu {
+	color: #fff;
+}
+/* general navigation background colors */
+.nav {
+	text-transform: uppercase;
+	font-size: 18px;
+}
+/* general navigation link font color */
+.nav a {
+	color: #fff;
+}
+/* first level items borders */
+.nav > li {
+}
+/* navigation hover colors */
+	.nav a:hover {
+		color: #f0c43a;
+	}
+/* second level navigation colors */
+	.nav li li a {
+		border-bottom: 1px solid #5c939f;
+		background: #315f6a;
+		padding-top: 5px;
+		padding-bottom: 7px;
+		line-height: normal;
+		font-size: 14px;
+	}
+/* third level navigation colors */
+.nav li li li a {
+	border-bottom: 1px solid #f0f0f0;;
+}
+/* ---------------- */
+/*      layout      */
+/* -----------------*/
+/* main div */
+.dropdowns {
+	width: auto;
+	float: right;
+	line-height: 36px;
+}
+/* small screens menu button */
+a.toggleMenu {
+	padding: 0px 40px;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+/* second and third level menus */
+.nav ul {
+	width: 11em;
+}
+/* general paddings and other stuff */
+.nav > li:first-child a {
+	padding-right: 0
+}
+
+
+.nav a {
+	padding: 5px 27px;
+	font-size: 18px
+}
+/* parents that have submenus */
+.nav > li > .parent {
+	padding-right: 17px;
+	background-position: 90% 50%;
+}
+@media screen and (max-width: 1000px) {
+	.nav > li:first-child a {
+		padding-right: inherit
+	}
+}
+
+	@media screen and (max-width: 980px) {
+		.dropdowns {
+			width: 70%;
+			line-height: 40px;
+		}
+
+		.nav {
+			position: absolute;
+			z-index: 100000000000000;
+		}
+
+			.nav a {
+				padding: 0px 20px;
+			}
+	}
+	/* small screen adjustments*/
+@media screen and (max-width: 768px) {
+	.nav ul {
+		width: 100%;
+	}
+
+	.nav > li:first-child a {
+		padding-right: 17px;
+	}
+
+	.dropdowns {
+		width: 100%;
+		line-height: 40px;
+	}
+
+	a.toggleMenu {
+		padding: 0px 30px;
+		top: 48px;
+		left: 0px;
+	}
+
+	.nav {
+		width: 100%;
+		top: 95px;
+	}
+}
