@@ -1,0 +1,11 @@
+Sitemap: https://mu.edu.iq/sitemap.xml
+
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: https://mu.edu.iq/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK
+Sitemap: https://mu.edu.iq/sitemap.xml
