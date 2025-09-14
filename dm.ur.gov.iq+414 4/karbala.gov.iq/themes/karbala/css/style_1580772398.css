@@ -1,0 +1,1068 @@
+.fl{float:left}
+.fr{float:right}
+.tl{text-align:left}
+.tc{text-align:center}
+.tr{text-align:right}
+
+@font-face {font-family: "NeoSansArabic";
+    src: url("../font/neosansarabic.ttf");
+}
+
+a{color:#131313;text-decoration: none !important;}
+ul{list-style: none;}
+ul li{display:inline-block; padding:0 4px}
+
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: "NeoSansArabic" !important;
+  background-color: #17171f;
+}
+
+.main-navigation li a , .secondary-navigation li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-left: 1px solid #24242b;
+    border-bottom: 1px solid #24242b;
+    background-size: 200% 200%;
+    background-color: transparent;
+    background-image: linear-gradient(to top, #1d1d25 51%, transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease;
+    transition: background-position 300ms, color 300ms ease;
+}
+
+
+.main-navigation li a:hover, .main-navigation li.active a{
+    border-bottom: 1px solid #1d1d25;
+    color: #74a6da;
+    background-image: linear-gradient(to top, #1d1d25 51%, transparent 50%);
+    background-position: 0 100%;
+    -webkit-transition: background-position 300ms, color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease;
+    transition: background-position 300ms, color 300ms ease;
+}
+
+
+ul.secondary-navigation li a {
+    width: 50px;
+    font-size: 20px;
+    padding: 15px;
+    color: #747479;	
+    border-bottom: 1px solid #24242b;
+    background-size: 200% 200%;
+    background-color: transparent;
+    background-image: linear-gradient(to top, #17171f 50%, transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease;
+    transition: background-position 300ms, color 300ms ease;
+    cursor: pointer;
+}
+
+.secondary-navigation li a:hover{
+    border-bottom: 1px solid #1d1d25;
+    color: #fff;
+    background-image: linear-gradient(to top, #1d1d25 51%, transparent 50%);
+    background-position: 0 100%;
+    -webkit-transition: background-position 300ms, color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease;
+    transition: background-position 300ms, color 300ms ease;
+}
+
+
+
+ul.secondary-navigation li a.color-twitter:hover {background-image: linear-gradient(to top, #55acee 51%, transparent 50%);}
+ul.secondary-navigation li a.color-facebook:hover {background-image: linear-gradient(to top, #3b5998  51%, transparent 50%);}
+ul.secondary-navigation li a.color-youtube:hover {background-image: linear-gradient(to top, #cc181e  51%, transparent 50%);}
+ul.secondary-navigation li a.color-instagram:hover {background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);}
+ul.secondary-navigation li a.color-linkedin:hover {background-image: linear-gradient(to top, #0077b5   51%, transparent 50%);}
+ul.secondary-navigation li a.color-search:hover{background-image: linear-gradient(to top, #74a6da 51%, transparent 50%);}
+ul.secondary-navigation li a.color-envelope{background-image: linear-gradient(to top, #74a6da 50%, transparent 50%);}
+
+.header-brand-logo{background-color:#1d1d25;text-align: center; padding:10px 15px;}
+.header-brand-logo img{width:100%;}
+
+
+.contentNavSlider{
+	position:relative;
+	z-index:3;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.36);
+	width: 80%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+/*
+.contentNavSlider:before, .contentNavSlider:after{
+    content: '';
+    height: 60px;
+    width: 60px;
+	position:absolute;
+	top:calc(50% - 30px);
+	background: #74a6da;
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer
+}
+
+.contentNavSlider:before{
+	right:-61px;
+    background-image: url(https://karbala.gov.iq/themes/karbala/img/read-more-arrow-right.png);	
+}
+
+.contentNavSlider:after{
+	left:-61px;
+    background-image: url(https://karbala.gov.iq/themes/karbala/img/read-more-white-arrow.png);
+}
+*/
+.owl-nav button{
+    background: #88b3df !important;
+    color: #fff !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 0 !important;
+    font-size: 30px !important;
+    position: absolute; 
+    top: 250px;
+}
+.owl-nav .owl-next{position: absolute; left: 35px}
+.owl-nav .owl-prev{position: absolute; left: 101px}
+
+.contentNavSlider .contentNavSlider-header-0{	
+	font-size: 70px;
+    font-weight: bold;
+    color: #ebebec;
+	margin:35px 0 25px;
+}
+.contentNavSlider  .contentNavSlider-date{
+    margin: 0px 0px 15px 0px;
+    font-size: 15px;
+	color: #74a6da;
+}
+.contentNavSlider .contentNavSlider-details{
+	margin: 0px 0px 25px 0px;
+	font-size: 18px;
+    color: #000000;
+    margin: 30px 0px 34px 0px;
+    min-height: 40px;
+    max-height: 68px;
+    overflow: hidden;
+    line-height: 35px;	
+}
+.contentNavSlider .contentNavSlider-icon{padding:0;    margin-bottom: 35px;}
+.contentNavSlider .contentNavSlider-icon img{
+	opacity: 0.4;
+	transition: opacity 0.1s ease-in;
+    -o-transition: opacity 0.1s ease-in;
+    -ms-transition: opacity 0.1s ease-in;
+    -moz-transition: opacity 0.1s ease-in;
+    -webkit-transition: opacity 0.1s ease-in;
+}
+.contentNavSlider .contentNavSlider-icon img:hover{opacity: 1;}
+
+.contentNavSlider .contentNavSlider-link{font-size: 18px;padding: 10px 0;position:relative}
+
+.border-slider{
+	position:absolute;
+	bottom:0;
+	left:0;
+    width: 15px;
+    height: 3px;
+    transition: width 0.5s ease;
+    display: block;
+    margin-top: 3px;
+}
+.border-slider.border-slider-bg1{background-color: #74a6da;}
+.border-slider.border-slider-bg2{background-color: #fff;}
+a.read-more-link:hover span.border-slider{width:100% !important}
+
+
+.section-2{position:relative;top:-81px; z-index:0}
+
+
+.section-2-right-block{background-color: #fff;width: 100%;overflow: hidden;min-height:300px}
+.section-2-right-block img{margin-top: 45px;border: 1px solid #dcdcdc;width:100%;}
+
+.quration{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    color: #ffcf2b;
+    font-weight: bold;
+    line-height: 40px;
+    margin: 68px 0px 0px 0px;
+	text-align:center;
+}
+.section-2-right-block .quotAuthor {
+    font-size: 18px;
+    color: #767272;
+	text-align:center;
+}
+
+.section-2-right-block .quotMessage {
+	text-align:center;
+    font-size: 22px;
+    margin: 15px 0px 15px 0px;
+    min-height: 128px;
+    max-height: 128px;
+}
+	
+.section-2-right-block .underline {
+    width: 45px;
+    border-top: 1px solid #ffcf2b;
+    text-align: center;
+    margin: 13px auto;
+	height: 1px;
+}
+
+.section-3{
+	padding:90px 0;
+	position: relative;
+	/*top:-81px; */
+	/*background:#5e99d5;
+	background-image:url('https://karbala.gov.iq/themes/karbala/img/leader-board-bg.jpg');*/
+	background-position:center;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.section-3::before{
+    background:#5e99d5ab;width:100%;height:1000px;position: absolute;top: 0;
+}
+
+.section-3-header, .section-4-header{
+	font-weight:bold;
+	font-size:60px;
+    color:#fff;
+    margin-top: 0;
+}
+
+.section-3-paragraph, .section-4-paragraph{
+    line-height: 1.8;
+    font-size: 22px;
+    color: #fff;
+    margin: 40px 0;
+    width: 90%;
+    height: 240px;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+    padding: 10px;
+	
+}
+
+.section-4{position: relative;top: -200px;}
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: #FFF;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	background-color: #FFF;
+	/*
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(0, 0, 0, 1) 0%,
+											  rgba(0, 0, 0, 1) 25%,
+											  transparent 100%,
+											  rgba(0, 0, 0, 1) 75%,
+											  transparent)
+    */
+}
+
+
+
+
+
+/* content start */
+.news-content-section{
+    position: relative;
+    float: right;
+    display: block;
+	width: 100%;
+	padding:10px 7%;
+}
+.news-content-section h3:first-of-type{
+	font-size: 40px;
+	line-height: 60px;
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+	font-family: 'NeoSansArabic';
+	margin: 20px 0;
+}
+
+.news-content-top-header{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #dcdcdc;
+	float: right;
+	overflow:hidden;
+}
+
+.news-content-top-header h6{
+	font-size: 16px;
+	line-height: 60px;
+	color: #000000;
+	padding: 0 100px;
+	font-weight: bold;
+}
+
+.news-content-top-header a{
+	position: absolute;
+	display: inline-block;
+	width: 80px;
+	height: 100%;
+	background-color: #74a6da;
+	top: 0px;
+	right: 0px;
+	background-image: url(https://karbala.gov.iq/themes/karbala/img/read-more-arrow-right.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-moz-transition: background-position 0.3s ease-in;
+	-ms-transition: background-position 0.3s ease-in;
+	-o-transition: background-position 0.3s ease-in;
+	-webkit-transition: background-position 0.3s ease-in;
+	transition: background-position 0.3s ease-in;
+}
+
+.news-published-date{
+    font-size: 18px;
+    line-height: 40px;
+    color: #74a6da;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.social-share-buttons-wrapper img{
+	opacity: 0.4;
+	transition: opacity 0.1s ease-in;
+    -o-transition: opacity 0.1s ease-in;
+    -ms-transition: opacity 0.1s ease-in;
+    -moz-transition: opacity 0.1s ease-in;
+    -webkit-transition: opacity 0.1s ease-in;
+}
+.social-share-buttons-wrapper img:hover{opacity: 1;}
+
+
+.news-image-wrapper{
+    height: auto;
+    outline: 0px;
+    position: relative;
+    border: 1px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
+}
+
+.related-news{
+	background-color:#fff;
+	overflow:hidden
+}
+.related-news-header{
+    position: relative;
+    float: right;
+    display: block;
+    width: 100%;
+    background-color: #74a6da;
+    height: 80px;
+    background-image: url(https://karbala.gov.iq/themes/karbala/img/related-news.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    padding: 28px 70px;
+}
+.related-news-header h4 {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 20px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.related-news-item{
+    position: relative;
+    float: right;
+    display: block;
+    width: 100%;
+    padding: 30px 30px 30px 30px;
+    border-bottom: 1px solid #dcdcdc;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+.related-news-item:hover {
+	background-color:rgba(116, 166, 218, 0.9);
+}
+.related-news-item:hover h5, .related-news-item:hover p{color:#fff;}
+.related-news-item:hover span{color:#f7f7f7;}
+
+
+.related-news-item h5{
+    font-size: 24px;
+    line-height: 44px;
+    color: #000000;
+    width: 100%;
+    transition: all 0.3s ease-in;
+}
+
+.related-news-item span {
+    font-size: 16px;
+    line-height: 40px;
+    color: #74a6da;
+    width: 100%;
+    transition: all 0.3s ease-in;
+}
+
+.related-news-item p {
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    max-height: 130px;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.next-prev-news-item{
+	position:relative;
+	height:400px;
+	background-position: center;
+	background-size: cover;
+}
+
+.next-prev-news-item:after{
+    content: ""; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+
+.next-prev-news-item > p {
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    padding: 0 7.8vw;
+}
+
+.next-prev-news-item h2{
+    line-height: 1.2;
+    font-weight: bold;
+    font-family: 'NeoSansArabic';
+    text-align: center;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    padding: 0 7.8vw;
+    transform: translateY(-50%);
+    min-height: 8.67vw;
+    max-height: 8.67vw;
+}
+.next-prev-news-item h2 a{color: #ffffff;}
+
+
+.read-more-circle{
+	position:absolute; 
+	bottom:15%;
+	width:100%;
+}
+
+.read-more-circle .circle{
+    text-align: center;
+    top: -30px;
+    z-index: 1;
+    position: absolute;
+    width: 8%;
+    height: 60px;
+    left: 46%;
+    display: block;
+    background: #b3b3b387;
+    border-radius: 100%;
+	border: 3px solid #b3b3b387;
+	transition: all 0.5s linear;
+}
+.read-more-circle .circle:hover{
+	border: 3px solid #74a6da;
+}
+.read-more-horizontal-line{
+    z-index: 1;
+	position: absolute;
+    width: 41%;
+    height: 1px;
+	background: #858488;
+}
+
+.read-more-right-line{
+	right:5%
+}
+.read-more-left-line{
+	left:5%
+}
+/* content end */
+
+.demo-logo{
+    background: #88b3df;
+    width: 272px;
+    height: 40px;
+    position: fixed;
+    top: 49px;
+    left: -65px;
+    text-align: center;
+    line-height: 2;
+    font-size: 20px;
+    color: #FFFFFF;
+    transform: rotate(-45deg);
+    z-index: 2;
+}
+
+/* SUGGESTION START */
+.suggetions-inner-wrapper{
+    background-color: #fff;
+    padding: 50px 5.25vw 0;
+    margin-top:12px;
+    overflow:hidden;
+}
+
+.form-field input{
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 50px;
+    outline: 0px;
+    margin:10px 0;
+}
+.form-field input:focus , .form-field textarea:focus {
+    border-bottom: 1px solid #74a6da;
+}
+
+
+
+.form-field select{
+    font-size: 18px;
+    line-height: 18px;
+    color: #888;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 50px;
+    outline: 0px;
+    margin:10px 0;
+}
+option
+{
+    color: #000;
+}
+option:first-child
+{
+    color: #ccc;
+}
+.form-field textarea {
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 8.67vw;
+    outline: 0px;
+    padding: 1.839vw 0 0 0;
+    resize: none;
+}
+
+.submit-suggetions-form{
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #74a6da;
+    display: block;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 40px;
+    padding: 0.49vw 1.83vw;
+    text-decoration: none;
+    outline: 0px;
+    margin: 30px 0 20px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.suggetions-image-main{
+    position:relative;
+}
+.suggetions-social-icons{
+    width: 11.56vw;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #17171f;
+    padding: 4.72vw 0 0 0;
+    text-align:center;
+    background-color:rgba(32, 32, 38, 0.9);
+}
+
+.suggetions-social-icons h6 {
+    display: block;
+    font-size: 1.05vw;
+    line-height: 2.62vw;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'NeoSansArabic';
+}
+
+.social-media-icon a {
+    border: 1px solid rgba(255,255,255,0.75);
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    padding: 7px 0px;
+    cursor: pointer;
+    font-size: 1.31vw;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    background-color: transparent;
+    background-image: linear-gradient(to top, #17171f 50%, transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease;
+    transition: background-position 300ms, color 300ms ease;
+}
+.suggetions-social-icons a:hover {
+    background-position: 0 100%;
+}
+
+.suggetions-social-icons a.color-facebook {background-image: linear-gradient(to top, #3b5998 50%, transparent 50%);}
+.suggetions-social-icons a.color-twitter {background-image: linear-gradient(to top, #55acee 50%, transparent 50%);}
+.suggetions-social-icons a.color-youtube {background-image: linear-gradient(to top, #cc181e 50%, transparent 50%);}
+.suggetions-social-icons a.color-instagram{background-image: linear-gradient(to top, #895656 50%, transparent 50%);}
+.suggetions-social-icons a.color-instagram:hover{background-image: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);}
+
+.suggetions-social-icons span {
+    margin-bottom:24px;
+    font-size: 0.945vw;
+    line-height: 2.62vw;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+}
+/* SUGGESTIONS END */
+
+
+
+/* section start */
+.category-wrapper{position:relative}
+.category-heading{
+	background: #74a6da;
+	color:#fff
+}
+.category-heading h3{
+	margin:0; 
+	padding:16px 22px; 
+	font-weight:400
+}
+.category-block-item{border-left:1px solid #e5e5e5}
+.category-content-wrapper{
+    min-height: 350px;	
+	padding:40px;
+	line-height: 2;
+	max-height: 350px;
+	background: #fff;
+	transition: all 0.1s ease-in;
+}
+.category-content-wrapper h4{
+	color:#000; 
+	line-height:2; 
+	font-weight:bold;
+}
+.category-content-date{color: #74a6da;}
+.category-content-wrapper:hover{background:#74a6da}
+.category-content-wrapper:hover .category-content-date, .category-content-wrapper:hover h4, .category-content-wrapper:hover p{
+	color:#fff
+}
+
+.category-leftside{top:0}
+.category-leftside-heading{
+	background: #46586a;
+	color:#fff
+}
+.category-leftside-heading h4{
+	margin:0;
+	line-height: 3.25;
+	padding-right: 12px;
+}
+.category-leftside-heading img{margin-left: 8px;}
+
+.category-leftside-block{
+	position:relative;	
+	background-image:url('https://karbala.gov.iq/themes/karbala/css/img/pic2.jpg');
+	background-size:cover;
+	height: calc(100vh - 58px);
+	padding:30px;
+	color:#fff;
+}
+.category-leftside-block::after{
+	content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.category-leftside-block span{
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    z-index: 1;
+    position: absolute;
+	top:50%;
+}
+.category-leftside-block h4 a{
+    font-size: 24px;
+    line-height: 22px;
+	font-weight: bold;
+    color: #ffffff;
+    z-index: 1;
+    position: absolute;
+	top:55%;	
+}
+
+.pagination-parent-wrapper{
+	text-align: center; 
+	height:40px; 
+	line-height:4; 
+	border-top:1px solid #e5e5e5;
+}
+.pagination-parent-wrapper a , .pagination-page{
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+.pagination-disable{background: #cfcfcf;}
+.pagination-page{
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+/* section end */
+
+
+/*footer start */
+footer{
+    background-color: #1d1d25;
+    position: relative;
+    top: 0;
+    padding-top: 33px;
+}
+footer h3{
+	text-align:center;
+	color: #ffffff;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 50px;
+}
+.social-media-count-box{
+	margin: 88px 0; 
+}
+footer .counter-box {
+	position: relative;
+    display: inline-block;
+	width: 24%;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid #24242b;
+    border-left: 0px;
+    min-width: auto;
+    max-width: none;
+    font-size: 18px;
+    color: #b8b8b8;
+    text-decoration: none;
+}
+footer .counter-box:hover{color:#fff}
+footer .counter-box-twitter:hover {background-image: linear-gradient(to top, #55acee 100%, transparent 50%);}
+footer .counter-box-facebook:hover {background-image: linear-gradient(to top, #3b5998 100%, transparent 50%);}
+footer .counter-box-youtube:hover {background-image: linear-gradient(to top, #ff0000 100%, transparent 50%);}
+footer .counter-box-instagram:hover {background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);}
+
+footer .counter-box span.media-type {
+    padding: 25px 50px 25px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+footer .counter-box i.fa {
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 14px;
+    font-size: 20px;
+    color: #fff;
+}
+footer .counter-box:first-child {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+footer .counter-box:last-child {
+    border-left: 1px solid #24242b;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+footer .copy-right{
+    background-color: #17171f;
+    border-top: 1px solid #24242b;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.copy-right{
+    color: #b8b8b8;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+
+/* footer end */
+@media only screen and (max-width: 600px) {
+    .contentNavSlider{width:100%;}
+    .section-2,.section-3,.section-4{top:0px;}
+    footer .counter-box{width:49%;}
+}
+.section-4-leftside .title{
+	font-size: 55px;
+    font-weight: bold;
+    color: #ebebec;
+    margin: 35px 25px 40px 0;
+}
+
+.section-4-slider .quoutImage {
+    width: 90%;
+    border: 1px solid #dcdcdc;
+}
+.section-4-slider .quoutImage img {
+	display: block;	
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    width: 100%;
+    transition: all 0.3s ease-in;	
+}
+
+.section-4-slider .quoutImage img:hover {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.section-4-slider .quoutTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #74a6da;
+    margin: 25px 0px 0px 0px;
+}
+
+.section-4-slider .quoutContent {
+    color: #000000;
+    line-height: 32px;
+    margin-top: 15px;
+    min-height: 200px;
+    text-align: justify;
+    width: 90%;
+}
+
+.owl-carousel2 .owl-prev {
+    right: -72px;
+    top: 180px;
+}
+.owl-carousel2 .owl-next {
+    right: -72px;
+}
+
+.social-media-icon img{
+	opacity: 0.4;
+	transition: opacity 0.1s ease-in;
+    -o-transition: opacity 0.1s ease-in;
+    -ms-transition: opacity 0.1s ease-in;
+    -moz-transition: opacity 0.1s ease-in;
+    -webkit-transition: opacity 0.1s ease-in;
+}
+.social-media-icon img:hover{opacity: 1;}
+/* -------------- services start ---------------- */
+.services-ul{margin: 20px 0 0 0;}
+.services-ul li{
+    padding: 15px;
+    font-size:18px;
+    background: #74a6da;
+    transform: skew(-30deg, 0deg);    
+}
+.services-ul li{border-top: 3px solid #74a6da;}
+.services-ul li a{
+    display: block;
+    transform: skewX(20deg);
+    color:#fff
+}
+.services-ul li.active{background: #fff;}
+.services-ul li.active a{color:#74a6da}
+.suggetions-inner-wrapper h2,.suggetions-inner-wrapper .h2 {
+    margin-top: 16px;
+    margin-bottom: 25px;
+}
+/* -------------- services end ---------------- */
+
+/* ------------- full menu start -------------- */
+.navbar-toggle {
+    float: right;
+	border-radius:0;
+}
+.navbar{
+	margin: 0;
+    border-radius: 0
+}
+.dropdown-menu li{width: 100%;}
+.nav-search input{
+	background: transparent;
+    border-radius: 0;
+    border: 1px solid rgba(116, 166, 218, 0.5);
+	color: #eee;
+}
+.nav-search button{
+	border-radius: 0;
+    background: #131313;
+    border: 1px solid #74a6da;
+    color: #ddd;
+	transition: all .2s ease-in;
+}
+.nav-search button:hover{
+    background: #74a6da;
+	color: #fff;
+}
+/* ------------- full menu end -------------- */
+
+/* ------------- switch input start ---------- */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 16px;
+    float: left;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+      background-color: #1c3643;
+      opacity: 1;
+  }
+  input:checked + .slider {
+    background-color: #437572;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #437572;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+/* ------------- switch input end ---------- */
+
+.asdar-box{background-color:#74a6da; width:100%}
+.asdar-box .asdar-box-image{background-size: cover; width:100%; height:420px}
+
+.asdar-box h2 {
+	padding: 8px 10px 10px;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.asdar-box p{
+    background: #31465c;
+    color: #fff;
+	margin:0;
+	padding: 4px 10px;
+    font-size: 12px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+.asdar-box p:last-of-type{text-align:left}
+/* -------------------- pubs end -------------------- */
