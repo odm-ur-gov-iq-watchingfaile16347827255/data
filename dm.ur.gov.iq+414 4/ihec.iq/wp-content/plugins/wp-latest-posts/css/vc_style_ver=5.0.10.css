@@ -1,0 +1,31 @@
+.wplp-vc-container {
+    position: relative;
+    text-align: center;
+}
+
+.wplp-vc-container .vc-wplp-placeholder {
+    background: url(https://ihec.iq/wp-content/plugins/wp-latest-posts/img/wplp-tmce-placeholder.svg) no-repeat scroll center center;
+    height: 230px;
+    border-radius: 2px;
+    width: 100%;
+    background-size: contain;
+    margin-bottom: 30px;
+}
+
+.wplp-vc-container .wplp-vc-message {
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    left: 0;
+}
+
+.wpb_column_container .wplp-icon,
+#vc_wplp .wplp-icon{
+    background-image: url(https://ihec.iq/wp-content/plugins/wp-latest-posts/img/wplp-icon.svg)!important;
+    background-size: cover!important;
+    width: 30px!important;
+    height: 30px!important;
+}
