@@ -1,0 +1,2156 @@
+@import "https://hajj.gov.iq/static/fonts/fonts/style.css";
+@import "https://hajj.gov.iq/static/fonts/BBC/styles.css";
+@import "https://hajj.gov.iq/static/fonts/MyriadArabic/style.css";
+
+
+* {
+    font-family: 'Droid Arabic Kufi';
+
+}
+
+a {
+    color: inherit;
+}
+
+.row {
+    position: relative;
+}
+
+.column {
+    margin-bottom: 5px;
+}
+
+img:not(.img) {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes imgbg {
+    0% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+a:hover {
+    color: inherit;
+}
+
+.imgbg {
+    width: 100%;
+    height: 200px;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.imgbg:hover {
+    /*animation: imgbg 3s linear;
+    background-position: 0% 100%;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'HacenLinerXL';
+}
+
+body {
+    background: #fff;
+}
+
+.fluid {
+    max-width: 100%;
+}
+
+/********************************* Old Css *********************************************************/
+.hajj_logo {
+    max-width: 154px;
+    margin-top: 6px;
+    margin-right: 74px;
+    position: relative;
+}
+
+.alhajj_text {
+
+    margin-right: 0px;
+    margin-top: 8px;
+}
+
+.menu_li {
+    list-style: none;
+    font-size: 14px;
+    list-style: none;
+    color: #fff;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    margin-top: 1px;
+    /* margin: 1px 12px;*/
+    margin: 1px 9px;
+}
+
+.menu_li:first-child {
+    margin-left: 138px;
+    margin-right: 0px;
+}
+
+.menu_li:nth-child(2) {
+    /* margin: 1px 24px;*/
+    margin: 1px 7px;
+
+}
+}
+.is-dropdown-submenu > li {
+    border-bottom: 1px solid;
+    }
+.menu_li a {
+    padding: 0.7rem 10px;
+}
+.dropdown.menu a{
+ padding: 0.7rem 10px;
+}
+.input_search {
+    margin-left: 16px;
+    float: left;
+    margin-top: 76px;
+    width: 420px;
+    border-radius: 23px;
+    background-image: url('../../../static/images/site/search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.header_menu {
+    height: 37px;
+    background-color: rgb(31, 102, 191);
+}
+
+/**************** category_page ******************************************/
+.category_page {
+    width: 200px;
+    height: 71px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding-right: 23px;
+}
+
+.category_page_title {
+    color: rgb(109, 109, 109);
+    font-size: 12px;
+    text-align: center;
+}
+
+.category_page_link {
+    padding-top: 5px;
+    margin-top: 10px;
+    width: 123px;
+    height: 31px;
+    background-color: rgb(7, 157, 23);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.header_date {
+    padding-top: 9px;
+    padding-right: 29px;
+    padding-left: 29px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 100%;
+    height: 71px;
+    background-color: rgb(221, 231, 238);
+}
+
+.day {
+    padding-right: 7px;
+    float: right;
+    font-family: Myriad Arabic;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: justifyLeft;
+}
+
+.clock {
+    margin-right: 4px;
+    float: right;
+    background-color: rgb(31, 102, 191);
+    width: 71px;
+    height: 24px;
+    font-size: 12px;
+}
+
+.space {
+    margin-top: 5px;
+
+}
+
+.Prayer {
+    padding-top: 4px;
+    background-color: rgb(221, 231, 238);
+    height: 71px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-right: 4px;
+}
+
+.ellipse {
+    float: right;
+    padding-top: 16px;
+    font-family: Myriad Arabic;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: rgb(7, 157, 23);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    line-height: 0.8;
+    padding-right: 14px;
+}
+
+.column_Prayer {
+    padding-top: 3px;
+    float: right;
+    height: 61px;
+    font-size: 12px;
+    width: 134px;
+}
+
+.column_Prayer .day {
+    font-size: 12px;
+    font-family: 'Droid Arabic Kufi';
+    line-height: 1.5;
+}
+
+.column_Prayer:first-child {
+    border-left: solid 1px;
+
+}
+
+.red {
+    color: red;
+
+}
+
+/**************** End category_page ******************************************/
+
+/**************** News ******************************************/
+
+.news_title_slider {
+    padding: 40px 80px;
+}
+
+.news_title_slider a {
+    font-size: 20px;
+    font-family: "BBCNassim";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+
+}
+
+/****************************************/
+
+.figure_2 {
+    overflow: hidden;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.column_news .image_slider {
+    display: block;
+    width: 100%;
+
+}
+
+
+/*Zoom In*/
+.column_news#zoomIn .image_slider {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.column_news#zoomIn:hover .image_slider {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*Zoom Out*/
+.column_news#zoomOut .image_slider {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.column_news#zoomOut:hover .image_slider {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.column_news .image_slider {
+    display: block;
+    width: 100%;
+}
+
+.news_image {
+    height: 150px;
+}
+
+.image_slider {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.date {
+    font-family: "BBCNassim";
+    padding-top: 7px;
+    direction: ltr;
+    color: #a0a0a0;
+}
+
+.hj_title_news_ {
+    font-family: "BBCNassim";
+    margin-top: 24px;
+    font-size: 17px;
+    height: 54px;
+    font-weight: bold;
+}
+
+.hj_content_news_ {
+    margin-top: -48px;
+    font-family: "BBCNassim";
+    font-size: 16px;
+}
+
+.row {
+    padding: 0px 9px;
+
+}
+
+.row:first-child {
+
+    padding-right: 0px;
+}
+
+.line {
+    height: 1px;
+    background: gainsboro;
+    width: 98%;
+}
+
+.more_news {
+    text-align: left;
+    color: rgb(246, 0, 0);
+    line-height: 1.2;
+    font-size: 10px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+
+.hj_book {
+    transition: all .4s;
+    padding-top: 12px;
+    border-radius: 10px;
+    background-color: rgb(221, 231, 238);
+    width: 245px;
+    height: 227px;
+    padding: 13px;
+}
+
+.hj_category {
+    margin-right: 7px;
+    float: right;
+
+    margin-bottom: 16px;
+}
+
+.hj_book_title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: right;
+    height: 52px;
+    border-left: solid #9c9494 1px;
+    color: #000;
+    font-family: "BBCNassim";
+    font-weight: bold;
+    width: 70%;
+    margin-top: 8px;
+
+}
+
+
+.hj_book_views {
+    width: 30%;
+    color: red;
+    float: right;
+
+}
+
+.hj_book_views p {
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.views {
+    margin-top: -12px !important;
+    font-size: 12px;
+    color: #000;
+
+}
+
+/*********************************/
+/**************** End news ******************************************/
+/**************** wills_and_instructions ******************************************/
+
+
+.instructions_image {
+    width: 368px;
+    height: 244px;
+}
+
+.instructions_date {
+    float: right;
+    width: 100px;
+    text-align: right;
+    color: rgba(71, 71, 71, 0.502);
+    line-height: 1.2;
+    font-size: 12px;
+    font-family: Tahoma;
+}
+
+.instructions_views {
+    font-size: 12px;
+    color: rgb(105, 105, 105);
+}
+
+.instructions_category {
+    margin-top: 42px;
+    font-size: 15.341px;
+    font-family: "BBCNassim";
+    color: rgb(232, 94, 21);
+    line-height: 1.2;
+    text-align: right;
+    margin-bottom: 6px;
+}
+
+.instructions_title {
+    text-align: right;
+    font-size: 20px;
+    font-family: "BBCNassim";
+    color: rgb(35, 31, 32);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.instructions_content {
+    margin-top: 34px;
+    font-size: 18px;
+    font-family: "BBCNassim";
+    color: rgb(137, 137, 137);
+    line-height: 1.2;
+    direction: rtl;
+    text-align: right;
+}
+
+.instructions_row2_image {
+
+    width: 155px;
+    height: 103px;
+}
+
+.instructions_hover:hover {
+    background-color: rgb(236, 236, 236);
+
+}
+
+/**************** End wills_and_instructions ******************************************/
+
+/**************** Application ******************************************/
+.App {
+    margin-top: 88px;
+
+}
+
+.app_bg {
+    height: 222px;
+    background-image: url('../../../static/images/site/app_layer.png');
+    text-align: center;
+}
+
+.paddin_left {
+    padding-left: 8px;
+
+}
+
+.App_title {
+    margin-top: 6px;
+    color: rgb(50, 90, 131);
+    font-weight: bold;
+    line-height: 1.875;
+    text-align: center;
+
+}
+
+.App_link {
+    width: 138px;
+    float: right;
+
+}
+
+.App_ln {
+    height: 40px;
+    margin: 1px auto;
+    width: 300px;
+    margin-top: 36px;
+}
+
+/**************** End Application ******************************************/
+.voting {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 77px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    width: 309px;
+    height: 322px;
+}
+
+.voting_title {
+    padding: 20px 10px;
+    font-family: "BBCNassim";
+    font-size: 19.273px;
+    color: rgb(35, 31, 32);
+    line-height: 1.2;
+}
+
+.voting_an {
+    padding-right: 15px;
+    font-family: "BBCNassim";
+}
+
+.voting_send {
+    float: left;
+    background-color: rgb(31, 102, 191);
+    width: 123px;
+    height: 31px;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 63px;
+    margin-top: 11px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.email_section {
+    margin-right: auto;
+    margin-top: 66px;
+    border-width: 1px;
+    border-color: rgb(162, 162, 162);
+    border-style: solid;
+    border-radius: 3px;
+    background-color: rgb(238, 240, 243);
+    width: 309px;
+    height: 322px;
+    margin-left: auto;
+}
+
+.email_section_title {
+    text-align: center;
+    font-family: "BBCNassim";
+    font-size: 16px;
+}
+
+.email_input {
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #00fd08;
+}
+
+.button_send:hover {
+    border: solid 1px #1f66bf;
+    background-color: #1f66bf;
+}
+
+.button_send {
+    float: left;
+    cursor: pointer;
+    border: solid 1px #1f66bf;
+    width: 75px;
+    height: 32px;
+    padding: 4px;
+    background-color: #1f66bf;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 6px;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+.email_input {
+    width: 204px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #1f66bf;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#error_ p {
+    color: #e20c0c;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: "BBCNassim";
+    font-size: 16px;
+}
+
+
+/**************** End Application ******************************************/
+/**************** Project ******************************************/
+.Project_section {
+
+    background: #f8f8f8;
+    margin-top: -6px;
+    height: 286px;
+}
+
+.bg_circle {
+    background-color: rgb(235, 235, 235);
+    width: 180px;
+    height: 173px;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    transition: all .3s;
+}
+
+.project_image {
+    width: 145px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 173px;
+    margin: 0 auto;
+}
+
+.bg_circle:hover {
+    border-radius: 10%;
+    background-color: rgb(226, 226, 226);
+}
+
+.project_link {
+
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+
+}
+
+.project_title {
+    text-align: center;
+
+}
+
+.project_title a {
+    position: relative;
+    margin-top: 43px;
+    width: 100%;
+    text-align: center;
+    font-size: 18.273px;
+    font-family: "BBCNassim";
+    color: rgb(35, 31, 32);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.project_row {
+    margin-top: 17px;
+    border-left: 1px solid #b2b2b3;
+
+}
+
+.project_row:nth-child(3) {
+    border: 0px;
+}
+
+.project_title {
+    width: fit-content;
+    margin-top: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.project_title:hover .project_row.bg_circle {
+    background: red;
+
+}
+
+/**************** End Project ******************************************/
+
+/****************  Video Section ******************************************/
+.video_section {
+
+    /*height:320px;*/
+    height: 346px;
+    background-color: rgb(40, 40, 40);
+
+}
+
+.jssor_image_ {
+    height: 198px;
+    /* width: 263px; */
+    width: 316px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.blog-img:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 50%);
+    background: -webkit-linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 50%);
+    background: -moz-linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+}
+
+.blog-pic-wrap:hover .blog-img:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.blog-pic-wrap {
+    position: relative;
+}
+
+
+.blog-img:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 50%);
+    background: -webkit-linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 50%);
+    background: -moz-linear-gradient(to left bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+}
+
+.blog-pic-wrap:hover .blog-img:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.slider-container.slider-1 .blog-pic-wrap .blog-img {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+.video_title a {
+    position: absolute;
+    font-size: 20px;
+    font-family: "BBCNassim";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    padding-right: 0px;
+    padding-left: 15px;
+}
+
+/*******************************************************************************/
+.jssor_hover {
+    position: absolute;
+}
+
+/***************** */
+@keyframes videoiconclick {
+    from {
+        transform: scale3d(1, 1, 1);
+        background-color: #C00
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1);
+        background-color: rgba(0, 0, 0, .5)
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+        background-color: #C00
+    }
+}
+
+@-webkit-keyframes videoiconclick {
+    from {
+        transform: scale3d(1, 1, 1);
+        background-color: #C00
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1);
+        background-color: rgba(0, 0, 0, .5)
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+        background-color: #C00
+    }
+}
+
+/************** end anmation */
+.blog-pic-wrap {
+    position: relative;
+}
+
+.video-icon {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(255, 4, 4, 1);
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-top: -33px;
+    margin-left: -33px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s, visibility 0.3s, border-color 0.3s;
+    -webkit-transition: background-color 0.3s, opacity 0.3s, visibility 0.3s, border-color 0.3s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+
+}
+
+.video-icon:hover {
+    animation: videoiconclick 1.5s infinite ease-in-out;
+    -webkit-animation: videoiconclick 1.5s infinite ease-in-out;
+}
+
+.jssor_hover:hover .video-icon {
+    background-color: #C00;
+    animation: videoiconclick 1.5s infinite ease-in-out;
+    -webkit-animation: videoiconclick 1.5s infinite ease-in-out;
+}
+
+
+.video-icon:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 15px 25px;
+    /*   border-left-color: rgba(255,255,255,.5); */
+    border-left-color: rgba(255, 4, 4, 1);
+
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -8px;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+.jssor_hover:hover .video-icon:after {
+    border-left-color: #FFF;
+}
+
+.post-item-wrap:hover .video-icon:after {
+    border-left-color: #FFF;
+}
+
+.video_icon_second {
+    top: 76px;
+    left: 144px;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 0;
+    width: 44px;
+    height: 44px;
+
+}
+
+.video_icon_second:after {
+
+
+    border-width: 10px 16px;
+    border-left-color: rgba(255, 255, 255, 1);
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -5px;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+/****************************************************************************/
+/**************** End Video Section ******************************************/
+
+/****************  Gallery Section ******************************************/
+.gallery {
+    height: 487px;
+    margin-top: 6px;
+}
+
+.gallery_image {
+    margin: 2px 2px;
+    height: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+}
+
+.gallery_image:nth-child(1),
+.gallery_image:nth-child(2),
+.gallery_image:nth-child(4),
+.gallery_image:nth-child(5),
+.gallery_image:nth-child(7),
+.gallery_image:nth-child(8) {
+    width: 10.73%;
+    /*  width:204px;*/
+}
+
+.gallery_image:nth-child(3),
+.gallery_image:nth-child(6) {
+    /*    width:322px; */
+    width: 16.9%;
+}
+
+/**************** End Gallery Section ****************************************/
+
+/**************** Fooooooooooooooter ****************************************/
+.footer {
+    height: 609px;
+    background-color: rgb(40, 40, 40);
+
+}
+
+.footer_logo_text {
+    margin-top: 4px;
+    max-width: 192px;
+    float: right;
+    margin-right: 3px;
+
+}
+
+.address {
+    float: right;
+    margin-top: 16px;
+    font-size: 12px;
+    font-family: "Myriad Arabic";
+    color: rgb(167, 162, 162);
+    line-height: 1.2;
+
+}
+
+.address_details {
+    font-size: 18px;
+    font-family: "Myriad Arabic";
+    color: rgb(222, 222, 222);
+    line-height: 1.2;
+}
+
+.phone {
+text-align:center;
+    direction: ltr;
+    font-size: 16px;
+    color: rgb(222, 222, 222);
+    line-height: 1.2;
+    width: 160px;
+    float:right;
+    margin-top: 3px;
+}
+
+.Inquiries {
+    font-size: 15px;
+    font-family: "BBCNassim";
+    color: rgb(222, 222, 222);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 5px;
+    width: 104px;
+    float: right;
+        padding-right: 30px;
+}
+
+.space2 {
+    float: right;
+    margin-right: 5px;
+    height: 2px;
+}
+.line_dot{
+
+width: 77%;
+    height: 5px;
+    border-bottom: dashed 1px rgb(120, 120, 120);
+        margin-top: 9px;
+}
+.website_chose li{
+      color: rgb(182, 182, 182);
+    margin-top: 2px;
+}
+.website_chose li a{
+font-size: 19px;
+    vertical-align: bottom;
+    font-family: "BBCNassim";
+      color: rgb(182, 182, 182);
+    }
+
+    .governmental_website{
+width:50%;
+float:right;
+
+    }
+    .website_chose li a:hover{
+    color:#fff;
+
+    }
+    .footer_social{
+        margin-left: 15px;
+        width: fit-content;
+        float: right;
+        margin-top:6px;
+    }
+    .social_title{
+    margin-left:2px;
+       font-family: "BBCNassim";
+          color: rgb(167, 162, 162);
+    }
+   .footer_social a:hover   .social_title{
+      color:#fff;
+      }
+/**************** End Fooooooooooooooter ****************************************/
+/**************** Slider NEWS ****************************************/
+#jssor_1 {
+    top: 0px !important;
+}
+
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*jssor slider bullet skin 032 css*/
+.jssorb032 {
+    position: absolute;
+}
+
+.jssorb032 .i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssorb032 .i .b {
+    fill: #fff;
+    fill-opacity: 0.7;
+    stroke: #000;
+    stroke-width: 1200;
+    stroke-miterlimit: 10;
+    stroke-opacity: 0.25;
+}
+
+.jssorb032 .i:hover .b {
+    fill: #000;
+    fill-opacity: .6;
+    stroke: #fff;
+    stroke-opacity: .35;
+}
+
+.jssorb032 .iav .b {
+    fill: #000;
+    fill-opacity: 1;
+    stroke: #fff;
+    stroke-opacity: .35;
+}
+
+.jssorb032 .i.idn {
+    opacity: .3;
+}
+
+/*jssor slider arrow skin 054 css*/
+.jssora054 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssora054 .a {
+    fill: none;
+    stroke: #000;
+    stroke-width: 640;
+    stroke-miterlimit: 10;
+}
+
+.jssora054:hover {
+    opacity: .8;
+}
+
+.jssora054.jssora054dn {
+    opacity: .5;
+}
+
+.jssora054.jssora054ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+
+.heart {
+-webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    text-align: left;
+
+    font-size: 24px;
+    color: #cfd8dc;
+    margin-left: 4px;
+}
+.heart:hover {
+color: #00b1ff;
+}
+        .liked_text{
+            margin-top: 3px;
+            color: #0161b7;
+            font-size: 13px;
+            width: 60px;
+            float: right;
+        }
+        .liked_heart{
+            vertical-align: sub;
+            font-size: 18px;
+            margin-right: 4px;
+        }
+.news_time_list {
+    color: #9facb5;
+    font-size: 18px;
+    font-family: Myriad Arabic;
+}
+
+.img_background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.description, .description p {
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: "BBCNassim";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.attachedImage_row {
+    border-bottom: solid 1px;
+    margin-bottom: 40px;
+}
+
+.attachedImage {
+    margin-bottom: 25px;
+    width: 232px;
+    height: 165px !important;
+
+}
+
+/**************** social media **********************************/
+.socialicon {
+    float: left;
+    background: url('https://hajj.gov.iq/static/images/site/social_media.svg');
+    height: 34px;
+    width: 31px;
+    margin: 0 5px;
+    transition: transform 0.6s ease-in-out;
+    display: block;
+    background-size: 125px 45px;
+}
+
+.socialicon-twitter {
+    background-position: 61px 0px;
+}
+
+.socialicon-facebook {
+    background-position: 31px 0px;
+}
+
+.socialicon-whatsapp {
+    background-position: 0px 0px;
+}
+
+.socialicon-telegram {
+    background-position: 95px 0px;
+}
+
+.socialicon:hover {
+    /* transform: rotate(360deg);*/
+}
+
+/************************* social media *************************/
+.circle {
+    height: 13px;
+    width: 13px;
+    background: #449284;
+    border-radius: 50%;
+    float: right;
+    margin-top: 8px;
+    margin-left: 7px;
+}
+
+.social_ul {
+    float: left;
+    display: flex;
+    position: inherit;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%, -50%);
+    top: 32px;
+    margin-bottom: 9px;
+    margin-left: 69px;
+    margin-top: 18px;
+}
+
+
+.social_ul li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.icon_s {
+    margin-top: 6px;
+    width: 32px;
+    height: 32px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    line-height: 34px;
+    margin: 0 10px;
+    display: block;
+    /*  border-radius: 50%;  */
+    position: relative;
+    overflow: hidden;
+    border: solid 1px #44474a;
+    z-index: 2;
+}
+
+.social_ul li a .fa {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+
+}
+
+.social_ul li a:hover .fa {
+    color: #FFFFFF; /* لون الايقونة بعد الهوفر */
+    transform: rotateY(360deg);
+}
+
+
+.icon_s:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #FF0000;
+    transition: .5s;
+    z-index: 1;
+}
+
+.social_ul li a:hover:before {
+    top: 0;
+}
+
+
+.social_ul li:nth-child(1) a:before {
+    background-color: #3b5999; /* الفيس بوك*/
+}
+
+.social_ul li:nth-child(2) a:before {
+    background-color: #55acee; /* تويتر */
+}
+
+.social_ul li:nth-child(3) a:before {
+    background-color: #25D366; /* الواتساب */
+}
+
+/**************************************/
+
+/**************** End Slider NEWS  ****************************************/
+/**************** view ****************************************/
+.questions_cat {
+    float: right;
+    border-radius: 3px;
+
+    background-color: rgb(236, 236, 236);
+    width: 188px;
+    height: 41px;
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: "BBCNassim";
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    color: rgba(0, 0, 0, 0.702);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 11px;
+}
+
+.news_time_details {
+    width: 92%;
+    /* margin-top: 40px; */
+    border-bottom: solid 1px #dedede;
+    margin-bottom: 24px;
+
+    padding-bottom: 21px;
+    margin: 40px auto 15px auto;
+}
+
+.news_time_details span {
+    font-size: 22px;
+    font-family: "BBCNassim";
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+    line-height: 1.364;
+
+}
+
+.news_row {
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    padding-left: 40px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-top: 23px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
+    margin-top: 20px;
+    height: 237px;
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+    /*box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.52);*/
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.52);
+}
+
+/**************** End view  ****************************************/
+/**************** Test  ****************************************/
+
+.menu_li a, .menu_li a:after, .menu_li a:before {
+  /*  transition: all .1s;*/
+
+}
+
+.menu_li a {
+    position: relative;
+    z-index: 1;
+}
+
+.menu_li a:hover {
+    /* color: #91640F;*/
+    color: #000000;
+}
+
+.menu_li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    /*background: #F1C40F;*/
+    background: #dde7ee;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.menu_li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+
+}
+
+.hj_book:hover {
+    background-color: rgb(206, 216, 224);
+}
+
+.instruction_1:hover {
+    background: rgb(249, 249, 249)
+
+}
+
+/**************** End Test  ****************************************/
+/******************* image*/
+.gallery_image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery_image .layer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px
+}
+
+.gallery_image:hover .layer {
+    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.9)
+}
+
+.gallery_image .layer {
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+.gallery_image:hover .layer {
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+
+/*******************End image*/
+/*******************End image*/
+
+    div.scroll-float-parent {
+        width: 100%;
+        background: #f8f8f8;
+        position: relative;
+        z-index: 25000;
+    }
+
+    div#scroll-float {
+        height: 53px;
+        width:100%;
+        position: fixed;
+        bottom: 0;
+        background: #cccccc;
+    }
+
+
+.last_news_scroll
+{
+   /* border: 1px solid #002840;*/
+    border: 0px solid #449284;
+    padding: 9px;
+    padding-right: 33px;
+    padding-left: 10px;
+    /* background: #002840; */
+    background: red;
+    /*color: #fff;*/
+    color: #fff400;
+    font-size: 18px;
+}
+.marquee_set {
+background:red;
+    padding-top: 9px;
+    height: 100%;
+    color: #fff;
+    font-size: 22px;
+    padding-right: 5px;
+}
+.afaq_space
+{
+   height: 19px;
+       margin-right: 28px;
+       margin-left: 28px;
+       margin-top: 4px;
+}
+#scroll_id{
+width: 88px;
+     padding: 5px 12px 4px 7px;
+     background-color: red;
+     color: #fff;
+     height: 37px;
+     }
+     .sub_title_{
+font-family: "BBCNassim";
+  margin-right: 26px;
+      margin-left: 20px;
+          vertical-align: middle;
+     }
+/*******************End image*/
+
+.news_row:hover{
+    background-color: rgba(183, 183, 183, 0.09);
+    box-shadow: 0px 0px 4px 0px rgb(31, 102, 191);
+    box-shadow: 0px 0px 4px 0px rgb(31, 102, 191);
+}
+
+.dropdown.menu .is-active > a{
+    color: #000;
+    background: #dde7ee;
+}
+.is-dropdown-submenu {
+    background: #1f66bf;
+        min-width: 150px;
+}
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    margin-top: 30px;
+        border-color: #ffffff transparent transparent;
+}
+.is-dropdown-submenu > li:hover a{
+color:#000;
+
+}
+.is-dropdown-submenu > li {
+    border-bottom: 1px solid;
+}
+.is-dropdown-submenu > li:hover {
+background:#dde7ee;
+}
+.is-dropdown-submenu > li:hover a:after{
+
+background:#dde7ee;
+
+}
+@media screen and (max-width: 1777px){
+
+.gallery {
+    height: auto;
+    }
+}
+@media screen and (max-width: 1276px){
+
+
+.gallery:nth-child(2) .gallery_image:nth-child(1), .gallery:nth-child(2) .gallery_image:nth-child(3), .gallery:nth-child(2) .gallery_image:nth-child(5), .gallery:nth-child(2) .gallery_image:nth-child(7){
+width:13%!important;
+
+}
+}
+@media screen and (max-width: 1776px){
+
+
+.gallery_image:nth-child(3), .gallery_image:nth-child(6){
+width:13%!important;
+}
+
+
+}
+.submit_b {
+    cursor: pointer;
+    float: left;
+    position: relative;
+    border: solid red 0px;
+    left: -409px;
+    margin-top: 86px;
+    width: 20px;
+    background: transparent;
+}
+.social_link{
+    width: 100%;
+    display: block;
+    height: 100%;
+
+}
+.footer_menu{
+    width: fit-content;
+    margin: 7px auto;
+}
+.footer_menu .menu_li:first-child{
+margin-left: 7px!important;
+
+}
+/********************************************************/
+
+.padding_right{
+padding-right: 40px;
+}
+/*  css of mobile */
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .gsc-control-cse{
+        display: none;
+    }
+    /* Icon 1 */
+
+     #nav-icon3{
+         margin-right: 0px;
+         margin-top: 15px;
+         margin-left: 20px;
+         zoom: .5;
+        width: 60px;
+        height: 45px;
+        position: relative;
+         float: right;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+   #nav-icon3 span{
+        display: block;
+        position: absolute;
+        height: 9px;
+        width: 100%;
+        background: #fff;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+
+    /* Icon 3 */
+
+    #nav-icon3 span:nth-child(1) {
+        top: 0px;
+    }
+
+    #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+        top: 18px;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+        top: 36px;
+    }
+
+    #nav-icon3.open span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+
+    #nav-icon3.open span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #nav-icon3.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    #nav-icon3.open span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+    @keyframes transformscale {
+        0% {opacity:0.0;transform:scale(0.1);}
+        100% {opacity:1;transform:scale(1);}
+    }
+.menumobile{
+    transform:scale(1)!important;
+    height: auto !important;
+}
+#menu{
+    z-index: 111111111111111111111111111111111111111111111111;
+
+}
+    #menu{
+        font-weight: bold;
+        color: #ffffff;
+        transform:scale(0);
+        margin-top: 38px;
+        background: #0077b5;
+        position: absolute;
+        min-width: 200px;
+        -o-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        -moz-transition-duration: .3s;
+        -o-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        transform-origin:100%   0% ;
+            height:auto;
+    }
+
+
+
+   /* end css mobile */
+.Prayer_grid{
+padding-right: 53px;
+}
+.padding_right_25{
+padding-right: 25px;
+}
+
+.root_left{
+
+transform: rotate(180deg);
+    width: 23px;margin-right: 11px;
+    }
+    .selection_search_about{
+    font-size: 20px;
+    font-family: 'BBCNassim';
+      margin-right: 87px;
+          margin-left: 7px;
+    }
+/**************************** Responsive  ********************/
+@media screen and (max-width: 1200px){
+#category_page{
+display:none;
+}
+}
+@media screen and (max-width: 1200px){
+.Prayer_grid{
+padding-right: 15px;
+}
+.header_date{
+width: 100%;
+}
+.menu_li{
+margin:1px 0px;
+font-size:13px;
+}
+.menu_li:nth-child(2){
+margin:1px 0px;
+}
+}
+@media screen and (max-width: 970px){
+.header_date{
+    width: 100%;
+
+    }
+.Prayer{
+
+}
+.hajj_logo{
+margin-right:0px;
+    max-width: 100px;
+}
+.alhajj_text {
+    max-width: 200px;
+}
+.input_search{
+    width: 260px;
+}
+}
+@media screen and (max-width: 800px){
+.selection_search_about {
+font-size:18px;
+margin-right:0px;
+}
+.news_row{
+height:auto!important;
+}
+.book_row{
+padding-left:0px!important;
+}
+.questions, .answer{
+height:auto!important;
+}
+.news_time_list {
+    padding-right: 10px;
+    }
+.news_title_list{
+padding-right:10px;
+}
+.heart{
+    margin-right: 10px;
+}
+.news_row{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.news_image_list{
+width:100%!important;
+}
+.view_all {
+display:none;
+}
+.submit_b{
+display:none;
+}
+.padding_right_25{
+padding-right: 0px;
+}
+.Prayer_grid{
+padding-right:0px;
+
+}
+
+}
+@media screen and (max-width: 650px){
+.address_details{
+line-height: 1.9;
+}
+.input_second {
+    width: 90%!important;
+}
+.category_page_link{
+width:80px;
+}
+.selection{
+width:120px!important;
+}
+.map_image{
+max-width:300px;
+}
+.email_section{
+    width: 100%!important;
+    padding-left: 10px;
+}
+.voting{
+    width: 100%!important;
+
+}
+.app_hover:hover::before {
+    left: -42px;
+width: 634px;
+}
+
+.gallery:nth-child(2),.gallery:nth-child(1) {
+    height: 130px!important;
+}
+.gallery:nth-child(1) .gallery_image:nth-child(1)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(3)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(5)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(7)
+
+ {
+    width: 23%!important;
+        height: 121px;
+}
+.gallery:nth-child(1) .gallery_image:nth-child(2)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(4)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(6)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(8)
+
+ {
+ display:none;
+ }
+ .gallery:nth-child(2) .gallery_image:nth-child(2)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(4)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(6)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(7)
+
+  {
+      width: 23%!important;
+         height: 121px!important;
+ }
+ .gallery:nth-child(2) .gallery_image:nth-child(1)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(3)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(5)
+
+
+  {
+  display:none;
+  }
+.gallery:nth-child(2) .gallery_image:nth-child(3),
+
+{
+display:none;
+
+}
+.footer {
+height:911px;
+}
+.root_left{
+margin-right:0px;
+}
+.video_section {
+    height: 178px;
+}
+.project_title a {
+    margin-top: 0px;
+}
+.project_row {
+    border-left: 0px solid #b2b2b3;
+}
+.project_image {
+    height: 141px;
+    width: 106px;
+}
+.project_link {
+    width: 135px;
+}
+.bg_circle {
+    width: 135px;
+    height: 135px;
+}
+.instructions_row2_image {
+    height: 115px;
+    width: 97%;
+}
+.instructions_title {
+    margin-bottom: 34px;
+}
+.instructions_image{
+    width: 100%;
+}
+.hj_book_title{
+    border-left: solid #9c9494 0px;
+width:100%;
+}
+.hj_book{
+width:100%;
+}
+.column_Prayer .day {
+font-size:10px;
+}
+.day{
+    font-size: 15px;
+}
+.Prayer {
+
+ border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+width:100%;
+}
+.ellipse{
+display:none;
+}
+.header_date{
+    width: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding-left: 8px;
+}
+#clock_id{
+display:none;
+
+}
+.header_date{
+    padding-right: 11px;
+}
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after{
+    border-color: #ffffff transparent transparent;
+}
+.padding_right{
+padding-right:12px;
+
+}
+.hajj_logo {
+    max-width: 70px;
+}
+.alhajj_text {
+    max-width: 152px;
+}
+.input_search{
+    width: 235px;
+}
+}
+@media screen and (max-width: 500px){
+.input_search{
+    margin-top: 108px;
+    width: 200px;
+}
+
+}
+@media screen and (max-width: 375px){
+.gallery:nth-child(1) .gallery_image:nth-child(1)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(3)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(5)  ,
+.gallery:nth-child(1) .gallery_image:nth-child(7)
+
+ {
+    width: 23%!important;
+
+}
+ .gallery:nth-child(2) .gallery_image:nth-child(2)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(4)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(6)  ,
+ .gallery:nth-child(2) .gallery_image:nth-child(7)
+
+  {
+      width: 23%!important;
+         height: 121px!important;
+ }
+.bg_circle {
+    width: 125px;
+    height: 125px;
+}
+.project_link {
+    width: 100px;
+}
+.project_image {
+    width: 70px;
+    }
+.column_Prayer {
+    height: 22px;
+    width: 68%;
+}
+.header_date {
+    display: none;
+    }
+.Prayer {
+width:300px;
+}
+.column_Prayer .day {
+    font-size: 6px;
+}
+}
+/**************************** End Responsive ********************/
+
+/******************************** css of edit 3/3/2020     *************/
+    @-webkit-keyframes shine {
+        100% {
+           transform:scale(0.8);
+        }
+    }
+@keyframes shine {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+.footer_hajj_logo{
+    -webkit-animation: shine 5s;
+    animation: shine 5s;
+    animation-iteration-count: infinite;
+
+}
+#counter{
+margin-top: -2px;
+}
+.ajj_day{
+    font-size: 24px;
+    font-family: Myriad Arabic;
+    margin-left: 9px;
+    margin-top: 3px;
+}
+.counter .timer-col {
+    margin-right: 2px;
+    width: 39%;
+    float: right;
+}
+.counter .timer-col #weeks , .counter .timer-col #daysLeft{
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid #b7b1b1;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 37px;
+    font-weight: 700;
+    color: #636362;
+    font-size: 20px;
+    text-align: center;
+    font-family: Myriad Arabic;
+}
+.counter .timer-col .timer-type {
+      width: 40px;
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      font-family: Myriad Arabic;
+          margin-top: -2px;
+}
+/******************************** End css of edit 3/3/2020     *************/
