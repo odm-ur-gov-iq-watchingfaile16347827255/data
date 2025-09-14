@@ -1,0 +1,79 @@
+.introjs-arrow.top, .introjs-arrow.top-middle, .introjs-arrow.top-right {
+    right: 10px;
+    left: auto !important;
+    border-color: transparent transparent rgb(187 158 101);
+    top: -15px;
+}
+
+.introjs-arrow.bottom, .introjs-arrow.bottom-middle, .introjs-arrow.bottom-right {
+    border-color: white transparent transparent;
+    left: auto;
+    right: 20px;
+    bottom: -15px;
+}
+
+.introjs-button {
+    color: #bf9e66;
+    border-radius: 2px !important;
+    border: 1px solid #bf9e66;
+}
+
+    .introjs-button:hover, .introjs-button:focus {
+        background: #bf9e66;
+        border-color: #bf9e66;
+    }
+
+.introjs-helperLayer {
+    border-radius: 2px !important;
+    box-shadow: rgb(255 255 255 / 0%) 0px 0px 1px 2px, rgb(33 33 33 / 85%) 0px 0px 0px 5000px !important;
+}
+
+.introjs-tooltip {
+    background: white;
+    color: black;
+    border-radius: 2px;
+}
+
+.introjs-tooltipReferenceLayer * {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.introjs-tooltiptext{
+    text-align: justify;
+}
+
+.introjs-tooltip-header {
+    background: #bf9e66;
+    padding: 10px;
+    color: white;
+    border-radius: 2px 2px 0 0;
+}
+
+a.introjs-skipbutton {
+    font-weight: bold;
+    color: white;
+}
+
+a.introjs-skipbutton:hover {
+    color: #8d1737;
+}
+
+.introjs-arrow.right {
+    right: -15px;
+    border-color: transparent transparent transparent rgb(191, 158, 102);
+}
+
+.introjs-arrow.right-bottom {
+    right: -15px;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+
+.introjs-arrow.left {
+    left: -15px;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+
+.introjs-arrow.left-bottom {
+    left: -15px;
+    border-color: transparent transparent transparent rgb(255, 255, 255);
+}
