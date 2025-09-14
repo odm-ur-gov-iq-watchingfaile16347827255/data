@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /webresource.axd
+Disallow: /_resources/controls
+Disallow: /_resources/templates
+Disallow: /_resources/xsl
+Disallow: /App_Code/
+Disallow: /App_Data/
+Disallow: /aspnet_client/
+Sitemap: http://www.jodidata.org/sitemaps/xml
+
