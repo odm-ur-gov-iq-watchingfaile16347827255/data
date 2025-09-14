@@ -1,0 +1,107 @@
+form {padding:0px; margin:0px;}
+
+*:focus {outline:none;}
+
+input, select, textarea {padding:3px;}
+
+textarea {font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+
+textarea:focus, textarea.default_fields:focus {color: #555;	background: #fff;}
+
+textarea.default_fields {width:250px; height:150px; border:1px solid #a7acb2;}
+
+.form_line {
+	margin-bottom:6px;
+	width:100%;
+	overflow:hidden; /* if used, needs to be hidden because of Opera */
+}
+
+*:first-child+html .form_line {margin-bottom:0px; padding-bottom:6px;}
+
+input.text {color:#666;}
+
+input.text:focus {color: #555;	background: #fff;}
+
+input.default_fields, select.default_fields {width:200px; border: 1px solid #ddd; font-family:Tahoma, Geneva, sans-serif;}
+
+input.button, button {
+	border: none;
+	font-family: Tahoma,Geneva,sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: white;
+	padding: 1px 10px 4px 12px;
+	background: #1BA0D9;
+}
+
+input.button:hover, button:hover {background: #555; cursor: pointer;}
+
+.formElement p {margin-top:0;}
+
+/***************** Box forms *******************/
+#dynamic_box_right .form_line div.submit {text-align:left; line-height:20px;}
+
+#dynamic_box_right .form_line div.submit a {float:right; padding-top:3px;}
+
+/*************** CONTENT FORMS *******************************************************************************************************************/
+/******************************************************************************************************************************************************/
+
+div.form_line label {
+	text-align:left;
+	padding:3px 3px 3px 5px;
+	display:block; 
+	float:right;
+	width:25%;
+	font-size:14px;
+	color:#555;
+}
+
+div.formElement {float:right; margin-right:6px; display:inline; z-index:auto;}
+
+div.formElement label {
+	padding:0px;
+	width:auto;
+	text-align:right;
+	float:none;
+	display:block;
+	font-weight:normal;
+}
+
+/***** Comments form *****/
+textarea.add_comment {width:588px; height:150px; padding:5px; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+
+#comment_form_holder div.form_line label {text-align:right; width:22%;}
+
+#comment_form_holder div.formElement {margin-right:0px;}
+
+input.tag_link_href, 
+input.tag_link_content {width:170px; margin-left:10px;}
+
+/***** Email to a friend *****/
+input.email_article {width:278px;}
+
+textarea.email_article {width:278px;}  
+
+/***************** User registration form (ajax validations) *******************/
+
+.tos_label {color:#666;}
+
+.tos_box {border:1px solid #a7acb2; padding:6px; margin-top:6px; width:350px; height:200px; overflow:scroll;}
+
+.tos_box pre {padding:0; margin:0; font-family:Arial, Helvetica, sans-serif;}
+
+#error_message {background:#fcd6d4; margin-bottom:6px;}
+
+#error_message p {margin:2px 0px; padding:4px; color:#555;}
+
+.validation {
+	padding:2px 18px 2px 0px; 
+	font-size:11px; 
+	font-weight:bold;
+}
+
+.not_valid {background:url(https://baghdad.gov.iq/themes/new_design/img/validation_not_valid.gif) right 0 no-repeat; color:#f3735d;}
+
+.checking {background:url(https://baghdad.gov.iq/themes/new_design/img/validation_info.gif) right 0 no-repeat; color:#6b99c5;}
+
+.valid {background:url(https://baghdad.gov.iq/themes/new_design/img/validation_valid.gif) right 0 no-repeat; color:#80ca73;}
