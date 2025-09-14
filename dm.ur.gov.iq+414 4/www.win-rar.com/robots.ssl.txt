@@ -1,0 +1,6 @@
+User-agent: *
+#Disallow: /*cHash               # no cHash
+Disallow: /*tx_wfqbe_pi1        # no filter parameter on download.html
+
+# sitemap
+Sitemap: https://www.win-rar.com/sitemap.xml
