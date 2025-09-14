@@ -1,0 +1,1 @@
+import{b as t}from"./chunk-GGYHNCMQ.js";import{f as o}from"./chunk-UEZGAC6H.js";import{ca as s}from"./chunk-IFGGGOFT.js";var h=r=>{let i=s(t),n=s(o),e=r.data.requiredPermissions||[];return((r.data.permissionsOperator||"AND")==="AND"?i.hasAllPermissions(e):i.hasSomePermissions(e))?!0:(n.navigate(["/unauthorized"]),!1)};export{h as a};
