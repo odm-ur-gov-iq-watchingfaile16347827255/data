@@ -1,0 +1,152 @@
+# robots.txt for www.npr.org
+# Changes are tracked in www-render
+
+User-agent: *
+Disallow: /mpx/
+Disallow: /cgi-bin
+Disallow: /ramfiles/
+Disallow: /oauth2/
+Disallow: /account/
+Disallow: /proxy/
+Disallow: /*.smil
+Disallow: /*.asx
+Disallow: /*.ram
+Disallow: /*.wav
+Disallow: /*.rmm
+Disallow: /*.js
+Disallow: /*.au
+Disallow: /stations/force/force_localization.php?
+Disallow: /rundowns/segment.php?
+Disallow: /templates/search/*
+Disallow: /2013/03/21/174840895/
+Disallow: /sections/ombudsman/2008/01/frequently_asked_questions_1.html
+Disallow: /sections/health-shots/2013/03/11/173816690/new-voices-for-the-voiceless-synthetic-speech-gets-an-upgrade
+Disallow: /transcripts/470280334*
+Disallow: /2015/07/04/419570939/chasing-memories-in-their-refugee-camp-40-years-after-they-fled-vietnam
+Disallow: /transcripts/419570939*
+Disallow: /sections/parallels/2016/08/15/480128005/for-french-teens-smoking-still-has-more-allure-than-stigma
+Disallow: /transcripts/480128005*
+Disallow: /2020/04/08/830237502/episode-989-what-if-no-one-pays-rent
+Disallow: /transcripts/830237502*
+Disallow: /sections/goatsandsoda/2015/06/09/406744975/a-gender-revolution-hits-the-streets-two-wheels-at-a-time
+Disallow: /transcripts/406744975*
+Disallow: /sureroute
+Disallow: /*/partials*
+Disallow: /*?*
+Disallow: /proxy/*
+Disallow: /player/*
+Disallow: /get/*
+Disallow: /geolocation
+
+# Disallowing the OpenAI web crawler
+User-agent: GPTBot
+Disallow: /
+
+# Disallowing OpenAI plugins
+User-agent: ChatGPT-User
+Disallow: /
+
+# Disallowing Common Crawl
+User-agent: CCBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Disallowing Google Bard and Vertex AI web crawlers
+User-agent: Google-Extended
+Disallow: /
+
+# Disallowing various bots
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: PerplexityUser
+Disallow: /
+
+# Allow Google Search Console for sitemap crawling
+User-agent: Google-InspectionTool
+Allow: /
+User-agent: Google-Image
+Allow: /
+User-agent: Google-Video
+Allow: /
+User-agent: Googlebot
+Allow: /
+
+# Explicitly allowing the TTD contextual crawler for Sponsorship
+User-agent: Mozilla/5.0 (compatible; TTD-Content; +https://www.thetradedesk.com/general/ttd-content)
+Allow: /
+
+# Explicitly allowing the Google-Mediapartners crawler for Sponsorship
+User-agent: Mediapartners-Google
+Allow: /
+
+# Explicitly allowing the Google-Display-Ads-Bot crawler for Sponsorship
+User-agent: Google-Display-Ads-Bot
+Allow: /
+
+# Explicitly allowing the IAB tech lab crawler for Sponsorship
+User-agent: IAB-Tech-Lab
+Allow: /
+
+# Explicitly allowing the TTD ads fraud/IVT prevention crawler for Sponsorship
+User-agent: Trade Desk ads.txt & sellers.json crawler
+Allow: /
+
+# Explicitly allowing the IAS crawler for Sponsorship
+User-agent: ias_crawler; http://integralads.com/site-indexing-policy/
+Allow: /
+
+# Explicitly allowing the IAS Wombles crawler for Sponsorship
+User-agent: ias_wombles; http://integralads.com/site-indexing-policy/
+Allow: /
+
+# Explicitly allowing the Amazon Standards crawler for Sponsorship
+User-agent: Amazon-Advertising-ad-standards-bot/1.0
+Allow: /
+
+# Explicitly allowing the Audigent crawler for Sponsorship
+User-agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; AudigentAdBot; +http://www.audigent.com/bot.html) Chrome/W.X.Y.Z Safari/537.36
+Allow: /
+
+# Explicitly allowing the Concert crawler for Sponsorship
+User-agent: Concert/1.0
+Allow: /
+
+# Ensures that we're using the correct sitemap. The fact that this is googlecrawl*.npr.org is OK because the crawler will only accept
+# URLs in this sitemap to match www*.npr.org
+Sitemap: https://googlecrawl.npr.org/standard/sitemap_index.xml
+Sitemap: https://googlecrawl.npr.org/news/sitemap_news.xml
+Sitemap: https://googlecrawl.npr.org/video/sitemap_index.xml
+Sitemap: https://www.npr.org/live-updates/sitemap.xml
