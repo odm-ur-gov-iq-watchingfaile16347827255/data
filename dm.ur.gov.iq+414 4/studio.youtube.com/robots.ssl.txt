@@ -1,0 +1,8 @@
+# robots.txt file for YouTube Studio
+
+User-agent: Mediapartners-Google*
+Disallow:
+
+User-agent: *
+Crawl-delay: 0.5
+Disallow:
