@@ -1,0 +1,13 @@
+User-agent: Googlebot 
+Disallow: /g/
+
+User-agent: sitebot
+Disallow: /
+
+User-agent: Yeti
+Disallow: /
+
+User-agent: *
+Sitemap: https://500px.com/sitemaps/sitemap_index.xml.gz
+Crawl-delay: 15
+Disallow: /g/
