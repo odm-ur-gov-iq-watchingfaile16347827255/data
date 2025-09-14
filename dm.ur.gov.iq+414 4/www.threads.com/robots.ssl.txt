@@ -1,0 +1,329 @@
+# Notice: Collection of data on Threads through automated means is
+# prohibited unless you have express written permission from Threads
+# and may only be conducted for the limited purpose contained in said
+# permission.
+# All authorized user-agents listed on this page must comply with Meta’s
+# Automated Data Collection Terms available at:
+# https://www.facebook.com/legal/automated_data_collection_terms
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: uptimerobot
+Disallow: /
+
+User-agent: viberbot
+Disallow: /
+
+User-agent: YaK
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Yeti
+Disallow: /
+
+User-agent: Applebot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Bingbot
+Disallow: /*/c/
+Disallow: /*/comments/
+Disallow: /*/liked_by/
+Disallow: /*/p/
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Discordbot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: DuckDuckBot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: facebookexternalhit
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Googlebot
+Disallow: /*/c/
+Disallow: /*/comments/
+Disallow: /*/liked_by/
+Disallow: /*/p/
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Googlebot-Image
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Googlebot-Video
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Googlebot-News
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Google-InspectionTool
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: LinkedInBot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: msnbot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Pinterestbot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: seznambot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Slurp
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: teoma
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: TelegramBot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: Twitterbot
+Disallow: /accounts/
+Disallow: /activity/
+Disallow: /ajax/
+Disallow: /client_error/
+Disallow: /deck/
+Disallow: /intent/
+Disallow: /logging/
+Disallow: /onboarding/
+Disallow: /publicapi/
+Disallow: /qp/batch_fetch_web/
+Disallow: /query/
+Disallow: /settings/
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.threads.com/sitemap/threads_profiles_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_tags_hashtag_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_tags_typeahead_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_tags_gsc_bulk_keywords_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_profiles_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_tags_gsc_bulk_keywords_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_tags_typeahead_sitemap.xml.gz
+Sitemap: https://www.threads.com/sitemap/threads_tags_hashtag_sitemap.xml.gz
+
