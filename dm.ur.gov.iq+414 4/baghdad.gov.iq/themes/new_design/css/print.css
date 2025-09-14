@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+body {
+	margin:0; 
+	padding:0;
+	width:100%;
+	background:#fff none repeat scroll 0% 50%;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	line-height:1.5;
+	margin:0pt;
+	padding:0pt;		
+}
+
+#header, 
+#footer, 
+#dynamic_box_left, 
+#dynamic_box_right, 
+#dynamic_box_center div#box_comments, 
+#dynamic_box_center div.box_breadcrumb, 
+#dynamic_box_center div.font_size, 
+#article_holder div.content_attachment, 
+#article_holder div#box_social_bookmarks, 
+#box_video_headline_container {display:none;}
+
+#container {background:#fff; clear:both; margin:auto;} 
+
+#article_holder {padding:6px;}
+
+#article_body {font-size:90%;} 
+
+#article_body div.image {float:left; border:1px solid black; padding:6px; margin:6px;}
+
+#article_body div.image span.image_caption {font-size:80%; font-family:Arial, Helvetica, sans-serif;}
+
+/************************* Article styles (from Tiny MCE) ************************************/
+body .quote_right { 
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:80%;
+	float:right; 
+	margin:6px; 
+	display:inline; 
+	width:200px; 
+	height:auto;
+	border:1px solid black;
+	padding:6px;
+	font-style:normal;
+	color:black;
+}
+
+body .quote_left { 
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:80%;
+	float:left; 
+	margin:6px; 
+	display:inline; 
+	width:200px; 
+	height:auto;
+	border:1px solid black;
+	padding:6px;
+	font-style:normal;
+	color:black;
+}
+
+.right_image {float:right; margin:6px; display:inline;}
+
+.left_image {float:left; margin:6px; display:inline;}
+
