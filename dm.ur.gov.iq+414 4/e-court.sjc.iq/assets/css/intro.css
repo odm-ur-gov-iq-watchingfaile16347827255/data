@@ -1,0 +1,13 @@
+.introjs-helperNumberLayer {
+    background: linear-gradient(to bottom, #bf9e66 0%, #bf9e66 100%) !important;
+}
+
+.introjs-tooltip.introjs-bottom-left-aligned{
+    left: unset !important;
+    right: 0px !important;
+}
+
+.introjs-tooltipbuttons{
+    direction:rtl;
+    text-align: right !important;
+}
