@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/home-page/home-page.xml.gz</loc>
+        <lastmod>2025-08-30</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/top-apps/top-apps-google-1.xml.gz</loc>
+        <lastmod>2025-08-30</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/top-apps/top-apps-apple-1.xml.gz</loc>
+        <lastmod>2025-08-30</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/top-apps/top-apps-apple-2.xml.gz</loc>
+        <lastmod>2025-08-30</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/top-apps/top-apps-apple-3.xml.gz</loc>
+        <lastmod>2025-08-30</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/top-websites/top-websites-001.xml.gz</loc>
+        <lastmod>2025-08-10</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/top-websites-trending/top-websites-trending-001.xml.gz</loc>
+        <lastmod>2025-08-10</lastmod>
+    </sitemap>
+    
+    <sitemap>
+         <loc>https://www.similarweb.com/sitemaps/technology/technology-001.xml.gz</loc>
+         <lastmod>2025-08-10</lastmod>
+    </sitemap>
+
+    <sitemap>
+         <loc>https://www.similarweb.com/sitemaps/top-amazon-brands/top-amazon-brands-001.xml.gz</loc>
+         <lastmod>2025-08-10</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/website/website-001.xml.gz</loc>
+        <lastmod>2025-08-10</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/website/website-002.xml.gz</loc>
+        <lastmod>2025-08-10</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://www.similarweb.com/sitemaps/website/website-003.xml.gz</loc>
+        <lastmod>2025-08-10</lastmod>
+    </sitemap>
+</sitemapindex>
