@@ -1,0 +1,28 @@
+User-agent: ia_archiver
+Allow: /
+
+User-agent: 008
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: *
+Allow: /w/api.php?action=mobileview&
+Allow: /w/load.php?
+Disallow: /w/
+Disallow: /api/
+Disallow: /wiki/Special:
+Disallow: /wiki/Special%3A
+Disallow: /index.php/
+Disallow: /wiki/Spam
+
+Sitemap: https://wiki.openstreetmap.org/sitemap-index-wiki.xml
+
+Host: wiki.openstreetmap.org
