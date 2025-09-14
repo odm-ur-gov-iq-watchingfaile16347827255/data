@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /ads/preferences/
+Allow: /dtt/k
+Allow: /pagead/show_ads.js
+Allow: /pagead/managed/
+Allow: /pagead/html/
+Allow: /pagead/js/
+Allow: /tag/js/
+Disallow: /
+Noindex: /
