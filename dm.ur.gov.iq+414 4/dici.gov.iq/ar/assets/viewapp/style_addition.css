@@ -1,0 +1,214 @@
+@font-face {
+  font-family: SF-Bold;
+  src: url(https://dici.gov.iq/ar/assets/viewApp/fonts/SF-BOLD.TTF);
+}
+
+@font-face {
+  font-family: SF-Book;
+  src: url(https://dici.gov.iq/ar/assets/viewApp/fonts/SF-BOOK.TTF);
+}
+
+@font-face {
+  font-family: SF-Light;
+  src: url(https://dici.gov.iq/ar/assets/viewApp/fonts/SF-LIGHT.TTF);
+}
+
+@font-face {
+  font-family: SF-Medium;
+  src: url(https://dici.gov.iq/ar/assets/viewApp/fonts/SF-MEDIUM.TTF);
+}
+
+@font-face {
+  font-family: SANSONEBOLD;
+  src: url(https://dici.gov.iq/ar/assets/viewApp/fonts/SANSONEBOLD.TTF);
+}
+
+@font-face {
+  font-family: SANSONEBOOK;
+  src: url(https://dici.gov.iq/ar/assets/viewApp/fonts/SANSONEBOOK.TTF);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  /* fonts */
+  --SF-Light: SF-Light;
+  --SF-Medium: SF-Medium;
+  --SF-Book: SF-Book;
+  --SF-Bold: SF-Bold;
+  --SANSONEBOLD: SANSONEBOLD;
+  --SANSONEBOOK: SANSONEBOOK;
+  --Poppins: 'Poppins', sans-serif;
+  --Roboto: 'Roboto', sans-serif;
+
+  /* Colors */
+  --C31: #313131;
+  --C26: #262626;
+  --C70: #707070;
+  --CF9: #F9F9F9;
+  --C87: #848687;
+  --C3B: #A7953B;
+  --C24: #242424;
+  --C9D: #9D9D9D;
+  --CB1: #B1B1B1;
+
+  /* Transisiton */
+  --t03: all 0.3s ease-in-out;
+  --t02: all 0.2s ease-in-out;
+  --t05: all 0.5s ease-in-out;
+  --t1: all 1s ease-in-out;
+  --t015: all 0.15s ease-in-out;
+
+  /* Gradiants */
+
+}
+
+.bg-yellow {
+  background: #A7953B !important;
+}
+
+.bg-dark-gray {
+  background: #242424;
+}
+
+.bg-dark-green {
+  background: #1F321C;
+}
+
+.yellow_btn {
+  background-color: #a7953b;
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  min-width: 10rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.yellow_btn:hover {
+  background-color: #a7953b;
+  color: #fff;
+}
+
+.selected {
+  border: 2px solid red;
+}
+
+.button_class {
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  min-width: 10rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+select {
+  height: 40px !important;
+  padding: 5px;
+  border-color: #D9D9D9 !important;
+}
+
+.double-btns button {
+  color: #fff;
+  text-decoration: none;
+  margin: auto 0.7rem;
+  padding: 0.75rem 1.25rem;
+  min-width: 12rem;
+  border: unset;
+  background-color: transparent;
+  transition: var(--t02);
+}
+
+.double-btns a {
+  color: #fff;
+  text-decoration: none;
+  margin: auto 0.7rem;
+  padding: 0.75rem 1.25rem;
+  min-width: 12rem;
+  border: unset;
+  background-color: var(--C31);
+  transition: var(--t02);
+}
+
+.double-btns a.bg-dark-gray {
+  background-color: var(--C31);
+}
+
+.double-btns a.bg-yellow {
+  background-color: var(--C3B);
+}
+
+.double-btns a.yellow_btn {
+  background-color: var(--C3B);
+}
+
+.double-btns a.bg-yellow:hover {
+  background-color: #7e702b;
+}
+
+.double-btns a.bg-dark-gray:hover {
+  background-color: #242424;
+}
+
+.pagination {
+  display: block !important;
+  padding: 20px;
+  list-style: none
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 13px;
+  color: #a7953b;
+  background-color: #D9D9D9;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.pagination a.active {
+  text-decoration: none;
+  padding: 13px;
+  color: white;
+  background-color: #a7953b;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.ul_bio {
+  list-style: none;
+}
+
+.ul_bio li {
+  display: inline-block;
+  float: left;
+  width: 30%;
+
+}
+
+.search_engin {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.input-container input{
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #EEEEEE;
+  background-color: #FBFBFB;
+  color: #959595;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: var(--t03);
+  font-size: 0.9rem;
+}
+
+.vid_container{
+  width: 90%;
+  justify-content: center;
+  margin: auto;
+}
