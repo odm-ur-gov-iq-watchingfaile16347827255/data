@@ -1,0 +1,1 @@
+import{Y as r}from"./chunk-IFGGGOFT.js";var c=(()=>{class t{static \u0275fac=function(e){return new(e||t)};static \u0275prov=r({token:t,factory:t.\u0275fac,providedIn:"root"})}return t})();var i=(()=>{class t{static \u0275fac=function(e){return new(e||t)};static \u0275prov=r({token:t,factory:t.\u0275fac,providedIn:"root"})}return t})();export{c as a,i as b};
