@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /enl/
+Disallow: /site-search*.html
+Disallow: /unodc/site-search.html
+Disallow: /unodc/en/site-search.html
+Disallow: /unodc/search.html
+Disallow: /unodc/en/search.html
+Disallow:/frontdoor/
+Disallow:/cgi-bin/
+Disallow:/test/
+Disallow:/multimedia/
