@@ -1,0 +1,8 @@
+# robots.txt for staging (noindex)
+<% if (process.env.VUE_APP_ROBOTS === 'disallow') { %>
+User-agent: *
+Disallow: /
+<% } else { %>
+User-agent: *
+Allow: /
+<% } %>
