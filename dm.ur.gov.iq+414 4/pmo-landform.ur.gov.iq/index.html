@@ -1,0 +1,1324 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="csrf-token" content="IjAyZjFkM2IxZDU3MjJiOWI5ZDFhMGU4NTQwNWE2YjM4ZGNmZGVkYjQi.aLdXDA.TWnlapBbTL4fJw3RYX1IEHvDVBA">
+    <link rel="icon" href="https://pmo-landform.ur.gov.iq/static/img/IQicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pmo-landform.ur.gov.iq/static/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://pmo-landform.ur.gov.iq/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pmo-landform.ur.gov.iq/static/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="https://pmo-landform.ur.gov.iq/static/css/font-awesome.min.css">
+    <!--link rel="stylesheet" href="static/css/sweetalert2.min.css" /-->
+    <link rel="stylesheet" href="https://pmo-landform.ur.gov.iq/static/css/style.css">
+    <title> استمارة تقديم شكوى</title>
+<style>.nvb{
+width:100%;
+height:200px;
+background-image: url("static/img/hdr2.png");
+position: relative;
+}
+.brandx{ 
+    position: absolute;
+    left: 50%;
+    top:0px;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+}
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+
+</style>
+</head>
+
+<body dir="rtl" class="rtl d-flex flex-column min-vh-100" style="overflow-y: auto;overflow-x:hidden">
+<nav class="navbar navbar-expand-lg nvb">
+ <a class="navbar-brand" href="index.html">
+  <img class="brandx" src="static/img/circle_slogan.png" alt="BootstrapBrain Logo" width="200" height="200">
+ </a>  
+</nav> 
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+ <h1 class="display-3">استمارة تقديم شكوى</h1>
+ <p class="lead"></p>
+</div> <!-- title div-->
+<div class="container">
+
+<div class="card-deck mb-3 text-center" id="dsclmr_container">
+ <div class="card mb-4 box-shadow">
+  <div class="card-header">
+   <h4 class="my-0 font-weight-normal">تعهد</h4>
+  </div>
+  <div class="card-body" style="min-height:250px;">
+   <h1 class="card-title pricing-card-title text-danger">اتعهد بصحة المعلومات المقدمة عبر هذه الاستمارة وبخلافه اتحمل كافة  التبعات القانونية
+    <input type="checkbox" style="background-color:red;margin-right:15px;width: 1.5rem; height: 1.5rem;top:0.5rem" id="customCheck1" onchange="dsclmr(this)">
+    <label for="customCheck1" style="color:black;font-size:16px;padding-buttom:6px;">اضغط هنا للاستمرار</label>
+   </h1>
+   <button class="btn btn-lg btn-block btn-primary mt-5" disabled="" id="cont_btn" onclick="dsclmrclick()">استمرار</button>
+  </div>
+ </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<div class="card-deck mb-3 text-center" id="captcha_container" style="display:none">
+        
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">رمزالتحقق</h4>
+          </div>
+          <div class="card-body" style="min-height:250px;">
+   <div class="row" id="capdiv"></div>
+   <button class="btn btn-danger" onclick="verify_captcha()">تحقق</button>
+   <small>سيتم تجديد الرمز خلال(<label style="color:red;font-size:16px;padding-buttom:6px;" id="captcha_timer_lbl"></label>) ثانية</small>
+   <small><label style="color:red;font-size:16px;padding-buttom:6px;" id="captcha_retry_lbl"></label> </small>
+  </div>
+ </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+      <div class="card-deck mb-3 text-center" id="phone_container" style="display:none">
+        
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">التسجيل برقم الهاتف الذي يمكن من خلاله التواصل مع المشتكي</h4>
+          </div>
+          <div class="card-body">
+            <h4 class="my-0 font-weight-normal text-success" id="wait_phone_reg">سيتم اعتماد هذا الرقم لمتابعة الشكوى</h4>
+          </div>
+          <div class="card-body" style="min-height:250px;">
+           <div> 
+            <label for="phone_inp" style="color:black;font-size:16px;padding-buttom:6px;">أدخل رقم الهاتف</label>
+            <input type="text" autocomplete="off" inputmode="numeric" maxlength="11" id="phone_inp" name="phone_inp" dir="ltr" style="width:11rem;color:navy;font-size:28px;font-style:bold;padding-buttom:6px;" value="" oninput="check_phone(this);" onkeydown="phone_enter(event);">
+           </div>
+            <small><label style="color:red;font-size:16px;padding-buttom:6px;" id="phone_alert">يتألف من 11 رقم ويبدأ ب07</label></small>
+            <button class="btn btn-lg btn-block btn-primary mt-5" id="phone_btn" onclick="phone_submit()" disabled="">تسجيل</button>
+               <small>سيتم غلق الاستمارة خلال(<label style="color:red;font-size:16px;padding-buttom:6px;" id="phone_timer_lbl"></label>) ثانية</small>
+          </div>
+        </div>
+
+      </div>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+     <div class="card-deck mb-3 text-center adjust-content-center" id="otp_container" style="display:none">
+        
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">تأكيد رقم الهاتف</h4>
+          </div>
+          <div class="card-body" style="min-height:250px;">
+            <div class="border">
+            <h4 class="my-0 font-weight-normal pt-3 pb-3 text-success">تم ارسال رمز تسجيل الهاتف لكم برسالة نصية</h4>
+          </div>             
+           <div class="row mb-2 mx-auto">
+           <div class="col-12 adjust-content-center">
+            <label for="otp_inp" style="color:black;font-size:16px;padding-buttom:6px;margin-top:10px;margin-left:10px;">أدخل رمز التسجيل</label>
+            <input type="text" autocomplete="off" inputmode="numeric" maxlength="6" id="otp_inp" name="otp_inp" dir="ltr" style="width:6rem;color:navy;font-size:28px;font-style:bold;padding-buttom:6px;" value="" oninput="check_otp(this);" onkeydown="otp_enter(event);" required="">
+           </div> 
+           <small><label style="color:red;font-size:16px;padding-buttom:6px;" id="otp_alert"></label></small>
+           </div> 
+           
+            <small><label id="sres" style="color:red;font-size:16px;padding-buttom:6px;"><label style="color:red;font-size:16px;padding-buttom:6px;" id="otp_timer_lbl"></label></label></small>
+           
+            <!--button class="btn btn-danger" id="otp_resend_btn" name="otp_resend_btn" disabled onclick="renew_otp_btn()">إعادة أرسال رمز التسجيل</button-->
+            <button class="btn btn-lg btn-block btn-primary mt-5" id="otp_btn" onclick="otp_submit()" disabled="">تأكيد</button>
+          </div>
+        </div>
+
+      </div>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+      <div class="card-deck mb-3 text-center" id="form_container" style="display:none">
+        
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">معلومات المشتكي</h4>
+          </div>
+          <div class="card-body" style="min-height:250px;">
+          <div class="row">
+          <div class="form-group col-md-5">
+          
+             <label class="lblnavy" for="tri_name">الاسم الثلاثي <span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" inputmode="search" class="text-navy" autocorrect="off" id="tri_name" name="tri_name" placeholder="الاسم الثلاثي" data-cntrl="txtar" value="" oninput="ikarb(event)" dir="rtl">
+             <small id="tri_name_help" class="form-text text-danger"></small>
+             
+             
+          </div>           
+  
+          <div class="form-group col-md-5">
+          
+             <label class="lblnavy" for="phone_num">رقم الهاتف</label>
+             <input type="text" onfocusout="efocusout(event)" id="phone_num" name="phone_num" readonly="" value="">
+             
+             
+             
+          </div>
+          </div>           
+          <div class="row bg-light">
+             <div class="row">
+             <div class="col-12">
+             <label class="lblnavy">عنوان السكن الحالي</label>
+             </div>
+             </div>
+<div class="row">
+          <div class="form-group col-md-4">
+                                              
+                                    <label class="lblnavy" for="province">المحافظة<span class="text-danger">*</span></label>
+                                    <select onchange="provinces(this)" class="form-control" id="province" name="province">
+                                      <option value="1000" selected="" disabled="">المحافظة</option>
+                
+<option value="0">الانبار</option>
+<option value="1">بابل</option>
+<option value="2">بغداد</option>
+<option value="3">البصرة</option>
+<option value="4">ديالى</option>
+<option value="5">ذي قار</option>
+<option value="6">صلاح الدين</option>
+<option value="7">القادسية</option>
+<option value="8">كركوك</option>
+<option value="9">كربلاء</option>
+<option value="10">المثنى</option>
+<option value="11">ميسان</option>
+<option value="12">النجف</option>
+<option value="13">نينوى</option>
+<option value="14">واسط</option>
+                              </select>
+                                    <small id="province_help" class="form-text text-danger"></small>
+                                                           
+                                
+                              
+             
+          </div>          
+                    <div class="form-group col-md-4">
+                                    <label class="lblnavy" for="sector">القضاء<span class="text-danger">*</span></label>
+                                    <select class="form-control" id="sector" name="sector" onchange="option_change(this)">
+                                      <option value="1000" selected="" disabled="">القضاء</option>
+                                    </select>
+                                    <small id="sector_help" class="form-text text-danger"></small>
+                                                           
+                                
+                              
+             
+          </div>     
+                             <div class="form-group col-md-4">
+                                    <label class="lblnavy" for="town">الناحية<small class="text-primary">(ان وُجِدَت)</small></label>
+                                    <input type="text" autocomplete="off" onfocusout="efocusout(event)" inputmode="search" class="text-navy" autocorrect="off" id="town" name="town" placeholder="الناحية" value="" oninput="ikarb(event)" dir="rtl" required="">
+                                    <small id="town_help" class="form-text text-danger"></small>
+                                                           
+                                
+                              
+             
+          </div> 
+     </div>         
+</div>
+<div class="row">
+<div class="form-group col-md-3">
+<label class="lblnavy" for="quarter">المحلة<span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" id="quarter" name="quarter" oninput="iknum(event)" dir="ltr">
+             <small id="quarter_help" class="form-text text-danger"></small>
+</div>             
+<div class="form-group col-md-3">
+<label class="lblnavy" for="street">الزقاق<span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" id="street" name="street" oninput="iknum(event)" dir="ltr">
+             <small id="street_help" class="form-text text-danger"></small>
+</div>             
+<div class="form-group col-md-3">
+<label class="lblnavy" for="house">رقم الدار<span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" id="house" name="house" oninput="iknum(event)" dir="ltr">
+             <small id="house_help" class="form-text text-danger"></small>
+</div>             
+<div class="form-group col-md-3">
+  <label class="lblnavy" for="relation">صلته بالعقار<span class="text-danger">*</span></label>
+                                    <select class="form-control" id="relation" name="relation" disabled="">
+                                      <option value="1000" disabled="">صلته بالعقار</option>
+                                      <option value="1001">مالك</option>
+                                      <option value="1002" selected="">مستاجر</option>
+                                    </select>
+                                    <small id="relation_help" class="form-text text-danger"></small>
+</div>
+</div>
+          
+
+
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">معلومات العقار</h4>
+          </div>          
+<!-- -->
+          <div class="border">
+            <h4 class="my-0 font-weight-normal pt-3 pb-3 text-danger">العقارات المشمولة بالشكوى تخص منطقة الدورة واطراف بغداد</h4>
+          </div>                  
+          
+          <div class="row">
+          <div class="form-group col-md-3">
+<label class="lblnavy" for="estate_num">رقم العقار<span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" id="estate_num" name="estate_num" oninput="inumkarb(event)" dir="rtl">
+             <small id="estate_num_help" class="form-text text-danger"></small>
+          </div>
+          
+          
+          <div class="form-group col-md-3">
+  <label class="lblnavy" for="estate_category">جنس العقار<span class="text-danger">*</span></label>
+                                    <select class="form-control" id="estate_category" name="estate_category" disabled="">
+                                      <option value="1000">جنس العقار</option>
+                                      <option value="1001" selected="">زراعي</option>
+                                      <option value="1002">سكني</option>
+                                      <option value="1003">صناعي</option>
+                                      <option value="1004">تجاري</option>
+                                    </select>
+                                    <small id="estate_category_help" class="form-text text-danger"></small>
+</div>
+          
+          <div class="form-group col-md-3">
+  <label class="lblnavy" for="bldng_type">نوع العقار<span class="text-danger">*</span></label>
+                                    <select class="form-control" id="bldng_type" name="bldng_type" disabled="">
+                                      <option value="1000">نوع العقار</option>
+                                      <option value="1001" selected="">اراضي</option>
+                                      <option value="1002">مباني</option>
+                                    </select>
+                                    <small id="bldng_type_help" class="form-text text-danger"></small>
+</div>
+          
+<div class="form-group col-md-3">
+  <label class="lblnavy" for="own_type">نوع الحيازة<span class="text-danger">*</span></label>
+                                    <select class="form-control" id="own_type" name="own_type" onchange="owntype_select(this)" disabled="">
+                                      <option value="1000">نوع الحيازة</option>
+                                      <option value="1001" selected="">ايجار</option>
+                                      <option value="1002">ملك</option>
+                                    </select>
+                                    <small id="own_type_help" class="form-text text-danger"></small>
+</div>
+          
+          
+          
+          
+          
+          
+          
+          
+          </div>
+          
+          
+          
+ <!--2-->         
+          <div class="row bg-light mx-2 my-2">
+          <div class="form-group col-md-4">
+<label class="lblnavy" for="land_owner_name">اسم مالك الارض<span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" inputmode="search" class="text-navy" autocorrect="off" id="land_owner_name" name="land_owner_name" placeholder="اسم مالك الارض" data-cntrl="txtar" value="" oninput="ikarb(event)" dir="rtl">
+             <small id="land_owner_name_help" class="form-text text-danger"></small>
+          </div>
+          <div class="form-group col-md-7">
+<label class="lblnavy w-100" for="estate_address">عنوان العقار<span class="text-danger">*</span></label>
+             <input style="width:80%" type="text" onfocusout="efocusout(event)" id="estate_address" name="estate_address" oninput="inumkarb(event)" dir="rtl">
+             <small id="estate_address_help" class="form-text text-danger"></small>
+          </div>
+          
+      </div>   
+<!--2-->          
+
+<!--3-->         
+          <div class="row">
+          <div class="form-group w-100">
+             <label class="text-center text-blue" for="municipality_name">اسم الدائرة البلدية التي يقع العقار ضمن حدودها<span class="text-danger">*</span></label>
+             <input type="text" autocomplete="off" onfocusout="efocusout(event)" inputmode="search" class="text-navy" autocorrect="off" dir="rtl" id="municipality_name" name="municipality_name" placeholder="" data-cntrl="txtar" value="" oninput="ikarb(event)">
+             <small id="municipality_name_help" class="form-text text-danger"></small>
+          </div>
+
+          
+      </div>   
+<!--3-->                    
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">موضوع الشكوى<span class="text-danger">*</span></h4>
+          </div>          
+
+<!--4-->         
+          <div class="row">
+          <div class="form-group w-100">
+             <textarea autocomplete="off" class="text-blue w-100 px-4 py-2" rows="12" oninput="inumkarb(event)" id="subjct" name="subjct" dir="rtl"></textarea>
+          <small id="subjct_help" class="form-text text-danger">1200 حرف كحد اقصى</small>   
+          </div>
+          
+          
+      </div>   
+<!--4-->                     
+<!--5-->
+<div class="form-row bg-light justify-content-center pt-2">
+    <div class="form-group col-md-3 mt-1">
+                                    <label for="val42" id="val12lbl" class="btn btn-primary w-100 mt-1">البطاقة الوطنية(الوجه الاول)</label>            
+                                    <input type="file" data-fn="0" id="val42" name="val42" accept=".png, .jpeg, .jpg" hidden="" onchange="fload(this)">
+                                    <small id="val42help" class="form-text"></small>
+     </div>
+
+    <div class="form-group col-md-3 mt-1">
+                                    <label for="val43" id="val12lbl" class="btn btn-primary w-100 mt-1">البطاقة الوطنية(الوجه الثاني)</label>            
+                                    <input type="file" data-fn="1" id="val43" name="val43" accept=".png, .jpeg, .jpg" hidden="" onchange="fload(this)">
+                                    <small id="val43help" class="form-text"></small>
+     </div>
+
+    
+    
+    <div class="form-group col-md-3 mt-1">
+                                    <label for="val44" id="val44lbl" class="btn btn-primary w-100 mt-1">عقد الايجار</label>            
+                                    <input type="file" data-fn="2" id="val44" name="val44" accept=".png, .jpeg, .jpg" hidden="" onchange="fload(this)">
+                                    <small id="val44help" class="form-text"></small>
+     </div>
+
+    <div class="form-group col-md-3 mt-1">
+                                    <label for="val45" id="val45lbl" class="btn btn-primary w-100 mt-1">الاوليات التي تؤيد الشكوى</label>            
+                                    <input type="file" data-fn="3" id="val45" name="val45" accept=".png, .jpeg, .jpg" hidden="" multiple="" onchange="floadm(this)">
+                                    <small id="val45help" class="form-text"></small>
+     </div>
+<label id="dbg_lbl"></label>
+</div>
+
+          
+<!--5-->          
+          
+          
+          
+          
+          
+          
+       
+
+
+
+          
+<!-- -->          
+            <button class="btn btn-lg btn-block btn-primary mt-5" id="all_btn" onclick="all_click()">استمرار</button>
+            <small id="allhelp" class="form-text text-danger"></small>
+          </div>
+
+        </div>
+
+      </div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <h5 class="modal-title  w-100 text-center" id="myModalLabel">استمارة شكوى</h5>
+            
+          </div>
+          <div class="modal-body">
+            <h3 id="myModalmsg"></h3>
+          </div>
+          <input id="mym" style="display:none">
+          <div class="modal-footer w-50 mx-auto">
+            
+            <button type="button" class="btn btn-primary" onclick="myModalOk()">حسنا</button>
+          </div>
+        </div>
+      </div>
+</div>
+</div> <!---main container div-->
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+ <div class="row text-center">
+  <div id="resultl" class="text-success"></div>
+   <small class="d-block mb-1 text-muted"> مكتب رئيس مجلس الوزراء/ المركز الوطني للتحول الرقمي</small>
+   <small class="d-block mb-1 text-muted">2025 ©</small>
+  </div>
+ 
+</footer>
+          
+    <script src="static/js/jquery-3.1.1.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/counties.js"></script>
+    <script src="static/js/sweetalert2.min.js"></script>
+
+<script>
+var otp_timeout = 59;//60
+var otp_retry = 0;
+var otp_timer_handler;
+var otp_stat = 0;
+
+var kchkey="20250902234356249-62429ee6156e4053966c059b36b31827";
+const myModal = new bootstrap.Modal(document.getElementById('myModal'),{backdrop:'static',keyboard:false});
+
+var phone_timeout = 120;
+var phone_timer_handler;
+
+function phone_timer(){
+ if(phone_timeout>0){phone_timeout-=1;}
+ else{ location.reload();}
+ document.getElementById("phone_timer_lbl").innerHTML=phone_timeout;
+}
+
+var cap_timeout = 30;
+var cap_retry = 0;
+var captcha_timer_handler;
+
+
+function cap_timer(){
+if(cap_timeout > 0){
+  document.getElementById("captcha_timer_lbl").innerHTML=cap_timeout;
+  var lbl ;
+  var lblrv = 3 - cap_retry  ;
+  if(lblrv===1)lbl = "لديك محاولة واحدة";
+  if(lblrv===2)lbl = "لديك محاولتان";
+  if(lblrv===3)lbl = "لديك ثلاث محاولات";
+  
+  document.getElementById("captcha_retry_lbl").innerHTML=lbl;
+  cap_timeout-=1;
+}  
+else {
+  if(cap_retry < 2){
+    request_new_captcha();++cap_retry;
+  }
+  else { location.reload();}
+}  
+}
+
+
+
+function convertArabicToEnglishNumerals(inputString) {
+  const arabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+  const latinNumerals = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+  
+  return inputString.replace(/[?-?]/g, function(char) {
+    const index = arabicNumerals.indexOf(char);
+    return latinNumerals[index];
+  });
+}
+
+
+function dsclmr(cb){
+if(cb.checked){
+document.getElementById("cont_btn").disabled=false;
+}
+else document.getElementById("cont_btn").disabled=true;
+}
+
+
+function request_new_captcha(){
+document.getElementById("dsclmr_container").style.display="none";
+document.getElementById("captcha_container").style.display="block";
+var jdata = {aaa:'A',bbb:'B'}; 
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+const options1 = {method:'POST',headers: {'Content-Type': 'application/json','X-CSRFToken': csrfToken},body:JSON.stringify(jdata)};
+fetch('/show_captcha', options1).then(async function (response) {
+              return response.json();}).then(async function (text) {
+                     if(text.fok==="1"){
+                      //console.log("!1111text.capinput");
+                      var capdiv = document.getElementById("capdiv");
+                       while (capdiv.firstChild) {
+                          capdiv.removeChild(capdiv.firstChild);
+                        }
+                      capdiv.insertAdjacentHTML('beforeend',text.capinput);
+                      cap_timeout = 30;  
+                      clearInterval(captcha_timer_handler);         
+                      captcha_timer_handler = setInterval(cap_timer,1000);
+                      document.getElementById("captcha-text").focus(); 
+                     }
+               });       
+
+}
+
+function dsclmrclick(){
+request_new_captcha();
+}
+
+
+
+
+
+function verify_captcha(){
+send_captcha();
+}
+
+
+function send_captcha(){
+var captext = document.getElementById("captcha-text").value;
+var caphash = document.getElementById("captcha-hash").value;
+//console.log("v",captext);
+                           var jdata = {captcha_text:captext,captcha_hash:caphash};
+                           
+                           //formdata1.append('captcha_text',captext);
+                           
+                           const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                           const options1 = {method:'POST',headers: {'Content-Type': 'application/json','X-CSRFToken': csrfToken},body:JSON.stringify(jdata)};
+                           fetch('/verify_jcaptcha', options1).then( function (response) {
+                           return response.json();}).then( function (text) {
+                                 if(text.fok==="1"){
+                                    //console.log(text.result);
+                                    clearInterval(captcha_timer_handler);
+                                    halert("تم التحقق","captcha");
+                                    
+                                    
+                                 }
+                                 else{
+                                 if(cap_retry < 2){
+                                    request_new_captcha();++cap_retry;
+                                 }
+                                 else { location.reload();}
+                                 
+                                 
+                                 }
+                           });   
+}
+
+function submit_captcha(ph){
+
+ph.value = convertArabicToEnglishNumerals(ph.value);
+ph.value = ph.value.replace(/[^0-9]/g, ''); // Remove non-digit characters
+var v = ph.value;
+//console.log("v:",v) 
+}
+
+function enter_captcha(event){
+if(event.key==='Enter'){
+//console.log("vv:",event.target.value);
+send_captcha();
+}
+}
+
+function check_phone(ph){
+ph.value = convertArabicToEnglishNumerals(ph.value);
+ph.value = ph.value.replace(/[^0-9]/g, ''); // Remove non-digit characters
+var v = ph.value; 
+//console.log("ip",v,v.length)
+//if (v.length!==11){document.getElementById("phone_alert").innerHTML="يتألف من11 رقم";}
+ 
+if (v.charCodeAt(0)!==48){document.getElementById("phone_alert").innerHTML="رقم الهاتف يبدأ ب 0";document.getElementById("phone_btn").disabled=true;}
+else{ 
+if (v.charCodeAt(1)!==55){document.getElementById("phone_alert").innerHTML="الرقم الثاني يجب ان يكون 7";document.getElementById("phone_btn").disabled=true;}
+else{if (v.charCodeAt(2)<52){document.getElementById("phone_alert").innerHTML="الرقم الثالث يجب ان يكون اكبر من 3";document.getElementById("phone_btn").disabled=true;} 
+else{ 
+if (v.length!==11){document.getElementById("phone_alert").innerHTML="يتألف من11 رقم";document.getElementById("phone_btn").disabled=true;}
+else {
+document.getElementById("phone_alert").innerHTML="";
+document.getElementById("phone_btn").disabled=false;
+}
+
+}
+}
+//console.log("v:",v.charCodeAt(0));
+}
+}
+
+
+
+function phone_submit(){
+var phone_num = document.getElementById("phone_inp").value;
+//console.log("v",phone_num);
+var jdata = {phone:phone_num};
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+const options1 = {method:'POST',headers: {'Content-Type': 'application/json','X-CSRFToken': csrfToken},body:JSON.stringify(jdata)};
+
+document.getElementById("phone_btn").disabled = true;
+document.getElementById("wait_phone_reg").innerHTML="يرجى الانتظار";
+fetch('/reg_phone', options1).then( function (response) {
+                           return response.json();}).then( function (text) {
+                                    document.getElementById("phone_btn").disabled = false;
+                                    document.getElementById("wait_phone_reg").innerHTML="سيتم اعتماد هذا الرقم لمتابعة الشكوى";
+
+                                 if(text.fok==="1"){
+                                    //console.log(text.result);
+                                    clearInterval(phone_timer_handler);
+
+                                    halert("تم تسجيل رقم الهاتف","phone");
+                                    //Swal.fire('Success!', 'Data loaded successfully.', 'success');                                   
+                                 }
+                                 else{
+                                    if(text.result==="registered"){
+                                    halert("رقم الهاتف مستخدم مسبقاً","")
+                                    }
+                                    else{
+                                      halert("لم يتم تسجيل رقم الهاتف","")
+                                    }  
+                                 /// Swal.fire('Error!', 'Failed to load data.', 'error');
+                                  location.reload();
+                                 }
+                           });   
+
+}
+
+function phone_enter(event){
+if(event.key==='Enter'){
+//console.log("phph:",event.target.value);
+if(document.getElementById("phone_btn").disabled===false)phone_submit();
+}
+}
+
+function otp_enter(event){
+if(event.key==='Enter'){
+//console.log("phph:",event.target.value);
+if(document.getElementById("otp_btn").disabled===false)otp_submit();
+}
+}
+
+function check_otp(ph){
+ph.value = convertArabicToEnglishNumerals(ph.value);
+ph.value = ph.value.replace(/[^0-9]/g, ''); // Remove non-digit characters
+var v = ph.value; 
+//console.log("ip",v,v.length)
+if (v.length!==6){
+document.getElementById("otp_alert").innerHTML="";
+document.getElementById("otp_btn").disabled=true;
+}
+else {
+document.getElementById("otp_alert").innerHTML="";
+document.getElementById("otp_btn").disabled=false;
+}
+
+}
+
+
+function otp_submit(){
+otp_stat = 0;
+var otp_val = document.getElementById("otp_inp").value;
+//console.log("v",otp_val);
+var jdata = {otp:otp_val};
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+const options1 = {method:'POST',headers: {'Content-Type': 'application/json','X-CSRFToken': csrfToken},body:JSON.stringify(jdata)};
+fetch('/verify_otp', options1).then( function (response) {
+                           return response.json();}).then( function (text) {
+                                 if(text.fok==="1"){
+                                    halert("تم تأكيد رقم الهاتف","otp");
+                                   
+                                 }
+                                 else{
+                                 halert("لم يتم تأكيد رقم الهاتف","");
+                                 location.reload();
+                                 }
+                           });   
+}
+
+function otp_timer(){
+if(otp_timeout > 0){
+  if(document.getElementById("otp_timer_lbl"))document.getElementById("otp_timer_lbl").innerText=otp_timeout.toString();
+  otp_timeout-=1;
+}
+else {
+location.reload();
+}
+}
+
+function owntype_select(sel){
+var indx = sel.selectedIndex;
+var opt = sel.options[indx].text;
+
+var caption = "";
+if (opt === "ايجار")caption = "صورة عقد الايجار";
+if (opt === "ملك")caption = "صورة سند العقار";
+
+document.getElementById("val44lbl").innerHTML=caption;
+
+
+}
+function option_change(sel){
+document.getElementById(sel.id).style.background="#ffffff";
+}
+
+
+function provinces(sel){
+//alert(sel.options[sel.selectedIndex].text);
+document.getElementById(sel.id).style.background="#ffffff";
+var prov = sel.options[sel.selectedIndex].value;
+    var cselect =  document.getElementById("sector");
+    var j,L = cselect.options.length - 1;
+    for(i = L; i >= 0; i--) {
+      cselect.remove(i);
+    }
+
+   var clist = counties[prov];
+    var opt = document.createElement('option');
+    opt.value = 1000;
+    opt.innerHTML = "القضاء";
+    opt.disabled = true;
+    opt.selected = true;
+    cselect.appendChild(opt);    
+for (var i = 0; i<clist.length; i++){
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = clist[i];
+    cselect.appendChild(opt);
+}
+}
+
+
+function reject_na(event){
+  // Check if the pressed key is a digit (0-9)
+var trgt = event.target;
+var k= trgt.value;
+var idk = trgt.id;
+
+hconsole("Down",event.key,event.keyCode);  
+document.getElementById(idk+"_help").innerHTML="";
+document.getElementById("phone_num").value = "Down-"+event.key+","+event.code;
+if((event.key==='Delete')||(event.key==='Backspace')||(event.key==='Enter'))return;
+//if(k.length>55){
+//document.getElementById(idk+"_help").innerHTML="اقل من 50 حرفا";
+//event.preventDefault(); 
+//return;
+//}  
+
+   if((event.key >= '0' && event.key <= '9')||(event.key >= 'A' && event.key <= 'Z')||(event.key >= 'a' && event.key <= 'z')) {
+    event.preventDefault(); // Prevent the default action (typing the number)
+    document.getElementById(idk+"_help").innerHTML="حروف عربية فقط";
+  }
+
+}
+
+
+
+function rejectchar(p,txt){
+var ntxt = txt.slice(0,p) + txt.slice(p+1);
+hconsole("p:",p,txt,ntxt);
+return ntxt;
+}
+
+function ikarb(event){
+var nmUnicodeRange = /[\u0030-\u0039]/;
+var enUnicodeRange = /[\u0041-\u005A]/;
+var arUnicodeRange = /[\u0621-\u064A]/;
+
+var trgt = event.target;
+var tid = trgt.id;
+var hid = tid+"_help";
+document.getElementById(tid).style.background="#ffffff";
+document.getElementById(hid).innerHTML="";
+
+var mch ,msg="";
+var k= trgt.value;    
+var cntrl = trgt.getAttribute("data-cntrl");
+var pos = parseInt(trgt.getAttribute("data-pos"));
+var icp = trgt.selectionEnd;
+var lp=k.length;
+if(icp<lp){lp=icp-1;}else lp -=1;
+if(lp<0)lp=0;
+pos = lp;
+var lk = k[lp];
+if(k==="")return;
+var rjct = 0;
+mch = trgt.value;
+var charlimit = 60;
+if(tid=="subjct")charlimit=1200;
+if(lp>charlimit){
+mch = rejectchar(pos,mch);
+msg=charlimit + "حرفا كحد اقصى";
+}
+else{
+if(k.charCodeAt(pos)===1600){
+mch = rejectchar(pos,mch);msg="غير مسموح استخدام ـ";
+hconsole("1 space only!");
+}
+else{
+if(arUnicodeRange.test(lk.toString())||(k.charCodeAt(pos)===32)){
+if((k.charCodeAt(pos)===32)&&(k.charCodeAt(pos-1)===32)){
+mch = rejectchar(pos,mch);msg="فراغ واحد فقط";
+hconsole("1 space only!");
+}
+else{
+
+if((lp===0)&&(k.charCodeAt(pos)===32)){mch = rejectchar(pos,mch);msg="لا يبدا بفراغ";hconsole("no space at start");}
+}
+}
+else {mch = rejectchar(pos,mch);msg="حروف عربية فقط";}
+}
+}
+trgt.value = mch;
+document.getElementById(hid).innerHTML=msg;
+trgt.setAttribute("data-pos",pos);
+hconsole("lk:",lk,"k:",k,"lp:",lp,pos);
+
+}
+
+
+function ptest(ths){
+ths.preventDefault();   
+return false;
+}
+
+
+
+var filedata1=[3];
+var filedata2=[5];
+
+var jpgf;
+var fnames1=[3];
+var fnames2=[5];
+
+var inpf1=[3];
+var inpf2=[5];
+
+function fload(ftag){
+var srcf = ftag.value; 
+hconsole("srcf",srcf,srcf.length,ftag.id);
+document.getElementById(ftag.id+"help").style.color="black";
+var fi = parseInt(document.getElementById(ftag.id).getAttribute("data-fn"));
+hconsole("01FI::::",fi);
+var ph1;
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+  ph1 = reader.result;
+  });
+  inpf1[fi] = ftag.files[0];
+  hconsole("inpf",srcf);
+/*  if(fnames1.includes(srcf)){
+  hconsole("inpf","Existtttttttttttttt");
+document.getElementById(ftag.id+"help").style.color="red";
+document.getElementById(ftag.id+"help").innerHTML="الملف مرفوع مسبقاً";
+return;
+  
+  }*/
+  fnames1[fi]=srcf;
+
+var ext = srcf.split('.').pop();
+hconsole("xtnsionXXX:",ext);
+  if(!(ftag.accept.includes(ext))){
+  hconsole("type.....");
+document.getElementById(ftag.id+"help").style.color="red";
+document.getElementById(ftag.id+"help").innerHTML="يجب اختيار ملف صورة ";
+return;
+  
+  }
+
+  filedata1[fi]=inpf1[fi];
+  hconsole("fi",inpf1[fi],fi)
+  reader.readAsDataURL(inpf1[fi]);
+
+if(srcf.length===0){
+hconsole("nofile.....");
+document.getElementById(ftag.id+"help").style.color="red";
+document.getElementById(ftag.id+"help").innerHTML="لم يتم اختيار ملف";
+return;
+}
+var fnn = srcf.replace(/^.*[\\/]/, '');
+if(fnn.length>16)fnn = fnn.substring(fnn.length-16,fnn.length);
+var fsx = ftag.files[0].size;
+var fsz = Math.floor(fsx/1024);
+if(fsz>5120){
+hconsole("size.....");
+document.getElementById(ftag.id+"help").innerHTML="حجم الملف كبير";
+document.getElementById(ftag.id+"help").style.color="red";
+}
+else{
+hconsole("green.....",ftag.id);
+document.getElementById(ftag.id+"help").style.color="green";
+document.getElementById(ftag.id+"help").innerHTML=fsz+"KB, "+fnn;
+
+}
+}
+
+async function floadm(ftag){
+var srcf = ftag.value; 
+hconsole("srcf",srcf,srcf.length,ftag.id);
+document.getElementById(ftag.id+"help").style.color="black";
+var fi = 3;// parseInt(document.getElementById(ftag.id).getAttribute("data-fn"));
+hconsole("2-7FI::::",fi);
+var ph1;
+  hconsole("ftag.files.length",ftag.files.length);
+  if(ftag.files.length>5){
+  halert("عدد المرفقات يجب ان لا يتجاوز (5) ملفات","");
+  document.getElementById(ftag.id+"help").style.color="red";
+  document.getElementById(ftag.id+"help").innerHTML="عدد المرفقات يجب ان لا يتجاوز (5) ملفات";
+  return;
+  } 
+  document.getElementById(ftag.id+"help").innerHTML="";
+  for (var i =0 ; i < ftag.files.length ; ++i){
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+  ph1 = reader.result;
+  });
+ 
+  srcf = ftag.files[i].name;
+  inpf2[i] = ftag.files[i];
+  hconsole("XXXinpf",srcf,ftag.files);
+ /* if(fnames2.includes(srcf)){
+  hconsole("yinpf","Existtttttttttttttt");
+document.getElementById(ftag.id+"help").style.color="red";
+document.getElementById(ftag.id+"help").innerHTML="الملف مرفوع مسبقاً";
+return;
+  
+  }*/
+  fnames2[i]=srcf;
+  hconsole("fi+i",fi,i,fi+i,fnames2[i]);
+var ext = srcf.split('.').pop();
+/*hconsole("xtnsionXXX:",ext);
+  if(!(ext==="jpeg")){
+  hconsole("type.....");
+document.getElementById(ftag.id+"help").style.color="red";
+document.getElementById(ftag.id+"help").innerHTML="يجب رفع الملف بصيغة jpeg";
+return;
+  
+  }*/
+
+  filedata2[i]=inpf2[i];
+  hconsole("fi",inpf2[i],fi+i)
+  await reader.readAsDataURL(inpf2[i]);
+
+var fnn = srcf.replace(/^.*[\\/]/, '');
+if(fnn.length>16)fnn = fnn.substring(fnn.length-16,fnn.length);
+
+var fsx = ftag.files[i].size;
+var fsz = Math.floor(fsx/1024);
+if(fsz>(15*1024)){
+hconsole("size.....");
+document.getElementById(ftag.id+"help").innerHTML="حجم الملف كبير";
+document.getElementById(ftag.id+"help").style.color="red";
+}
+else{
+hconsole("green.....",ftag.id);
+document.getElementById(ftag.id+"help").style.color="green";
+document.getElementById(ftag.id+"help").innerHTML +=("\n"+fsz+"KB, "+fnn);
+
+}
+}
+//hconsole("multi1=",filedata1);
+//hconsole("multi2=",filedata2);
+}
+
+
+
+
+
+
+
+
+
+
+
+function all_click(){
+var inboxes = ["tri_name","phone_num","town","quarter","street","house","estate_num","land_owner_name","estate_address","municipality_name"];
+var insels = ["province","sector","relation","estate_category","bldng_type","own_type"];
+
+var jdata={};
+var i,k,selectElement;
+var iter = 0;
+var tin = 0;
+for(var ti = 0;ti < 10; ++ti){
+//hconsole("ti::",ti,"TI");
+if((ti===1)||(ti===2))continue;
+hconsole("ti::",ti,inboxes[ti]);
+
+  var tt = document.getElementById(inboxes[ti]);
+  if(tt.value===""){
+  iter = 1;
+  document.getElementById(inboxes[ti]+"_help").innerHTML = "يجب مليء الحقل";
+  tt.style.background="#fff0f0";
+  }
+  else{
+  document.getElementById(inboxes[ti]+"_help").innerHTML = "";
+  tt.style.background="#ffffff";
+  }
+
+}
+
+for(var sti = 0;sti < 2; ++sti){
+
+  var tt = document.getElementById(insels[sti]);
+ if(tt.selectedIndex===0){
+  document.getElementById(insels[sti]).style.background="#fff0f0";
+  document.getElementById(insels[sti]+'_help').innerHTML="يجب اختيار الحقل";
+  iter = 1;
+  }
+  else{
+  document.getElementById(insels[sti]).style.background="#ffffff";
+  document.getElementById(insels[sti]+'_help').innerHTML="";
+  }
+
+}
+
+
+
+if(document.getElementById("subjct").value===""){
+iter = 1;
+document.getElementById("subjct").style.background="#fff0f0";
+document.getElementById("subjct_help").innerHTML="يجب مليء الحقل";
+}
+else{
+document.getElementById("subjct").style.background="#ffffff";
+document.getElementById("subjct_help").innerHTML="";
+}
+
+
+if(iter ===1){halert("يجب مليء الحقول المؤشرة","");return;}
+
+
+for( i = 0; i <10;++i){
+jdata[inboxes[i]]=document.getElementById(inboxes[i]).value;
+
+}
+
+for( i = 0; i <6;++i){
+selectElement = document.getElementById(insels[i]);
+k = selectElement.selectedIndex;
+jdata[insels[i]]=selectElement.options[k].text;
+}
+
+
+jdata['subject']=document.getElementById('subjct').value;
+var f1f = document.getElementById("val42help");
+var f2f = document.getElementById("val43help");
+var f3f = document.getElementById("val44help");
+var feflag=0;
+var fmsg;
+if((f1f.innerHTML==="")|(f1f.style.color==="red")){feflag=1;fmsg="يجب رفع البطاقة الوطنية(الوجه الاول)";}
+if((f2f.innerHTML==="")|(f2f.style.color==="red")){feflag=2;fmsg="يجب رفع البطاقة الوطنية(الوجه الثاني)";}
+if((f3f.innerHTML==="")|(f3f.style.color==="red")){feflag=3;fmsg="يجب رفع عقد الايجار";}
+if(feflag>0){halert(fmsg,"");return;} 
+const formData1 = new FormData();
+
+
+formData1.append('file1', filedata1[0]);
+formData1.append('file2', filedata1[1]);
+formData1.append('file3', filedata1[2]);
+
+for(var q = 0 ; q < 5 ;++q){
+//if (filedata2[q])
+formData1.append('file'+(q+4).toString(), filedata2[q]);
+//else formData1.append('file'+(q+4).toString(), null);
+//hconsole("fff:",q+4)
+
+}
+//formData1.append('file2', filedata[1]);
+//formData1.append('file3', filedata[2]);
+formData1.append('jdata',JSON.stringify(jdata));
+formData1.append('xssnn',kchkey);
+//console.log('xssnn',kchkey);
+//document.getElementById("dbg_lbl").innerHTML = "["+kchkey+"]";
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+//formData1.append('X-CSRFToken',csrfToken);
+const options1 = {method:'POST',headers: {'X-CSRFToken':csrfToken},body: formData1};
+//delete options1.headers['Content-Type'];
+hconsole("Sending....");
+fetch('/complaint', options1).then(function (response) {
+          return response.json();
+    }).then(async function (text) {
+	    if(text.fok==="1"){
+          hconsole("Sent.....");
+          document.getElementById('form_container').style.display="none";
+                   halert("تم قبول طلب الشكوى","done");
+                   
+           document.getElementById("resultl").innerHTML="تم قبول طلب الشكوى";
+        }
+        else{halert("لم يكتمل مليء الاستمارة","");}  
+});
+
+
+
+}
+
+
+function inumkarb(event){
+var nmUnicodeRange = /[\u0030-\u0039]/;
+var enUnicodeRange = /[\u0041-\u005A]/;
+var arUnicodeRange = /[\u0621-\u064A]/;
+
+var trgt = event.target;
+var tid = trgt.id;
+var hid = tid+"_help";
+var mch ,msg="";
+var k= trgt.value;    
+document.getElementById(tid).style.background="#ffffff";
+document.getElementById(hid).innerHTML="";
+
+var cntrl = trgt.getAttribute("data-cntrl");
+var pos = parseInt(trgt.getAttribute("data-pos"));
+var icp = trgt.selectionEnd;
+var lp=k.length;
+if(icp<lp){lp=icp-1;}else lp -=1;
+if(lp<0)lp=0;
+pos = lp;
+var lk = k[lp];
+if(k==="")return;
+var rjct = 0;
+mch = trgt.value;
+var charlimit = 20;
+if(tid=="subjct")charlimit=1200;
+if(lp>charlimit){mch = rejectchar(pos,mch);msg=charlimit+" رقم وحرف عربي";}
+else{
+var xdgt=['0','1','2','3','4','5','6','7','8','9'];
+var tc= k.charCodeAt(pos);
+hconsole("na:::",tc);
+
+if((tc>1631)&&(tc<1642)){
+tc = (tc-1632);
+k[lp]=xdgt[tc];
+lk= xdgt[tc];
+mch = rejectchar(pos,mch);
+mch += lk;
+hconsole("nx:::",k,lk);
+}
+
+if(nmUnicodeRange.test(lk.toString())||arUnicodeRange.test(lk.toString())||(k.charCodeAt(pos)===32)){
+if((k.charCodeAt(pos)===32)&&(k.charCodeAt(pos-1)===32)){
+hconsole("1 space only!");
+}
+else{
+if((lp===0)&&(k.charCodeAt(pos)===32)){mch = rejectchar(pos,mch);msg="لا يبدا بفراغ";hconsole("no space at start");}
+}
+}
+else {
+if((tc===10)&&(tid==="subjct")){
+//mch += "\n";
+msg="";
+}
+else{ mch = rejectchar(pos,mch);msg="ارقام وحروف عربية فقط";}
+}
+trgt.value = mch;
+document.getElementById(hid).innerHTML=msg;
+trgt.setAttribute("data-pos",pos);
+hconsole("lk:",lk,"k:",k,"lp:",lp,pos);
+
+}
+}
+function iknum(event){
+
+
+
+var trgt = event.target;
+var tid = trgt.id;
+var hid = tid+"_help";
+var mch ,msg="";
+var k= trgt.value;    
+var cntrl = trgt.getAttribute("data-cntrl");
+var pos = parseInt(trgt.getAttribute("data-pos"));
+var icp = trgt.selectionEnd;
+var lp=k.length;
+document.getElementById(tid).style.background="#ffffff";
+document.getElementById(hid).innerHTML="";
+
+
+if(icp<lp){lp=icp-1;}else lp -=1;
+if(lp<0)lp=0;
+pos = lp;
+var lk = k[lp];
+if(k==="")return;
+var rjct = 0;
+mch = trgt.value;
+if((tid==="quarter")||(tid==="street")||(tid==="house")){
+if(lp>7){mch = rejectchar(pos,mch);msg="8 ارقام";}
+}
+else
+
+if(lp>9){mch = rejectchar(pos,mch);msg="10 ارقام";}
+if(msg.length===0){
+var xdgt=['0','1','2','3','4','5','6','7','8','9'];
+var tc= k.charCodeAt(pos);
+hconsole("na:::",tc);
+if((tc>1631)&&(tc<1642)){
+tc = (tc-1632);
+k[lp]=xdgt[tc];
+lk= xdgt[tc];
+mch = rejectchar(pos,mch);
+mch += lk;
+hconsole("nx:::",k,lk);
+}
+}
+if(!((lk>='0')&&(lk<='9'))){mch = rejectchar(pos,mch);msg="ارقام فقط";}
+else {pos++;}
+
+
+
+trgt.value = mch;
+document.getElementById(hid).innerHTML=msg;
+trgt.setAttribute("data-pos",pos);
+hconsole("lk:",lk,"k:",k,"lp:",lp,pos);
+}
+
+    
+function efocusout(event){
+var trgt = event.target;
+var tid = trgt.id;
+var hid = tid+"_help";
+hconsole(tid,hid);
+if(document.getElementById(tid).value!=="")document.getElementById(hid).innerHTML="";
+}    
+
+function hconsole(...args){
+//console.log(args);
+}
+
+
+function halert(txt,srcx){
+alert(txt);
+
+      if(srcx==="captcha"){
+                                    document.getElementById("captcha_container").style.display="none";
+                                    document.getElementById("phone_container").style.display="block";
+                                    //document.getElementById("phone_inp").focus(); 
+                                    phone_timer_handler = setInterval(phone_timer,1000);
+                                    if(document.getElementById("phone_container").style.display==="block")document.getElementById("phone_inp").focus();
+      
+      }
+      if(srcx==="phone"){
+                                    document.getElementById("phone_container").style.display="none";                                 
+                                    document.getElementById("otp_container").style.display="block";
+                                    document.getElementById("otp_inp").focus();                                 
+                                    otp_timer_handler = setInterval(otp_timer,1000); 
+      
+      
+      
+      }
+      if(srcx==="otp"){
+                                    document.getElementById("otp_container").style.display="none";
+                                    document.getElementById("form_container").style.display="block";
+                                    document.getElementById("phone_num").value = document.getElementById("phone_inp").value; //``;
+                                    clearInterval(otp_timer_handler);
+                                    document.getElementById("tri_name").focus();
+      }
+//document.getElementById("myModalmsg").innerHTML="";      
+//document.getElementById("mym").value="";
+//myModal.hide();        
+} 
+      
+
+/*
+function halert(txt,srcx){
+var icoshape;
+document.getElementById("myModalmsg").innerHTML=txt;
+document.getElementById("mym").value=srcx;
+myModal.show();
+}
+function myModalOk(){
+var srcx=document.getElementById("mym").value;
+      if(srcx==="captcha"){
+                                    document.getElementById("captcha_container").style.display="none";
+                                    document.getElementById("phone_container").style.display="block";
+                                    //document.getElementById("phone_inp").focus(); 
+                                    phone_timer_handler = setInterval(phone_timer,1000);
+                                    if(document.getElementById("phone_container").style.display==="block")document.getElementById("phone_inp").focus();
+      
+      }
+      if(srcx==="phone"){
+                                    document.getElementById("phone_container").style.display="none";                                 
+                                    document.getElementById("otp_container").style.display="block";
+                                    document.getElementById("otp_inp").focus();                                 
+                                    otp_timer_handler = setInterval(otp_timer,1000); 
+      
+      
+      
+      }
+      if(srcx==="otp"){
+                                    document.getElementById("otp_container").style.display="none";
+                                    document.getElementById("form_container").style.display="block";
+                                    document.getElementById("phone_num").value = document.getElementById("phone_inp").value; //``;
+                                    clearInterval(otp_timer_handler);
+                                    document.getElementById("tri_name").focus();
+      }
+document.getElementById("myModalmsg").innerHTML="";      
+document.getElementById("mym").value="";
+myModal.hide();        
+} 
+      
+*/
+
+</script>     
+
+</body></html>
