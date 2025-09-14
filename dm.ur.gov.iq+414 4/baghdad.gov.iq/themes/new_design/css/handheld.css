@@ -1,0 +1,100 @@
+body {
+	margin: 0; padding: 0;
+	width:100%;
+	background:#CCCCCC none repeat scroll 0% 50%;
+	font-family:'vera sans',helvetica,sans-serif;
+	font-size: 80%;
+	line-height:1.5;
+	margin:0pt;
+	padding:0pt;		
+}
+
+img {
+	border: 0;
+}
+
+#container {
+	background:#FFFFFF;
+	clear:both;
+	margin:auto;
+	max-width:420px;
+}
+
+#content { padding: 4px;}
+
+.header_image img {width: 100%;}
+
+#mainTicker, 
+#box_newsletter, 
+#box_poll, 
+#box_login, 
+.box_tabs, 
+#box_users, 
+#box_sections div.box_title, #mainNav li ul, 
+#box_sections li ul, 
+#rotating_headlines div.headline_image div.image_caption, 
+.comment_block, 
+#box_article_tools, 
+#box_my_tags, 
+#box_article_rating, 
+span.image_caption {display:none;}
+
+/*** Navigations ***/
+#mainNav, #box_sections, .box_pages {height:20px; font-size: 80%;}
+
+#mainNav, #box_sections, #footer {background-color:#F1F1F1;}
+
+#mainNav ul, #box_sections ul, .box_pages ul, #footer ul {margin:0; padding: 3px;}
+
+#mainNav ul li, #box_sections ul li, .box_pages ul li, #footer ul li {display:inline; list-style:none; margin-right: 2px;}
+
+#mainNav ul li a, #box_sections ul li a, #footer ul li a {color:#000000;}
+
+/*** Search ***/
+#box_search {padding: 3px;}
+
+#box_search input, #box_search button {font-size: 10px;}
+
+/*** Headlines ***/
+#rotating_headlines {padding:3px; margin:3px; background-color:#F1F1F1;}
+
+#rotating_headlines h1 {font-size: 150%; padding:0; margin:0;}
+
+#rotating_headlines div.headline_image img {float:none; width:40%;}
+
+.player ul {margin:0; padding: 3px;}
+
+.player ul li {display:inline; list-style:none; margin-right: 2px;}
+
+/*** Latest news ***/
+#latest_news {padding: 6px;}
+
+#latest_news h2 {font-size: 110%; padding:0; margin:0;}
+
+#latest_news span.summary {font-size: 80%;}
+
+#latest_news div.short {height:50px;}
+
+/*** Main news ***/
+#category_news_box {padding: 6px;}
+
+.main_news_category { border-bottom: 1px solid #CCCCCC; margin-bottom: 4px;}
+
+.main_news_category h4 {padding:0; margin:0; font-size: 110%; font-weight:bold;}
+
+.main_news_category div.short {padding: 6px; width:100%; overflow:hidden;}
+
+.main_news_category div.short div.image {float:left; margin:4px;}
+
+.main_news_category h3 {padding:0; margin:0; font-size: 90%;}
+
+.main_news_category ul { padding:3px; margin:0; font-size: 80%;}
+
+.main_news_category ul li { list-style-position: inside;}
+
+
+/*** Tags ***/
+#box_tags {padding:6px; margin:3px; background-color:#F1F1F1;}
+
+/*** article ***/
+#article_body { padding: 4px;}
