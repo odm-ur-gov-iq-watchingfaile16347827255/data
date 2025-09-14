@@ -1,0 +1,25 @@
+/* 
+ * Ministry of Justice - Iraq Website Styles
+ * Main CSS File - Imports all modular components
+ */
+
+/* Base styles and variables */
+@import 'https://moj.gov.iq/assets/css/modules/variables.css';
+@import 'https://moj.gov.iq/assets/css/modules/typography.css';
+@import 'https://moj.gov.iq/assets/css/modules/layout.css?t=99';
+
+/* UI Components */
+@import 'https://moj.gov.iq/assets/css/modules/components-ui.css';
+@import 'https://moj.gov.iq/assets/css/modules/news-ticker.css';
+@import 'https://moj.gov.iq/assets/css/modules/news-cards.css';
+@import 'https://moj.gov.iq/assets/css/modules/sliders.css';
+
+/* Page-specific styles */
+@import 'https://moj.gov.iq/assets/css/modules/article-page.css';
+@import 'https://moj.gov.iq/assets/css/modules/sidebar-widgets.css';
+@import 'https://moj.gov.iq/assets/css/modules/social-media.css';
+
+@import 'https://moj.gov.iq/assets/css/modules/navbar.css';
+/* Responsive rules - always last */
+@import 'https://moj.gov.iq/assets/css/modules/responsive.css';
+@import 'https://moj.gov.iq/assets/css/modules/footer.css';
