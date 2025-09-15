@@ -1,0 +1,125 @@
+# Repository Gitignore for Data Repository
+# ملف Gitignore لمستودع البيانات
+
+# Analysis and temporary files / ملفات التحليل والملفات المؤقتة
+analysis/
+temp/
+tmp/
+*.tmp
+*.temp
+*.log.backup
+*.bak
+*.swp
+*.swo
+*~
+
+# System files / ملفات النظام
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and editor files / ملفات IDE والمحررات
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+
+# Security and sensitive files / ملفات الأمان والبيانات الحساسة
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config/secrets.yml
+config/database.yml
+secrets.json
+
+# Backup files / ملفات النسخ الاحتياطية
+*.backup
+*.orig
+backup/
+backups/
+
+# Logs / ملفات السجلات
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Cache directories / مجلدات التخزين المؤقت
+.cache/
+.npm/
+.yarn/
+node_modules/
+.pnp
+.pnp.js
+
+# Build artifacts / مخرجات البناء
+dist/
+build/
+out/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Operating system generated files / ملفات مولدة من نظام التشغيل
+.AppleDouble
+.LSOverride
+Icon?
+
+# Git LFS temporary files / ملفات Git LFS المؤقتة
+.lfsconfig
+
+# Database files / ملفات قواعد البيانات
+*.sqlite
+*.sqlite3
+*.db
+
+# Archives / الأرشيف
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# Large media files that should be in LFS / ملفات الوسائط الكبيرة التي يجب أن تكون في LFS
+# These are tracked in .gitattributes but ignored if accidentally added without LFS
+# هذه متتبعة في .gitattributes لكن تُتجاهل إذا أُضيفت عن طريق الخطأ بدون LFS
+
+# Keep analysis results but ignore raw data / الاحتفاظ بنتائج التحليل لكن تجاهل البيانات الخام
+!analysis/*.txt
+!analysis/*.md
+!analysis/*.json
+
+# Exclude specific problematic files found during analysis
+# استبعاد ملفات مشكوك فيها محددة تم اكتشافها أثناء التحليل
+**/SiteSucker.log.backup.*
+
+# Temporary fix files / ملفات الإصلاح المؤقتة
+fix-*
+cleanup-*
+temp-rename-*
+
+# Git hooks / خطافات Git
+.git/hooks/
