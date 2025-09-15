@@ -1,0 +1,104 @@
+# Pre-commit hooks configuration for security and quality
+# إعدادات pre-commit hooks للأمان والجودة
+
+repos:
+  # Security scanning / فحص الأمان
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        name: Detect secrets
+        description: فحص الأسرار والمفاتيح الحساسة
+        args: ['--baseline', '.secrets.baseline']
+        exclude: package.lock.json
+
+  # File size check / فحص أحجام الملفات
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+        name: Check for large files
+        description: فحص الملفات الكبيرة (أكبر من 5MB)
+        args: ['--maxkb=5120']  # 5MB limit
+      
+      - id: check-case-conflict
+        name: Check case conflict
+        description: فحص تعارض الأحرف الكبيرة والصغيرة
+      
+      - id: check-merge-conflict
+        name: Check merge conflict
+        description: فحص تعارض الدمج
+      
+      - id: check-yaml
+        name: Check YAML syntax
+        description: فحص صحة بنية YAML
+        files: \.(yaml|yml)$
+      
+      - id: check-json
+        name: Check JSON syntax
+        description: فحص صحة بنية JSON
+        files: \.json$
+      
+      - id: end-of-file-fixer
+        name: Fix end of files
+        description: إصلاح نهايات الملفات
+        exclude: \.min\.(js|css)$
+      
+      - id: trailing-whitespace
+        name: Trim trailing whitespace
+        description: إزالة المسافات الفارغة في النهايات
+        exclude: \.min\.(js|css)$|\.md$
+
+  # Git LFS check / فحص Git LFS
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+        name: Check files are in LFS
+        description: التأكد من أن الملفات الكبيرة في Git LFS
+        args: ['--maxkb=5120']
+
+  # Arabic and special character filename check / فحص أسماء الملفات العربية والرموز الخاصة
+  - repo: local
+    hooks:
+      - id: check-filename-safety
+        name: Check filename safety
+        description: فحص أمان أسماء الملفات
+        entry: scripts/check-filename-safety.sh
+        language: script
+        pass_filenames: true
+        
+      - id: check-path-length
+        name: Check path length
+        description: فحص طول المسارات
+        entry: scripts/check-path-length.sh
+        language: script
+        pass_filenames: true
+
+  # AWS credentials check / فحص بيانات AWS
+  - repo: local
+    hooks:
+      - id: check-aws-credentials
+        name: Check AWS credentials
+        description: فحص بيانات اعتماد AWS
+        entry: scripts/check-aws-credentials.sh
+        language: script
+        files: .*
+
+# Global configuration / الإعدادات العامة
+default_stages: [commit]
+fail_fast: false
+
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] إصلاح تلقائي للملفات
+    
+    [pre-commit.ci] auto fixes from hooks
+
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] تحديث تلقائي لـ pre-commit'
+  autoupdate_schedule: weekly
+  skip: []
+  submodules: false
