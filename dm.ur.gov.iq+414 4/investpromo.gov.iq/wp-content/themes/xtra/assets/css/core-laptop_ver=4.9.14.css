@@ -1,0 +1,21 @@
+.header_1,
+.header_2,
+.header_3 {
+	width: 100%
+}
+div#layout.layout_1,
+div#layout.layout_2 {
+	width: 94% !important
+}
+div#layout.layout_1 .row,
+div#layout.layout_2 .row {
+	width: 90% !important
+}
+.codevz-custom-menu-two-col-mobile > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start
+}
+.codevz-custom-menu-two-col-mobile > div > div {
+	flex-basis: 50%
+}
