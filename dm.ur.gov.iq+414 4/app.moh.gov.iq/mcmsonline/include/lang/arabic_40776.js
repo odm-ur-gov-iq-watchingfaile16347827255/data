@@ -10,7 +10,7 @@ Runner.lang.constants = {
 	TEXT_NEXT: 'تال',
 	TEXT_LAST: 'أخير',
 	TEXT_PROCEED_TO: 'انتقل إلى',
-	TEXT_DETAIL_NOT_SAVED: 'لم يتم حفظ السجلات في٪ S',
+	TEXT_DETAIL_NOT_SAVED: 'لم يتم حفظ السجلات في %s',
 	TEXT_NO_RECORDS: 'لا يوجد أي سجلات ',
 	TEXT_DETAIL_GOTO: 'الذهاب إلى',
 	TEXT_SHOW_ALL: 'أظهر الكل',
@@ -114,10 +114,10 @@ Runner.lang.constants = {
 	TEXT_COLLAPSE_ALL: 'انهيار جميع',
 
 	//for register page
-	SEC_PWD_LEN: 'يجب أن تكون كلمة المرورعلى الاقل ٪٪ طول أحرف.',
+	SEC_PWD_LEN: 'يجب أن تكون كلمة المرور على الأقل %s أحرف طولاً.',
 	SEC_PWD_CASE: 'يجب أن تحتوي كلمة المرور الأحرف في حالة العلوي والسفلي.',
-	SEC_PWD_DIGIT: 'يجب أن تحتوي كلمة السر٪٪ أرقام أو رموز',
-	SEC_PWD_UNIQUE: 'يجب أن تحتوي كلمة السر٪٪ شخصيات فريدة',
+	SEC_PWD_DIGIT: 'يجب أن تحتوي كلمة السر على %s أرقام أو رموز',
+	SEC_PWD_UNIQUE: 'يجب أن تحتوي كلمة السر على %s أحرف فريدة',
 	PASSWORDS_DONT_MATCH: 'كلمات السر لا تتطابق',
 	SUCCES_LOGGED_IN: 'لقد قمت بتسجيل الدخول بنجاح',
 
@@ -151,11 +151,11 @@ Runner.lang.constants = {
 
 	ERROR_MISSING_FILE_NAME: 'لم يتم توفير اسم الملف',
 	ERROR_ACCEPT_FILE_TYPES: 'نوع الملف غير مقبول',
-	ERROR_MAX_FILE_SIZE: 'حجم الملف يتجاوز حد كيلوبايت٪ S',
-	ERROR_MIN_FILE_SIZE: 'يجب أن لا يكون حجم الملف أقل من٪ S ك بايت',
-	ERROR_MAX_TOTAL_FILE_SIZE: 'إجمالي الملفات حجم يتجاوز حد كيلوبايت٪ S',
+	ERROR_MAX_FILE_SIZE: 'حجم الملف يتجاوز حد %s كيلوبايت',
+	ERROR_MIN_FILE_SIZE: 'يجب أن لا يكون حجم الملف أقل من %s كيلوبايت',
+	ERROR_MAX_TOTAL_FILE_SIZE: 'إجمالي الملفات حجم يتجاوز حد %s كيلوبايت',
 	ERROR_MAX_NUMBER_OF_FILES_ONE: 'يمكنك تحميل ملف واحد فقط',
-	ERROR_MAX_NUMBER_OF_FILES_MANY: 'يمكنك تحميل أي ملفات أكثر من٪ S',
+	ERROR_MAX_NUMBER_OF_FILES_MANY: 'لا يمكنك تحميل أكثر من %s ملفات',
 
 	TEXT_SERVER_ERROR_OCCURRED: 'حدث خطأ الخادم',
 	TEXT_SEE_DETAILS: 'انظر التفاصيل',
@@ -174,7 +174,6 @@ Runner.lang.constants = {
 	TEXT_WR_SOME_PROBLEM: 'تظهر بعض المشاكل خلال الحفظ',
 	TEXT_WR_CROSS_GROUP: 'مجموعة',
 	TEXT_WR_HEADER: 'الرائسي',
-	TEXT_WR_CROSS_GROUP: 'مجموعة',
 	TEXT_COUNT: 'تعداد',
 	TEXT_MIN: 'أدنى',
 	TEXT_MAX: 'أقصى',
