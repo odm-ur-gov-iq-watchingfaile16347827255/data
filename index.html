@@ -2,14 +2,73 @@
 <html lang="ar">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=ur.gov.iq+414 4/">
-  <title>إعادة توجيه...</title>
-  <script>
-    // احتياط في حال الميتا لم تعمل
-    window.location.replace("ur.gov.iq+414 4/");
-  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>روابط صفحات الموقع</title>
+  <style>
+    body { font-family: Arial, Tahoma, sans-serif; direction: rtl; background: #f7f7f7; color: #222; padding: 20px; }
+    .container { max-width: 700px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 8px #0001; }
+    h1 { margin-top: 0; }
+    input[type="search"] { width: 100%; font-size: 1.1em; margin-bottom: 14px; padding: 8px 10px; box-sizing: border-box; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { padding: 7px; border-bottom: 1px solid #eee; }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note { font-size: 0.9em; color: #666; margin-bottom: 16px; }
+  </style>
 </head>
 <body>
-  <p>جاري التحويل إلى <a href="ur.gov.iq+414 4/">ur.gov.iq+414 4/</a>...</p>
+  <div class="container">
+    <h1>روابط صفحات الموقع</h1>
+    <p class="note">هذه الصفحة تعرض روابط صفحات الموقع. لتضمين كل صفحات HTML تلقائياً، أنشئ ملف <code>pages.json</code> في نفس المجلد بصيغة JSON: [{"title":"اسم الصفحة","href":"path"}].</p>
+    <input type="search" id="search" placeholder="ابحث عن صفحة..." aria-label="ابحث عن صفحة">
+    <ul id="pagesList"><li>جاري التحميل...</li></ul>
+  </div>
+
+  <script>
+    // صفحات افتراضية — عدّلها أو أنشئ pages.json في نفس المجلد
+    const defaultPages = [
+      { title: "الصفحة السابقة (ur.gov.iq+414 4)", href: "ur.gov.iq+414 4/" },
+      { title: "مثال: page2", href: "page2.html" },
+      { title: "مثال: page3", href: "page3.html" }
+    ];
+
+    async function loadPages() {
+      try {
+        const res = await fetch('pages.json', {cache: 'no-store'});
+        if (!res.ok) throw new Error('no pages.json');
+        const data = await res.json();
+        if (Array.isArray(data) && data.length) return data;
+      } catch (e) {
+        // استخدام الافتراضي إن فشل التحميل
+      }
+      return defaultPages;
+    }
+
+    function renderList(pages) {
+      const ul = document.getElementById('pagesList');
+      ul.innerHTML = '';
+      pages.forEach(p => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = p.href;
+        a.textContent = p.title || p.href;
+        a.target = '_self';
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+    }
+
+    document.getElementById('search').addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      Array.from(document.querySelectorAll('#pagesList li')).forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+
+    (async () => {
+      const pages = await loadPages();
+      renderList(pages);
+    })();
+  </script>
 </body>
 </html>
