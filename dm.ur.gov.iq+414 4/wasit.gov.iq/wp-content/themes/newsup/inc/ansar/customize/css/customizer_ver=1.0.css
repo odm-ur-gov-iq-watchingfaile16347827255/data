@@ -1,0 +1,253 @@
+/* ==========================================================================
+   CSS for Customizer Custom Controls
+   ========================================================================== */
+li.customize-control-section-title {
+	background-color: #e2e2e2;
+	padding: 0 10px;
+	margin-top: 15px;
+}
+li.customize-control-section-title h3{
+	color: #707070;
+
+}
+.customize-control select,
+.select2-container--default .selection .select2-selection--single {
+	border: none;
+	background: #fcfcff;
+	position: relative;
+	border-radius: 0;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.wp-customizer .select2-container--default .selection .select2-selection--multiple {
+	border: none;
+	background: #fcfcff;
+	border-radius: 0;
+	height: auto;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+	width: 95%;
+}
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__clear {
+	position: absolute;
+	right: 0;
+}
+.wp-customizer .select2-container .select2-dropdown {
+	z-index: 900000;
+}
+.customize-control select:active,
+.customize-control select:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+input[type="date"] {
+	background: #fcfcff;
+	position: relative;
+	border-radius: 0;
+	border: 1px solid #eee;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="number"]:active,
+input[type="number"]:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.simple-notice-custom-control .customize-control-description {
+	line-height: 1.6
+}
+.simple-notice-custom-control code {
+	font-size: 90%;
+	padding: 2px 4px;
+}
+.tinymce-control textarea {
+	width: 100%;
+	padding: 10px;
+}
+.text_radio_button_control:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+.text_radio_button_control .radio-buttons {
+	display: inline-block;
+	border: 1px solid #f9f9fe;
+}
+.text_radio_button_control .radio-button-label {
+	cursor: pointer;
+	float: left;
+}
+.text_radio_button_control .radio-button-label > input {
+	display: none;
+}
+.text_radio_button_control .radio-button-label span {
+	cursor: pointer;
+	font-weight: 500;
+	border: 2px solid #f9f9fe;
+	margin: 0;
+	background-color: #eee;
+	padding: 5px 15px;
+	display: inline-block;
+}
+.text_radio_button_control .radio-button-label span:hover {
+	background-color: rgba(255, 255, 255, .2);
+	color: #2885bb;
+}
+.text_radio_button_control .radio-button-label > input:checked + span {
+	background-color: #2084bd;
+	color: #fff;
+}
+.text_radio_button_control .radio-button-label > input:checked + span:hover {
+	color: #fff;
+}
+.image_radio_button_control .radio-button-label > input {
+	display: none;
+}
+.image_radio_button_control .radio-button-label > img {
+	cursor: pointer;
+	border: 3px solid #ddd;
+}
+.image_radio_button_control .radio-button-label > input:checked + img {
+	border: 3px solid #2885bb;
+}
+
+.image_checkbox_control .checkbox-label > input {
+	display: none;
+}
+.image_checkbox_control .checkbox-label > img {
+	cursor: pointer;
+	border: 3px solid #ddd;
+}
+.image_checkbox_control .checkbox-label > input:checked + img {
+	border: 3px solid #2885bb;
+}
+/* ==========================================================================
+   Toggle Switch
+   ========================================================================== */
+.toggle-switch-control .customize-control-title {
+	display: inline-block;
+}
+.toggle-switch {
+	position: relative;
+	width: 64px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	float: right;
+}
+.toggle-switch .toggle-switch-checkbox {
+	display: none;
+}
+.toggle-switch .toggle-switch-label {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid #ddd;
+	border-radius: 20px;
+	padding: 0;
+	margin: 0;
+}
+.toggle-switch-inner {
+	display: block;
+	width: 200%;
+	margin-left: -100%;
+	transition: margin 0.3s ease-in 0s;
+}
+.toggle-switch-inner:before,
+.toggle-switch-inner:after {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 22px;
+	padding: 0;
+	line-height: 22px;
+	font-size: 14px;
+	color: white;
+	font-family: Trebuchet, Arial, sans-serif;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+.toggle-switch-inner:before {
+	content: "ON";
+	padding-left: 8px;
+	background-color: #2885bb;
+	color: #FFFFFF;
+}
+.toggle-switch-inner:after {
+	content: "OFF";
+	padding-right: 8px;
+	background-color: #EEEEEE;
+	color: #999999;
+	text-align: right;
+}
+.toggle-switch-switch {
+	display: block;
+	width: 16px;
+	margin: 3px;
+	background: #FFFFFF;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 38px;
+	border: 2px solid #ddd;
+	border-radius: 20px;
+	transition: all 0.3s ease-in 0s;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+	margin-left: 0;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+	right: 0px;
+}
+.customize-control-newsup_content_layout .image-select + label {
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    margin-right: 2%;
+}
+#customize-control-newsup_content_layout input[type=radio], #customize-control-newsup_single_page_layout input[type=radio], #customize-control-newsup_page_layout input[type=radio] {display: none;}
+#customize-control-newsup_content_layout img, #customize-control-newsup_single_page_layout img, 
+#customize-control-newsup_page_layout img{width:110px; margin-bottom: 10px; margin-right:10px;}
+li.customize-control-section-title {
+    background-color: #ffffff;
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    border-left: 4px solid #00a0d2;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+input#_customize-input-newsup_date_time_show_type-radio-newsup_default, 
+input#_customize-input-newsup_date_time_show_type-radio-wordpress_date_setting, 
+input#_customize-input-post_image_type-radio-newsup_post_img_hei, 
+input#_customize-input-post_image_type-radio-newsup_post_img_acc  {
+    display: inline-block;
+}
+#customize-controls .ui-checkboxradio-checked img {
+    border: 4px solid #1151d3;
+}
+.mg-latest-news .customize-partial-edit-shortcut-button{
+	margin-top: -35px;
+}
+#customize-controls .ui-checkboxradio-radio-label{
+	padding: 0;
+    height: auto;
+    box-shadow: none;
+    border: 0;
+	background: transparent;
+}

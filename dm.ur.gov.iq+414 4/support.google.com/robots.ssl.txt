@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /*/search
+Disallow: /*/apis
+Disallow: /*/api
+Disallow: /*/bin/search.py
+Disallow: /bin/search.py
+Disallow: /bin/search.go
+Disallow: /*/forum-attachment
