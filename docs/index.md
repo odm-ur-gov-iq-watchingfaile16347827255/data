@@ -1,13 +1,15 @@
----
-layout: default
-title: "الصفحة الرئيسية"
----
-
-# مرحبًا بك في الموقع
-
-مرحبًا — هذا النص داخل محتوى الصفحة. الآن Jekyll سيعالج المتغيرات ويطبّق التخطيط.
-
-- عنوان الموقع: {{ site.title }}
-- وصف الموقع: {{ site.description }}
-
-يمكنك تحرير هذا الملف لعرض أي محتوى إضافي.
+ html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=dm.ur.gov.iq+414 4/">
+  <title>إعادة توجيه...</title>
+  <script>
+    // احتياط في حال الميتا لم تعمل
+    window.location.replace("dm.ur.gov.iq+414 4/");
+  </script>
+</head>
+<body>
+  <p>جاري التحويل إلى <a href="dm.ur.gov.iq+414 4/">dm.ur.gov.iq/</a>...</p>
+</body>
+</html> تحرير هذا الملف لعرض أي محتوى إضافي.
