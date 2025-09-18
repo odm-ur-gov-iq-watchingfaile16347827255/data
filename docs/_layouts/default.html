@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ page.description | default: site.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
