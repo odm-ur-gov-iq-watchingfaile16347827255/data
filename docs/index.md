@@ -1,3 +1,13 @@
-# Documentation
+---
+layout: default
+title: "الصفحة الرئيسية"
+---
 
-This is the index page for the documentation.
+# مرحبًا بك في الموقع
+
+مرحبًا — هذا النص داخل محتوى الصفحة. الآن Jekyll سيعالج المتغيرات ويطبّق التخطيط.
+
+- عنوان الموقع: {{ site.title }}
+- وصف الموقع: {{ site.description }}
+
+يمكنك تحرير هذا الملف لعرض أي محتوى إضافي.

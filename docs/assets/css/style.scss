@@ -1,0 +1,30 @@
+---
+# Front matter required so Jekyll converts this SCSS
+---
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+header {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+main {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+a { color: #0b66c3; text-decoration: none; }
+a:hover { text-decoration: underline; }
