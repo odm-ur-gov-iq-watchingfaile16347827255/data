@@ -14,3 +14,17 @@ jobs:
 		uses: actions/checkout@v4
 	  - name: Run a one-line script
 		run: echo "Hello, GitHub Actions!"
+# Instead of:
+- uses: actions/checkout@v4
+# Use:
+- uses: actions/checkout@<full-commit-sha>
+
+# Instead of:
+- uses: ruby/setup-ruby@v1
+# Use:
+- uses: ruby/setup-ruby@<full-commit-sha>
+
+# Instead of:
+- uses: peaceiris/actions-gh-pages@v3
+# Use:
+- uses: peaceiris/actions-gh-pages@<full-commit-sha>
