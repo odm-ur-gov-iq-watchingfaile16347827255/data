@@ -1,4 +1,4 @@
- html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="utf-8" />
@@ -12,4 +12,4 @@
 <body>
   <p>جاري التحويل إلى <a href="dm.ur.gov.iq+414 4/">dm.ur.gov.iq/</a>...</p>
 </body>
-</html> تحرير هذا الملف لعرض أي محتوى إضافي.
+</html>
