@@ -1,20 +1,34 @@
-name: Jekyll site CI
+name: Build and deploy Jekyll site
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - name: Checkout repository
+        # استبدل <ACTIONS_CHECKOUT_SHA> بالـ SHA الكامل لإصدار v4
+        uses: actions/checkout@<ACTIONS_CHECKOUT_SHA>
+      - name: Setup Ruby
+        # استبدل <SETUP_RUBY_SHA> بالـ SHA الكامل لإصدار v1
+        uses: ruby/setup-ruby@<SETUP_RUBY_SHA>
+        with:
+          ruby-version: 3.1
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+      - name: Build the site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --source docs --destination _site
+      - name: Deploy to GitHub Pages
+        # استبدل <PEACEIRIS_GH_PAGES_SHA> بالـ SHA الكامل لإصدار v3
+        uses: peaceiris/actions-gh-pages@<PEACEIRIS_GH_PAGES_SHA>
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
