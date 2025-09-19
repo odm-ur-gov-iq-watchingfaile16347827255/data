@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        # استبدل <ACTIONS_CHECKOUT_SHA> بالـ SHA الكامل لإصدار v4
-        uses: actions/checkout@<ACTIONS_CHECKOUT_SHA>
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955
       - name: Setup Ruby
-        # استبدل <SETUP_RUBY_SHA> بالـ SHA الكامل لإصدار v1
-        uses: ruby/setup-ruby@<SETUP_RUBY_SHA>
+        uses: ruby/setup-ruby@866b91cc020931c510d42e43e498a7f07d335f60
         with:
           ruby-version: 3.1
       - name: Install dependencies
@@ -26,8 +24,7 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --source docs --destination _site
       - name: Deploy to GitHub Pages
-        # استبدل <PEACEIRIS_GH_PAGES_SHA> بالـ SHA الكامل لإصدار v3
-        uses: peaceiris/actions-gh-pages@<PEACEIRIS_GH_PAGES_SHA>
+        uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
