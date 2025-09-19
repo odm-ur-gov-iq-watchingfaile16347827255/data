@@ -2,15 +2,15 @@ name: CI
 
 on:
   push:
-	branches:
-	  - main
+    branches:
+      - main
   pull_request:
 
 jobs:
   build:
-	runs-on: ubuntu-latest
-	steps:
-	  - name: Checkout repository
-		uses: actions/checkout@v4
-	  - name: Run a one-line script
-		run: echo "Hello, GitHub Actions!"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo "Hello, GitHub Actions!"
