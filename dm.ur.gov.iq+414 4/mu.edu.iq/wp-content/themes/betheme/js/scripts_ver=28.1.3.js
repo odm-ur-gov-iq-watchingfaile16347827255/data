@@ -614,8 +614,6 @@ function msnryGalleryInit() {
 
       stickyH = height + shift;
 
-      return stickyH;
-
     }
 
     // FIX | responsive
